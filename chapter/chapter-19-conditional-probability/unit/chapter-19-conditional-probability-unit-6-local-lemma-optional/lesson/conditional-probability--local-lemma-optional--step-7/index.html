@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="Let us give an example of using Lovász&#39;s local lemma, showing how easily nontrivial things can be derived from it. We say that two clauses of a formula in…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Conditional Probability › Local Lemma (Optional) › Lesson 7 | Discrete Mathematics" />
+    <meta property="og:description" content="Let us give an example of using Lovász&#39;s local lemma, showing how easily nontrivial things can be derived from it. We say that two clauses of a formula in…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-19-conditional-probability/unit/chapter-19-conditional-probability-unit-6-local-lemma-optional/lesson/conditional-probability--local-lemma-optional--step-7/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-19-conditional-probability/unit/chapter-19-conditional-probability-unit-6-local-lemma-optional/lesson/conditional-probability--local-lemma-optional--step-7/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-D2TnCphR.css">
+    <script type="module" crossorigin src="/assets/index-D5PyAk3l.js"></script>
+    <title>Conditional Probability › Local Lemma (Optional) › Lesson 7 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Conditional Probability / Local Lemma (Optional)</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Conditional Probability · Local Lemma (Optional)</p>
+        <h1>Lesson 7</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p>Let us give an example of using Lovász's local lemma, showing how easily nontrivial things can be derived from it. We say that two clauses of a formula in CNF <em>intersect</em> if they have at least one common variable (this variable may appear in these two clauses with different signs).</p><p><strong>Theorem. </strong><em>For <span class="math-tex">\(k\ge 1\)</span>, if every clause of a CNF formula consists of exactly <span class="math-tex">\(k\)</span> literals on distinct variables and intersects at most <span class="math-tex">\(2^{k-2}\)</span> other clauses, then the formula is satisfiable.</em></p><p>For example, if each clause of the formula contains exactly ten variables and intersects no more than <span class="math-tex">\(256\)</span> other clauses, then the formula is satisfiable. At the same time, we do not impose any restrictions on the number of clauses or the number of variables! We also note that it is not difficult to construct an unsatisfiable formula in <span class="math-nowrap"><span class="math-tex">\(k\)</span>-CNF</span> with exactly <span class="math-tex">\(2^{k}\)</span> clauses.</p><p><em>Proof. </em>For <span class="math-tex">\(k=1\)</span>, the intersection bound is <span class="math-tex">\(1/2\)</span>, so different clauses use disjoint variables and the formula is satisfiable. For <span class="math-tex">\(k\ge 2\)</span>, assign each variable independently and uniformly at random. Let <span class="math-tex">\(A_{i}\)</span> be the event that clause <span class="math-tex">\(i\)</span> is not satisfied. Then <span class="math-tex">\(\Pr[A_{i}]=q=2^{-k}\)</span>. Let <span class="math-tex">\(\Gamma(A_{i})\)</span> consist of the events corresponding to other clauses that share a variable with clause <span class="math-tex">\(i\)</span>. By assumption, <span class="math-tex">\(|\Gamma(A_{i})|\le d=2^{k-2}\)</span>. Every event outside <span class="math-tex">\(\Gamma(A_{i})\cup\{A_{i}\}\)</span> is determined only by variables outside clause <span class="math-tex">\(i\)</span>. Thus <span class="math-tex">\(A_{i}\)</span> is independent of that entire collection, even if those events depend on one another. Since <span class="math-tex">\(4qd=1\)</span>, the Local Lemma guarantees that the formula is satisfied with positive probability, and hence is satisfiable.<span class="proof-end" aria-label="End of proof">◼</span></p><p>The obtained result is&nbsp;nonconstructive (as&nbsp;is&nbsp;Lovász's Local Lemma itself): it&nbsp;does not tell&nbsp;us how to&nbsp;quickly find a&nbsp;satisfying assignment. It can be made constructive, but it is not so easy.</p>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-19-conditional-probability/unit/chapter-19-conditional-probability-unit-6-local-lemma-optional/lesson/conditional-probability--local-lemma-optional--step-6/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-19-conditional-probability/unit/chapter-19-conditional-probability-unit-7-theory-problems/lesson/conditional-probability--theory-problems--step-1/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>
