@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="Previously, we considered the classical PageRank algorithm, which treats all pages in the graph uniformly and models a random walk of a user. Over time, the…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Project: PageRank Algorithm › PageRank Algorithm › Lesson 4 | Discrete Mathematics" />
+    <meta property="og:description" content="Previously, we considered the classical PageRank algorithm, which treats all pages in the graph uniformly and models a random walk of a user. Over time, the…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-30-project-pagerank-algorithm/unit/chapter-30-project-pagerank-algorithm-unit-4-pagerank-algorithm/lesson/project-pagerank-algorithm--pagerank-algorithm--step-4/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-30-project-pagerank-algorithm/unit/chapter-30-project-pagerank-algorithm-unit-4-pagerank-algorithm/lesson/project-pagerank-algorithm--pagerank-algorithm--step-4/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Project: PageRank Algorithm › PageRank Algorithm › Lesson 4 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Project: PageRank Algorithm / PageRank Algorithm</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Project: PageRank Algorithm · PageRank Algorithm</p>
+        <h1>Lesson 4</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p>Previously, we&nbsp;considered the classical PageRank algorithm, which treats all&nbsp;pages in&nbsp;the graph uniformly and models a&nbsp;random&nbsp;walk of&nbsp;a&nbsp;user. Over time, the algorithm has&nbsp;undergone numerous modifications aimed&nbsp;at improving both&nbsp;accuracy and computational efficiency.</p><p>One&nbsp;such modification is&nbsp;<em>personalized PageRank</em>. In&nbsp;the previous setting, we&nbsp;assumed that&nbsp;the user starts the random&nbsp;walk from&nbsp;a&nbsp;uniformly chosen vertex. In&nbsp;practice, however, this&nbsp;assumption is&nbsp;unrealistic. Each&nbsp;user has&nbsp;individual interests that&nbsp;make certain pages more&nbsp;attractive and, consequently, more&nbsp;likely to&nbsp;be&nbsp;visited. Personalized PageRank was&nbsp;introduced to&nbsp;account for&nbsp;this&nbsp;behavior. Although accurately estimating a&nbsp;user's&nbsp;true preferences may&nbsp;be&nbsp;challenging in&nbsp;practice, when such&nbsp;preferences are&nbsp;known, the algorithm from the previous section can&nbsp;be easily adapted to compute personalized PageRank. Specifically, if&nbsp;we are&nbsp;given a&nbsp;probability vector&nbsp;<span class="math-tex">\(\mathbf{w}= (w_{1}, w_{2}, &hellip;, w_{n})\)</span> where&nbsp;<span class="math-tex">\(w_{i}\)</span> denotes the probability that&nbsp;the user starts the random&nbsp;walk from&nbsp;page&nbsp;<span class="math-tex">\(i\)</span>, it suffices to&nbsp;replace the update matrix with&nbsp;<span class="math-tex">\(U = d\mathbf{T}+ (1-d)\mathbf{W}\)</span>, where <span class="math-tex">\(\mathbf{W}= (\mathbf{w}, \mathbf{w}, ..., \mathbf{w})\)</span> is a matrix consisting of <span class="math-tex">\(n\)</span> columns <span class="math-tex">\(\mathbf{w}\)</span>. The resulting algorithm then computes a&nbsp;personalized PageRank that&nbsp;reflects the user's&nbsp;interests.</p><p>It&nbsp;may&nbsp;not be&nbsp;immediately obvious why this&nbsp;modification works. To&nbsp;see this, recall that we&nbsp;begin the process at&nbsp;a&nbsp;random vertex, so the initial vector&nbsp;<span class="math-tex">\(\mathbf{v}_{0} = (\tfrac{1}{n}, \tfrac{1}{n}, &hellip;, \tfrac{1}{n})^{\top}\)</span> is&nbsp;uniformly distributed over all vertices. At&nbsp;each&nbsp;iteration, we&nbsp;make a&nbsp;step of the random walk which is equivalent to&nbsp;<span class="math-tex">\(\mathbf{v}_{i+1}= d \mathbf{T}\mathbf{v}_{i} + (1-d)\mathbf{v}_{0}\)</span>. Here, the term&nbsp;<span class="math-tex">\(d \mathbf{T}\mathbf{v}_{i}\)</span> corresponds to&nbsp;following an&nbsp;outgoing link chosen uniformly at&nbsp;random with probability&nbsp;<span class="math-tex">\(d\)</span>, while the term&nbsp;<span class="math-tex">\((1-d)\mathbf{v}_{0}\)</span> represents a&nbsp;jump to&nbsp;a&nbsp;uniformly random page with&nbsp;probability&nbsp;<span class="math-tex">\(1-d\)</span>.</p><p>In&nbsp;the personalized setting, instead&nbsp;of assuming&nbsp;that&nbsp;the random jump is&nbsp;uniformly distributed, we&nbsp;introduce a&nbsp;personalization vector <span class="math-tex">\(\mathbf{w}= (w_{1}, w_{2}, &hellip;, w_{n})^{\top}\)</span> where <span class="math-tex">\(w_{i}\)</span> denotes the probability that&nbsp;the user jumps to&nbsp;vertex&nbsp;<span class="math-tex">\(i\)</span>, and&nbsp;<span class="math-tex">\(\sum_{i} w_{i} = 1\)</span>. Replacing&nbsp;<span class="math-tex">\(\mathbf{v}_{0}\)</span> with&nbsp;<span class="math-tex">\(\mathbf{w}\)</span>, the update rule becomes&nbsp;<span class="math-tex">\(\mathbf{v}_{i+1}= d \mathbf{T}\mathbf{v}_{i} + (1-d)\mathbf{w}\)</span>.  This&nbsp;modification models a&nbsp;random surfer who, with&nbsp;probability&nbsp;<span class="math-tex">\(d\)</span>, follows an&nbsp;outgoing link, and with&nbsp;probability&nbsp;<span class="math-tex">\(1-d\)</span>, teleports&nbsp;to a&nbsp;page according&nbsp;to the distribution&nbsp;<span class="math-tex">\(\mathbf{w}\)</span>, thereby biasing the PageRank scores toward&nbsp;the user's preferences. And it&nbsp;is also easy&nbsp;to&nbsp;see that&nbsp;this update rule is&nbsp;equivalent to&nbsp;multiplying probability vector&nbsp;<span class="math-tex">\(\mathbf{w}\)</span> by&nbsp;the modified update matrix&nbsp;<span class="math-tex">\(U = d\mathbf{T}+ (1-d)\mathbf{W}\)</span>.</p>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-30-project-pagerank-algorithm/unit/chapter-30-project-pagerank-algorithm-unit-4-pagerank-algorithm/lesson/project-pagerank-algorithm--pagerank-algorithm--step-3/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-30-project-pagerank-algorithm/unit/chapter-30-project-pagerank-algorithm-unit-4-pagerank-algorithm/lesson/project-pagerank-algorithm--pagerank-algorithm--step-5/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

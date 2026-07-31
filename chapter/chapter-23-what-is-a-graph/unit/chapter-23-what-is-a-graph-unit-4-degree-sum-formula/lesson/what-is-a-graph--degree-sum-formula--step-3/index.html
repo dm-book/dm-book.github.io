@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="What we&#39;ve just proved is known as the handshaking lemma : Before a business meeting, some people shook hands. Then, the number of people who made an odd…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="What is a Graph? › Degree Sum Formula › Lesson 3 | Discrete Mathematics" />
+    <meta property="og:description" content="What we&#39;ve just proved is known as the handshaking lemma : Before a business meeting, some people shook hands. Then, the number of people who made an odd…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-23-what-is-a-graph/unit/chapter-23-what-is-a-graph-unit-4-degree-sum-formula/lesson/what-is-a-graph--degree-sum-formula--step-3/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-23-what-is-a-graph/unit/chapter-23-what-is-a-graph-unit-4-degree-sum-formula/lesson/what-is-a-graph--degree-sum-formula--step-3/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>What is a Graph? › Degree Sum Formula › Lesson 3 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / What is a Graph? / Degree Sum Formula</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">What is a Graph? · Degree Sum Formula</p>
+        <h1>Lesson 3</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p>What we've just proved is&nbsp;known as&nbsp;<em>the handshaking lemma</em>: </p><blockquote style="color:black">Before a&nbsp;business meeting, some people shook hands. Then, the number of&nbsp;people who made an&nbsp;odd number of&nbsp;handshakes is&nbsp;even.</blockquote><p>In&nbsp;graph terms, it&nbsp;is stated as&nbsp;follows.</p><p><strong>Lemma </strong>(handshaking lemma).<em>A&nbsp;graph has an&nbsp;even number of&nbsp;nodes of&nbsp;odd degree.</em></p><p>In&nbsp;turn, the handshaking lemma follows from the following formula.</p><p><strong>Lemma </strong>(degree sum formula).<em>For any graph <span class="math-tex">\(G(V,E)\)</span>, the sum of&nbsp;degrees of&nbsp;all its nodes is&nbsp;twice the number of&nbsp;edges: <span class="math-tex">\[\sum_{v \in V}\deg(v) = 2 \cdot |E| \  .\]</span></em></p><p><em>Proof. </em>In&nbsp;short, each edge contributes&nbsp;2 to&nbsp;the sum of&nbsp;degrees as&nbsp;well as&nbsp;to twice the number of edges.</p><p>For a&nbsp;more formal proof, one can proceed by&nbsp;induction on&nbsp;<span class="math-tex">\(|E|\)</span>. </p><ul><li><strong>Base case:</strong>&nbsp; <span class="math-tex">\(|E|=0\)</span>. Then, there are no&nbsp;edges in&nbsp;the graph and the sum of&nbsp;degrees is&nbsp;just zero.</li><li><strong>Induction step.</strong>&nbsp; Remove an&nbsp;edge <span class="math-tex">\(\{u,v\} \in E\)</span> from the graph. The resulting graph has <span class="math-tex">\(|E|-1\)</span> edges, hence, by&nbsp;the induction hypothesis, the sum of&nbsp;degrees is&nbsp;equal to&nbsp;<span class="math-tex">\(2(|E|-1)\)</span>. Now, restore the edge <span class="math-tex">\(\{u,v\}\)</span>. This increases the total degree by&nbsp;two as&nbsp;both the degree of&nbsp;<span class="math-tex">\(u\)</span> and the degree of&nbsp;<span class="math-tex">\(v\)</span> are incremented by&nbsp;one. Hence, the total degree is <span class="math-tex">\[2(|E|-1)+2=2|E|.\]</span></li></ul><p><span class="proof-end" aria-label="End of proof">◼</span></p><p>This is&nbsp;how this formula implies the handshaking lemma: if a&nbsp;graph has an&nbsp;odd number of&nbsp;nodes of&nbsp;odd degree, then the sum&nbsp;of&nbsp;the degrees is&nbsp;odd, but it&nbsp;cannot be&nbsp;odd as&nbsp;it&nbsp;is equal to&nbsp;twice the number of&nbsp;edges.</p>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-23-what-is-a-graph/unit/chapter-23-what-is-a-graph-unit-4-degree-sum-formula/lesson/what-is-a-graph--degree-sum-formula--step-2/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-23-what-is-a-graph/unit/chapter-23-what-is-a-graph-unit-4-degree-sum-formula/lesson/what-is-a-graph--degree-sum-formula--step-4/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

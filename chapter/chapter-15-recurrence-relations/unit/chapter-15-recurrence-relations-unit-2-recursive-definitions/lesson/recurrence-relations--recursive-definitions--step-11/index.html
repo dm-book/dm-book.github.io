@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="Again, you can guess the solution by listing the first few terms of the sequence: It can be observed that the numbers resemble powers of two minus one,…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Recurrence Relations › Recursive Definitions › Lesson 11 | Discrete Mathematics" />
+    <meta property="og:description" content="Again, you can guess the solution by listing the first few terms of the sequence: It can be observed that the numbers resemble powers of two minus one,…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-15-recurrence-relations/unit/chapter-15-recurrence-relations-unit-2-recursive-definitions/lesson/recurrence-relations--recursive-definitions--step-11/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-15-recurrence-relations/unit/chapter-15-recurrence-relations-unit-2-recursive-definitions/lesson/recurrence-relations--recursive-definitions--step-11/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Recurrence Relations › Recursive Definitions › Lesson 11 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Recurrence Relations / Recursive Definitions</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Recurrence Relations · Recursive Definitions</p>
+        <h1>Lesson 11</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p>Again, you can guess the solution by listing the first few terms of the sequence: </p><p style="text-align:center;"><img src="generated/assets/Recurrence_Relations/Recursive_Definitions=10/image0.png" width="800" ></p><p> It can be observed that the numbers resemble powers of two minus one, leading to the guess <span class="math-tex">\(V(n)=2^{n}-1\)</span>, which can then be proved by induction.</p><p>Considering the tree structure, note that each subsequent level of vertices has twice as many vertices as the previous level. Hence, the total number of vertices in the tree will be <span class="math-tex">\[1+2+4+8+16+\dotsb+2^{n-1}.\]</span> This sum equals <span class="math-tex">\(2^{n}-1\)</span>. This equality can be proved using mathematical induction or by&nbsp;using a&nbsp;formula for geometric series: <span class="math-tex">\[1+c+c^{2}+c^{3}+\dotsb+c^{n}=\frac{c^{n+1}-1}{c-1}\]</span> (the formula holds for <span class="math-tex">\(c \neq 1\)</span>; for <span class="math-tex">\(c=1\)</span>, the left-hand side equals <span class="math-tex">\(n+1\)</span>).</p>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-15-recurrence-relations/unit/chapter-15-recurrence-relations-unit-2-recursive-definitions/lesson/recurrence-relations--recursive-definitions--step-10/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-15-recurrence-relations/unit/chapter-15-recurrence-relations-unit-2-recursive-definitions/lesson/recurrence-relations--recursive-definitions--step-12/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

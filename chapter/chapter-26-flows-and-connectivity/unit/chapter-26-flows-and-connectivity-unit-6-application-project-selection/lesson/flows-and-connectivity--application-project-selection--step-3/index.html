@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="To design an efficient algorithm for the project selection problem, we reduce it to the minimum cut problem in a network. Specifically, we build the…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Flows and Connectivity › Application: Project Selection › Lesson 3 | Discrete Mathematics" />
+    <meta property="og:description" content="To design an efficient algorithm for the project selection problem, we reduce it to the minimum cut problem in a network. Specifically, we build the…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-26-flows-and-connectivity/unit/chapter-26-flows-and-connectivity-unit-6-application-project-selection/lesson/flows-and-connectivity--application-project-selection--step-3/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-26-flows-and-connectivity/unit/chapter-26-flows-and-connectivity-unit-6-application-project-selection/lesson/flows-and-connectivity--application-project-selection--step-3/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Flows and Connectivity › Application: Project Selection › Lesson 3 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Flows and Connectivity / Application: Project Selection</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Flows and Connectivity · Application: Project Selection</p>
+        <h1>Lesson 3</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p>To&nbsp;design an&nbsp;efficient algorithm for the project selection problem, we&nbsp;reduce&nbsp;it to&nbsp;the minimum cut problem in a&nbsp;network. Specifically, we&nbsp;build the following network&nbsp;<span class="math-tex">\(G\)</span>. </p><ol><li> The vertex set is the projects&nbsp;<span class="math-tex">\([n]\)</span> and two special vertices <span class="math-tex">\(s\)</span> and <span class="math-tex">\(t\)</span>.</li><li> For each project&nbsp;<span class="math-tex">\(i\)</span> with&nbsp;<span class="math-tex">\(p_{i}&gt;0\)</span>, add an edge <span class="math-tex">\((s,i)\)</span> with capacity <span class="math-tex">\(p_{i}\)</span>.</li><li> For each project&nbsp;<span class="math-tex">\(i\)</span> with&nbsp;<span class="math-tex">\(p_{i}&lt;0\)</span>, add an edge <span class="math-tex">\((i,t)\)</span> with capacity <span class="math-tex">\(-p_{i}\)</span>.</li><li> For each constraint <span class="math-tex">\((i,j)\)</span>, add an edge <span class="math-tex">\((i,j)\)</span> with infinite capacity.</li></ol><p style="text-align:center;"><img src="generated/assets/Flows_and_Connectivity/Application$_Project_Selection=2/image0.png" width="800" ></p><p>In this network, we will look for a minimum cut and, as we show below, the optimal feasible set of projects will be those in the same part as vertex&nbsp;<span class="math-tex">\(s\)</span>. Intuitively, this is because: A cut of finite capacity always exists (e.g., cutting off <span class="math-tex">\(s\)</span>). Thus, edges of infinite capacity never appear in the cut, so all constraints are respected. Also, minimizing the cut means cutting fewer <span class="math-tex">\((s, i)\)</span> edges, which corresponds to including more projects with positive profit. We prove this formally below.</p>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-26-flows-and-connectivity/unit/chapter-26-flows-and-connectivity-unit-6-application-project-selection/lesson/flows-and-connectivity--application-project-selection--step-2/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-26-flows-and-connectivity/unit/chapter-26-flows-and-connectivity-unit-6-application-project-selection/lesson/flows-and-connectivity--application-project-selection--step-4/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

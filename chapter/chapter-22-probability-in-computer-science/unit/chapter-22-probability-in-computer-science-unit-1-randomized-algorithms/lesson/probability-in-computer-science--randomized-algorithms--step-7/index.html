@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="In fact, any deterministic protocol (not just one-round) requires Alice and Bob to exchange at least \(n\) bits in the worst case to solve the problem. We…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Probability in Computer Science › Randomized Algorithms › Lesson 7 | Discrete Mathematics" />
+    <meta property="og:description" content="In fact, any deterministic protocol (not just one-round) requires Alice and Bob to exchange at least \(n\) bits in the worst case to solve the problem. We…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-22-probability-in-computer-science/unit/chapter-22-probability-in-computer-science-unit-1-randomized-algorithms/lesson/probability-in-computer-science--randomized-algorithms--step-7/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-22-probability-in-computer-science/unit/chapter-22-probability-in-computer-science-unit-1-randomized-algorithms/lesson/probability-in-computer-science--randomized-algorithms--step-7/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Probability in Computer Science › Randomized Algorithms › Lesson 7 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Probability in Computer Science / Randomized Algorithms</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Probability in Computer Science · Randomized Algorithms</p>
+        <h1>Lesson 7</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p>In&nbsp;fact, any deterministic protocol (not just one-round) requires Alice and Bob to&nbsp;exchange at&nbsp;least <span class="math-tex">\(n\)</span>&nbsp;bits in&nbsp;the worst case to&nbsp;solve the problem.</p><p>We now show that Alice and Bob can use randomness to obtain the correct answer with high probability while transmitting only <span class="math-tex">\(O(\log n)\)</span> bits. This is an exponential improvement! Again, we use a&nbsp;fingerprint, and this time the fingerprint will be a&nbsp;remainder modulo some number. Alice chooses a&nbsp;random prime number&nbsp;<span class="math-tex">\(p\)</span> from the interval <span class="math-tex">\([1..t]\)</span> (the value of the parameter&nbsp;<span class="math-tex">\(t\)</span> will be chosen later) and sends Bob&nbsp;<span class="math-tex">\(p\)</span> and&nbsp;<span class="math-tex">\(a \bmod p\)</span>. Bob compares the received remainder with&nbsp;<span class="math-tex">\(b \bmod p\)</span>. If the remainders differ, then of course <span class="math-tex">\(a \neq b\)</span>. But if <span class="math-tex">\(a \bmod p = b \bmod p\)</span>, the strings may still differ. This happens when <span class="math-tex">\(p\)</span>&nbsp;divides <span class="math-tex">\(a-b\)</span>. It is easy to see that <span class="math-tex">\(a-b &lt; 2^{n}\)</span>, and therefore this number can have at most <span class="math-tex">\(n\)</span> distinct prime divisors (if there were more, then their product <span class="math-tex">\(2\cdot 3 \cdot 5 \dotsb\)</span> would exceed <span class="math-tex">\(2^{n}\)</span>). The total number of primes in the interval <span class="math-tex">\([1..t]\)</span> is about <span class="math-tex">\[\frac{t}{\ln t}\]</span> (see the <a href="https://en.wikipedia.org/wiki/Prime_number_theorem">prime number theorem</a>). If we take <span class="math-tex">\(t=n^{2}\log n\)</span>, then the error probability of the protocol can be estimated from above as <span class="math-tex">\[\frac{n}{t/\ln t}=O\left(\frac{1}{n}\right) \  .\]</span> The complexity of the protocol is <span class="math-tex">\(2\log_{2} t=O(\log n)\)</span>.</p><details><summary>For the curious 🤓</summary><div style="border-style: solid;">Note that choosing a random prime number is a nontrivial task. In particular, this is because primality testing is itself nontrivial. Deterministic primality testing algorithms were developed relatively recently, and they are still slower than their randomized counterparts.</div></details>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-22-probability-in-computer-science/unit/chapter-22-probability-in-computer-science-unit-1-randomized-algorithms/lesson/probability-in-computer-science--randomized-algorithms--step-6/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-22-probability-in-computer-science/unit/chapter-22-probability-in-computer-science-unit-1-randomized-algorithms/lesson/probability-in-computer-science--randomized-algorithms--step-8/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

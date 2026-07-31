@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="There are many approaches to solving the traveling salesman problem. Below we provide a very brief overview. Heuristic methods. These are methods that work…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Cycles › Traveling Salesman Problem › Lesson 3 | Discrete Mathematics" />
+    <meta property="og:description" content="There are many approaches to solving the traveling salesman problem. Below we provide a very brief overview. Heuristic methods. These are methods that work…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-25-cycles/unit/chapter-25-cycles-unit-5-traveling-salesman-problem/lesson/cycles--traveling-salesman-problem--step-3/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-25-cycles/unit/chapter-25-cycles-unit-5-traveling-salesman-problem/lesson/cycles--traveling-salesman-problem--step-3/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Cycles › Traveling Salesman Problem › Lesson 3 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Cycles / Traveling Salesman Problem</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Cycles · Traveling Salesman Problem</p>
+        <h1>Lesson 3</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p>There are many approaches to solving the traveling salesman problem. Below we provide a very brief overview.</p><ul><li> Heuristic methods. These are methods that work well in practice but do not have provable guarantees. <ul><li> Branch-and-bound method. This is probably the most popular exhaustive method in situations where an optimal solution needs to be found. The results are impressive: they can find a provably optimal solution on graphs with tens of thousands of vertices. Linear programming solvers are used to optimize the search.<br><p style="text-align:center;"><img src="generated/assets/Cycles/Traveling_Salesman_Problem=2/image0.png" width="800" ></p></li><li> Local search (in particular, the simulated annealing method). Used in situations where a good enough route needs to be found quickly. The idea is simple and natural: start with any cycle and try to improve it with local modifications. This finds a local (not global) optimum. It is often used in commercial logistics programs because it works fast, gives good results, and, unlike some other methods, easily adapts to additional constraints (e.g., when there are time windows during which points need to be visited).<br><p style="text-align:center;"><img src="generated/assets/Cycles/Traveling_Salesman_Problem=2/image1.png" width="800" ></p></li><li> Nearest neighbor algorithm. This is a simple greedy algorithm: from the current point, go to the nearest unvisited one. It works very quickly and occasionally gives acceptable results, but there are datasets where it performs quite poorly.</li></ul></li><li> Exact algorithms. The most famous one is the Bellman-Held-Karp algorithm, based on dynamic programming with a runtime of <span class="math-tex">\(O(n^{2}2^{n})\)</span> (where <span class="math-tex">\(n\)</span> is the number of vertices in the graph, as usual). A faster algorithm in general has not been found, but for undirected graphs, there is the Björklund algorithm with a runtime of <span class="math-tex">\(O(1{,}7^{n})\)</span>.</li><li> Approximation algorithms. These are algorithms that work quickly and find a solution that is guaranteed to be not much longer than the optimal one. It is known that in general, constructing such an algorithm is difficult. However, if edge weights are a <em>metric</em>, there is a known <span class="math-tex">\(1{,}5\)</span>-approximation algorithm. This is a relatively simple algorithm, presented in 1972 independently by Christofides and Serdyukov. For the <em>Euclidean</em> special case (where vertices are just points, for example, in a plane), Arora and Mitchell even constructed an <em>approximation scheme</em>: an algorithm that finds a <span class="math-tex">\((1+\varepsilon)\)</span>-approximation for any <span class="math-tex">\(\varepsilon&gt;0\)</span> (and works longer the smaller <span class="math-tex">\(\varepsilon\)</span> is).<p style="text-align:center;"><img src="generated/assets/Cycles/Traveling_Salesman_Problem=2/myquote0.png" width="800" ></p><details><summary>For the curious 🤓</summary><div style="border-style: solid;">Very recently, at&nbsp;the end of&nbsp;2022, Karlin, Klein, and Gharan designed a&nbsp;<span class="math-tex">\(\frac{3}{2}-\varepsilon\)</span> approximation algorithm for&nbsp;metric TSP, for&nbsp;some <span class="math-tex">\(\varepsilon&gt;10^{-36}\)</span>. That is, they improved upon the&nbsp;Christofides&ndash;Serdyukov algorithm after 50&nbsp;years.</div></details></li></ul>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-25-cycles/unit/chapter-25-cycles-unit-5-traveling-salesman-problem/lesson/cycles--traveling-salesman-problem--step-2/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-25-cycles/unit/chapter-25-cycles-unit-5-traveling-salesman-problem/lesson/cycles--traveling-salesman-problem--step-4/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

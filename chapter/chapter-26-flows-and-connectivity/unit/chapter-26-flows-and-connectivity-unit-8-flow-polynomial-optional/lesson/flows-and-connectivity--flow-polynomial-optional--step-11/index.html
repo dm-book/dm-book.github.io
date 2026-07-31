@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="There is one more convention that is often used in graph theory. A nowhere-zero \(k\) - flow on an undirected graph is an orientation of the edges and…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Flows and Connectivity › Flow Polynomial (Optional) › Lesson 11 | Discrete Mathematics" />
+    <meta property="og:description" content="There is one more convention that is often used in graph theory. A nowhere-zero \(k\) - flow on an undirected graph is an orientation of the edges and…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-26-flows-and-connectivity/unit/chapter-26-flows-and-connectivity-unit-8-flow-polynomial-optional/lesson/flows-and-connectivity--flow-polynomial-optional--step-11/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-26-flows-and-connectivity/unit/chapter-26-flows-and-connectivity-unit-8-flow-polynomial-optional/lesson/flows-and-connectivity--flow-polynomial-optional--step-11/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Flows and Connectivity › Flow Polynomial (Optional) › Lesson 11 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Flows and Connectivity / Flow Polynomial (Optional)</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Flows and Connectivity · Flow Polynomial (Optional)</p>
+        <h1>Lesson 11</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p>There is one more convention that is often used in graph theory. A&nbsp;nowhere-zero <span class="math-tex">\(k\)</span>-<em>flow</em> on an&nbsp;undirected graph is an&nbsp;orientation of the&nbsp;edges and integer values from <span class="math-tex">\([k - 1]\)</span> such that the&nbsp;incoming sum equals the&nbsp;outgoing sum at every vertex, now as an&nbsp;equality of ordinary integers.</p><p>This looks stronger than a&nbsp;nowhere-zero <span class="math-tex">\(\mathbb{Z}_{k}\)</span>-circulation, because equality over the&nbsp;integers is stronger than equality modulo <span class="math-tex">\(k\)</span>. Tutte proved that, for existence, the&nbsp;two notions are actually equivalent.</p><p><strong>Theorem (Tutte, 1950). </strong><em>An&nbsp;undirected graph has a&nbsp;nowhere-zero <span class="math-tex">\(k\)</span>-flow if and only if it has a&nbsp;nowhere-zero <span class="math-tex">\(\mathbb{Z}_{k}\)</span>-circulation.</em></p><p><em>Proof. </em>One direction is immediate: reduce all integer values modulo <span class="math-tex">\(k\)</span>.</p><p>For the&nbsp;other direction, start with a&nbsp;nowhere-zero <span class="math-tex">\(\mathbb{Z}_{k}\)</span>-circulation. Choose an&nbsp;orientation and represent every edge value by an&nbsp;integer in <span class="math-tex">\([k - 1]\)</span>. Among all such choices, pick one minimizing  <span class="math-tex">\[M=\sum_{v\in V}|b(v)|, \quad \text{ where }b(v)=\sum_{e\in\delta^+(v)}\phi(e)-\sum_{e\in\delta^-(v)}\phi(e) \  .\]</span>   Since we have a&nbsp;circulation modulo <span class="math-tex">\(k\)</span>, every <span class="math-tex">\(b(v)\)</span> is divisible by <span class="math-tex">\(k\)</span>. If all <span class="math-tex">\(b(v)\)</span> are zero, we already have an&nbsp;integer <span class="math-tex">\(k\)</span>-flow.</p><p>Otherwise, let <span class="math-tex">\(S=\{v \colon b(v)&gt;0\}\)</span> and <span class="math-tex">\(T=\{v \colon b(v)&lt;0\}\)</span>. Both sets are nonempty, since the&nbsp;sum of all <span class="math-tex">\(b(v)\)</span> is zero. Let <span class="math-tex">\(U\)</span> be the&nbsp;set of vertices reachable from <span class="math-tex">\(S\)</span> by directed paths in the&nbsp;current orientation. If <span class="math-tex">\(U\)</span> did not meet <span class="math-tex">\(T\)</span>, then <span class="math-tex">\(\sum_{u\in U}b(u)&gt;0\)</span>. But no edge leaves <span class="math-tex">\(U\)</span>, so this sum is nonpositive, a&nbsp;contradiction. Thus there is a&nbsp;directed path from some <span class="math-tex">\(s\in S\)</span> to some <span class="math-tex">\(t\in T\)</span>.</p><p>Reverse all edges on this path, and replace each value <span class="math-tex">\(a\)</span> on the&nbsp;path by <span class="math-tex">\(k-a\)</span>. This is still a&nbsp;nowhere-zero <span class="math-tex">\(\mathbb{Z}_{k}\)</span>-circulation. For internal vertices of the&nbsp;path, <span class="math-tex">\(b(v)\)</span> does not change. For the&nbsp;first vertex, <span class="math-tex">\(b(s)\)</span> decreases by <span class="math-tex">\(k\)</span>; for the&nbsp;last vertex, <span class="math-tex">\(b(t)\)</span> increases by <span class="math-tex">\(k\)</span>. Since <span class="math-tex">\(b(s)&gt;0\)</span> and <span class="math-tex">\(b(t)&lt;0\)</span>, the&nbsp;value of <span class="math-tex">\(M\)</span> decreases. This contradicts the&nbsp;minimality of our choice. Therefore the&nbsp;minimum possible value of <span class="math-tex">\(M\)</span> is <span class="math-tex">\(0\)</span>, and an&nbsp;integer <span class="math-tex">\(k\)</span>-flow exists.<span class="proof-end" aria-label="End of proof">◼</span></p><p>As a&nbsp;consequence, if a&nbsp;graph has a&nbsp;nowhere-zero <span class="math-tex">\(k\)</span>-flow, then it also has a&nbsp;nowhere-zero <span class="math-tex">\(k'\)</span>-flow for every <span class="math-tex">\(k'\ge k\)</span>: the&nbsp;same integer values are still allowed. Combining this with the&nbsp;theorem that only the&nbsp;group size matters, if a&nbsp;graph has a&nbsp;nowhere-zero <span class="math-tex">\(\Gamma\)</span>-circulation, then it has a&nbsp;nowhere-zero <span class="math-tex">\(\Gamma'\)</span>-circulation for every finite abelian group <span class="math-tex">\(\Gamma'\)</span> with <span class="math-tex">\(|\Gamma'|\ge |\Gamma|\)</span>.</p>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-26-flows-and-connectivity/unit/chapter-26-flows-and-connectivity-unit-8-flow-polynomial-optional/lesson/flows-and-connectivity--flow-polynomial-optional--step-10/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-26-flows-and-connectivity/unit/chapter-26-flows-and-connectivity-unit-8-flow-polynomial-optional/lesson/flows-and-connectivity--flow-polynomial-optional--step-12/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

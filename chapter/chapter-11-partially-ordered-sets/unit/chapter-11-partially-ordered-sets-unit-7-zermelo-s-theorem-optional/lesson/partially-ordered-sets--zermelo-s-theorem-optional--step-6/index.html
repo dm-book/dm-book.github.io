@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="Let us explain in which form the Axiom of Choice is used in the proof of the Well-Ordering Principle. Let \(A\) be a given set. We assume that there exists…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Partially Ordered Sets › Zermelo&#39;s Theorem (Optional) › Lesson 6 | Discrete Mathematics" />
+    <meta property="og:description" content="Let us explain in which form the Axiom of Choice is used in the proof of the Well-Ordering Principle. Let \(A\) be a given set. We assume that there exists…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-11-partially-ordered-sets/unit/chapter-11-partially-ordered-sets-unit-7-zermelo-s-theorem-optional/lesson/partially-ordered-sets--zermelo-s-theorem-optional--step-6/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-11-partially-ordered-sets/unit/chapter-11-partially-ordered-sets-unit-7-zermelo-s-theorem-optional/lesson/partially-ordered-sets--zermelo-s-theorem-optional--step-6/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Partially Ordered Sets › Zermelo&#39;s Theorem (Optional) › Lesson 6 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Partially Ordered Sets / Zermelo&#39;s Theorem (Optional)</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Partially Ordered Sets · Zermelo&#39;s Theorem (Optional)</p>
+        <h1>Lesson 6</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p>Let us explain in which form the Axiom of Choice is&nbsp;used in the proof of the Well-Ordering Principle. Let <span class="math-tex">\(A\)</span> be a&nbsp;given set. We assume that there exists a&nbsp;function <span class="math-tex">\(\varphi\)</span>, defined on all subsets of the set&nbsp;<span class="math-tex">\(A\)</span>, except for <span class="math-tex">\(A\)</span> itself, which assigns to&nbsp;each such subset one of the elements outside of it, that is: <span class="math-tex">\[X \subsetneq A \Rightarrow \varphi(X) \in A \setminus X.\]</span> Once such a&nbsp;function is fixed, it is possible to construct a&nbsp;well-order on&nbsp;<span class="math-tex">\(A\)</span>, and this construction involves no ambiguity. Here is how it is done.</p><p>We&nbsp;define the least element of the set&nbsp;<span class="math-tex">\(A\)</span> as <span class="math-tex">\(a_{0} = \varphi(\varnothing)\)</span>. Next comes the element <span class="math-tex">\(a_{1} = \varphi(\{a_{0}\})\)</span>; by construction, it differs from&nbsp;<span class="math-tex">\(a_{0}\)</span>. Then follows the element <span class="math-tex">\(a_{2} = \varphi(\{a_{0}, a_{1}\})\)</span>, and so&nbsp;on.</p><p>If the set <span class="math-tex">\(A\)</span> is infinite, this process may be continued indefinitely, yielding a&nbsp;sequence <span class="math-tex">\(\{a_{0}, a_{1}, &hellip;\}\)</span> of elements of the set&nbsp;<span class="math-tex">\(A\)</span>. If, after this, there still remain unused elements of the set <span class="math-tex">\(A\)</span>, we consider the element <span class="math-tex">\(a_{\omega} = \varphi(\{a_{0}, a_{1}, a_{2}, &hellip;\})\)</span>, and we proceed in this manner as long as the set&nbsp;<span class="math-tex">\(A\)</span> is&nbsp;not exhausted. When it is exhausted, the selection process terminates and defines a&nbsp;well-order on&nbsp;<span class="math-tex">\(A\)</span>.</p><p>Of course, the previous sentence requires clarification—what exactly does &ldquo;proceed in this manner&rdquo; mean? Nevertheless, this difficulty can be overcome. We proceed as&nbsp;follows: we examine all potential fragments of the&nbsp;future order and demonstrate that they can&nbsp;be consistently combined.</p><p>Let <span class="math-tex">\((S, \leq_{S})\)</span> be a&nbsp;certain subset of the set&nbsp;<span class="math-tex">\(A\)</span> together with an&nbsp;order defined on&nbsp;it. We shall say that <span class="math-tex">\((S, \leq_{S})\)</span> is a correct fragment if it constitutes a&nbsp;well-ordered set, and moreover satisfies <span class="math-tex">\[s = \varphi([0, s))\]</span> for every&nbsp;<span class="math-tex">\(s \in S\)</span>. Here, <span class="math-tex">\([0, s)\)</span> denotes the initial segment of the set&nbsp;<span class="math-tex">\(S\)</span>, consisting of all elements less than&nbsp;<span class="math-tex">\(s\)</span> with respect to the given order on&nbsp;<span class="math-tex">\(S\)</span>.</p><p>For instance, the set <span class="math-tex">\(\{\varphi(\varnothing)\}\)</span> is a&nbsp;correct fragment (the order need not be specified in this case, as it contains only one element). The set <span class="math-tex">\(\{\varphi(\varnothing), \varphi(\{\varphi(\varnothing)\})\}\)</span> (the first of the listed elements is considered less than the second) is also a&nbsp;correct fragment. This construction can be extended further, but it is now necessary to&nbsp;discuss the &ldquo;intersection&rdquo; of infinitely many (and even uncountably many) such steps of the construction. Our plan is as&nbsp;follows: we will prove that any two correct fragments can be combined in a&nbsp;consistent manner, after which we will examine the union of all such fragments. The union of all correct fragments will itself be a&nbsp;correct fragment and will coincide with the entire set&nbsp;<span class="math-tex">\(A\)</span> (otherwise, one could extend it and obtain a&nbsp;correct fragment not included in the union).</p>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-11-partially-ordered-sets/unit/chapter-11-partially-ordered-sets-unit-7-zermelo-s-theorem-optional/lesson/partially-ordered-sets--zermelo-s-theorem-optional--step-5/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-11-partially-ordered-sets/unit/chapter-11-partially-ordered-sets-unit-7-zermelo-s-theorem-optional/lesson/partially-ordered-sets--zermelo-s-theorem-optional--step-7/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="Let&#39;s demonstrate how differently the same graph can be drawn. The code below builds six different layouts of the dodecahedron graph. The first layout…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Planar Graphs › Planar Graphs › Lesson 5 | Discrete Mathematics" />
+    <meta property="og:description" content="Let&#39;s demonstrate how differently the same graph can be drawn. The code below builds six different layouts of the dodecahedron graph. The first layout…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-29-planar-graphs/unit/chapter-29-planar-graphs-unit-1-planar-graphs/lesson/planar-graphs--planar-graphs--step-5/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-29-planar-graphs/unit/chapter-29-planar-graphs-unit-1-planar-graphs/lesson/planar-graphs--planar-graphs--step-5/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Planar Graphs › Planar Graphs › Lesson 5 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Planar Graphs / Planar Graphs</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Planar Graphs · Planar Graphs</p>
+        <h1>Lesson 5</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p>Let's demonstrate how differently the same graph can be drawn. The code below builds six different layouts of the dodecahedron graph. The first layout chooses vertex positions randomly. As you can see, the resulting layout is hard to interpret. The second layout arranges the vertices in a circle. This is already a nicer picture: for example, it's immediately clear that each vertex has degree three. The third, fourth, and fifth layouts are spring-based: the graph's edges are modeled as springs, and a stable configuration is found. As you can see, the results are nice symmetric pictures. The sixth layout is planar: it has no edge crossings, but it’s probably not the most effective layout for this particular graph.</p><pre><code class="language-python">import networkx as nx
+import matplotlib.pyplot as plt
+
+g = nx.dodecahedral_graph()
+
+positions = [
+    nx.random_layout(g, seed=4),
+    nx.circular_layout(g),
+    nx.spring_layout(g, seed=5),
+    nx.spring_layout(g, seed=19),
+    nx.spring_layout(g, seed=58),
+    nx.planar_layout(g, scale=2),
+]
+
+for idx, pos in enumerate(positions):
+    plt.clf()
+    plt.gca().set_aspect('equal')
+    nx.draw(g, pos=pos, node_size=40)
+    plt.savefig(f'dod{idx}.png')</code></pre><p style="text-align:center;"><img src="generated/assets/Planar_Graphs/Planar_Graphs=4/image0.png" width="800" ></p>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-29-planar-graphs/unit/chapter-29-planar-graphs-unit-1-planar-graphs/lesson/planar-graphs--planar-graphs--step-4/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-29-planar-graphs/unit/chapter-29-planar-graphs-unit-1-planar-graphs/lesson/planar-graphs--planar-graphs--step-6/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

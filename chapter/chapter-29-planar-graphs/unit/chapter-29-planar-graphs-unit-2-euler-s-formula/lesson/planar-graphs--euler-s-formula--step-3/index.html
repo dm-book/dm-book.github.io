@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="Theorem (Euler&#39;s formula). Let \(G\) be a connected planar graph. Then \[|V(G)|-|E(G)|+|F(G)|=2\ .\] Proof. Induction on the number \(c\) of cycles in \(G\)…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Planar Graphs › Euler&#39;s Formula › Lesson 3 | Discrete Mathematics" />
+    <meta property="og:description" content="Theorem (Euler&#39;s formula). Let \(G\) be a connected planar graph. Then \[|V(G)|-|E(G)|+|F(G)|=2\ .\] Proof. Induction on the number \(c\) of cycles in \(G\)…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-29-planar-graphs/unit/chapter-29-planar-graphs-unit-2-euler-s-formula/lesson/planar-graphs--euler-s-formula--step-3/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-29-planar-graphs/unit/chapter-29-planar-graphs-unit-2-euler-s-formula/lesson/planar-graphs--euler-s-formula--step-3/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Planar Graphs › Euler&#39;s Formula › Lesson 3 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Planar Graphs / Euler&#39;s Formula</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Planar Graphs · Euler&#39;s Formula</p>
+        <h1>Lesson 3</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p><strong>Theorem (Euler's formula). </strong><em>Let <span class="math-tex">\(G\)</span> be a connected planar graph. Then <span class="math-tex">\[|V(G)|-|E(G)|+|F(G)|=2\  .\]</span></em></p><p><em>Proof. </em>Induction on the number&nbsp;<span class="math-tex">\(c\)</span> of cycles in&nbsp;<span class="math-tex">\(G\)</span>. Base case: if <span class="math-tex">\(c=0\)</span>, then <span class="math-tex">\(G\)</span> is&nbsp;a&nbsp;tree (since <span class="math-tex">\(G\)</span>&nbsp;is connected); in this case, <span class="math-tex">\(|F(G)|=1\)</span> (there is one outer face) and <span class="math-tex">\(|E(G)|=|V(G)|-1\)</span>.</p><p>Step <span class="math-tex">\(c \to (c+1)\)</span>: suppose <span class="math-tex">\(G\)</span>&nbsp;has <span class="math-tex">\((c+1)\)</span> cycles. Consider an arbitrary cycle and delete one of&nbsp;its edges. Denote the resulting graph by&nbsp;<span class="math-tex">\(H\)</span>. Then <span class="math-tex">\(H\)</span>&nbsp;is still connected and has at most&nbsp;<span class="math-tex">\(c\)</span> cycles, so&nbsp;we can use the induction hypothesis. Clearly, <span class="math-tex">\(|E(H)|=|E(G)|-1\)</span> and <span class="math-tex">\(|F(H)|=|F(G)|-1\)</span>: removing a&nbsp;cycle edge merges two faces into one.<span class="proof-end" aria-label="End of proof">◼</span></p><details><summary>For the curious 🤓</summary><div style="border-style: solid;">On&nbsp;<a href="https://ics.uci.edu/~eppstein/junkyard/euler/">this page</a>, you can find 21&nbsp;proofs of&nbsp;Euler's formula.</div></details>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-29-planar-graphs/unit/chapter-29-planar-graphs-unit-2-euler-s-formula/lesson/planar-graphs--euler-s-formula--step-2/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-29-planar-graphs/unit/chapter-29-planar-graphs-unit-2-euler-s-formula/lesson/planar-graphs--euler-s-formula--step-4/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

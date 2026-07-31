@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="Below, we present an elegant proof of the lower bound on \(R(k,k)\) . Theorem (Erdős, 1947). For \(k \ge 3\) , it holds that \[R(k,k) &gt; 2^{\frac{k-1}{2}}\…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Probability in Computer Science › Probabilistic Method: Ramsey Numbers › Lesson 8 | Discrete Mathematics" />
+    <meta property="og:description" content="Below, we present an elegant proof of the lower bound on \(R(k,k)\) . Theorem (Erdős, 1947). For \(k \ge 3\) , it holds that \[R(k,k) &gt; 2^{\frac{k-1}{2}}\…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-22-probability-in-computer-science/unit/chapter-22-probability-in-computer-science-unit-4-probabilistic-method-ramsey-numbers/lesson/probability-in-computer-science--probabilistic-method-ramsey-numbers--step-8/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-22-probability-in-computer-science/unit/chapter-22-probability-in-computer-science-unit-4-probabilistic-method-ramsey-numbers/lesson/probability-in-computer-science--probabilistic-method-ramsey-numbers--step-8/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Probability in Computer Science › Probabilistic Method: Ramsey Numbers › Lesson 8 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Probability in Computer Science / Probabilistic Method: Ramsey Numbers</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Probability in Computer Science · Probabilistic Method: Ramsey Numbers</p>
+        <h1>Lesson 8</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p>Below, we present an elegant proof of the lower bound on <span class="math-tex">\(R(k,k)\)</span>.</p><p><strong>Theorem (Erdős, 1947). </strong><em>For <span class="math-tex">\(k \ge 3\)</span>, it holds that <span class="math-tex">\[R(k,k) &gt; 2^{\frac{k-1}{2}}\  .\]</span> That is, there exists a&nbsp;graph with <span class="math-tex">\(2^{\frac{k-1}{2}}\)</span> vertices having neither a&nbsp;clique of&nbsp;size&nbsp;<span class="math-tex">\(k\)</span> nor an&nbsp;independent set of&nbsp;size&nbsp;<span class="math-tex">\(k\)</span>.</em></p><p><em>Proof. </em>Let <span class="math-tex">\(n=2^{\frac{k-1}{2}}\)</span>. Consider the uniform distribution on all <span class="math-tex">\(2^{\binom{n}{2}}\)</span> undirected graphs on <span class="math-tex">\(n\)</span> vertices. We will show that a random graph has the required property with positive probability. To do this, we will prove that the probability of the complement of this event (i.e., that the graph does not have the required property) is less than one.</p><p>Let <span class="math-tex">\(G(V,E)\)</span> be a random graph and <span class="math-tex">\(A \subseteq V\)</span> be a subset of its vertices of size <span class="math-tex">\(k\)</span>. Let <span class="math-tex">\(X_{A}\)</span> denote the event "the vertices of set <span class="math-tex">\(A\)</span> form a clique or an independent set in <span class="math-tex">\(G\)</span>". Then <span class="math-tex">\[\Pr[X_{A}]= 2 \cdot \frac{2^{\binom{n}{2}-\binom{k}{2}}}{2^{\binom{n}{2}}}=2^{-\binom{k}{2}+1}\  .\]</span> Now, let <span class="math-tex">\(p\)</span> denote the probability that <span class="math-tex">\(G\)</span> contains a clique or an independent set of size <span class="math-tex">\(k\)</span>. Then <span class="math-tex">\[\begin{align*}p&=\Pr\left[\bigcup_{A \subseteq V \colon |A|=k}X_{A}\right] \le&\text{(union bound)}\\&\le \sum_{A \subseteq V \colon |A|=k}\Pr[X_{A}]=\\&=\binom{n}{k}\cdot 2^{-\binom{k}{2}+1}\le&\text{(\(k \ge 3\))}\\&\le \frac{n^k}{2\cdot 3}\cdot 2^{-\binom{k}{2}+1}=&\text{(\(n=2^{\frac{k-1}{2}}\))}\\&= \frac{2^{k(k-1)/2}}{2\cdot 3}\cdot 2^{-\binom{k}{2}+1}=\\&=\frac{1}{3}\  .\end{align*}\]</span> Thus, with probability at least <span class="math-tex">\(2/3\)</span>, <span class="math-tex">\(G\)</span> contains neither a clique nor an independent set of size <span class="math-tex">\(k\)</span>.<span class="proof-end" aria-label="End of proof">◼</span></p><details><summary>For the curious 🤓</summary><div style="border-style: solid;">An&nbsp;upper bound <span class="math-tex">\(R(k, k) \le 4^{k}\)</span> was improved to&nbsp;<span class="math-tex">\((2^{(2 - \varepsilon) k})\)</span> (for some small <span class="math-tex">\(\varepsilon&gt;0\)</span>) in&nbsp;2023 by&nbsp;Campos, Griffiths, Morris and Sahasrabudhe. Then, in&nbsp;2024, Gupta, Ndiaye, Norin, and Wei pushed&nbsp;it to&nbsp;<span class="math-tex">\(3.8^{k}\)</span>. Improving a&nbsp;lower bound <span class="math-tex">\(2^{(1/2 + \varepsilon)k}&lt; R(k,k)\)</span> remains a&nbsp;challenging open problem.</div></details>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-22-probability-in-computer-science/unit/chapter-22-probability-in-computer-science-unit-4-probabilistic-method-ramsey-numbers/lesson/probability-in-computer-science--probabilistic-method-ramsey-numbers--step-7/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-22-probability-in-computer-science/unit/chapter-22-probability-in-computer-science-unit-5-probabilistic-method-sum-free-sets-optional/lesson/probability-in-computer-science--probabilistic-method-sum-free-sets-optional--step-1/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

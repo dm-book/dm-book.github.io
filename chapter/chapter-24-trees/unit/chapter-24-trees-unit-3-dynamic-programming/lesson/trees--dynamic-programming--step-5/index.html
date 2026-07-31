@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="To solve the weighted problem, the greedy algorithm will no longer work: if we immediately take a leaf into the solution, then we will definitely not take…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Trees › Dynamic Programming › Lesson 5 | Discrete Mathematics" />
+    <meta property="og:description" content="To solve the weighted problem, the greedy algorithm will no longer work: if we immediately take a leaf into the solution, then we will definitely not take…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-24-trees/unit/chapter-24-trees-unit-3-dynamic-programming/lesson/trees--dynamic-programming--step-5/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-24-trees/unit/chapter-24-trees-unit-3-dynamic-programming/lesson/trees--dynamic-programming--step-5/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Trees › Dynamic Programming › Lesson 5 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Trees / Dynamic Programming</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Trees · Dynamic Programming</p>
+        <h1>Lesson 5</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p>To solve the weighted problem, the greedy algorithm will no longer work: if we immediately take a leaf into the solution, then we will definitely not take its neighbor (or parent), but this neighbor may have a large weight.</p><p>We will use the method of dynamic programming, and here it will be a bit more convenient to assume that the tree is rooted. We will move up the tree and calculate the index of happiness <span class="math-tex">\(F(v)\)</span> of each subtree with root at vertex&nbsp;<span class="math-tex">\(v\)</span> using the recurrence formula: <span class="math-tex">\[F(v)=\max\left\lbrace w(v)+ \sum\limits_{\substack{\text{grandchildren $w$ } \\ \text{of vertex $v$}}}F(w), \sum\limits_{\substack{\text{children $w$ } \\ \text{of vertex $v$}}}F(w) \right\rbrace \  .\]</span>  The result is shown in the figure below.</p><p style="text-align:center;"><img src="generated/assets/Trees/Dynamic_Programming=4/image0.png" width="800" ></p>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-24-trees/unit/chapter-24-trees-unit-3-dynamic-programming/lesson/trees--dynamic-programming--step-4/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-24-trees/unit/chapter-24-trees-unit-4-cayley-s-formula/lesson/trees--cayley-s-formula--step-1/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

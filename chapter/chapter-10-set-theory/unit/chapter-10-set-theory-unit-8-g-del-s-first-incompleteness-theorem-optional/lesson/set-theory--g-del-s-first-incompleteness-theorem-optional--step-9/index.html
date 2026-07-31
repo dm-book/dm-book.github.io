@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="Gödel&#39;s original proof is beautiful but tedious. However, there is an extremely short, elegant proof that uses the fact that the Halting problem is…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Set Theory › Gödel&#39;s First Incompleteness Theorem (Optional) › Lesson 9 | Discrete Mathematics" />
+    <meta property="og:description" content="Gödel&#39;s original proof is beautiful but tedious. However, there is an extremely short, elegant proof that uses the fact that the Halting problem is…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-10-set-theory/unit/chapter-10-set-theory-unit-8-g-del-s-first-incompleteness-theorem-optional/lesson/set-theory--g-del-s-first-incompleteness-theorem-optional--step-9/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-10-set-theory/unit/chapter-10-set-theory-unit-8-g-del-s-first-incompleteness-theorem-optional/lesson/set-theory--g-del-s-first-incompleteness-theorem-optional--step-9/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Set Theory › Gödel&#39;s First Incompleteness Theorem (Optional) › Lesson 9 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Set Theory / Gödel&#39;s First Incompleteness Theorem (Optional)</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Set Theory · Gödel&#39;s First Incompleteness Theorem (Optional)</p>
+        <h1>Lesson 9</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p>Gödel's original proof is beautiful but tedious. However, there is an&nbsp;extremely short, elegant proof that uses the fact that the Halting problem is undecidable. Here's how it&nbsp;goes.</p><p>First, we choose a&nbsp;set of&nbsp;axioms that is&nbsp;strong enough to&nbsp;prove that the halting problem is&nbsp;undecidable. In&nbsp;particular, this set of&nbsp;axioms must be strong enough to reason about computer programs or&nbsp;algorithms. (In&nbsp;a&nbsp;more formal presentation, these notions would be&nbsp;much more clearly defined.)</p><p>Just so&nbsp;that you have a&nbsp;rough image in&nbsp;your mind, it&nbsp;might be&nbsp;helpful to&nbsp;think of&nbsp;the three axioms of&nbsp;equality plus some additional axioms that we won't worry about:</p><ol><li> For any <span class="math-tex">\(x\)</span>, <span class="math-tex">\(x = x\)</span>.</li><li> For any <span class="math-tex">\(x\)</span> and <span class="math-tex">\(y\)</span>, if <span class="math-tex">\(x = y\)</span> then <span class="math-tex">\(y = x\)</span>.</li><li> For any <span class="math-tex">\(x\)</span>, <span class="math-tex">\(y\)</span>, and <span class="math-tex">\(z\)</span>, if <span class="math-tex">\(x = y\)</span> and <span class="math-tex">\(y = z\)</span>, then <span class="math-tex">\(x = z\)</span>.</li><li> <span class="math-tex">\(&hellip;\)</span></li></ol><p>Suppose for the purposes of contradiction that every mathematical truth can be derived from these axioms in finitely many steps. (In a more formal presentation, this notion would be much more clearly defined.) Let's use this assumption to write a computer program,&nbsp;<span class="math-tex">\(P\)</span>, that solves the halting problem, a contradiction:</p><p>Since we want&nbsp;<span class="math-tex">\(P\)</span> to solve the halting problem it&nbsp;will naturally take as&nbsp;input a&nbsp;description of another computer program,&nbsp;<span class="math-tex">\(Q\)</span>. After taking its input, <span class="math-tex">\(P\)</span>&nbsp;will enumerate all of the theorems that follow logically from the axioms. So, using our example axioms, <span class="math-tex">\(P\)</span>&nbsp;might list theorems like this:</p><ol><li> For any <span class="math-tex">\(x\)</span>, <span class="math-tex">\(x = x\)</span>. (Axiom)</li><li> For any <span class="math-tex">\(x\)</span> and <span class="math-tex">\(y\)</span>, if <span class="math-tex">\(x = y\)</span> then <span class="math-tex">\(y = x\)</span>. (Axiom)</li><li> For any <span class="math-tex">\(x\)</span>, <span class="math-tex">\(y\)</span>, and <span class="math-tex">\(z\)</span>, if <span class="math-tex">\(x = y\)</span> and <span class="math-tex">\(y = z\)</span>, then <span class="math-tex">\(x = z\)</span>. (Axiom)</li><li> For any <span class="math-tex">\(w\)</span>, <span class="math-tex">\(x\)</span>, <span class="math-tex">\(y\)</span>, and <span class="math-tex">\(z\)</span>, if <span class="math-tex">\(w = x\)</span>, <span class="math-tex">\(x = y\)</span>, and <span class="math-tex">\(y = z\)</span>, then <span class="math-tex">\(w = z\)</span>. (Iterating theorem three twice)</li><li> For any <span class="math-tex">\(x\)</span>, <span class="math-tex">\(y\)</span>, and <span class="math-tex">\(z\)</span>, if <span class="math-tex">\(x = y\)</span> and <span class="math-tex">\(z = y\)</span>, then <span class="math-tex">\(x = z\)</span>. (Combining theorems two and three)</li><li> <span class="math-tex">\(&hellip;\)</span></li></ol><p>If <span class="math-tex">\(P\)</span>&nbsp;happens to arrive at the theorem &ldquo;<span class="math-tex">\(Q\)</span> eventually halts,&rdquo; then <span class="math-tex">\(P\)</span> will output that fact. If <span class="math-tex">\(P\)</span> happens to arrive at the theorem &ldquo;<span class="math-tex">\(Q\)</span> runs forever,&rdquo; then <span class="math-tex">\(P\)</span>&nbsp;will output that fact. Obviously, <span class="math-tex">\(Q\)</span> must do one of these things, and since we assumed that our axioms can derive every mathematical truth in finitely many steps, it must be the case that <span class="math-tex">\(P\)</span>&nbsp;will eventually output the correct answer.</p><p>But, this means that <span class="math-tex">\(P\)</span>&nbsp;solves the halting problem. Since we've already proven that that's impossible, our assumption must have been wrong. In&nbsp;particular, there is no set of axioms from which all mathematical truths follow. Russell's attempts were guaranteed to fail from the beginning.</p>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-10-set-theory/unit/chapter-10-set-theory-unit-8-g-del-s-first-incompleteness-theorem-optional/lesson/set-theory--g-del-s-first-incompleteness-theorem-optional--step-8/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-10-set-theory/unit/chapter-10-set-theory-unit-9-theory-problems/lesson/set-theory--theory-problems--step-1/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

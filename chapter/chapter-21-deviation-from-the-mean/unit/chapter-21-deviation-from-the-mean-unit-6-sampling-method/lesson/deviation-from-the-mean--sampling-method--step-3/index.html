@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="The same analysis explains the accuracy of Monte Carlo estimates. Suppose we want to estimate \(\Pr[A]=p\) for some event \(A\) . For the \(i\) -th…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Deviation from the Mean › Sampling Method › Lesson 3 | Discrete Mathematics" />
+    <meta property="og:description" content="The same analysis explains the accuracy of Monte Carlo estimates. Suppose we want to estimate \(\Pr[A]=p\) for some event \(A\) . For the \(i\) -th…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-21-deviation-from-the-mean/unit/chapter-21-deviation-from-the-mean-unit-6-sampling-method/lesson/deviation-from-the-mean--sampling-method--step-3/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-21-deviation-from-the-mean/unit/chapter-21-deviation-from-the-mean-unit-6-sampling-method/lesson/deviation-from-the-mean--sampling-method--step-3/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Deviation from the Mean › Sampling Method › Lesson 3 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Deviation from the Mean / Sampling Method</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Deviation from the Mean · Sampling Method</p>
+        <h1>Lesson 3</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p>The same analysis explains the accuracy of Monte Carlo estimates. Suppose we want to estimate <span class="math-tex">\(\Pr[A]=p\)</span> for some event <span class="math-tex">\(A\)</span>. For the <span class="math-tex">\(i\)</span>-th independent run, define the indicator variable <span class="math-tex">\[\chi_{i} = \begin{cases}1, & \text{if \(A\) occurs in run \(i\),}\\ 0, & \text{otherwise.}\end{cases}\]</span> Then the Monte Carlo estimate is <span class="math-tex">\[\widehat p=\frac{\chi_1+\dotsb+\chi_n}{n}.\]</span> It has expectation <span class="math-tex">\(p\)</span> and variance at most <span class="math-tex">\(1/(4n)\)</span>. Indeed, each <span class="math-tex">\(\chi_{i}\)</span> is a&nbsp;Bernoulli random variable, so <span class="math-tex">\[\operatorname{Var}[\chi_{i}]=p(1-p) = \frac{1}{4}-\left(p-\frac{1}{2}\right)^{2} \le \frac{1}{4},\]</span> and the variables <span class="math-tex">\(\chi_{1},\dotsc,\chi_{n}\)</span> are independent. Therefore, by Chebyshev's inequality, <span class="math-tex">\[\Pr[|\widehat p-p|\ge \varepsilon] \le \frac{1}{4n\varepsilon^2}.\]</span> This means that to make the error about ten times smaller, one usually needs about one hundred times more trials. Indeed, suppose we want to keep the same upper bound on the probability of a&nbsp;large error. If the old error threshold is <span class="math-tex">\(\varepsilon\)</span>, the bound is <span class="math-tex">\[\frac{1}{4n\varepsilon^2}.\]</span> If we replace <span class="math-tex">\(\varepsilon\)</span> by <span class="math-tex">\(\varepsilon/10\)</span>, then the same number of trials would give <span class="math-tex">\[\frac{1}{4n(\varepsilon/10)^2}= \frac{100}{4n\varepsilon^2}.\]</span> To compensate for this factor, we should replace <span class="math-tex">\(n\)</span> by <span class="math-tex">\(100n\)</span>.</p>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-21-deviation-from-the-mean/unit/chapter-21-deviation-from-the-mean-unit-6-sampling-method/lesson/deviation-from-the-mean--sampling-method--step-2/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-21-deviation-from-the-mean/unit/chapter-21-deviation-from-the-mean-unit-6-sampling-method/lesson/deviation-from-the-mean--sampling-method--step-4/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

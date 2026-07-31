@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="For the curious 🤓 Consider the following random complete graph with \(n\) vertices: each edge (independently) is assigned a random weight, chosen uniformly…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Trees › Minimum Spanning Tree › Lesson 6 | Discrete Mathematics" />
+    <meta property="og:description" content="For the curious 🤓 Consider the following random complete graph with \(n\) vertices: each edge (independently) is assigned a random weight, chosen uniformly…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-24-trees/unit/chapter-24-trees-unit-2-minimum-spanning-tree/lesson/trees--minimum-spanning-tree--step-6/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-24-trees/unit/chapter-24-trees-unit-2-minimum-spanning-tree/lesson/trees--minimum-spanning-tree--step-6/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Trees › Minimum Spanning Tree › Lesson 6 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Trees / Minimum Spanning Tree</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Trees · Minimum Spanning Tree</p>
+        <h1>Lesson 6</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <details><summary>For the curious 🤓</summary><div style="border-style: solid;">Consider the following random complete graph with <span class="math-tex">\(n\)</span>&nbsp;vertices: each edge (independently) is assigned a random weight, chosen uniformly from the interval <span class="math-tex">\([0,1]\)</span>. For any spanning tree of this graph, its expected total weight will be equal to <span class="math-tex">\(\frac{n-1}{2}\)</span>. But what will be the expected weight of the <em>minimum</em> spanning tree in this graph? Try to guess the answer and look at the simulation of a random experiment given below. Then compare your guess with the <a href="https://theoremoftheday.org/OR/Frieze/TotDFrieze.pdf">answer</a>. <pre><code class="language-python">from itertools import combinations
+from networkx import Graph, minimum_spanning_edges
+from random import random
+
+n = 1000
+
+graph = Graph()
+for i, j in combinations(range(n), 2):
+    graph.add_edge(i, j, weight=random())
+
+print(sum([e[2]["weight"] for e in minimum_spanning_edges(graph)]))</code></pre></div></details>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-24-trees/unit/chapter-24-trees-unit-2-minimum-spanning-tree/lesson/trees--minimum-spanning-tree--step-5/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-24-trees/unit/chapter-24-trees-unit-2-minimum-spanning-tree/lesson/trees--minimum-spanning-tree--step-7/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

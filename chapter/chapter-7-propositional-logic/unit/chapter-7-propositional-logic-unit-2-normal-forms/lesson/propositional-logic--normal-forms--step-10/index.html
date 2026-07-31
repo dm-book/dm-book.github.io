@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="Theorem. For any function \(f \in B_{n}\) , there exists a unique Zhegalkin polynomial. Proof. Existence can be shown almost the same way as the existence…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Propositional Logic › Normal Forms › Lesson 10 | Discrete Mathematics" />
+    <meta property="og:description" content="Theorem. For any function \(f \in B_{n}\) , there exists a unique Zhegalkin polynomial. Proof. Existence can be shown almost the same way as the existence…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-7-propositional-logic/unit/chapter-7-propositional-logic-unit-2-normal-forms/lesson/propositional-logic--normal-forms--step-10/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-7-propositional-logic/unit/chapter-7-propositional-logic-unit-2-normal-forms/lesson/propositional-logic--normal-forms--step-10/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Propositional Logic › Normal Forms › Lesson 10 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Propositional Logic / Normal Forms</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Propositional Logic · Normal Forms</p>
+        <h1>Lesson 10</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p><strong>Theorem. </strong><em>For any function <span class="math-tex">\(f \in B_{n}\)</span>, there exists a&nbsp;unique Zhegalkin polynomial.</em></p><p> <em>Proof. </em></p><ul><li><strong>Existence</strong>&nbsp; can be&nbsp;shown almost the same way as the existence of DNF: for each set of variable values for which the function equals one, we add a &ldquo;literal&rdquo; monomial (product of literals) to the polynomial. For example, for an&nbsp;assignment <span class="math-tex">\(x_{1}=0,x_{2}=0,x_{3}=1\)</span>, we add a monomial <span class="math-tex">\((1 \oplus x_{1})(1 \oplus x_{2})x_{3}\)</span>. After this, we expand all brackets and get the polynomial.<br>Existence can also be proven by induction on <span class="math-tex">\(n\)</span>. For this, we consider a decomposition analogous to the one discussed above:  <span class="math-tex">\[f(x_{1}, \dotsc, x_{n})= (1 \oplus x_{1})f_{0}(x_{2}, \dotsc, x_{n}) \oplus x_{1}f_{1}(x_{2}, \dotsc, x_{n}) \  .\]</span>   After this, we can use the induction hypothesis. (The base case is easy to check.)</li><li><strong>Uniqueness</strong>&nbsp; can be proven using a&nbsp;counting argument: the number of different polynomials is <span class="math-tex">\(2^{2^n}\)</span> (each of the <span class="math-tex">\(2^{n}\)</span> monomials in the polynomial is&nbsp;either present or&nbsp;not). The number of&nbsp;Boolean functions on&nbsp;<span class="math-tex">\(n\)</span>&nbsp;variables is&nbsp;also <span class="math-tex">\(2^{2^n}\)</span>. Thus, if some function could be represented by two polynomials, then some other function would lack a&nbsp;polynomial.<br>Uniqueness can also be proven in another way. Suppose that the multilinear polynomials <span class="math-tex">\(p(x_{1}, \dotsc, x_{n})\)</span> and <span class="math-tex">\(q(x_{1}, \dotsc, x_{n})\)</span> coincide with the function <span class="math-tex">\(f \in B_{n}\)</span> at all points <span class="math-tex">\(x \in \{0,1\}^{n}\)</span>, but are different (as sets of monomials). Then, the polynomial <span class="math-tex">\(d=(p \oplus q)\)</span> contains monomials and is equal to zero at all points. We will show that this cannot happen by induction on <span class="math-tex">\(n\)</span>. Let's expand:  <span class="math-tex">\[\begin{align*}d(x_{1}, \dotsc, x_{n})&= (1 \oplus x_{1})d_{0}(x_{2}, \dotsc, x_{n}) \oplus x_{1}d_{1}(x_{2}, \dotsc, x_{n})\\&=x_{1}(d_{0} \oplus d_{1})(x_{2}, \dotsc, x_{n}) \oplus d_{0}(x_{2}, \dotsc, x_{n})\end{align*}\]</span>   Now, substitute <span class="math-tex">\(x_{1}=0\)</span>. We find that the polynomial <span class="math-tex">\(d_{0}\)</span> is zero at all points. Then, by the induction hypothesis, it contains no monomials, and our expansion simplifies to <span class="math-tex">\[x_{1}d_{1}(x_{2}, \dotsc, x_{n}) \  .\]</span> Substituting <span class="math-tex">\(x_{1}=1\)</span>, we conclude that <span class="math-tex">\(d_{1}\)</span> also contains no monomials.<br>Finally, we can also prove by contradiction that a polynomial containing monomials cannot vanish at all points. Let <span class="math-tex">\(p(x_{1},\dotsc,x_{n})\)</span> be such a polynomial. It is clear that its constant term equals zero (otherwise <span class="math-tex">\(p(0,\dotsc,0)=1\)</span>). We then take a monomial <span class="math-tex">\(m\)</span> that contains the fewest variables. We substitute one into these variables and zero into all others. The value of the polynomial on this set will be equal to one. Indeed, any other monomial contains a variable not in <span class="math-tex">\(m\)</span>: if this were not the case for some monomial, then that monomial would be a subset of <span class="math-tex">\(m\)</span>. Thus, all other monomials vanish, and the value of the polynomial is&nbsp;equal to&nbsp;one. This is a contradiction.</li></ul><p><span class="proof-end" aria-label="End of proof">◼</span></p>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-7-propositional-logic/unit/chapter-7-propositional-logic-unit-2-normal-forms/lesson/propositional-logic--normal-forms--step-9/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-7-propositional-logic/unit/chapter-7-propositional-logic-unit-2-normal-forms/lesson/propositional-logic--normal-forms--step-11/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

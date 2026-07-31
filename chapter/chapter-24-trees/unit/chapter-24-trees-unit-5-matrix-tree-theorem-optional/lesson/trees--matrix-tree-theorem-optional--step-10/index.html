@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="The proven theorem allows computing \(\tau(G)\) in time \(O(n^{3})\) (and even in time \(O(n^{\omega})\) , where \(\omega &lt; 2{,}38\) is the exponent of…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Trees › Matrix Tree Theorem (Optional) › Lesson 10 | Discrete Mathematics" />
+    <meta property="og:description" content="The proven theorem allows computing \(\tau(G)\) in time \(O(n^{3})\) (and even in time \(O(n^{\omega})\) , where \(\omega &lt; 2{,}38\) is the exponent of…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-24-trees/unit/chapter-24-trees-unit-5-matrix-tree-theorem-optional/lesson/trees--matrix-tree-theorem-optional--step-10/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-24-trees/unit/chapter-24-trees-unit-5-matrix-tree-theorem-optional/lesson/trees--matrix-tree-theorem-optional--step-10/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Trees › Matrix Tree Theorem (Optional) › Lesson 10 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Trees / Matrix Tree Theorem (Optional)</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Trees · Matrix Tree Theorem (Optional)</p>
+        <h1>Lesson 10</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p>The proven theorem allows computing <span class="math-tex">\(\tau(G)\)</span> in time <span class="math-tex">\(O(n^{3})\)</span> (and even in time <span class="math-tex">\(O(n^{\omega})\)</span>, where <span class="math-tex">\(\omega &lt; 2{,}38\)</span> is the exponent of matrix multiplication).</p><pre><code class="language-python">from networkx import Graph, laplacian_matrix
+from numpy.linalg import det
+from numpy import delete
+
+g = Graph([(1, 2), (2, 3), (3, 4), (4, 1), (2, 4)])
+m = laplacian_matrix(g).A
+m = delete(arr=m, obj=0, axis=0)
+m = delete(arr=m, obj=0, axis=1)
+print(round(det(m)))</code></pre><pre><code class="language-auto">8
+</code></pre>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-24-trees/unit/chapter-24-trees-unit-5-matrix-tree-theorem-optional/lesson/trees--matrix-tree-theorem-optional--step-9/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-24-trees/unit/chapter-24-trees-unit-5-matrix-tree-theorem-optional/lesson/trees--matrix-tree-theorem-optional--step-11/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

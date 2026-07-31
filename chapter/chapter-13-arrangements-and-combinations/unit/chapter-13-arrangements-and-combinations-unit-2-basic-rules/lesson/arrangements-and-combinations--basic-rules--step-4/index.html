@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="There are \(\lfloor 1000/2 \rfloor =500\) numbers divisible by \(2\) , and \(\lfloor 1000/3 \rfloor =333\) numbers divisible by \(3\) . However, this does…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Arrangements and Combinations › Basic Rules › Lesson 4 | Discrete Mathematics" />
+    <meta property="og:description" content="There are \(\lfloor 1000/2 \rfloor =500\) numbers divisible by \(2\) , and \(\lfloor 1000/3 \rfloor =333\) numbers divisible by \(3\) . However, this does…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-13-arrangements-and-combinations/unit/chapter-13-arrangements-and-combinations-unit-2-basic-rules/lesson/arrangements-and-combinations--basic-rules--step-4/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-13-arrangements-and-combinations/unit/chapter-13-arrangements-and-combinations-unit-2-basic-rules/lesson/arrangements-and-combinations--basic-rules--step-4/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Arrangements and Combinations › Basic Rules › Lesson 4 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Arrangements and Combinations / Basic Rules</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Arrangements and Combinations · Basic Rules</p>
+        <h1>Lesson 4</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p>There are <span class="math-tex">\(\lfloor 1000/2 \rfloor =500\)</span> numbers divisible by <span class="math-tex">\(2\)</span>, and <span class="math-tex">\(\lfloor 1000/3 \rfloor =333\)</span> numbers divisible by <span class="math-tex">\(3\)</span>. However, this does <em>not imply</em> that the answer to our problem is <span class="math-tex">\(500+333\)</span>: some numbers are divisible by both <span class="math-tex">\(2\)</span> and <span class="math-tex">\(3\)</span>. This means that we cannot use the sum rule: it requires the sets to be disjoint. Nonetheless, it is not difficult to generalize the sum rule: for any sets <span class="math-tex">\(A\)</span> and <span class="math-tex">\(B\)</span>, it holds that <span class="math-tex">\[|A \cup B|=|A| + |B| - |A \cap B| \  .\]</span> </p><p style="text-align:center;"><img src="generated/assets/Arrangements_and_Combinations/Basic_Rules=3/image0.png" width="800" ></p><p> This is the familiar inclusion-exclusion formula.</p><p>The answer to our problem is <span class="math-tex">\(500+333-166=667\)</span>. </p><pre><code class="language-python">print(len([x for x in range(1000) if x % 2 == 0 or x % 3 == 0]))</code></pre><pre><code class="language-auto">667
+</code></pre>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-13-arrangements-and-combinations/unit/chapter-13-arrangements-and-combinations-unit-2-basic-rules/lesson/arrangements-and-combinations--basic-rules--step-3/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-13-arrangements-and-combinations/unit/chapter-13-arrangements-and-combinations-unit-2-basic-rules/lesson/arrangements-and-combinations--basic-rules--step-5/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

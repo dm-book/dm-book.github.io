@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="Advanced Problems. (20 points) Let \(X\) be a random variable with expected value \(E[X] = 0\) and variance \(\operatorname{Var}[X] = \sigma^{2}\) . Prove…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Deviation from the Mean › Theory Problems › Lesson 2 | Discrete Mathematics" />
+    <meta property="og:description" content="Advanced Problems. (20 points) Let \(X\) be a random variable with expected value \(E[X] = 0\) and variance \(\operatorname{Var}[X] = \sigma^{2}\) . Prove…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-21-deviation-from-the-mean/unit/chapter-21-deviation-from-the-mean-unit-8-theory-problems/lesson/deviation-from-the-mean--theory-problems--step-2/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-21-deviation-from-the-mean/unit/chapter-21-deviation-from-the-mean-unit-8-theory-problems/lesson/deviation-from-the-mean--theory-problems--step-2/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Deviation from the Mean › Theory Problems › Lesson 2 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Deviation from the Mean / Theory Problems</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Deviation from the Mean · Theory Problems</p>
+        <h1>Lesson 2</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p><strong>Advanced Problems.</strong></p><ol><li data-theory-problem>(20 points) Let <span class="math-tex">\(X\)</span> be&nbsp;a random variable with expected value <span class="math-tex">\(E[X] = 0\)</span> and variance <span class="math-tex">\(\operatorname{Var}[X] = \sigma^{2}\)</span>. Prove that for&nbsp;any <span class="math-tex">\(\lambda &gt; 0\)</span>: <span class="math-tex">\[\Pr[X \ge \lambda] \le \frac{\sigma^2}{\sigma^2 + \lambda^2}.\]</span><details><summary>Hint:</summary><div style="border-style: solid;">Consider introducing a&nbsp;constant <span class="math-tex">\(b &gt; 0\)</span> and observing that the&nbsp;event <span class="math-tex">\(X \ge \lambda\)</span> is&nbsp;equivalent to <span class="math-tex">\(X + b \ge \lambda + b\)</span>.</div></details></li><li data-theory-problem>(20 points) Let&nbsp;<span class="math-tex">\(\operatorname{Cov}(X, Y) = E[XY] - E[X]E[Y]\)</span> denote the&nbsp;covariance between two random variables <span class="math-tex">\(X\)</span>&nbsp;and <span class="math-tex">\(Y\)</span>. Show that the&nbsp;variance of&nbsp;the sum of&nbsp;<span class="math-tex">\(n\)</span> random variables is&nbsp;given by <span class="math-tex">\[\operatorname{Var}\left[\sum_{i=1}^{n} X_{i}\right] = \sum_{i=1}^{n} \operatorname{Var}[X_{i}] + 2 \sum_{1 \le i &lt; j \le n}\operatorname{Cov}(X_{i}, X_{j}).\]</span><details><summary>Hint:</summary><div style="border-style: solid;">It&nbsp;may be&nbsp;helpful to&nbsp;first prove the&nbsp;bilinearity of&nbsp;covariance using the&nbsp;definition of&nbsp;expectation. Specifically, show that <span class="math-tex">\(\operatorname{Cov}\left(\sum_{i} X_{i}, \sum_{j} Y_{j}\right) = \sum_{i} \sum_{j} \operatorname{Cov}(X_{i}, Y_{j})\)</span>.</div></details></li><li data-theory-problem>(20 points) Let <span class="math-tex">\(X\)</span> be&nbsp;a non-negative random variable with finite variance such that <span class="math-tex">\(\Pr[X&gt;0]&gt;0\)</span>. Prove that for&nbsp;any <span class="math-tex">\(0 \le \theta \le 1\)</span>: <span class="math-tex">\[\Pr[X &gt; \theta E[X]] \ge (1-\theta)^{2} \frac{E[X]^2}{E[X^2]}.\]</span><details><summary>Hint:</summary><div style="border-style: solid;">Express <span class="math-tex">\(E[X]\)</span> using the&nbsp;sum of&nbsp;expectations over two regions: where <span class="math-tex">\(X \le \theta E[X]\)</span> and where <span class="math-tex">\(X &gt; \theta E[X]\)</span>.</div></details></li><li data-theory-problem>(20 points) Let <span class="math-tex">\(X_{i}\)</span> be&nbsp;independent Bernoulli random variables with <span class="math-tex">\(\Pr[X_{i}=1]=p_{i}\)</span>. Let <span class="math-tex">\(X = X_{1} + \cdots + X_{n}\)</span> and&nbsp;<span class="math-tex">\(p = p_{1} + \cdots + p_{n}\)</span>.<ul><li> For any <span class="math-tex">\(t&gt;0\)</span> and&nbsp;<span class="math-tex">\(\delta&gt;0\)</span>, prove: <span class="math-tex">\[\Pr[X \ge (1+\delta)p] \le \frac{E[e^{tX}]}{e^{t(1+\delta)p}}.\]</span></li><li> Prove that: <span class="math-tex">\[E[e^{tX}] = \prod_{i=1}^{n} (p_{i} e^{t} + 1 - p_{i}).\]</span></li><li> Prove that: <span class="math-tex">\[\Pr[X \ge (1+\delta)p] \le \frac{e^{(e^t-1)p}}{e^{t(1+\delta)p}}.\]</span></li><li> Substitute <span class="math-tex">\(t = \ln(1+\delta)\)</span> and&nbsp;write the&nbsp;resulting upper bound.</li><li> Show that if&nbsp;<span class="math-tex">\(\delta &gt; 2e-1\)</span>, then <span class="math-tex">\(\Pr[X \ge (1+\delta)p] &lt; 2^{-(1+\delta)p}\)</span>.</li></ul><details><summary>Hint:</summary><div style="border-style: solid;">For (c), recall that <span class="math-tex">\(1 + x \le e^{x}\)</span>.</div></details></li><li data-theory-problem>(20 points) Consider a&nbsp;random graph <span class="math-tex">\(G(n, p)\)</span> where every edge exists independently with probability <span class="math-tex">\(p\)</span>. Let <span class="math-tex">\(T\)</span> be&nbsp;the number of&nbsp;triangles (sets of&nbsp;3 vertices <span class="math-tex">\(\{u,v,w\}\)</span> where all edges <span class="math-tex">\((u,v), (v,w), (u,w)\)</span> exist). Compute <span class="math-tex">\(\operatorname{Var}[T]\)</span>.</li></ol>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-21-deviation-from-the-mean/unit/chapter-21-deviation-from-the-mean-unit-8-theory-problems/lesson/deviation-from-the-mean--theory-problems--step-1/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-21-deviation-from-the-mean/unit/chapter-21-deviation-from-the-mean-unit-8-theory-problems/lesson/deviation-from-the-mean--theory-problems--step-3/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

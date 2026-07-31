@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="Now let&#39;s implement the enumeration ourselves. The code will resemble binary sequence enumeration. For binary sequences it was simple: each position could…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Generation of Combinatorial Objects › Generating Permutations › Lesson 3 | Discrete Mathematics" />
+    <meta property="og:description" content="Now let&#39;s implement the enumeration ourselves. The code will resemble binary sequence enumeration. For binary sequences it was simple: each position could…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-14-generation-of-combinatorial-objects/unit/chapter-14-generation-of-combinatorial-objects-unit-3-generating-permutations/lesson/generation-of-combinatorial-objects--generating-permutations--step-3/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-14-generation-of-combinatorial-objects/unit/chapter-14-generation-of-combinatorial-objects-unit-3-generating-permutations/lesson/generation-of-combinatorial-objects--generating-permutations--step-3/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Generation of Combinatorial Objects › Generating Permutations › Lesson 3 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Generation of Combinatorial Objects / Generating Permutations</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Generation of Combinatorial Objects · Generating Permutations</p>
+        <h1>Lesson 3</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p>Now let's implement the enumeration ourselves. The code will resemble binary sequence enumeration. For binary sequences it was simple: each position could be either zero or one. With permutations it's a bit more complex: at the first position, we can place any of the <span class="math-tex">\(n\)</span> elements; at the second — any of the remaining <span class="math-tex">\((n-1)\)</span>; at the third — any of the remaining <span class="math-tex">\((n-2)\)</span>; and so on.</p><pre><code class="language-python">def permutations(universe, k):
+    def helper(perm, k):
+        if len(perm) == k:
+            yield perm
+        else:
+            for i in universe:
+                if i not in perm:
+                    yield from helper(perm + [i], k)
+
+    yield from helper([], k)
+
+
+for p in permutations('abc', 2):
+    print(*p, sep='', end=' ')</code></pre><pre><code class="language-auto">ab ac ba bc ca cb
+</code></pre>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-14-generation-of-combinatorial-objects/unit/chapter-14-generation-of-combinatorial-objects-unit-3-generating-permutations/lesson/generation-of-combinatorial-objects--generating-permutations--step-2/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-14-generation-of-combinatorial-objects/unit/chapter-14-generation-of-combinatorial-objects-unit-3-generating-permutations/lesson/generation-of-combinatorial-objects--generating-permutations--step-4/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

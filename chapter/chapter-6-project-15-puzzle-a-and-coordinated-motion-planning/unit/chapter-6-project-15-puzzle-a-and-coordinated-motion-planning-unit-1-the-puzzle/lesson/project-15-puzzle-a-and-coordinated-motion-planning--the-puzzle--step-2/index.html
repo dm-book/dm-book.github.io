@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="Take a \(4\times 4\) square frame and place \(15\) square tiles labeled \(1,2,\dotsc,15\) inside it. Each tile has size \(1\times 1\) , so the tiles occupy…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Project: 15 Puzzle, A*, and Coordinated Motion Planning › The Puzzle › Lesson 2 | Discrete Mathematics" />
+    <meta property="og:description" content="Take a \(4\times 4\) square frame and place \(15\) square tiles labeled \(1,2,\dotsc,15\) inside it. Each tile has size \(1\times 1\) , so the tiles occupy…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-6-project-15-puzzle-a-and-coordinated-motion-planning/unit/chapter-6-project-15-puzzle-a-and-coordinated-motion-planning-unit-1-the-puzzle/lesson/project-15-puzzle-a-and-coordinated-motion-planning--the-puzzle--step-2/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-6-project-15-puzzle-a-and-coordinated-motion-planning/unit/chapter-6-project-15-puzzle-a-and-coordinated-motion-planning-unit-1-the-puzzle/lesson/project-15-puzzle-a-and-coordinated-motion-planning--the-puzzle--step-2/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Project: 15 Puzzle, A*, and Coordinated Motion Planning › The Puzzle › Lesson 2 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Project: 15 Puzzle, A*, and Coordinated Motion Planning / The Puzzle</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Project: 15 Puzzle, A*, and Coordinated Motion Planning · The Puzzle</p>
+        <h1>Lesson 2</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p>Take a&nbsp;<span class="math-tex">\(4\times 4\)</span> square frame and place <span class="math-tex">\(15\)</span>&nbsp;square tiles labeled <span class="math-tex">\(1,2,\dotsc,15\)</span> inside it. </p><p style="text-align:center;"><img src="generated/assets/Project$_15_Puzzle,_A*,_and_Coordinated_Motion_Planning/The_Puzzle=1/image0.png" width="800" ></p><p> Each tile has size <span class="math-tex">\(1\times 1\)</span>, so the tiles occupy <span class="math-tex">\(15\)</span> out of the <span class="math-tex">\(16\)</span> cells, leaving one cell empty. A&nbsp;move consists of sliding a&nbsp;tile adjacent to the empty cell into it, thereby vacating its previous position. The objective is to rearrange the tiles into a&nbsp;desired configuration.</p><p>For example, one may attempt to transform the configuration on the left into the one on the right by a&nbsp;sequence of such moves.</p><p style="text-align:center;"><img src="generated/assets/Project$_15_Puzzle,_A*,_and_Coordinated_Motion_Planning/The_Puzzle=1/image1.png" width="800" ></p><p>Equivalently, one may consider the reverse task: starting from the configuration in which <span class="math-tex">\(14\)</span> and&nbsp;<span class="math-tex">\(15\)</span> are swapped (right), restore the initial configuration (left). This formulation is entirely equivalent—one simply reverses the sequence of moves, as in a&nbsp;video played backwards—and is often more convenient in practice, since there is no need to&nbsp;memorize the target configuration. <a href="https://discrete-math-puzzles.github.io/puzzles/15-game/index.html">Try it!</a></p><p>Historically, the&nbsp;15&nbsp;Puzzle enjoyed enormous popularity in&nbsp;the&nbsp;United States in&nbsp;the&nbsp;late 19th century, sparking a&nbsp;widespread craze. At&nbsp;the&nbsp;height of this phenomenon, substantial prizes were offered for its solution, including a&nbsp;notable reward of&nbsp;<span class="math- tex">\(\$\)</span>1 000 for anyone who could solve certain challenging configurations like the one above.</p>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-6-project-15-puzzle-a-and-coordinated-motion-planning/unit/chapter-6-project-15-puzzle-a-and-coordinated-motion-planning-unit-1-the-puzzle/lesson/project-15-puzzle-a-and-coordinated-motion-planning--the-puzzle--step-1/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-6-project-15-puzzle-a-and-coordinated-motion-planning/unit/chapter-6-project-15-puzzle-a-and-coordinated-motion-planning-unit-1-the-puzzle/lesson/project-15-puzzle-a-and-coordinated-motion-planning--the-puzzle--step-3/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

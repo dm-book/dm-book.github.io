@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="Derandomization: the method of small sample spaces For the approximate algorithm for Maximum Cut, we proved that the random variable “number of cut edges”…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Probability in Computer Science › Hashing (Optional) › Lesson 3 | Discrete Mathematics" />
+    <meta property="og:description" content="Derandomization: the method of small sample spaces For the approximate algorithm for Maximum Cut, we proved that the random variable “number of cut edges”…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-22-probability-in-computer-science/unit/chapter-22-probability-in-computer-science-unit-2-hashing-optional/lesson/probability-in-computer-science--hashing-optional--step-3/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-22-probability-in-computer-science/unit/chapter-22-probability-in-computer-science-unit-2-hashing-optional/lesson/probability-in-computer-science--hashing-optional--step-3/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Probability in Computer Science › Hashing (Optional) › Lesson 3 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Probability in Computer Science / Hashing (Optional)</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Probability in Computer Science · Hashing (Optional)</p>
+        <h1>Lesson 3</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p><strong>Derandomization: the method of small sample spaces</strong> For the approximate algorithm for Maximum Cut, we proved that the random variable &ldquo;number of cut edges&rdquo; has a good expectation. From this, one can immediately conclude that there exists a point in the sample space where our random variable takes a sufficiently large value. However, the sample space in our case is <span class="math-tex">\(\{0,1\}^{n}\)</span>, so simply iterating through all points in it is expensive. At the same time, looking more closely at the analysis, we notice that we only used <em>pairwise independence</em>. It turns out that if we only need pairwise independence, we can significantly reduce the number of random bits used and, accordingly, the size of the sample space.</p><p>For simplicity, let us assume that the set of graph vertices is <span class="math-tex">\([n]\)</span> and that <span class="math-tex">\(n\)</span> is a power of two (this is needed so that a <a href="https://en.wikipedia.org/wiki/Finite_field%23Non-prime_fields">field of size <span class="math-tex">\(n\)</span></a> exists and so that <span class="math-tex">\(n\)</span> is even). Consider the field <span class="math-tex">\(\mathbb{F}_{n}\)</span> and the <span class="math-tex">\(2\)</span>-universal family <span class="math-tex">\(\mathcal{H}\)</span> from Theorem above. We take a random hash function <span class="math-tex">\(h \in \mathcal{H}\)</span>, which will determine the colors of all vertices: we color vertex <span class="math-tex">\(i\)</span> with the color <span class="math-tex">\((h(i) \bmod 2)\)</span>. On average, half of the edges will be cut again, but the sample space <span class="math-tex">\(\mathcal{H}\)</span> now has size <span class="math-tex">\(n^{2}\)</span>, so we can simply iterate through all its points.</p>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-22-probability-in-computer-science/unit/chapter-22-probability-in-computer-science-unit-2-hashing-optional/lesson/probability-in-computer-science--hashing-optional--step-2/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-22-probability-in-computer-science/unit/chapter-22-probability-in-computer-science-unit-3-probabilistic-method-tournament-paradox/lesson/probability-in-computer-science--probabilistic-method-tournament-paradox--step-1/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

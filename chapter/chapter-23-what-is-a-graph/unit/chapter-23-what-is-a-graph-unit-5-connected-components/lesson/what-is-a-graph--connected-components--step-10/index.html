@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="Below, we show that a graph with a few edges has many connected components. Theorem. An undirected graph \(G(V,E)\) has at least \(|V|-|E|\) connected…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="What is a Graph? › Connected Components › Lesson 10 | Discrete Mathematics" />
+    <meta property="og:description" content="Below, we show that a graph with a few edges has many connected components. Theorem. An undirected graph \(G(V,E)\) has at least \(|V|-|E|\) connected…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-23-what-is-a-graph/unit/chapter-23-what-is-a-graph-unit-5-connected-components/lesson/what-is-a-graph--connected-components--step-10/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-23-what-is-a-graph/unit/chapter-23-what-is-a-graph-unit-5-connected-components/lesson/what-is-a-graph--connected-components--step-10/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>What is a Graph? › Connected Components › Lesson 10 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / What is a Graph? / Connected Components</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">What is a Graph? · Connected Components</p>
+        <h1>Lesson 10</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p>Below, we&nbsp;show that a&nbsp;graph with a&nbsp;few edges has many connected components.</p><p><strong>Theorem. </strong><em>An&nbsp;undirected graph <span class="math-tex">\(G(V,E)\)</span> has at&nbsp;least <span class="math-tex">\(|V|-|E|\)</span> connected components.</em></p><p>Before proving the theorem, let&nbsp;us consider a&nbsp;few examples. In&nbsp;all of&nbsp;them, <span class="math-tex">\(V=\{1,2,3,4,5\}\)</span>. By&nbsp;<span class="math-tex">\(c\)</span>, we&nbsp;denote the number of&nbsp;connected components. </p><p style="text-align:center;"><img src="generated/assets/What_is_a_Graph/Connected_Components=9/image0.png" width="800" ></p><p> By&nbsp;looking at&nbsp;the examples and the theorem statement, one can conclude the following. </p><ul><li> If a&nbsp;graph is connected, then <span class="math-tex">\(|E| \ge |V|-1\)</span>. Indeed, if <span class="math-tex">\(|E| \le |V|-2\)</span>, then, by the theorem, the graph has at&nbsp;least two connected components.</li><li> If <span class="math-tex">\(|E|=0\)</span>, then every node forms a&nbsp;connected component, hence there are <span class="math-tex">\(|V|\)</span>&nbsp;connected components.</li><li> When <span class="math-tex">\(|E| \ge |V|-1\)</span> the lower bound given by&nbsp;the theorem is&nbsp;trivial: it&nbsp;says that there must be&nbsp;at&nbsp;least one connected component.</li></ul><p>After developing an&nbsp;intuition, we&nbsp;are ready to&nbsp;prove the theorem.</p><p><em>Proof. </em>We&nbsp;use the trick from the proof of&nbsp;the degree sum formula: start with an&nbsp;empty graph, add edges one by&nbsp;one, each time tracking the values of&nbsp;the two parameters in&nbsp;question (<span class="math-tex">\(|V|-|E|\)</span> and the number of&nbsp;connected components). Initially, when <span class="math-tex">\(E = \emptyset\)</span>, both parameters are equal to&nbsp;<span class="math-tex">\(|V|\)</span>: <span class="math-tex">\(|V|-|E|=|V|-0=|V|\)</span> and each node forms a&nbsp;connected component. Each time when we&nbsp;add a&nbsp;new edge <span class="math-tex">\(\{u,v\}\)</span>, the value of&nbsp;<span class="math-tex">\(|V|-|E|\)</span> drops by&nbsp;one, whereas the number of&nbsp;connected components either drops by&nbsp;one or&nbsp;stays the same: </p><ul><li> if <span class="math-tex">\(u\)</span>&nbsp;and&nbsp;<span class="math-tex">\(v\)</span> belong to&nbsp;different connected components, then adding the edge <span class="math-tex">\(\{u, v\}\)</span> merges these two components (and the number of&nbsp;connected components drops by&nbsp;one);</li><li> if <span class="math-tex">\(u\)</span>&nbsp;and&nbsp;<span class="math-tex">\(v\)</span> belong to&nbsp;the same connected component, then adding the edge <span class="math-tex">\(\{u,v\}\)</span> does not change the set of&nbsp;connected components.</li></ul><p> Thus, <span class="math-tex">\(|V|-|E|\)</span> cannot be&nbsp;larger than the number of&nbsp;connected components.<span class="proof-end" aria-label="End of proof">◼</span></p>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-23-what-is-a-graph/unit/chapter-23-what-is-a-graph-unit-5-connected-components/lesson/what-is-a-graph--connected-components--step-9/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-23-what-is-a-graph/unit/chapter-23-what-is-a-graph-unit-5-connected-components/lesson/what-is-a-graph--connected-components--step-11/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="We already know that every Boolean function can be expressed as some combination of NAND gates (recall that a NAND gate takes two Boolean variables and…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Boolean Circuits › NAND Game › Lesson 1 | Discrete Mathematics" />
+    <meta property="og:description" content="We already know that every Boolean function can be expressed as some combination of NAND gates (recall that a NAND gate takes two Boolean variables and…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-9-boolean-circuits/unit/chapter-9-boolean-circuits-unit-5-nand-game/lesson/boolean-circuits--nand-game--step-1/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-9-boolean-circuits/unit/chapter-9-boolean-circuits-unit-5-nand-game/lesson/boolean-circuits--nand-game--step-1/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Boolean Circuits › NAND Game › Lesson 1 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Boolean Circuits / NAND Game</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Boolean Circuits · NAND Game</p>
+        <h1>Lesson 1</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p>We already know that every Boolean function can be expressed as some combination of NAND gates (recall that a&nbsp;NAND gate takes two Boolean variables and returns <span class="math-tex">\(1\)</span> if and only if at&nbsp;least one of the&nbsp;variables is&nbsp;<span class="math-tex">\(0\)</span>). So, in&nbsp;the next several steps, we will construct a&nbsp;collection of useful functions using only NAND gates.</p><p>We also slightly modify the&nbsp;format of the&nbsp;representation of circuits. Instead of writing a&nbsp;truth table in each gate, we&nbsp;identify the gate function by&nbsp;a&nbsp;case-sensitive name. If a&nbsp;function <span class="math-tex">\(F\)</span> has <span class="math-tex">\(t\)</span> outputs and arity&nbsp;<span class="math-tex">\(k\)</span>, then a&nbsp;gate line has the&nbsp;form <span class="math-tex">\[\texttt{y\_{1}}\  \dotsc\  \texttt{y\_{t} x\_{1}}\ \dotsc\  \texttt{x\_{k} F}\]</span> This means that <span class="math-tex">\((y_{1},\dotsc,y_{t})=F(x_{1},\dotsc,x_{k})\)</span>.</p><p>In each task you are given some function <span class="math-tex">\[F(x_{1},\dotsc,x_{k})=(y_{1},\dotsc,y_{t}).\]</span> A&nbsp;submission consists only of&nbsp;gate lines, and the circuit size is&nbsp;the number of&nbsp;submitted lines.</p><p>The numeral in a&nbsp;gate name identifies over what bit-sizes it&nbsp;works. For example, <span class="math-tex">\(\operatorname{XOR}_{16}\)</span> takes two 16-bit values and computes their component-wise exclusive or. In a&nbsp;submission, append numeric subscripts directly to the base name: for example, <span class="math-tex">\(x_{1}\)</span>, and&nbsp;<span class="math-tex">\(\operatorname{XOR}_{16}\)</span> are written as&nbsp;<span class="math- tex">\(\texttt{x1}\)</span>, and&nbsp;<span class="math- tex">\(\texttt{XOR16}\)</span>.</p><p>Whenever we&nbsp;list the bits of a&nbsp;variable, we&nbsp;list them in&nbsp;descending order: from the most significant bit to&nbsp;the least significant bit.</p><p style="text-align:center;"><img src="generated/assets/Boolean_Circuits/NAND_Game=0/image0.png" width="800" ></p><p>Below, a&nbsp;representation of the&nbsp;circuit above is&nbsp;shown. </p><pre><code class="language-python">a x1 x2 NAND2
+b x2 x3 NAND2
+c a b NAND2
+y1 a x3 NAND2
+y2 c y1 NAND2</code></pre><p>This section is&nbsp;inspired by&nbsp;the <a href="https://nandgame.com/">NANDgame</a> that&nbsp;is, in&nbsp;turn, inspired by&nbsp;the book <a href="https://www.nand2tetris.org/">The Elements of Computing Systems: Building a Modern Computer from First Principles</a> by&nbsp;Noam Nisan and Shimon Schocken. We&nbsp;mimic some of&nbsp;the first problems from the book and gradually build more and more advanced computer components from scratch. For each problem, we&nbsp;have a&nbsp;reference solution, and you receive partial score if&nbsp;you come&nbsp;up with a&nbsp;design that implements the required function correctly, but with a&nbsp;larger number of&nbsp;gates. More precisely, if&nbsp;the reference circuit has size&nbsp;<span class="math-tex">\(x\)</span> whereas your circuit has size&nbsp;<span class="math-tex">\(y\)</span>, you get a&nbsp;fraction <span class="math-tex">\((x / y)^{1.5}\)</span> of&nbsp;the score.</p>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-9-boolean-circuits/unit/chapter-9-boolean-circuits-unit-4-lower-bounds/lesson/boolean-circuits--lower-bounds--step-2/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-9-boolean-circuits/unit/chapter-9-boolean-circuits-unit-5-nand-game/lesson/boolean-circuits--nand-game--step-2/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

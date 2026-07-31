@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="Now assume that we know the frequencies of all symbols \(p_{1}, \dotsc, p_{n}\) ( \(p_{1}+\dotsb+p_{n}=1\) ). We want to construct a uniquely decodable code…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Proofs of Algorithm Correctness and Runtime Estimates › Application: Data Compression (Optional) › Lesson 4 | Discrete Mathematics" />
+    <meta property="og:description" content="Now assume that we know the frequencies of all symbols \(p_{1}, \dotsc, p_{n}\) ( \(p_{1}+\dotsb+p_{n}=1\) ). We want to construct a uniquely decodable code…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-4-proofs-of-algorithm-correctness-and-runtime-estimates/unit/chapter-4-proofs-of-algorithm-correctness-and-runtime-estimates-unit-5-application-data-compression-optional/lesson/proofs-of-algorithm-correctness-and-runtime-estimates--application-data-compression-optional--step-4/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-4-proofs-of-algorithm-correctness-and-runtime-estimates/unit/chapter-4-proofs-of-algorithm-correctness-and-runtime-estimates-unit-5-application-data-compression-optional/lesson/proofs-of-algorithm-correctness-and-runtime-estimates--application-data-compression-optional--step-4/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Proofs of Algorithm Correctness and Runtime Estimates › Application: Data Compression (Optional) › Lesson 4 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Proofs of Algorithm Correctness and Runtime Estimates / Application: Data Compression (Optional)</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Proofs of Algorithm Correctness and Runtime Estimates · Application: Data Compression (Optional)</p>
+        <h1>Lesson 4</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p>Now assume that we know the frequencies of all symbols <span class="math-tex">\(p_{1}, \dotsc, p_{n}\)</span> (<span class="math-tex">\(p_{1}+\dotsb+p_{n}=1\)</span>). We want to construct a uniquely decodable code <span class="math-tex">\(\phi \colon \Sigma \to \{0,1\}^{*}\)</span> with minimum <em>redundancy coefficient</em>: <span class="math-tex">\(\sum_{i=1}^{n}p_{i}\cdot |\phi(a_{i})|\)</span> (also called the <em>average length</em>). Of course, we want the code lengths to be as short as possible. On the other hand, we want the code to be uniquely decodable. It turns out that given a set of codeword lengths, we can determine whether such a&nbsp;code exists.</p><p style="text-align:center;"><img src="generated/assets/Proofs_of_Algorithm_Correctness_and_Runtime_Estimates/Application$_Data_Compression_(Optional)=3/image0.png" width="800" ></p><p><strong>Theorem (Kraft&ndash;McMillan, 1949/1956). </strong><em>Let <span class="math-tex">\(l_{1}, \dotsc, l_{n}\)</span> be the lengths of a uniquely decodable code. Then <span class="math-tex">\[2^{-l_1}+2^{-l_2}+\dotsb+2^{-l_n}\le 1 \  .\]</span></em></p><p>For prefix codes, this theorem has a particularly intuitive proof: draw a tree, complete it to a full one, and see what portion of the leaves each symbol gets (<span class="math-tex">\(2^{-l_i}\)</span>, indeed). Alternatively, imagine a segment of length&nbsp;1 at the root. As we descend the tree, we split the segment in half. Then, the symbol <span class="math-tex">\(a_{i}\)</span> will get a segment of length <span class="math-tex">\(2^{-l_i}\)</span>.</p><p style="text-align:center;"><img src="generated/assets/Proofs_of_Algorithm_Correctness_and_Runtime_Estimates/Application$_Data_Compression_(Optional)=3/image1.png" width="800" ></p><p><em>Proof. </em>Let <span class="math-tex">\(t\)</span> be a numerical parameter we’ll choose later. Raise the left-hand side of the inequality to the power <span class="math-tex">\(t\)</span>: <span class="math-tex">\[\left(\sum_{i=1}^{n}2^{-l_i}\right)^{t}=\sum_{j=1}^{t\cdot \max l_i}c_{j}2^{-j}\  .\]</span> Here, <span class="math-tex">\(c_{j}\)</span> is the coefficient of <span class="math-tex">\(2^{-j}\)</span>, i.e., the number of ways to represent <span class="math-tex">\(j\)</span> as a sum <span class="math-tex">\(l_{i_1}+\dotsb+l_{i_t}\)</span>. Each such sum corresponds to a string <span class="math-tex">\(\phi(a_{i_1})\dotsb\phi(a_{i_t})\)</span>. All such strings have length <span class="math-tex">\(j\)</span> and are distinct due to the unique decodability. So <span class="math-tex">\(c_{j} \le 2^{j}\)</span>, and the sum does not exceed <span class="math-tex">\(t \cdot \max l_{i}\)</span>. If <span class="math-tex">\(\sum 2^{-l_i}&gt; 1\)</span>, then for large enough <span class="math-tex">\(t\)</span>, the inequality <span class="math-tex">\[\left(\sum_{i=1}^{n}2^{-l_i}\right)^{t} \le t \cdot \max l_{i}\]</span> would be violated (since exponentials eventually dominate linear functions).<span class="proof-end" aria-label="End of proof">◼</span></p>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-4-proofs-of-algorithm-correctness-and-runtime-estimates/unit/chapter-4-proofs-of-algorithm-correctness-and-runtime-estimates-unit-5-application-data-compression-optional/lesson/proofs-of-algorithm-correctness-and-runtime-estimates--application-data-compression-optional--step-3/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-4-proofs-of-algorithm-correctness-and-runtime-estimates/unit/chapter-4-proofs-of-algorithm-correctness-and-runtime-estimates-unit-5-application-data-compression-optional/lesson/proofs-of-algorithm-correctness-and-runtime-estimates--application-data-compression-optional--step-5/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

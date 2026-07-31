@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="Uniqueness. It is possible to construct a graph that admits multiple stationary distributions. For example, consider a graph consisting of two isolated…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Project: PageRank Algorithm › Stationary Distributions › Lesson 6 | Discrete Mathematics" />
+    <meta property="og:description" content="Uniqueness. It is possible to construct a graph that admits multiple stationary distributions. For example, consider a graph consisting of two isolated…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-30-project-pagerank-algorithm/unit/chapter-30-project-pagerank-algorithm-unit-3-stationary-distributions/lesson/project-pagerank-algorithm--stationary-distributions--step-6/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-30-project-pagerank-algorithm/unit/chapter-30-project-pagerank-algorithm-unit-3-stationary-distributions/lesson/project-pagerank-algorithm--stationary-distributions--step-6/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Project: PageRank Algorithm › Stationary Distributions › Lesson 6 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Project: PageRank Algorithm / Stationary Distributions</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Project: PageRank Algorithm · Stationary Distributions</p>
+        <h1>Lesson 6</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <ul><li><strong>Uniqueness.</strong>&nbsp; It&nbsp;is possible to&nbsp;construct a&nbsp;graph that admits multiple stationary distributions. For example, consider a&nbsp;graph consisting of two isolated self-loops. <p style="text-align:center;"><img src="generated/assets/Project$_PageRank_Algorithm/Stationary_Distributions=5/image0.png" width="800" ></p> It&nbsp;is easy to&nbsp;see that any probability distribution over these two vertices is stationary.<br>However, there is&nbsp;an important class of&nbsp;graphs for which the stationary distribution is&nbsp;unique. To&nbsp;describe them, decompose the graph into&nbsp;its strongly connected components (SCCs) and form the corresponding component graph, which is always a&nbsp;directed acyclic graph. If&nbsp;this component graph contains more than one sink component, then, as&nbsp;in&nbsp;the two-vertex example above, we&nbsp;can assign arbitrary weights to&nbsp;each sink component. In&nbsp;that case, the overall stationary distribution is&nbsp;any linear combination of&nbsp;the stationary distributions of&nbsp;each sink SCC summing to&nbsp;<span class="math-tex">\(1\)</span>. (You may also notice that every vertex outside the sink SCCs must have weight&nbsp;<span class="math-tex">\(0\)</span> in any stationary distribution. Indeed, from any non-sink component there&nbsp;is a&nbsp;non-zero probability of leaving&nbsp;it, but once you leave, you can never return, therefore no stationary mass can accumulate there.) Graphs whose component graph has exactly one sink SCC are&nbsp;called <em>irreducible</em>. For such graphs, the stationary distribution exists and is&nbsp;unique.</li><li><strong>Convergence.</strong>&nbsp; It&nbsp;is also not true that any initial distribution will necessarily converge to&nbsp;the stationary distribution. <p style="text-align:center;"><img src="generated/assets/Project$_PageRank_Algorithm/Stationary_Distributions=5/image1.png" width="800" ></p> As&nbsp;a&nbsp;simple example, consider a&nbsp;bipartite graph. In such a&nbsp;graph, the probability mass alternates between the two partitions at&nbsp;each step, so the stationary distribution is&nbsp;never actually reached. The class of&nbsp;graphs in&nbsp;which such cyclic behavior does&nbsp;not occur is&nbsp;called <em>aperiodic</em>. Formally, a&nbsp;graph is <em>aperiodic</em> if, for&nbsp;every vertex, the greatest common divisor (GCD) of&nbsp;the lengths of&nbsp;all cycles containing that vertex is&nbsp;<span class="math-tex">\(1\)</span>. (As&nbsp;in the previous discussion, vertices that lie outside the sink strongly connected components may&nbsp;not satisfy this condition. For such vertices, the stationary distribution still assigns a&nbsp;weight of&nbsp;<span class="math-tex">\(0\)</span>.)</li></ul><p>The&nbsp;<a href="https://www.math.uchicago.edu/~may/VIGRE/VIGRE2007/REUPapers/FINALFULL/Casarotto.pdf">Ergodic Theorem</a> states that for&nbsp;any irreducible and aperiodic graph, there exists a&nbsp;unique stationary distribution, and any initial distribution will exponentially converge to&nbsp;it under a&nbsp;random&nbsp;walk.</p><details><summary>For the curious 🤓</summary><div style="border-style: solid;">Here, exponential convergence means that there exist constants&nbsp;<span class="math-tex">\(C &gt; 0\)</span> and&nbsp;<span class="math-tex">\(0 &lt; \lambda &lt; 1\)</span> (in fact <span class="math-tex">\(\lambda\)</span> is the absolute value of&nbsp;the second largest eigenvalue of&nbsp;the transition matrix&nbsp;<span class="math-tex">\(\mathbf{T}\)</span>) such&nbsp;that <span class="math-tex">\[\|\mu_{n} - \mathbf{r}\|_{2} \le C \cdot \lambda^{n}\]</span> where&nbsp;<span class="math-tex">\(\mu_{n}\)</span> is&nbsp;the distribution after&nbsp;<span class="math-tex">\(n\)</span> steps and&nbsp;<span class="math-tex">\(\| \cdot \|_{2}\)</span> denotes the Euclidean&nbsp;norm.</div></details>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-30-project-pagerank-algorithm/unit/chapter-30-project-pagerank-algorithm-unit-3-stationary-distributions/lesson/project-pagerank-algorithm--stationary-distributions--step-5/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-30-project-pagerank-algorithm/unit/chapter-30-project-pagerank-algorithm-unit-4-pagerank-algorithm/lesson/project-pagerank-algorithm--pagerank-algorithm--step-1/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="It turns out that for \(d=\frac{n}{4}\) , the code can be of exponential size! Theorem. There exists a set of \(e^{n/16}\) binary strings of length \(n\)…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Probability in Computer Science › Probabilistic Method: Codes (Optional) › Lesson 5 | Discrete Mathematics" />
+    <meta property="og:description" content="It turns out that for \(d=\frac{n}{4}\) , the code can be of exponential size! Theorem. There exists a set of \(e^{n/16}\) binary strings of length \(n\)…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-22-probability-in-computer-science/unit/chapter-22-probability-in-computer-science-unit-6-probabilistic-method-codes-optional/lesson/probability-in-computer-science--probabilistic-method-codes-optional--step-5/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-22-probability-in-computer-science/unit/chapter-22-probability-in-computer-science-unit-6-probabilistic-method-codes-optional/lesson/probability-in-computer-science--probabilistic-method-codes-optional--step-5/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Probability in Computer Science › Probabilistic Method: Codes (Optional) › Lesson 5 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Probability in Computer Science / Probabilistic Method: Codes (Optional)</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Probability in Computer Science · Probabilistic Method: Codes (Optional)</p>
+        <h1>Lesson 5</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p>It turns out that for <span class="math-tex">\(d=\frac{n}{4}\)</span>, the code can be of exponential size!</p><p><strong>Theorem. </strong><em>There exists a&nbsp;set of&nbsp;<span class="math-tex">\(e^{n/16}\)</span> binary strings of&nbsp;length&nbsp;<span class="math-tex">\(n\)</span> such that any pair is&nbsp;at&nbsp;Hamming distance at&nbsp;least <span class="math-tex">\(n/4\)</span> from each other.</em></p><p> <em>Proof. </em>We&nbsp;construct the required code randomly: generate <span class="math-tex">\(e^{n/16}\)</span> random strings (by&nbsp;generating all bits of each string independently).</p><p>The expected distance between two random strings is <span class="math-tex">\(n/2\)</span>. Indeed, let <span class="math-tex">\(\alpha\)</span> be&nbsp;the distance between two random strings <span class="math-tex">\(a\)</span>&nbsp;and&nbsp;<span class="math-tex">\(b\)</span>. Then, <span class="math-tex">\[\alpha=\chi_{[a_1 \neq b_1]}+\dotsb+\chi_{[a_n \neq b_n]},\]</span> where <span class="math-tex">\(\chi_{[a_i \neq b_i]}\)</span> is an&nbsp;indicator random variable of&nbsp;an&nbsp;event &ldquo;<span class="math-tex">\(a\)</span>&nbsp;and&nbsp;<span class="math-tex">\(b\)</span> differ in the <span class="math-tex">\(i\)</span>-th bit&rdquo;. Clearly, <span class="math-tex">\[\operatorname{E}[\chi_{[a_i \neq b_i]}]=\Pr[\chi_{[a_i \neq b_i]}=1]=\Pr[a_{i} \neq b_{i}]=\frac{1}{2}.\]</span> Hence, <span class="math-tex">\(\operatorname{E}[\alpha]=n/2\)</span>.</p><p>Then, by&nbsp;Chernoff, <span class="math-tex">\[\Pr\left[\alpha \le \frac{n}{4}\right] =\Pr\left[\alpha \le \operatorname{E}[\alpha] - \frac{n}{4}\right]\le e^{-\frac{2}{n}\frac{n^2}{16}}=e^{-\frac{n}{8}}\]</span></p><p>By&nbsp;the union bound, the probability that any pair of&nbsp;<span class="math-tex">\(k=e^{n/16}\)</span> random strings lies at&nbsp;distance at&nbsp;most <span class="math-tex">\(n/4\)</span>, is&nbsp;at&nbsp;most <span class="math-tex">\[\binom{k}{2}e^{-\frac{n}{8}}&lt;k^{2}e^{-\frac{n}{8}}=e^{\frac{n}{8}}e^{-\frac{n}{8}}=1.\]</span><span class="proof-end" aria-label="End of proof">◼</span></p>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-22-probability-in-computer-science/unit/chapter-22-probability-in-computer-science-unit-6-probabilistic-method-codes-optional/lesson/probability-in-computer-science--probabilistic-method-codes-optional--step-4/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-22-probability-in-computer-science/unit/chapter-22-probability-in-computer-science-unit-6-probabilistic-method-codes-optional/lesson/probability-in-computer-science--probabilistic-method-codes-optional--step-6/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

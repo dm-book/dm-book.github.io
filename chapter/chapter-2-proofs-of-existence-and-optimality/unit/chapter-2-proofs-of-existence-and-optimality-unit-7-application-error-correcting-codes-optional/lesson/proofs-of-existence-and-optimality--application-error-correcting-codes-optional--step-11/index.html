@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="The Reed–Muller code allows one to achieve higher distances. Theorem. Let \(0 \le r \le m\) . Then, \[C_{r,m}= \{\text{truth table of \(P\)}\colon P \in…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Proofs of Existence and Optimality › Application: Error Correcting Codes (Optional) › Reed–Muller code | Discrete Mathematics" />
+    <meta property="og:description" content="The Reed–Muller code allows one to achieve higher distances. Theorem. Let \(0 \le r \le m\) . Then, \[C_{r,m}= \{\text{truth table of \(P\)}\colon P \in…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-2-proofs-of-existence-and-optimality/unit/chapter-2-proofs-of-existence-and-optimality-unit-7-application-error-correcting-codes-optional/lesson/proofs-of-existence-and-optimality--application-error-correcting-codes-optional--step-11/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-2-proofs-of-existence-and-optimality/unit/chapter-2-proofs-of-existence-and-optimality-unit-7-application-error-correcting-codes-optional/lesson/proofs-of-existence-and-optimality--application-error-correcting-codes-optional--step-11/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Proofs of Existence and Optimality › Application: Error Correcting Codes (Optional) › Reed–Muller code | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Proofs of Existence and Optimality / Application: Error Correcting Codes (Optional)</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Proofs of Existence and Optimality · Application: Error Correcting Codes (Optional)</p>
+        <h1>Reed–Muller code</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p> The Reed–Muller code allows one to&nbsp;achieve higher distances.</p><p><strong>Theorem. </strong><em>Let <span class="math-tex">\(0 \le r \le m\)</span>. Then, <span class="math-tex">\[C_{r,m}= \{\text{truth table of \(P\)}\colon P \in \mathbb{F}_{2}[x_{1},\dotsc,x_{m}],&nbsp;P \text{ is multilinear},&nbsp;\deg(P) \le r\}\]</span> is a linear <span class="math-tex">\((n=2^{m}, k=\sum_{t \le r}\binom{m}{t}, d=2^{m-r})\)</span> code. Encoding is polynomial-time.</em></p><p>Before proving, consider a toy example. Let <span class="math-tex">\(m=2\)</span>. Here we use polynomials in two variables. The set <span class="math-tex">\(C_{1,2}\)</span> is shown below, its distance is two. The set <span class="math-tex">\(C_{0,2}\)</span> consists of its first two vectors, distance is four.</p><p style="text-align:center;"><img src="generated/assets/Proofs_of_Existence_and_Optimality/Application$_Error_Correcting_Codes_(Optional)=10/image0.png" width="800" ></p><p><em>Proof. </em></p><ul><li><strong>Linearity.</strong>&nbsp; The sum of two polynomials of degree <span class="math-tex">\(\le r\)</span> has degree <span class="math-tex">\(\le r\)</span>.</li><li><strong>Dimension.</strong>&nbsp; Basis: truth tables of all multilinear monomials of degree <span class="math-tex">\(\le r\)</span>:  <span class="math-tex">\[\{1\} \cup \{x_{1},\dotsc,x_{m}\} \cup \{x_{1}x_{2},\dotsc,x_{m-1}x_{m}\} \cup \dotsb \cup \{x_{i_1}\dotsb x_{i_r}\colon 1\le i_{1}&lt;\dotsb&lt;i_{r}\le m\}.\]</span>   Hence <span class="math-tex">\(k=\sum_{t \le r}\binom{m}{t}\)</span>.</li><li><strong>Encoding.</strong>&nbsp; Map <span class="math-tex">\(\phi \colon \{0,1\}^{k} \to \{0,1\}^{n}\)</span>: input bits are coefficients of a degree-<span class="math-tex">\(\le r\)</span> polynomial; output is its truth table.</li><li><strong>Distance.</strong>&nbsp; Since the code is linear, it suffices to show any nonzero codeword has weight <span class="math-tex">\(\ge 2^{m-r}\)</span>, which follows from the lemma below.</li></ul><p><span class="proof-end" aria-label="End of proof">◼</span></p><p><strong>Lemma. </strong><em>Let <span class="math-tex">\(P \in \mathbb{F}_{2}[x_{1},\dotsc,x_{m}]\)</span> be a&nbsp;nonzero multilinear polynomial of&nbsp;degree&nbsp;<span class="math-tex">\(\le r\)</span>. Then, <span class="math-tex">\[|\{x \in \{0,1\}^{m} \colon P(x)=1\}| \ge 2^{m-r}.\]</span></em></p><p><em>Proof. </em>Induction on <span class="math-tex">\(m\)</span>. Base: <span class="math-tex">\(m=1\)</span>, then <span class="math-tex">\(P\in\{1,x_{1},1\oplus x_{1}\}\)</span>, checked directly. Step <span class="math-tex">\(m-1\to m\)</span>: without loss of&nbsp;generality, assume <span class="math-tex">\(P\)</span>&nbsp;depends on&nbsp;<span class="math-tex">\(x_{m}\)</span>. Then <span class="math-tex">\[P(x)=Q(x_{1},\dotsc,x_{m-1})\oplus x_{m} R(x_{1},\dotsc,x_{m-1}),\]</span> where <span class="math-tex">\(R\neq0\)</span>, <span class="math-tex">\(\deg R \le r-1\)</span>. By induction, <span class="math-tex">\(R=1\)</span> on at least <span class="math-tex">\(2^{m-r}\)</span> points. Each such <span class="math-tex">\((v_{1},\dotsc,v_{m-1})\)</span> extends to <span class="math-tex">\((v_{1},\dotsc,v_{m-1},1\oplus Q(v))\)</span>, and <span class="math-tex">\[P(v_{1},\dotsc,v_{m-1},1\oplus Q(v))=Q\oplus1\oplus Q=1.\]</span><span class="proof-end" aria-label="End of proof">◼</span></p>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-2-proofs-of-existence-and-optimality/unit/chapter-2-proofs-of-existence-and-optimality-unit-7-application-error-correcting-codes-optional/lesson/proofs-of-existence-and-optimality--application-error-correcting-codes-optional--step-10/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-2-proofs-of-existence-and-optimality/unit/chapter-2-proofs-of-existence-and-optimality-unit-7-application-error-correcting-codes-optional/lesson/proofs-of-existence-and-optimality--application-error-correcting-codes-optional--step-12/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

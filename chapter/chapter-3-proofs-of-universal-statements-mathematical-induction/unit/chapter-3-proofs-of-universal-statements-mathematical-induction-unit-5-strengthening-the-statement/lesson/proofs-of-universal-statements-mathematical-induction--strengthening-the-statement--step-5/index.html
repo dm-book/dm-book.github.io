@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="Before proving, let&#39;s see if this sum is indeed less than one—at least for \(n=500\) . from itertools import accumulate import matplotlib.pyplot as plt…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Proofs of Universal Statements: Mathematical Induction › Strengthening the Statement › Lesson 5 | Discrete Mathematics" />
+    <meta property="og:description" content="Before proving, let&#39;s see if this sum is indeed less than one—at least for \(n=500\) . from itertools import accumulate import matplotlib.pyplot as plt…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-3-proofs-of-universal-statements-mathematical-induction/unit/chapter-3-proofs-of-universal-statements-mathematical-induction-unit-5-strengthening-the-statement/lesson/proofs-of-universal-statements-mathematical-induction--strengthening-the-statement--step-5/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-3-proofs-of-universal-statements-mathematical-induction/unit/chapter-3-proofs-of-universal-statements-mathematical-induction-unit-5-strengthening-the-statement/lesson/proofs-of-universal-statements-mathematical-induction--strengthening-the-statement--step-5/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Proofs of Universal Statements: Mathematical Induction › Strengthening the Statement › Lesson 5 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Proofs of Universal Statements: Mathematical Induction / Strengthening the Statement</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Proofs of Universal Statements: Mathematical Induction · Strengthening the Statement</p>
+        <h1>Lesson 5</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p>Before proving, let's see if this sum is indeed less than one&mdash;at least for <span class="math-tex">\(n=500\)</span>. </p><pre><code class="language-python">from itertools import accumulate
+import matplotlib.pyplot as plt
+
+plt.plot([*accumulate(1 / (i * (i + 1)) for i in range(1, 500))])
+plt.savefig('inverse_squares.png')</code></pre><p style="text-align:center;"><img src="generated/assets/Proofs_of_Universal_Statements$_Mathematical_Induction/Strengthening_the_Statement=4/image0.png" width="800" ></p><p>It is evident that as <span class="math-tex">\(n\)</span>&nbsp;grows, the sum approaches one. We cannot simply prove the required statement by induction: if we only know that a certain number is less than one, it might still become greater than one after adding the next term. To prove that this cannot happen, we need to know <em>by how much</em> our number is less than one. This is exactly what needs to be &ldquo;embedded&rdquo; in the strengthened statement. For example, we can prove that the sum will be no more than <span class="math-tex">\(1-1/(n+1)\)</span>. Then the step will be easily proven.</p><details><summary>For the curious 🤓</summary><div style="border-style: solid;">In fact, the sum we need is even equal to <span class="math-tex">\(1-1/(n+1)\)</span>: experienced people will quickly notice this by understanding that each term should be rewritten as <span class="math-tex">\(1/i-1/(i+1)\)</span>, after which almost everything cancels out (or, as it is sometimes said, telescopes).</div></details>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-3-proofs-of-universal-statements-mathematical-induction/unit/chapter-3-proofs-of-universal-statements-mathematical-induction-unit-5-strengthening-the-statement/lesson/proofs-of-universal-statements-mathematical-induction--strengthening-the-statement--step-4/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-3-proofs-of-universal-statements-mathematical-induction/unit/chapter-3-proofs-of-universal-statements-mathematical-induction-unit-5-strengthening-the-statement/lesson/proofs-of-universal-statements-mathematical-induction--strengthening-the-statement--step-6/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

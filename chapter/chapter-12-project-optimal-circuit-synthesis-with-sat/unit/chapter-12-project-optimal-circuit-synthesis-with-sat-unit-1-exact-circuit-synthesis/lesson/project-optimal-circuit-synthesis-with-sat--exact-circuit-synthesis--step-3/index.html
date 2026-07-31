@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="Before searching for circuits, we need a reliable evaluator. The rows of a truth-table are ordered lexicographically: \[00… 0, 00… 1, \dotsc, 11… 1.\] For…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Project: Optimal Circuit Synthesis with SAT › Exact Circuit Synthesis › Lesson 3 | Discrete Mathematics" />
+    <meta property="og:description" content="Before searching for circuits, we need a reliable evaluator. The rows of a truth-table are ordered lexicographically: \[00… 0, 00… 1, \dotsc, 11… 1.\] For…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-12-project-optimal-circuit-synthesis-with-sat/unit/chapter-12-project-optimal-circuit-synthesis-with-sat-unit-1-exact-circuit-synthesis/lesson/project-optimal-circuit-synthesis-with-sat--exact-circuit-synthesis--step-3/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-12-project-optimal-circuit-synthesis-with-sat/unit/chapter-12-project-optimal-circuit-synthesis-with-sat-unit-1-exact-circuit-synthesis/lesson/project-optimal-circuit-synthesis-with-sat--exact-circuit-synthesis--step-3/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Project: Optimal Circuit Synthesis with SAT › Exact Circuit Synthesis › Lesson 3 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Project: Optimal Circuit Synthesis with SAT / Exact Circuit Synthesis</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Project: Optimal Circuit Synthesis with SAT · Exact Circuit Synthesis</p>
+        <h1>Lesson 3</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p>Before searching for circuits, we need a&nbsp;reliable evaluator. The rows of&nbsp;a&nbsp;truth-table are ordered lexicographically: <span class="math-tex">\[00&hellip; 0,&nbsp;00&hellip; 1,&nbsp;\dotsc,&nbsp;11&hellip; 1.\]</span> For every row, evaluate the circuit on&nbsp;this assignment.</p><p><strong>Programming problem. </strong> Compute the truth tables of all circuit outputs.</p><ul><li><strong>Input format.</strong>&nbsp; The first line contains <span class="math-tex">\(n\)</span>, <span class="math-tex">\(m\)</span>, and <span class="math-tex">\(r\)</span> (<span class="math-tex">\(1\le n\le 8\)</span>, <span class="math-tex">\(0\le m\le 100\)</span>, <span class="math-tex">\(1\le r\le 20\)</span>): the numbers of inputs, gates, and outputs. Each of the next <span class="math-tex">\(m\)</span> lines contains two predecessor indices <span class="math-tex">\(a_{i},b_{i}\)</span> and a&nbsp;four-bit operation string. Gate&nbsp;<span class="math-tex">\(i\)</span> has index <span class="math-tex">\(n+i\)</span>, and <span class="math-tex">\(0\le a_{i},b_{i}&lt;n+i\)</span>. The last line contains <span class="math-tex">\(r\)</span> source indices used as outputs.</li><li><strong>Output format.</strong>&nbsp; Print <span class="math-tex">\(r\)</span> lines. Line&nbsp;<span class="math-tex">\(j\)</span> must be the <span class="math-tex">\(2^{n}\)</span>-bit truth table of output&nbsp;<span class="math-tex">\(j\)</span>, in&nbsp;lexicographic order of&nbsp;input assignments.</li></ul>
+          <div class="task-card programming-card">
+        
+        <a class="cogniterra-only-notice" href="https://cogniterra.org/a/697" target="_blank" rel="noreferrer">This problem can only be submitted at Cogniterra.</a>
+        <section class="programming-samples" aria-label="Public programming samples">
+          <div class="task-heading">Public samples</div>
+          <article class="programming-sample">
+            <strong>Public sample 1</strong>
+            <div class="programming-result-grid">
+              <div><div class="result-field-label">Input</div><pre>2 2 2
+0 1 0110
+0 1 0001
+2 3</pre></div>
+              <div><div class="result-field-label">Example output</div><pre>0110
+0001</pre></div>
+            </div>
+          </article>
+          <article class="programming-sample">
+            <strong>Public sample 2</strong>
+            <div class="programming-result-grid">
+              <div><div class="result-field-label">Input</div><pre>3 0 3
+0 1 2</pre></div>
+              <div><div class="result-field-label">Example output</div><pre>00001111
+00110011
+01010101</pre></div>
+            </div>
+          </article>
+          <article class="programming-sample">
+            <strong>Public sample 3</strong>
+            <div class="programming-result-grid">
+              <div><div class="result-field-label">Input</div><pre>3 2 2
+0 1 0110
+3 2 0001
+3 4</pre></div>
+              <div><div class="result-field-label">Example output</div><pre>00111100
+00010100</pre></div>
+            </div>
+          </article>
+        </section>
+      </div>
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-12-project-optimal-circuit-synthesis-with-sat/unit/chapter-12-project-optimal-circuit-synthesis-with-sat-unit-1-exact-circuit-synthesis/lesson/project-optimal-circuit-synthesis-with-sat--exact-circuit-synthesis--step-2/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-12-project-optimal-circuit-synthesis-with-sat/unit/chapter-12-project-optimal-circuit-synthesis-with-sat-unit-2-searching-small-circuits/lesson/project-optimal-circuit-synthesis-with-sat--searching-small-circuits--step-1/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="In the world of computer science, we often strive for certainty. We want our programs to be “deterministic”—producing the same output for a given input…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Probability in Computer Science › Randomized Algorithms › Lesson 1 | Discrete Mathematics" />
+    <meta property="og:description" content="In the world of computer science, we often strive for certainty. We want our programs to be “deterministic”—producing the same output for a given input…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-22-probability-in-computer-science/unit/chapter-22-probability-in-computer-science-unit-1-randomized-algorithms/lesson/probability-in-computer-science--randomized-algorithms--step-1/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-22-probability-in-computer-science/unit/chapter-22-probability-in-computer-science-unit-1-randomized-algorithms/lesson/probability-in-computer-science--randomized-algorithms--step-1/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Probability in Computer Science › Randomized Algorithms › Lesson 1 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Probability in Computer Science / Randomized Algorithms</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Probability in Computer Science · Randomized Algorithms</p>
+        <h1>Lesson 1</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p>In the world of computer science, we often strive for certainty. We&nbsp;want our programs to&nbsp;be &ldquo;deterministic&rdquo;&mdash;producing the same output for a&nbsp;given input every single time. However, introducing a&nbsp;bit of &ldquo;chaos&rdquo; through randomization is&nbsp;actually one of&nbsp;the most powerful strategies in&nbsp;an&nbsp;algorithm designer's toolkit.</p><p>Here&nbsp;is why letting an&nbsp;algorithm &ldquo;flip a&nbsp;coin&rdquo; is often the smartest move.</p><ul><li><strong>Breaking the &ldquo;worst-case&rdquo; trap.</strong>&nbsp; Many classic algorithms have a&nbsp;&ldquo;weak spot.&rdquo; For example, the standard <a href="https://en.wikipedia.org/wiki/Quicksort">QuickSort</a> algorithm is&nbsp;incredibly fast on average, but if it consistently picks a&nbsp;poor &ldquo;pivot&rdquo; element, its performance can collapse from <span class="math-tex">\(O(n \log n)\)</span> to <span class="math-tex">\(\Omega(n^{2})\)</span>. By using a&nbsp;Randomized QuickSort, the algorithm chooses its pivot point at&nbsp;random. This ensures that no specific input (like a&nbsp;pre-sorted list) can consistently force the algorithm into its slowest state. It shifts the risk away from the data and onto a&nbsp;random variable, making the &ldquo;worst case&rdquo; practically impossible to&nbsp;hit.</li><li><strong>Efficiency and simplicity.</strong>&nbsp; Randomized algorithms are often significantly simpler to code than their deterministic counterparts. <ul><li><strong>Simplicity.</strong>&nbsp; Instead of complex balancing logic in a&nbsp;tree, you can use a&nbsp;<a href="https://en.wikipedia.org/wiki/Treap">Treap</a> (a&nbsp;randomized search tree) which stays balanced with high probability just by&nbsp;assigning random priorities to nodes.</li><li><strong>Speed.</strong>&nbsp; In primality testing (checking if a&nbsp;number is prime), randomized algorithms like <a href="https://en.wikipedia.org/wiki/Miller%E2%80%93Rabin_primality_test">Miller&ndash;Rabin</a> provide answers almost instantaneously for massive numbers, whereas deterministic methods are often too slow for practical use in cryptography.</li></ul></li><li><strong>Solving the &ldquo;unsolvable&rdquo;.</strong>&nbsp; In some fields, like high-dimensional physics or&nbsp;complex integration, calculating an&nbsp;exact answer is&nbsp;mathematically exhausting or&nbsp;impossible. Monte Carlo methods use random sampling to&nbsp;approximate these results. By taking enough &ldquo;random shots&rdquo; at a&nbsp;problem, you can converge on a&nbsp;highly accurate answer much faster than you could by&nbsp;checking every possible coordinate.</li><li><strong>Symmetry breaking in&nbsp;distributed systems.</strong>&nbsp; In a&nbsp;network where multiple computers (nodes) need to communicate, they often run into &ldquo;deadlocks&rdquo; where everyone tries to&nbsp;do the same thing at&nbsp;the same time. If every node follows the exact same deterministic rule, they might stay stuck forever. Randomization allows nodes to&nbsp;&ldquo;back off&rdquo; for a&nbsp;random amount of time, breaking the symmetry and allowing the system to&nbsp;resume work. This&nbsp;is the backbone of how Ethernet and Wi-Fi handle data collisions.</li><li><strong>Machine Learning.</strong>&nbsp; It is tempting to imagine that a&nbsp;text language model simply chooses the &ldquo;best&rdquo; next word again and again. In many systems, however, the model first assigns scores to many possible next tokens and then turns these scores into a&nbsp;probability distribution. The scores themselves are not probabilities: they can be negative, they do not sum to one, and only their relative values matter. Applying different transformations to those scores, combined with the use of randomness, allows one to introduce varying degrees of &ldquo;creativity&rdquo; into the model. </li></ul>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-21-deviation-from-the-mean/unit/chapter-21-deviation-from-the-mean-unit-8-theory-problems/lesson/deviation-from-the-mean--theory-problems--step-3/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-22-probability-in-computer-science/unit/chapter-22-probability-in-computer-science-unit-1-randomized-algorithms/lesson/probability-in-computer-science--randomized-algorithms--step-2/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

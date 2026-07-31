@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="The Catalan number \(C(n)\) is defined as the number of correct bracket sequences with \(n\) opening and \(n\) closing brackets. The number \(C(n)\) can be…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Arrangements and Combinations › Catalan Numbers: Proof of the Formula › Lesson 1 | Discrete Mathematics" />
+    <meta property="og:description" content="The Catalan number \(C(n)\) is defined as the number of correct bracket sequences with \(n\) opening and \(n\) closing brackets. The number \(C(n)\) can be…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-13-arrangements-and-combinations/unit/chapter-13-arrangements-and-combinations-unit-10-catalan-numbers-proof-of-the-formula/lesson/arrangements-and-combinations--catalan-numbers-proof-of-the-formula--step-1/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-13-arrangements-and-combinations/unit/chapter-13-arrangements-and-combinations-unit-10-catalan-numbers-proof-of-the-formula/lesson/arrangements-and-combinations--catalan-numbers-proof-of-the-formula--step-1/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Arrangements and Combinations › Catalan Numbers: Proof of the Formula › Lesson 1 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Arrangements and Combinations / Catalan Numbers: Proof of the Formula</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Arrangements and Combinations · Catalan Numbers: Proof of the Formula</p>
+        <h1>Lesson 1</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p>The Catalan number <span class="math-tex">\(C(n)\)</span> is defined as the number of correct bracket sequences with&nbsp;<span class="math-tex">\(n\)</span>&nbsp;opening and&nbsp;<span class="math-tex">\(n\)</span>&nbsp;closing brackets. The number <span class="math-tex">\(C(n)\)</span> can be found using the following recurrence relation. A correct bracket sequence must begin with an opening bracket. Let us find the matching closing bracket. The whole sequence then looks like this: <span class="math-tex">\[\textcolor{#90ee90}{(}\underbrace{(())()((()))}_{\text{\(l\)&nbsp;pairs}}\textcolor{#90ee90}{)}\underbrace{(()(())()())()}_{\text{\((n-1-l)\)&nbsp;pairs}}\]</span> It is easy to see that between these two brackets, as well as immediately after them, there must be correct bracket sequences. Therefore, <span class="math-tex">\[C(n)=\sum_{l=0}^{n-1}C(l)C(n-1-l)=\sum_{l+r=n-1}C(l)C(r) \  .\]</span> At the same time, <span class="math-tex">\(C(0)=1\)</span>: there is one way to place no brackets at all. Accordingly, the Catalan numbers can be computed sequentially:  <span class="math-tex">\[\begin{align*}C(0)&= 1,\\ C(1)&= C(0)C(0)=1 \times 1 = 1,\\ C(2)&= C(0)C(1)+C(1)C(0) = 1 \times 1 + 1 \times 1 = 2,\\ C(3)&= C(0)C(2)+C(1)C(1)+C(2)C(0)=1 \times 2 + 1 \times 1 + 2 \times 1 = 5.\\\end{align*}\]</span>  </p><p>The first few Catalan numbers: </p><p style="text-align:center;"><img src="generated/assets/Arrangements_and_Combinations/Catalan_Numbers$_Proof_of_the_Formula=0/image0.png" width="800" ></p>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-13-arrangements-and-combinations/unit/chapter-13-arrangements-and-combinations-unit-9-catalan-numbers-introduction/lesson/arrangements-and-combinations--catalan-numbers-introduction--step-10/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-13-arrangements-and-combinations/unit/chapter-13-arrangements-and-combinations-unit-10-catalan-numbers-proof-of-the-formula/lesson/arrangements-and-combinations--catalan-numbers-proof-of-the-formula--step-2/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

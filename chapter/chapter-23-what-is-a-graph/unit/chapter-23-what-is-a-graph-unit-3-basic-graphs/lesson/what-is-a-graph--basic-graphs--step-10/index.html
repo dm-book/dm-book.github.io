@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="In many applications, one deals with rooted trees. A rooted tree is just a tree with one node designated as the root. Then, for each node, one can measure…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="What is a Graph? › Basic Graphs › Lesson 10 | Discrete Mathematics" />
+    <meta property="og:description" content="In many applications, one deals with rooted trees. A rooted tree is just a tree with one node designated as the root. Then, for each node, one can measure…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-23-what-is-a-graph/unit/chapter-23-what-is-a-graph-unit-3-basic-graphs/lesson/what-is-a-graph--basic-graphs--step-10/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-23-what-is-a-graph/unit/chapter-23-what-is-a-graph-unit-3-basic-graphs/lesson/what-is-a-graph--basic-graphs--step-10/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>What is a Graph? › Basic Graphs › Lesson 10 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / What is a Graph? / Basic Graphs</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">What is a Graph? · Basic Graphs</p>
+        <h1>Lesson 10</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p>In&nbsp;many applications, one deals with rooted trees. A&nbsp;<em>rooted tree</em> is&nbsp;just a&nbsp;tree with one node designated as&nbsp;the root. Then, for each node, one can measure its distance to&nbsp;the root. This, in&nbsp;turn, allows us to&nbsp;draw a&nbsp;tree in a&nbsp;layered manner: the root goes on&nbsp;top, its neighbors are located on&nbsp;the next layer below the root, and so&nbsp;on. In&nbsp;such a&nbsp;drawing, the neighbors of a&nbsp;node&nbsp;<span class="math-tex">\(v\)</span> that are located below&nbsp;it are called <em>the children of&nbsp;<span class="math-tex">\(v\)</span></em> whereas its only neighbor above&nbsp;<span class="math-tex">\(v\)</span> is&nbsp;called <em>the parent of&nbsp;<span class="math-tex">\(v\)</span></em> (hence, the root node has no&nbsp;parent).</p><p>To&nbsp;give an&nbsp;example, consider the following tree. </p><p style="text-align:center;"><img src="generated/assets/What_is_a_Graph/Basic_Graphs=9/image0.png" width="800" ></p><p> Now, let's make it&nbsp;rooted by&nbsp;designating the node&nbsp;<span class="math-tex">\(3\)</span> as&nbsp;the root. We&nbsp;draw the tree from top to&nbsp;bottom starting from the root. To&nbsp;do that, imagine that the nodes are balls and the edges are threads and we&nbsp;hang&nbsp;up the tree by&nbsp;its root node. </p><p style="text-align:center;"><img src="generated/assets/What_is_a_Graph/Basic_Graphs=9/image1.png" width="800" ></p><p> In&nbsp;this rooted tree, </p><ul><li> <span class="math-tex">\(3\)</span> is&nbsp;the root;</li><li> the children of&nbsp;<span class="math-tex">\(1\)</span> are <span class="math-tex">\(\{4, 2, 6\}\)</span>;</li><li> the parent of&nbsp;<span class="math-tex">\(7\)</span> is&nbsp;<span class="math-tex">\(6\)</span>;</li><li> <span class="math-tex">\(\{14, 11, 12, 4, 2, 9, 10\}\)</span> are leaves.</li></ul><p>The following code shows that one can also use orbits (rather than horizontal lines) as&nbsp;levels. </p><pre><code class="language-python">from networkx import balanced_tree, nx_agraph
+
+tree = balanced_tree(2, 5)
+for layout in ('dot', 'twopi'):
+    nx_agraph.to_agraph(tree).draw(f'b_{layout}.png', prog=layout)</code></pre><p style="text-align:center;"><img src="generated/assets/What_is_a_Graph/Basic_Graphs=9/image2.png" width="800" ></p>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-23-what-is-a-graph/unit/chapter-23-what-is-a-graph-unit-3-basic-graphs/lesson/what-is-a-graph--basic-graphs--step-9/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-23-what-is-a-graph/unit/chapter-23-what-is-a-graph-unit-3-basic-graphs/lesson/what-is-a-graph--basic-graphs--step-11/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="For a sequence \(\pi\) , let \(\operatorname{inv}(\pi)\) denote the number of volumes that are positioned to the right of their correct places. In the…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Proofs of Algorithm Correctness and Runtime Estimates › Invariants and Algorithms › Lesson 14 | Discrete Mathematics" />
+    <meta property="og:description" content="For a sequence \(\pi\) , let \(\operatorname{inv}(\pi)\) denote the number of volumes that are positioned to the right of their correct places. In the…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-4-proofs-of-algorithm-correctness-and-runtime-estimates/unit/chapter-4-proofs-of-algorithm-correctness-and-runtime-estimates-unit-3-invariants-and-algorithms/lesson/proofs-of-algorithm-correctness-and-runtime-estimates--invariants-and-algorithms--step-14/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-4-proofs-of-algorithm-correctness-and-runtime-estimates/unit/chapter-4-proofs-of-algorithm-correctness-and-runtime-estimates-unit-3-invariants-and-algorithms/lesson/proofs-of-algorithm-correctness-and-runtime-estimates--invariants-and-algorithms--step-14/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Proofs of Algorithm Correctness and Runtime Estimates › Invariants and Algorithms › Lesson 14 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Proofs of Algorithm Correctness and Runtime Estimates / Invariants and Algorithms</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Proofs of Algorithm Correctness and Runtime Estimates · Invariants and Algorithms</p>
+        <h1>Lesson 14</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p>For a&nbsp;sequence&nbsp;<span class="math-tex">\(\pi\)</span>, let <span class="math-tex">\(\operatorname{inv}(\pi)\)</span> denote the number of&nbsp;volumes that are positioned <em>to the right</em> of their correct places. In the example below, all such volumes are highlighted. </p><p style="text-align:center;"><img src="generated/assets/Proofs_of_Algorithm_Correctness_and_Runtime_Estimates/Invariants_and_Algorithms=13/image0.png" width="800" ></p><p> This is the semi-invariant we need! Let's prove the three promised facts for it. </p><ol><li> <em>For each move, this parameter decreases by no more than one.</em> Indeed, each volume that is to the right of its position needs to move to the left, but each move only one volume moves to the left (and the other one moves to the right). Therefore, in one move, the number of volumes that are to the right of their places decreases by no more than one.</li><li> <em>For an ordered (ascending) sequence, this parameter equals zero.</em> Indeed, in an ordered sequence, there is no volume that is to the right more than necessary.</li><li> <em>There are sequences for which this parameter equals nine.</em> This is shown in the example above.</li></ol><p>This allows us to conclude that the minimum number of moves required to sort the sequence <span class="math-tex">\[[9, 0, 1, 2, 3, 4, 5, 6, 7, 8],\]</span> is nine.</p>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-4-proofs-of-algorithm-correctness-and-runtime-estimates/unit/chapter-4-proofs-of-algorithm-correctness-and-runtime-estimates-unit-3-invariants-and-algorithms/lesson/proofs-of-algorithm-correctness-and-runtime-estimates--invariants-and-algorithms--step-13/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-4-proofs-of-algorithm-correctness-and-runtime-estimates/unit/chapter-4-proofs-of-algorithm-correctness-and-runtime-estimates-unit-4-guessing-a-number/lesson/proofs-of-algorithm-correctness-and-runtime-estimates--guessing-a-number--step-1/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

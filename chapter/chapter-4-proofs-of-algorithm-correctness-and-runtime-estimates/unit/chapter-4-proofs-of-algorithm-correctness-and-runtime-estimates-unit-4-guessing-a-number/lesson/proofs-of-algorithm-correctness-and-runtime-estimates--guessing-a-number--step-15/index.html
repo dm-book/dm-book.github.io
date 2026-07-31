@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="One way of arriving at a solution is the following. For the curious 🤓 There exists a set \(C \subseteq \{0,1\}^{7}\) with the following two properties:…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Proofs of Algorithm Correctness and Runtime Estimates › Guessing a Number › Lesson 15 | Discrete Mathematics" />
+    <meta property="og:description" content="One way of arriving at a solution is the following. For the curious 🤓 There exists a set \(C \subseteq \{0,1\}^{7}\) with the following two properties:…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-4-proofs-of-algorithm-correctness-and-runtime-estimates/unit/chapter-4-proofs-of-algorithm-correctness-and-runtime-estimates-unit-4-guessing-a-number/lesson/proofs-of-algorithm-correctness-and-runtime-estimates--guessing-a-number--step-15/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-4-proofs-of-algorithm-correctness-and-runtime-estimates/unit/chapter-4-proofs-of-algorithm-correctness-and-runtime-estimates-unit-4-guessing-a-number/lesson/proofs-of-algorithm-correctness-and-runtime-estimates--guessing-a-number--step-15/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Proofs of Algorithm Correctness and Runtime Estimates › Guessing a Number › Lesson 15 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Proofs of Algorithm Correctness and Runtime Estimates / Guessing a Number</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Proofs of Algorithm Correctness and Runtime Estimates · Guessing a Number</p>
+        <h1>Lesson 15</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p>One way of&nbsp;arriving at a&nbsp;solution is&nbsp;the following.</p><details><summary>For the curious 🤓</summary><div style="border-style: solid;">There exists a&nbsp;set <span class="math-tex">\(C \subseteq \{0,1\}^{7}\)</span> with the following two properties: <span class="math-tex">\(|C|=16\)</span> and any two different strings <span class="math-tex">\(u, v \in C\)</span> differ in&nbsp;at&nbsp;least three positions. As&nbsp;<span class="math-tex">\(C\)</span> one can take, for example, the <em>Hamming code</em>: <span class="math-tex">\[C=\{x \in \{0,1\}^{7} \colon Hx=\mathbf{0}\},\]</span> where the matrix <span class="math-tex">\(H \in \{0,1\}^{3 \times 7}\)</span> contains as&nbsp;columns the binary representation of&nbsp;integers <span class="math-tex">\(1,2,\dotsc,7\)</span> and the multiplication is&nbsp;over&nbsp;<span class="math-tex">\(\mathbb{F}_{2}\)</span>. <span class="math-tex">\[H=\begin{pmatrix}0&0&0&1&1&1&1\\ 0&1&1&0&0&1&1\\ 1&0&1&0&1&0&1\end{pmatrix}\]</span> We&nbsp;leave the proof of&nbsp;two properties of&nbsp;<span class="math-tex">\(C\)</span> mentioned above to&nbsp;you as&nbsp;an&nbsp;exercise. This&nbsp;is how one can generate the set&nbsp;<span class="math-tex">\(C\)</span> in&nbsp;Python. <pre><code class="language-python">from itertools import product
+
+code = [x for x in product(range(2), repeat=7) if
+        (x[3] + x[4] + x[5] + x[6]) % 2 == 0 and
+        (x[1] + x[2] + x[5] + x[6]) % 2 == 0 and
+        (x[0] + x[2] + x[4] + x[6]) % 2 == 0
+        ]
+
+for i, word in enumerate(code):
+    print(i, end=' ')
+    print(*word, sep='')</code></pre><pre><code class="language-auto">0 0000000
+1 0001111
+2 0010110
+3 0011001
+4 0100101
+5 0101010
+6 0110011
+7 0111100
+8 1000011
+9 1001100
+10 1010101
+11 1011010
+12 1100110
+13 1101001
+14 1110000
+15 1111111
+</code></pre>The set&nbsp;<span class="math-tex">\(C\)</span> allows you to&nbsp;proceed as&nbsp;follows. Give the list above to&nbsp;your friend and ask her to&nbsp;locate the <span class="math-tex">\(x\)</span>-th row in&nbsp;it and to&nbsp;send you the seven bits from this row. Even if&nbsp;your friend flips one of&nbsp;the seven bits, you will be&nbsp;able to&nbsp;recover the original sequence of&nbsp;seven bits (thanks to&nbsp;the property that every two sequences in&nbsp;<span class="math-tex">\(C\)</span> differ in&nbsp;at&nbsp;least three positions)!Finally, this&nbsp;is how one can prove that at&nbsp;least seven questions are needed in&nbsp;any strategy. Assume that this can be&nbsp;done with six questions. Then, you not only learn&nbsp;<span class="math-tex">\(x\)</span>, but also the index of&nbsp;the question where your friend gave you a&nbsp;wrong answer or&nbsp;the fact that there were no&nbsp;wrong answers. The total number of&nbsp;possibilities is <span class="math-tex">\(16 \cdot 7=112\)</span>, but this is larger than <span class="math-tex">\(2^{6}\)</span>.</div></details>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-4-proofs-of-algorithm-correctness-and-runtime-estimates/unit/chapter-4-proofs-of-algorithm-correctness-and-runtime-estimates-unit-4-guessing-a-number/lesson/proofs-of-algorithm-correctness-and-runtime-estimates--guessing-a-number--step-14/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-4-proofs-of-algorithm-correctness-and-runtime-estimates/unit/chapter-4-proofs-of-algorithm-correctness-and-runtime-estimates-unit-5-application-data-compression-optional/lesson/proofs-of-algorithm-correctness-and-runtime-estimates--application-data-compression-optional--step-1/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

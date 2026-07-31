@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="Theorem (law of large numbers). Let \(\alpha_{1}, \alpha_{2}, \dotsc\) be an infinite sequence of pairwise independent random variables with expectation…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Deviation from the Mean › Law of Large Numbers › Lesson 2 | Discrete Mathematics" />
+    <meta property="og:description" content="Theorem (law of large numbers). Let \(\alpha_{1}, \alpha_{2}, \dotsc\) be an infinite sequence of pairwise independent random variables with expectation…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-21-deviation-from-the-mean/unit/chapter-21-deviation-from-the-mean-unit-4-law-of-large-numbers/lesson/deviation-from-the-mean--law-of-large-numbers--step-2/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-21-deviation-from-the-mean/unit/chapter-21-deviation-from-the-mean-unit-4-law-of-large-numbers/lesson/deviation-from-the-mean--law-of-large-numbers--step-2/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Deviation from the Mean › Law of Large Numbers › Lesson 2 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Deviation from the Mean / Law of Large Numbers</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Deviation from the Mean · Law of Large Numbers</p>
+        <h1>Lesson 2</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p><strong>Theorem (law of large numbers). </strong><em>Let <span class="math-tex">\(\alpha_{1}, \alpha_{2}, \dotsc\)</span> be an&nbsp;infinite sequence of pairwise independent random variables with expectation <span class="math-tex">\(e\)</span> and variance <span class="math-tex">\(d\)</span>, and let <span class="math-tex">\(\beta_{n}\)</span> be the mean of the first <span class="math-tex">\(n\)</span> variables: <span class="math-tex">\[\beta_{n}=\frac{\alpha_1+\dotsb+\alpha_n}{n}\  .\]</span> Then, for large <span class="math-tex">\(n\)</span>, the value of <span class="math-tex">\(\beta_{n}\)</span> is close to <span class="math-tex">\(e\)</span> with probability close to one: for any constant <span class="math-tex">\(\varepsilon&gt;0\)</span>, <span class="math-tex">\[\lim_{n \to \infty}\Pr[|\beta_{n} - e| &lt; \varepsilon] = 1 \  .\]</span></em></p><p> <em>Proof. </em>Indeed, <span class="math-tex">\[\begin{align*}\operatorname{E}[\beta_{n}]&=\operatorname{E}\left[\frac{1}{n}\cdot(\alpha_{1}+\dotsb+\alpha_{n})\right] =\\&=\frac{1}{n}\cdot \operatorname{E}[\alpha_{1}+\dotsb+\alpha_{n}]=&\text{(linearity)}\\&=\frac{1}{n} \cdot (\operatorname{E}[\alpha_{1}]+\dotsb+\operatorname{E}[\alpha_{n}])=\\&=\frac{1}{n} \cdot ne=e \  ,\end{align*}\]</span>  <span class="math-tex">\[\begin{align*}\operatorname{Var}[\beta_{n}]&= \operatorname{Var}\left[\frac{1}{n}\cdot(\alpha_{1}+\dotsb+\alpha_{n})\right]=\\&=\frac{1}{n^2}\operatorname{Var}[\alpha_{1}+\dotsb+\alpha_{n}]=&\text{(independence)}\\&=\frac{1}{n^2}(\operatorname{Var}[\alpha_{1}]+\dotsb+\operatorname{Var}[\alpha_{n}])=\\&=\frac{d}{n}\  .\end{align*}\]</span>   Then, by Chebyshev's inequality, the following inequality holds: <span class="math-tex">\[\Pr[|\beta_{n}-e| \ge \varepsilon]=\Pr[|\beta_{n}-\operatorname{E}[\beta_{n}]| \ge \varepsilon] \le \frac{\operatorname{Var}[\beta_n]}{\varepsilon^2}=\frac{d}{n\varepsilon^2}\  .\]</span><span class="proof-end" aria-label="End of proof">◼</span></p>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-21-deviation-from-the-mean/unit/chapter-21-deviation-from-the-mean-unit-4-law-of-large-numbers/lesson/deviation-from-the-mean--law-of-large-numbers--step-1/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-21-deviation-from-the-mean/unit/chapter-21-deviation-from-the-mean-unit-4-law-of-large-numbers/lesson/deviation-from-the-mean--law-of-large-numbers--step-3/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

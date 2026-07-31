@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="In Python, it is particularly convenient to work with graphs and we will see many code snippets below. One can create a graph simply by passing the list of…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="What is a Graph? › Graphs › Lesson 15 | Discrete Mathematics" />
+    <meta property="og:description" content="In Python, it is particularly convenient to work with graphs and we will see many code snippets below. One can create a graph simply by passing the list of…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-23-what-is-a-graph/unit/chapter-23-what-is-a-graph-unit-1-graphs/lesson/what-is-a-graph--graphs--step-15/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-23-what-is-a-graph/unit/chapter-23-what-is-a-graph-unit-1-graphs/lesson/what-is-a-graph--graphs--step-15/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>What is a Graph? › Graphs › Lesson 15 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / What is a Graph? / Graphs</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">What is a Graph? · Graphs</p>
+        <h1>Lesson 15</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p>In&nbsp;Python, it&nbsp;is particularly convenient to&nbsp;work with graphs and we&nbsp;will see many code snippets below. One can create a&nbsp;graph simply by&nbsp;passing the list of&nbsp;its edges. One can also draw a&nbsp;graph using various layout options.</p><pre><code class="language-python">from networkx import nx_agraph, DiGraph
+
+graph = DiGraph([(1, 2), (2, 3), (3, 4), (4, 5), (1, 5)])
+
+for layout in ('circo', 'dot'):
+    nx_agraph.to_agraph(graph).draw(f'graph_{layout}.png', prog=layout)</code></pre><p style="text-align:center;"><img src="generated/assets/What_is_a_Graph/Graphs=14/image0.png" width="800" ></p>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-23-what-is-a-graph/unit/chapter-23-what-is-a-graph-unit-1-graphs/lesson/what-is-a-graph--graphs--step-14/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-23-what-is-a-graph/unit/chapter-23-what-is-a-graph-unit-1-graphs/lesson/what-is-a-graph--graphs--step-16/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

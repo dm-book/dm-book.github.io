@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="To find the stationary distribution \(\mathbf{r}\) , it is sufficient to solve the system of equations defined by the conditions \(\mathbf{T}\mathbf{r}=…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Project: PageRank Algorithm › Stationary Distributions › Lesson 4 | Discrete Mathematics" />
+    <meta property="og:description" content="To find the stationary distribution \(\mathbf{r}\) , it is sufficient to solve the system of equations defined by the conditions \(\mathbf{T}\mathbf{r}=…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-30-project-pagerank-algorithm/unit/chapter-30-project-pagerank-algorithm-unit-3-stationary-distributions/lesson/project-pagerank-algorithm--stationary-distributions--step-4/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-30-project-pagerank-algorithm/unit/chapter-30-project-pagerank-algorithm-unit-3-stationary-distributions/lesson/project-pagerank-algorithm--stationary-distributions--step-4/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Project: PageRank Algorithm › Stationary Distributions › Lesson 4 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Project: PageRank Algorithm / Stationary Distributions</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Project: PageRank Algorithm · Stationary Distributions</p>
+        <h1>Lesson 4</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p>To&nbsp;find the stationary distribution&nbsp;<span class="math-tex">\(\mathbf{r}\)</span>, it&nbsp;is sufficient to&nbsp;solve the system&nbsp;of&nbsp;equations defined by&nbsp;the conditions&nbsp;<span class="math-tex">\(\mathbf{T}\mathbf{r}= \mathbf{r}\)</span>, <span class="math-tex">\(\sum_{i} \mathbf{r}_{i} = 1\)</span>.  <span class="math-tex">\[\begin{cases}\dfrac14\ \mathbf{r}_1 + \dfrac13\ \mathbf{r}_2 = \mathbf{r}_0, \\ \dfrac13\ \mathbf{r}_0 + \dfrac12\ \mathbf{r}_3 = \mathbf{r}_1, \\ \dfrac13\ \mathbf{r}_0 + \dfrac14\ \mathbf{r}_1 = \mathbf{r}_2, \\ \dfrac14\ \mathbf{r}_1 + \dfrac13\ \mathbf{r}_2 + \mathbf{r}_4 = \mathbf{r}_3, \\ \dfrac13\ \mathbf{r}_0 + \dfrac14\ \mathbf{r}_1 + \dfrac13\ \mathbf{r}_2 + \dfrac12\ \mathbf{r}_3 = \mathbf{r}_4, \\ \mathbf{r}_0 + \mathbf{r}_1 + \mathbf{r}_2 + \mathbf{r}_3 + \mathbf{r}_4 = 1\end{cases} \;\Rightarrow\; \begin{cases}\mathbf{r}_0 = \dfrac{1}{13} = 0.077, \\ \mathbf{r}_1 = \dfrac{8}{39} = 0.205, \\ \mathbf{r}_2 = \dfrac{1}{13} = 0.077, \\ \mathbf{r}_3 = \dfrac{14}{39} = 0.359, \\ \mathbf{r}_4 = \dfrac{11}{39} = 0.282\end{cases}\]</span>   You may also observe that for large values of&nbsp;<span class="math-tex">\(k\)</span>, the probabilities of reaching each vertex after&nbsp;<span class="math-tex">\(k\)</span> steps of&nbsp;the random walk become very close to&nbsp;the stationary distribution. For example, after <span class="math-tex">\(k=100\)</span> steps of a&nbsp;random walk, one obtains the following probabilities: </p><pre><code class="language-python">import numpy as np
+import networkx as nx
+
+edges = ['01', '02', '04', '10', '12', '13', '14', '20', '23', '24', '31', '34', '43']
+graph = nx.DiGraph([(int(e[0]), int(e[1])) for e in edges])
+n = graph.number_of_nodes()
+
+A = nx.stochastic_graph(graph)
+T = nx.to_numpy_array(A, nodelist=sorted(graph.nodes())).T
+r = [1 / n] * n
+
+print(*np.linalg.matrix_power(T, 100) @ r)</code></pre><pre><code class="language-auto">0.07692307692307661 0.20512820512820565 0.07692307692307661 0.3589743589743573 0.28205128205128227
+</code></pre><p> Interestingly, the difference between the probabilities of a&nbsp;random walk after <span class="math-tex">\(100\)</span>&nbsp;steps and the probabilities of&nbsp;the stationary distribution does&nbsp;not exceed <span class="math-tex">\[10^{-12}=0.000000000001.\]</span> This is not&nbsp;a&nbsp;coincidence, and we&nbsp;will discuss the reason for this behavior later.</p>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-30-project-pagerank-algorithm/unit/chapter-30-project-pagerank-algorithm-unit-3-stationary-distributions/lesson/project-pagerank-algorithm--stationary-distributions--step-3/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-30-project-pagerank-algorithm/unit/chapter-30-project-pagerank-algorithm-unit-3-stationary-distributions/lesson/project-pagerank-algorithm--stationary-distributions--step-5/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

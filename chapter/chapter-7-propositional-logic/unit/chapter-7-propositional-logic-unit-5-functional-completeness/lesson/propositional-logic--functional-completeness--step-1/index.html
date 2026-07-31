@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="We call \(\Omega \subseteq B^{*}\) a complete basis if any Boolean function \(f(x_{1}, \dotsc, x_{n})\) can be defined using the variables \(x_{1}, \dotsc,…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Propositional Logic › Functional Completeness › Lesson 1 | Discrete Mathematics" />
+    <meta property="og:description" content="We call \(\Omega \subseteq B^{*}\) a complete basis if any Boolean function \(f(x_{1}, \dotsc, x_{n})\) can be defined using the variables \(x_{1}, \dotsc,…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-7-propositional-logic/unit/chapter-7-propositional-logic-unit-5-functional-completeness/lesson/propositional-logic--functional-completeness--step-1/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-7-propositional-logic/unit/chapter-7-propositional-logic-unit-5-functional-completeness/lesson/propositional-logic--functional-completeness--step-1/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Propositional Logic › Functional Completeness › Lesson 1 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Propositional Logic / Functional Completeness</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Propositional Logic · Functional Completeness</p>
+        <h1>Lesson 1</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p>We call <span class="math-tex">\(\Omega \subseteq B^{*}\)</span> a <em>complete basis</em> if any Boolean function <span class="math-tex">\(f(x_{1}, \dotsc, x_{n})\)</span> can be defined using the variables <span class="math-tex">\(x_{1}, \dotsc, x_{n}\)</span> and functions from <span class="math-tex">\(\Omega\)</span> (which we will call <em>connectives</em>). For example, <span class="math-tex">\[\{\operatorname{AND}_{2}, \operatorname{OR}_{2}, \operatorname{NOT}_{1}\}=\{\land, \lor, \neg\}\]</span> is a complete basis (the subscript under each function indicates its arity, i.e., the number of input bits): after all, any function can be represented in CNF/DNF form. In particular, it follows that <span class="math-tex">\[\{\operatorname{AND}_{2}, \operatorname{NOT}_{1}\}=\{\land, \neg\}\]</span> is also complete, because <span class="math-tex">\(\operatorname{OR}_{2}\)</span> can be expressed using the remaining two functions:  <span class="math-tex">\[\operatorname{OR}_{2}(x,y) = x \lor y = \neg((\neg x) \land (\neg y))= \operatorname{NOT}_{1}(\operatorname{AND}_{2}(\operatorname{NOT}_{1}(x), \operatorname{NOT}_{1}(y))) \  .\]</span>  </p><p>The question of which bases are complete is not only of theoretical interest: as we will see below, any Boolean function can be computed using a logic circuit made exclusively of <span class="math-tex">\(\operatorname{NOR}\)</span> gates!</p><p>The&nbsp;Apollo program culminated in&nbsp;the first human landing on&nbsp;the Moon in&nbsp;1969. Its onboard computer, the&nbsp;Apollo Guidance Computer (AGC), was one of&nbsp;the&nbsp;first machines constructed using silicon integrated circuits rather than discrete transistors. In&nbsp;fact, its digital logic was implemented almost entirely from a&nbsp;single primitive: 3-input <span class="math-tex">\(\operatorname{NOR}\)</span> gates! Despite its simplicity, the&nbsp;AGC was a&nbsp;real-time control computer operating at&nbsp;approximately 2&nbsp;MHz, with only a&nbsp;few kilobytes of&nbsp;RAM. Its overall computational performance was comparable to&nbsp;that of&nbsp;early personal computers of&nbsp;the&nbsp;late 1970s, such as&nbsp;the&nbsp;Apple&nbsp;II. Thus, they proved that <span class="math-tex">\(\operatorname{NOR}\)</span> gates are enough, to&nbsp;navigate safely to&nbsp;the&nbsp;Moon and back!</p>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-7-propositional-logic/unit/chapter-7-propositional-logic-unit-4-quantifiers/lesson/propositional-logic--quantifiers--step-5/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-7-propositional-logic/unit/chapter-7-propositional-logic-unit-5-functional-completeness/lesson/propositional-logic--functional-completeness--step-2/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

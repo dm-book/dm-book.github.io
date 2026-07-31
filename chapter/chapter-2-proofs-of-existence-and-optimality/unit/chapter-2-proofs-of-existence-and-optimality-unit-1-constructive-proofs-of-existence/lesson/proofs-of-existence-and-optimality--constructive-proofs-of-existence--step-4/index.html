@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="Problem. Recall that a number \(p \in \mathbb{Z}_{&gt;0}\) is called prime if it is divisible only by one and itself. The number \(p=1\) is traditionally not…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Proofs of Existence and Optimality › Constructive Proofs of Existence › Lesson 4 | Discrete Mathematics" />
+    <meta property="og:description" content="Problem. Recall that a number \(p \in \mathbb{Z}_{&gt;0}\) is called prime if it is divisible only by one and itself. The number \(p=1\) is traditionally not…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-2-proofs-of-existence-and-optimality/unit/chapter-2-proofs-of-existence-and-optimality-unit-1-constructive-proofs-of-existence/lesson/proofs-of-existence-and-optimality--constructive-proofs-of-existence--step-4/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-2-proofs-of-existence-and-optimality/unit/chapter-2-proofs-of-existence-and-optimality-unit-1-constructive-proofs-of-existence/lesson/proofs-of-existence-and-optimality--constructive-proofs-of-existence--step-4/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Proofs of Existence and Optimality › Constructive Proofs of Existence › Lesson 4 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Proofs of Existence and Optimality / Constructive Proofs of Existence</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Proofs of Existence and Optimality · Constructive Proofs of Existence</p>
+        <h1>Lesson 4</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p><strong>Problem. </strong> Recall that a&nbsp;number <span class="math-tex">\(p \in \mathbb{Z}_{&gt;0}\)</span> is called <em>prime</em> if it is divisible only by&nbsp;one and itself. The number <span class="math-tex">\(p=1\)</span> is traditionally not considered prime. Here are some of&nbsp;the first prime numbers. </p><pre><code class="language-python">from sympy import primerange
+
+print(*primerange(130))</code></pre><pre><code class="language-auto">2 3 5 7 11 13 17 19 23 29 31 37 41 43 47 53 59 61 67 71 73 79 83 89 97 101 103 107 109 113 127
+</code></pre><p>Euler discovered that the polynomial <span class="math-tex">\(p(n)=n^{2}-n+41\)</span> has an&nbsp;amazing property: for small&nbsp;<span class="math-tex">\(n\)</span>, the value of <span class="math-tex">\(p(n)\)</span> is prime. </p><pre><code class="language-python">from sympy import isprime
+
+
+def p(n):
+    return n ** 2 - n + 41
+
+
+for n in range(1, 35):
+    print(n, p(n), isprime(p(n)))</code></pre><pre><code class="language-auto">1 41 True
+2 43 True
+3 47 True
+4 53 True
+5 61 True
+6 71 True
+7 83 True
+8 97 True
+9 113 True
+10 131 True
+11 151 True
+12 173 True
+13 197 True
+14 223 True
+15 251 True
+16 281 True
+17 313 True
+18 347 True
+19 383 True
+20 421 True
+21 461 True
+22 503 True
+23 547 True
+24 593 True
+25 641 True
+26 691 True
+27 743 True
+28 797 True
+29 853 True
+30 911 True
+31 971 True
+32 1033 True
+33 1097 True
+34 1163 True
+</code></pre><p>Is it true that <span class="math-tex">\(p(n)\)</span> will be prime for all non-negative integers&nbsp;<span class="math-tex">\(n\)</span>? (In&nbsp;other words, does there <em>exist</em> <span class="math-tex">\(n \in \mathbb{Z}_{\ge 0}\)</span> such that <span class="math-tex">\(p(n)=n^{2}-n+41\)</span> is not prime?)</p>
+          <div class="task-card"><div class="task-heading">Question</div><a class="cogniterra-only-notice" href="https://cogniterra.org/a/697" target="_blank" rel="noreferrer">This problem can only be submitted at Cogniterra.</a><ol class="task-option-list"><li class="task-option"><span class="task-option-number" aria-hidden="true">1</span><div class="task-option-body"><p> Yes, <span class="math-tex">\(p(n)\)</span> is prime for all non-negative integers <span class="math-tex">\(n\)</span>. </p></div></li><li class="task-option"><span class="task-option-number" aria-hidden="true">2</span><div class="task-option-body"><p> No, there exists a non-negative integer <span class="math-tex">\(n\)</span> such that <span class="math-tex">\(p(n)\)</span> is not prime.</p></div></li></ol></div>
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-2-proofs-of-existence-and-optimality/unit/chapter-2-proofs-of-existence-and-optimality-unit-1-constructive-proofs-of-existence/lesson/proofs-of-existence-and-optimality--constructive-proofs-of-existence--step-3/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-2-proofs-of-existence-and-optimality/unit/chapter-2-proofs-of-existence-and-optimality-unit-1-constructive-proofs-of-existence/lesson/proofs-of-existence-and-optimality--constructive-proofs-of-existence--step-5/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

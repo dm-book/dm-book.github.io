@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="Programming problem. In the programming task below, you will fit the simplest conditional probabilistic model. Each observation has a context \(x\) and a…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Random Variables › Likelihood and Parameter Fitting › Lesson 6 | Discrete Mathematics" />
+    <meta property="og:description" content="Programming problem. In the programming task below, you will fit the simplest conditional probabilistic model. Each observation has a context \(x\) and a…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-20-random-variables/unit/chapter-20-random-variables-unit-9-likelihood-and-parameter-fitting/lesson/random-variables--likelihood-and-parameter-fitting--step-6/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-20-random-variables/unit/chapter-20-random-variables-unit-9-likelihood-and-parameter-fitting/lesson/random-variables--likelihood-and-parameter-fitting--step-6/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Random Variables › Likelihood and Parameter Fitting › Lesson 6 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Random Variables / Likelihood and Parameter Fitting</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Random Variables · Likelihood and Parameter Fitting</p>
+        <h1>Lesson 6</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p><strong>Programming problem. </strong> In the programming task below, you will fit the simplest conditional probabilistic model. Each observation has a&nbsp;context <span class="math-tex">\(x\)</span> and a&nbsp;binary outcome <span class="math-tex">\(y \in \{0,1\}\)</span>. For every context <span class="math-tex">\(x\)</span>, the model has its own Bernoulli parameter <span class="math-tex">\[\theta_{x}=\Pr[Y=1 \mid X=x].\]</span></p><p>The first line of the input contains three integers <span class="math-tex">\(n\)</span>, <span class="math-tex">\(m\)</span>, and <span class="math-tex">\(q\)</span>. The next <span class="math-tex">\(n\)</span> lines contain observations <span class="math-tex">\(x_{i},y_{i}\)</span>, where <span class="math-tex">\(x_{i} \in \{1,\dotsc,m\}\)</span> and <span class="math-tex">\(y_{i} \in \{0,1\}\)</span>. The last line contains <span class="math-tex">\(q\)</span> query contexts <span class="math-tex">\(z_{1},\dotsc,z_{q}\)</span>. You may assume that <span class="math-tex">\(1 \le m \le 20\)</span>, <span class="math-tex">\(m \le n \le 500\)</span>, and <span class="math-tex">\(1 \le q \le 3m\)</span>. Every query context appears at least once among the observations.</p><p>For each query context <span class="math-tex">\(z_{j}\)</span>, output the maximum likelihood estimate of <span class="math-tex">\(\Pr[Y=1 \mid X=z_{j}]\)</span>. Your answers will be accepted if each number has absolute error at most <span class="math-tex">\(10^{-6}\)</span>.</p>
+          <div class="task-card programming-card">
+        
+        <a class="cogniterra-only-notice" href="https://cogniterra.org/a/697" target="_blank" rel="noreferrer">This problem can only be submitted at Cogniterra.</a>
+        <section class="programming-samples" aria-label="Public programming samples">
+          <div class="task-heading">Public samples</div>
+          <article class="programming-sample">
+            <strong>Public sample 1</strong>
+            <div class="programming-result-grid">
+              <div><div class="result-field-label">Input</div><pre>6 3 3
+1 1
+1 0
+1 1
+2 0
+2 0
+3 1
+1 2 3</pre></div>
+              <div><div class="result-field-label">Example output</div><pre>0.6666666667 0.0000000000 1.0000000000</pre></div>
+            </div>
+          </article>
+        </section>
+      </div>
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-20-random-variables/unit/chapter-20-random-variables-unit-9-likelihood-and-parameter-fitting/lesson/random-variables--likelihood-and-parameter-fitting--step-5/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-20-random-variables/unit/chapter-20-random-variables-unit-9-likelihood-and-parameter-fitting/lesson/random-variables--likelihood-and-parameter-fitting--step-7/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

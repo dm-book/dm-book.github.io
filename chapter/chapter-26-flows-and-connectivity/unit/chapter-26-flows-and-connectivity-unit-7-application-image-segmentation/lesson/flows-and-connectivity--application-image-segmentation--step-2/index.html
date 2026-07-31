@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="The input to the problem is an undirected graph \(G(V,E)\) , where the vertices represent pixels and two pixels are connected by an edge if we consider them…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Flows and Connectivity › Application: Image Segmentation › Lesson 2 | Discrete Mathematics" />
+    <meta property="og:description" content="The input to the problem is an undirected graph \(G(V,E)\) , where the vertices represent pixels and two pixels are connected by an edge if we consider them…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-26-flows-and-connectivity/unit/chapter-26-flows-and-connectivity-unit-7-application-image-segmentation/lesson/flows-and-connectivity--application-image-segmentation--step-2/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-26-flows-and-connectivity/unit/chapter-26-flows-and-connectivity-unit-7-application-image-segmentation/lesson/flows-and-connectivity--application-image-segmentation--step-2/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Flows and Connectivity › Application: Image Segmentation › Lesson 2 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Flows and Connectivity / Application: Image Segmentation</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Flows and Connectivity · Application: Image Segmentation</p>
+        <h1>Lesson 2</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p>The input to the problem is an <em>undirected</em> graph <span class="math-tex">\(G(V,E)\)</span>, where the vertices represent pixels and two pixels are connected by an edge if we consider them neighbors (most likely we assume a rectangular grid here, but that's not important now). We also assume that each pixel <span class="math-tex">\(i\)</span> is assigned two non-negative numbers&mdash;<span class="math-tex">\(b_{i}\)</span> and <span class="math-tex">\(f_{i}\)</span>. The formal meaning of these numbers will become clear very soon, but informally: the higher <span class="math-tex">\(b_{i}\)</span> (<span class="math-tex">\(f_{i}\)</span>), the more we want to assign this pixel to the background (respectively, foreground). Finally, we assume that for each pair of neighboring pixels <span class="math-tex">\(\{i,j\}\)</span> a non-negative number <span class="math-tex">\(p_{ij}\)</span> is given&mdash;a penalty for placing these pixels in different parts during segmentation. (In practice, some of these values may come from the user&mdash;for example, they may highlight a part of the image containing the foreground. The remaining values can be set to zero.)</p><p>In a&nbsp;modern computer vision pipeline, these numbers do not have to be chosen by hand. A&nbsp;neural network may estimate how likely each pixel is to belong to the foreground or background, and may also estimate which neighboring pixels should probably stay together. This is a&nbsp;typical interaction between machine learning and discrete optimization.</p><p>We are required to find a partition of the set of pixels into two parts <span class="math-tex">\((B,F)\)</span> that maximizes the following value: <span class="math-tex">\[q(B,F)=\sum_{i \in B}b_{i}+\sum_{i \in F}f_{i} - \sum_{\substack{\{i,j\} \in E\\|B \cap \{i,j\}|=1}}p_{ij}\  .\]</span></p>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-26-flows-and-connectivity/unit/chapter-26-flows-and-connectivity-unit-7-application-image-segmentation/lesson/flows-and-connectivity--application-image-segmentation--step-1/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-26-flows-and-connectivity/unit/chapter-26-flows-and-connectivity-unit-7-application-image-segmentation/lesson/flows-and-connectivity--application-image-segmentation--step-3/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

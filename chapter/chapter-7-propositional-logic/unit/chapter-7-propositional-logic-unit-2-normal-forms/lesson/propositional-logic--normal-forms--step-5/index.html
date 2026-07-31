@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="Conjunctive Normal Form (CNF) is a conjunction of disjunctions of literals, where a literal is a variable or its negation. For example:…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Propositional Logic › Normal Forms › Lesson 5 | Discrete Mathematics" />
+    <meta property="og:description" content="Conjunctive Normal Form (CNF) is a conjunction of disjunctions of literals, where a literal is a variable or its negation. For example:…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-7-propositional-logic/unit/chapter-7-propositional-logic-unit-2-normal-forms/lesson/propositional-logic--normal-forms--step-5/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-7-propositional-logic/unit/chapter-7-propositional-logic-unit-2-normal-forms/lesson/propositional-logic--normal-forms--step-5/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Propositional Logic › Normal Forms › Lesson 5 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Propositional Logic / Normal Forms</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Propositional Logic · Normal Forms</p>
+        <h1>Lesson 5</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p><em>Conjunctive Normal Form</em> (CNF) is a&nbsp;conjunction of disjunctions of literals, where a literal is a variable or its negation. For example: <span class="math-tex">\[(\overline{x_3}\lor x_{1}) \land (x_{2} \lor x_{3}) \land (x_{1} \lor x_{4} \lor \overline{x_2}\lor x_{3}) \  .\]</span> Each bracket in this expression is called a <em>clause</em> and essentially forbids one assignment to the variables contained in that clause: for example, the first clause states that if <span class="math-tex">\(x_{3}=1\)</span> and <span class="math-tex">\(x_{1}=0\)</span>, then the entire formula evaluates to zero.</p><p><em>Disjunctive Normal Form</em> (DNF) is a disjunction of conjunctions of literals: <span class="math-tex">\[(x_{1} \land \overline{x_2}) \lor (\overline{x_3}\land x_{1}) \  .\]</span> Here, each bracket (called a&nbsp;<em>monomial</em>) simply specifies a condition under which the entire formula evaluates to one: for example, if <span class="math-tex">\(x_{3}=0\)</span> and <span class="math-tex">\(x_{1}=1\)</span>, the formula equals one. Note that the above DNF can also be&nbsp;written as <span class="math-tex">\[x_{1}\overline{x_2}\lor \overline{x_3}x_{1} \  .\]</span> Much as&nbsp;we omit multiplication signs (that&nbsp;is, we&nbsp;usually write just <span class="math-tex">\(xy\)</span> instead of&nbsp;<span class="math-tex">\(x \cdot y\)</span> when <span class="math-tex">\(x\)</span>&nbsp;and&nbsp;<span class="math-tex">\(y\)</span> denote integers), we&nbsp;omit the <span class="math-tex">\(\land\)</span>&nbsp;signs here.</p>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-7-propositional-logic/unit/chapter-7-propositional-logic-unit-2-normal-forms/lesson/propositional-logic--normal-forms--step-4/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-7-propositional-logic/unit/chapter-7-propositional-logic-unit-2-normal-forms/lesson/propositional-logic--normal-forms--step-6/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

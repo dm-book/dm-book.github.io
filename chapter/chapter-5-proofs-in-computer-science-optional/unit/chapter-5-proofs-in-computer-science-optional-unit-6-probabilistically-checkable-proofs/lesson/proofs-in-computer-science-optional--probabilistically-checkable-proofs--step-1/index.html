@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="Let graphs \(G_{0}\) and \(G_{1}\) be non-isomorphic. Now we will construct a proof that, on one hand, will be very long, but on the other hand, you will…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Proofs in Computer Science (Optional) › Probabilistically Checkable Proofs › Lesson 1 | Discrete Mathematics" />
+    <meta property="og:description" content="Let graphs \(G_{0}\) and \(G_{1}\) be non-isomorphic. Now we will construct a proof that, on one hand, will be very long, but on the other hand, you will…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-5-proofs-in-computer-science-optional/unit/chapter-5-proofs-in-computer-science-optional-unit-6-probabilistically-checkable-proofs/lesson/proofs-in-computer-science-optional--probabilistically-checkable-proofs--step-1/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-5-proofs-in-computer-science-optional/unit/chapter-5-proofs-in-computer-science-optional-unit-6-probabilistically-checkable-proofs/lesson/proofs-in-computer-science-optional--probabilistically-checkable-proofs--step-1/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Proofs in Computer Science (Optional) › Probabilistically Checkable Proofs › Lesson 1 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Proofs in Computer Science (Optional) / Probabilistically Checkable Proofs</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Proofs in Computer Science (Optional) · Probabilistically Checkable Proofs</p>
+        <h1>Lesson 1</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p>Let graphs <span class="math-tex">\(G_{0}\)</span> and <span class="math-tex">\(G_{1}\)</span> be non-isomorphic. Now we will construct a proof that, on one hand, will be very long, but on the other hand, you will only need to read a <em>constant</em> number of bits from it to verify its correctness. The proof will be a bit string of length <span class="math-tex">\(2^{\binom n2}\)</span>, indexed by all graphs on <span class="math-tex">\(n\)</span> vertices. In the cell corresponding to graph <span class="math-tex">\(H\)</span>, we will write <span class="math-tex">\(i \in \{0,1\}\)</span> if <span class="math-tex">\(H\)</span> is isomorphic to <span class="math-tex">\(G_{i}\)</span>, and anything otherwise.</p><p>To give an example, consider these two graphs. </p><p style="text-align:center;"><img src="generated/assets/Proofs_in_Computer_Science_(Optional)/Probabilistically_Checkable_Proofs=0/image0.png" width="800" ></p><p> The proof for graphs <span class="math-tex">\(G_{0}\)</span> and <span class="math-tex">\(G_{1}\)</span> will look like this: </p><p style="text-align:center;"><img src="generated/assets/Proofs_in_Computer_Science_(Optional)/Probabilistically_Checkable_Proofs=0/image1.png" width="800" ></p><p>How do we check such a proof? We choose a random graph <span class="math-tex">\(G \in \{G_{0}, G_{1}\}\)</span>, then choose a random permutation <span class="math-tex">\(\sigma \in S_{n}\)</span> and read the bit of the proof from the cell <span class="math-tex">\(\sigma(G)\)</span>. If the graphs are non-isomorphic, then it should contain the number <span class="math-tex">\(i\)</span>. Accordingly, if we see something other than <span class="math-tex">\(i\)</span> there, we reject this proof. On the other hand, if <span class="math-tex">\(G_{0}, G_{1}\)</span> were isomorphic, then <span class="math-tex">\(\sigma(G)\)</span> could equally likely come from <span class="math-tex">\(G_{0}\)</span> or <span class="math-tex">\(G_{1}\)</span>. And whatever is written in the cell <span class="math-tex">\(\sigma(G)\)</span>, we will reject it with a probability of <span class="math-tex">\(1/2\)</span>. Repeating this <span class="math-tex">\(k\)</span> times, we reduce the error probability to <span class="math-tex">\(1/2^{k}\)</span>.</p>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-5-proofs-in-computer-science-optional/unit/chapter-5-proofs-in-computer-science-optional-unit-5-zero-knowledge-proofs/lesson/proofs-in-computer-science-optional--zero-knowledge-proofs--step-6/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-5-proofs-in-computer-science-optional/unit/chapter-5-proofs-in-computer-science-optional-unit-6-probabilistically-checkable-proofs/lesson/proofs-in-computer-science-optional--probabilistically-checkable-proofs--step-2/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

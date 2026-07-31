@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="A random variable (or even several) can be transformed using an arbitrary numerical function to obtain another random variable. For example, let \(U=\{a, b,…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Random Variables › Random Variables › Lesson 6 | Discrete Mathematics" />
+    <meta property="og:description" content="A random variable (or even several) can be transformed using an arbitrary numerical function to obtain another random variable. For example, let \(U=\{a, b,…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-20-random-variables/unit/chapter-20-random-variables-unit-1-random-variables/lesson/random-variables--random-variables--step-6/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-20-random-variables/unit/chapter-20-random-variables-unit-1-random-variables/lesson/random-variables--random-variables--step-6/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Random Variables › Random Variables › Lesson 6 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Random Variables / Random Variables</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Random Variables · Random Variables</p>
+        <h1>Lesson 6</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p>A random variable (or even several) can be transformed using an arbitrary numerical function to obtain another random variable. For example, let <span class="math-tex">\(U=\{a, b, c, d, e, f\}\)</span>, and let the probabilities of the elementary outcomes be defined as follows: </p><p style="text-align:center;"><img src="generated/assets/Random_Variables/Random_Variables=5/image0.png" width="800" ></p><p> Note that the elementary outcomes are not numbers but simply six objects labeled with letters. To define a random variable <span class="math-tex">\(\alpha \colon U \to \mathbb{R}\)</span>, we specify its value for each elementary outcome. For example: </p><p style="text-align:center;"><img src="generated/assets/Random_Variables/Random_Variables=5/image1.png" width="800" ></p><p> Once the random variable is defined, we can estimate the probability that its value satisfies some property: <span class="math-tex">\[\begin{align*}\Pr[\alpha=2]&=\Pr[\{a, d\}]=0.5 \  .\\ \Pr[\alpha \ge 3]&=\Pr[\{c, e, f\}]=0.3 \  .\\ \Pr[\alpha \bmod 3 = 0]&= \Pr[c] = 0.1 \  .\\\end{align*}\]</span> Finally, since <span class="math-tex">\(\alpha(u)\)</span> is a number, we can apply a real function to it to obtain a new random variable. Suppose, for example, that <span class="math-tex">\(f \colon \mathbb{R}\to \mathbb{R}\)</span> is defined as <span class="math-tex">\(f(x)=x^{2}-3\)</span>. Then <span class="math-tex">\(f(\alpha)\)</span> is also a random variable on the same probability space <span class="math-tex">\((U, \Pr)\)</span> with the following values: </p><p style="text-align:center;"><img src="generated/assets/Random_Variables/Random_Variables=5/image2.png" width="800" ></p><p> Instead of <span class="math-tex">\(f(\alpha)\)</span>, we usually write just <span class="math-tex">\(\alpha^{2}-3\)</span>. For example, we can consider random variables <span class="math-tex">\(\frac{1}{\alpha}\)</span> and <span class="math-tex">\(e^{\alpha}\)</span>. Similarly, we can define functions of several random variables: for example, <span class="math-tex">\(3\alpha\sin \beta + 5\beta^{2}\gamma^{3}\)</span>. Clearly, the new random variable has the same type as the original one: <span class="math-tex">\[f(\alpha) \colon U \to \mathbb{R} \  .\]</span></p>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-20-random-variables/unit/chapter-20-random-variables-unit-1-random-variables/lesson/random-variables--random-variables--step-5/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-20-random-variables/unit/chapter-20-random-variables-unit-1-random-variables/lesson/random-variables--random-variables--step-7/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

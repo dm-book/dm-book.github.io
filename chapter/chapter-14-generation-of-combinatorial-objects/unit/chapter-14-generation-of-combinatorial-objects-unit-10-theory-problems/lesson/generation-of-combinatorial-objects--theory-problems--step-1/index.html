@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="Basic Problems. (10 points) Design an algorithm that, for given \(n, k \in \mathbb{Z}_{\ge 1}\) , outputs, in time \(O(k \cdot n^{k})\) , all \(k\)…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Generation of Combinatorial Objects › Theory Problems › Lesson 1 | Discrete Mathematics" />
+    <meta property="og:description" content="Basic Problems. (10 points) Design an algorithm that, for given \(n, k \in \mathbb{Z}_{\ge 1}\) , outputs, in time \(O(k \cdot n^{k})\) , all \(k\)…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-14-generation-of-combinatorial-objects/unit/chapter-14-generation-of-combinatorial-objects-unit-10-theory-problems/lesson/generation-of-combinatorial-objects--theory-problems--step-1/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-14-generation-of-combinatorial-objects/unit/chapter-14-generation-of-combinatorial-objects-unit-10-theory-problems/lesson/generation-of-combinatorial-objects--theory-problems--step-1/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Generation of Combinatorial Objects › Theory Problems › Lesson 1 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Generation of Combinatorial Objects / Theory Problems</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Generation of Combinatorial Objects · Theory Problems</p>
+        <h1>Lesson 1</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p><strong>Basic Problems.</strong></p><ol><li data-theory-problem>(10 points) Design an&nbsp;algorithm that, for given <span class="math-tex">\(n, k \in \mathbb{Z}_{\ge 1}\)</span>, outputs, in&nbsp;time <span class="math-tex">\(O(k \cdot n^{k})\)</span>, all <span class="math-tex">\(k\)</span>-sequences over&nbsp;<span class="math-tex">\([n]\)</span> such that any two consecutive sequences differ in&nbsp;one position and the values in&nbsp;that position differ by&nbsp;exactly one.For example, for <span class="math-tex">\(n=3, k=2\)</span>, the following is&nbsp;such an&nbsp;order: <span class="math-tex">\[11 \quad 12 \quad 13 \quad 23 \quad 22 \quad 21 \quad 31 \quad 32 \quad 33.\]</span> This way, such sequences generalize Gray codes for larger alphabets, though in&nbsp;this case we&nbsp;don't require anything for the last and the first elements of&nbsp;the sequence.<details><summary>Hint:</summary><div style="border-style: solid;">Consider a&nbsp;recursive approach. How might one construct the required sequence for length&nbsp;<span class="math-tex">\(k\)</span> by&nbsp;utilizing the sequence generated for length&nbsp;<span class="math-tex">\(k-1\)</span>?</div></details></li><li data-theory-problem>(10 points) For&nbsp;a given integer partition <span class="math-tex">\(\lambda = (\lambda_{1}, \lambda_{2}, &hellip;, \lambda_{k})\)</span> of&nbsp;<span class="math-tex">\(n\)</span> (with <span class="math-tex">\(\lambda_{1} \geq \lambda_{2} \geq &hellip; \geq \lambda_{k} &gt; 0\)</span>), the corresponding Young diagram is&nbsp;a collection of&nbsp;<span class="math-tex">\(n\)</span> cells arranged in&nbsp;<span class="math-tex">\(k\)</span> left-justified rows, where row <span class="math-tex">\(i\)</span> has&nbsp;<span class="math-tex">\(\lambda_{i}\)</span> cells. A&nbsp;Standard Young Tableau (SYT) is&nbsp;a filling of&nbsp;the cells of&nbsp;this diagram with the integers <span class="math-tex">\([n]\)</span> such that the values increase along each row and down each column.Given an&nbsp;integer <span class="math-tex">\(n\)</span> and a&nbsp;partition <span class="math-tex">\(\lambda\)</span> of&nbsp;<span class="math-tex">\(n\)</span>, describe an&nbsp;algorithm which generates all Standard Young Tableaux of&nbsp;shape <span class="math-tex">\(\lambda\)</span>.For&nbsp;<span class="math-tex">\(\lambda = (3,2,1)\)</span>, the SYT is shown below. <span class="math-tex">\[\begin{array}{ccc}1 & 3 & 6 \\ 2 & 5 & \\ 4 & &\end{array}\]</span></li><li data-theory-problem>(15 points) Design a&nbsp;linear time algorithm that takes a&nbsp;sequence of&nbsp;brackets and outputs the longest valid bracket substring.</li><li data-theory-problem>(15 points) Design a&nbsp;linear time algorithm that, given a&nbsp;permutation of&nbsp;<span class="math-tex">\([n]\)</span>, outputs the lexicographically next permutation.</li><li data-theory-problem>(15 points) By <span class="math-tex">\(k\)</span>-bit Gray code we mean the Gray code for binary strings of length <span class="math-tex">\(k\)</span>. Consider the <span class="math-tex">\(2\)</span>-bit Gray code <span class="math-tex">\(00\to 01\to11\to10\)</span>, then each digit changes twice (note that we're always assuming the final item loops back to&nbsp;the first).A&nbsp;Gray code is&nbsp;called balanced if&nbsp;each digit changes the same number of&nbsp;times in&nbsp;a&nbsp;full cycle. The 2-bit Gray code above is&nbsp;balanced. Do&nbsp;there exist <span class="math-tex">\(3\)</span>- and <span class="math-tex">\(4\)</span>-bit balanced Gray codes?</li><li data-theory-problem>(15 points) Given an&nbsp;algorithm that counts the&nbsp;number of Hamiltonian paths in&nbsp;directed graphs in&nbsp;time&nbsp;<span class="math-tex">\(T(n)\)</span>, construct an&nbsp;algorithm that <em>finds</em> some Hamiltonian path in&nbsp;time&nbsp;<span class="math-tex">\(n^{O(1)}\cdot T(n)\)</span>.<details><summary>Hint:</summary><div style="border-style: solid;">Consider a&nbsp;specific vertex&nbsp;<span class="math-tex">\(s\)</span> and a&nbsp;neighbor&nbsp;<span class="math-tex">\(v\)</span>. Can you use the&nbsp;counter to determine whether there exists at least one Hamiltonian path that <em>starts</em> with the&nbsp;edge <span class="math-tex">\((s, v)\)</span>?</div></details></li><li data-theory-problem>(15 points) In&nbsp;the Subset Sum problem, one is given a&nbsp;set of <span class="math-tex">\(n\)</span>&nbsp;integers and seeks to&nbsp;determine whether there exists a&nbsp;(nonempty) subset whose elements sum to zero. Design an&nbsp;algorithm for this problem with a&nbsp;running time of <span class="math-tex">\(n^{O(1)}\cdot 2^{n / 2}\)</span>.</li></ol>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-14-generation-of-combinatorial-objects/unit/chapter-14-generation-of-combinatorial-objects-unit-9-object-indices-optional/lesson/generation-of-combinatorial-objects--object-indices-optional--step-8/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-14-generation-of-combinatorial-objects/unit/chapter-14-generation-of-combinatorial-objects-unit-10-theory-problems/lesson/generation-of-combinatorial-objects--theory-problems--step-2/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

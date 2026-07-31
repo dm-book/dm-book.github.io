@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="You are now able to store a \(16\) -bit word in a register. Additional memory capacity can be obtained simply by stacking such registers. However, since a…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Boolean Circuits › NAND Game: Memory (Optional) › Lesson 8 | Discrete Mathematics" />
+    <meta property="og:description" content="You are now able to store a \(16\) -bit word in a register. Additional memory capacity can be obtained simply by stacking such registers. However, since a…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-9-boolean-circuits/unit/chapter-9-boolean-circuits-unit-8-nand-game-memory-optional/lesson/boolean-circuits--nand-game-memory-optional--step-8/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-9-boolean-circuits/unit/chapter-9-boolean-circuits-unit-8-nand-game-memory-optional/lesson/boolean-circuits--nand-game-memory-optional--step-8/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Boolean Circuits › NAND Game: Memory (Optional) › Lesson 8 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Boolean Circuits / NAND Game: Memory (Optional)</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Boolean Circuits · NAND Game: Memory (Optional)</p>
+        <h1>Lesson 8</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p>You are now able to store a&nbsp;<span class="math-tex">\(16\)</span>-bit word in&nbsp;a&nbsp;register. Additional memory capacity can be obtained simply by stacking such registers. However, since a&nbsp;processor operates on&nbsp;one word at a&nbsp;time, it is necessary to provide a&nbsp;mechanism for selecting and modifying individual words within a&nbsp;larger memory bank. This objective is achieved through the use of memory addresses. Each word in&nbsp;memory is assigned a&nbsp;numerical address, thereby enabling the retrieval or overwriting of a&nbsp;word by specifying its corresponding number. In&nbsp;this task, you are required to employ two registers and to address them using a&nbsp;single-bit address signal.</p><p><strong>Problem. </strong> Synthesize a&nbsp;circuit of&nbsp;size&nbsp;<span class="math-tex">\(4\)</span> over <span class="math-tex">\[\{\operatorname{NAND}_{2}, \operatorname{INV}_{1}, \operatorname{AND}_{2}, \operatorname{REGISTER}_{16}, \operatorname{SWITCH}_{1}, \operatorname{SELECT}_{16}\}\]</span> computing the two-cell 16-bit memory function <span class="math-tex">\[\operatorname{RAM}_{16}(st,x,ad,cl)=q.\]</span> Both cells start at&nbsp;<span class="math-tex">\(0\)</span>. The address bit <span class="math- tex">\(\texttt{ad}\)</span> selects the cell to&nbsp;read; if <span class="math- tex">\(\texttt{st}\)</span>=1, <span class="math- tex">\(\texttt{x}\)</span> is&nbsp;also written to&nbsp;that cell using the same clock protocol as&nbsp;a&nbsp;register. Assume the inputs do not change while <span class="math- tex">\(\texttt{cl}\)</span>=1.</p>
+          <div class="task-card"><div class="task-heading">String task, Advanced problem</div><a class="cogniterra-only-notice" href="https://cogniterra.org/a/697" target="_blank" rel="noreferrer">This problem can only be submitted at Cogniterra.</a></div>
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-9-boolean-circuits/unit/chapter-9-boolean-circuits-unit-8-nand-game-memory-optional/lesson/boolean-circuits--nand-game-memory-optional--step-7/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-9-boolean-circuits/unit/chapter-9-boolean-circuits-unit-9-nand-game-processor-optional/lesson/boolean-circuits--nand-game-processor-optional--step-1/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

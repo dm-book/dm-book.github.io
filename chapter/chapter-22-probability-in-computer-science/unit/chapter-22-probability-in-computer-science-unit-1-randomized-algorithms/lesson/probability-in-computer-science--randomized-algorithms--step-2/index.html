@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="The main idea of the QuickSort algorithm can be used to design an elegant and efficient randomized algorithm for the order statistics problem . In this…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Probability in Computer Science › Randomized Algorithms › Lesson 2 | Discrete Mathematics" />
+    <meta property="og:description" content="The main idea of the QuickSort algorithm can be used to design an elegant and efficient randomized algorithm for the order statistics problem . In this…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-22-probability-in-computer-science/unit/chapter-22-probability-in-computer-science-unit-1-randomized-algorithms/lesson/probability-in-computer-science--randomized-algorithms--step-2/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-22-probability-in-computer-science/unit/chapter-22-probability-in-computer-science-unit-1-randomized-algorithms/lesson/probability-in-computer-science--randomized-algorithms--step-2/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Probability in Computer Science › Randomized Algorithms › Lesson 2 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Probability in Computer Science / Randomized Algorithms</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Probability in Computer Science · Randomized Algorithms</p>
+        <h1>Lesson 2</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p>The main idea of the QuickSort algorithm can be&nbsp;used to&nbsp;design an&nbsp;elegant and efficient randomized algorithm for the <em>order statistics problem</em>. In&nbsp;this problem, one is&nbsp;given a&nbsp;sequence&nbsp;<span class="math-tex">\(A=(a_{0}, \dotsb, a_{n-1})\)</span> of&nbsp;integers and an&nbsp;integer&nbsp;<span class="math-tex">\(k \in \{0,\dotsc,n-1\}\)</span> and is&nbsp;asked to&nbsp;compute the element of rank&nbsp;<span class="math-tex">\(k\)</span>, that is, the <span class="math-tex">\((k+1)\)</span>-st smallest element of&nbsp;the sequence.</p><p><em>Randomized QuickSelect</em> proceeds as&nbsp;follows: select a&nbsp;random element&nbsp;<span class="math-tex">\(p\)</span> (called <em>the pivot</em>) of&nbsp;<span class="math-tex">\(A\)</span> and partition&nbsp;<span class="math-tex">\(A\)</span> into three parts containing elements smaller than&nbsp;<span class="math-tex">\(p\)</span>, equal&nbsp;to&nbsp;<span class="math-tex">\(p\)</span>, and greater than&nbsp;<span class="math-tex">\(p\)</span>; then, proceed recursively with one of the three parts.</p><blockquote style="color:black"><ol><li> Choose a&nbsp;pivot element <span class="math-tex">\(p\)</span> uniformly at random from <span class="math-tex">\(A\)</span>.</li><li> Partition <span class="math-tex">\(A\)</span> into three multisets:  <span class="math-tex">\[S = \{x \in A \colon x &lt; p\}, \quad E = \{x \in A \colon x = p\}, \quad G = \{x \in A \colon x &gt; p\}.\]</span>  </li><li> If <span class="math-tex">\(k &lt; |S|\)</span>, recursively select the <span class="math-tex">\(k\)</span>-th smallest element in&nbsp;<span class="math-tex">\(S\)</span>.</li><li> If <span class="math-tex">\(|S| \le k &lt; |S| + |E|\)</span>, return&nbsp;<span class="math-tex">\(p\)</span>.</li><li> Otherwise, recursively select the <span class="math-tex">\((k - |S| - |E|)\)</span>-th smallest element in&nbsp;<span class="math-tex">\(G\)</span>.</li></ol></blockquote><p>This is&nbsp;how it can be&nbsp;implemented in&nbsp;Python. </p><pre><code class="language-python">from random import choice
+
+
+def order_statistics(lst, k):
+    pivot = choice(lst)
+
+    smaller = [x for x in lst if x &lt; pivot]
+    if k &lt; len(smaller):
+        return order_statistics(smaller, k)
+
+    equal = [x for x in lst if x == pivot]
+    if len(smaller) &lt;= k &lt; len(smaller) + len(equal):
+        return pivot
+
+    greater = [x for x in lst if x &gt; pivot]
+    return order_statistics(greater, k - len(smaller) - len(equal))
+
+
+l = [5, 2, 6, 1, 2, 7, 2, 2, 7, 9, 3]
+print(order_statistics(l, 4))
+print(order_statistics(l, 10))</code></pre><pre><code class="language-auto">2
+9
+</code></pre><p><strong>Problem. </strong> Test your intuition! What is&nbsp;the expected running time of Randomized QuickSelect?</p>
+          <div class="task-card"><div class="task-heading">Question</div><a class="cogniterra-only-notice" href="https://cogniterra.org/a/697" target="_blank" rel="noreferrer">This problem can only be submitted at Cogniterra.</a><ol class="task-option-list"><li class="task-option"><span class="task-option-number" aria-hidden="true">1</span><div class="task-option-body"><p> <span class="math-tex">\(O(1)\)</span></p></div></li><li class="task-option"><span class="task-option-number" aria-hidden="true">2</span><div class="task-option-body"><p> <span class="math-tex">\(O(\log n)\)</span></p></div></li><li class="task-option"><span class="task-option-number" aria-hidden="true">3</span><div class="task-option-body"><p> <span class="math-tex">\(O(n)\)</span></p></div></li><li class="task-option"><span class="task-option-number" aria-hidden="true">4</span><div class="task-option-body"><p> <span class="math-tex">\(O(n\log n)\)</span></p></div></li></ol></div>
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-22-probability-in-computer-science/unit/chapter-22-probability-in-computer-science-unit-1-randomized-algorithms/lesson/probability-in-computer-science--randomized-algorithms--step-1/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-22-probability-in-computer-science/unit/chapter-22-probability-in-computer-science-unit-1-randomized-algorithms/lesson/probability-in-computer-science--randomized-algorithms--step-3/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

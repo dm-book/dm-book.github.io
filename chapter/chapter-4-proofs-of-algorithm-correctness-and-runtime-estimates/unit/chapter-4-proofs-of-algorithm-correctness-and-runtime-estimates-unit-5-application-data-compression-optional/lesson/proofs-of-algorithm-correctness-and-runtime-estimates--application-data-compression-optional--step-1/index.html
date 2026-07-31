@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="In this section, we consider data compression algorithms . We will need to both prove their correctness and analyze them. Suppose we are given an alphabet…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Proofs of Algorithm Correctness and Runtime Estimates › Application: Data Compression (Optional) › Lesson 1 | Discrete Mathematics" />
+    <meta property="og:description" content="In this section, we consider data compression algorithms . We will need to both prove their correctness and analyze them. Suppose we are given an alphabet…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-4-proofs-of-algorithm-correctness-and-runtime-estimates/unit/chapter-4-proofs-of-algorithm-correctness-and-runtime-estimates-unit-5-application-data-compression-optional/lesson/proofs-of-algorithm-correctness-and-runtime-estimates--application-data-compression-optional--step-1/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-4-proofs-of-algorithm-correctness-and-runtime-estimates/unit/chapter-4-proofs-of-algorithm-correctness-and-runtime-estimates-unit-5-application-data-compression-optional/lesson/proofs-of-algorithm-correctness-and-runtime-estimates--application-data-compression-optional--step-1/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Proofs of Algorithm Correctness and Runtime Estimates › Application: Data Compression (Optional) › Lesson 1 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Proofs of Algorithm Correctness and Runtime Estimates / Application: Data Compression (Optional)</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Proofs of Algorithm Correctness and Runtime Estimates · Application: Data Compression (Optional)</p>
+        <h1>Lesson 1</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p>In&nbsp;this section, we consider <em>data compression algorithms</em>. We will need to both prove their correctness and analyze them.</p><p>Suppose we are given an alphabet <span class="math-tex">\(\Sigma = \{a_{1}, \dotsc, a_{n}\}\)</span> (of messages we want to encode). In this section, a <em>code</em> is defined as a function <span class="math-tex">\(\phi \colon \Sigma \to \{0,1\}^{*}\)</span>. A message <span class="math-tex">\(m = a_{i_1}\dotsc a_{i_k}\)</span> will be encoded as <span class="math-tex">\(\phi(m) = \phi(a_{i_1})\dotsc \phi(a_{i_k})\)</span>. Naturally, we want the code to be <em>uniquely decodable</em>: any message should be decoded unambiguously. This can be achieved by making the code <em>uniform</em> (all symbol codes have the same length), <em>prefix-free</em> (no symbol's code is a prefix of another), or <em>suffix-free</em>. There also exist uniquely decodable codes that possess none of these properties: e.g., <span class="math-tex">\(\phi(a_{1}) = 0\)</span>, <span class="math-tex">\(\phi(a_{2}) = 010\)</span>.</p><p>When might it be beneficial to use codes of different lengths for different symbols? For example, when some symbols appear much more frequently than others. Consider a toy example: </p><p style="text-align:center;"><img src="generated/assets/Proofs_of_Algorithm_Correctness_and_Runtime_Estimates/Application$_Data_Compression_(Optional)=0/image0.png" width="800" ></p><p>As we can see, the prefix code yields nearly twice as short a code (compared to uniform). As we will see later, the code with minimum redundancy can be found among prefix codes. Prefix codes are conveniently represented as leaves of a binary tree. Such a tree is also used for decoding.</p><p style="text-align:center;"><img src="generated/assets/Proofs_of_Algorithm_Correctness_and_Runtime_Estimates/Application$_Data_Compression_(Optional)=0/image1.png" width="800" ></p>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-4-proofs-of-algorithm-correctness-and-runtime-estimates/unit/chapter-4-proofs-of-algorithm-correctness-and-runtime-estimates-unit-4-guessing-a-number/lesson/proofs-of-algorithm-correctness-and-runtime-estimates--guessing-a-number--step-15/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-4-proofs-of-algorithm-correctness-and-runtime-estimates/unit/chapter-4-proofs-of-algorithm-correctness-and-runtime-estimates-unit-5-application-data-compression-optional/lesson/proofs-of-algorithm-correctness-and-runtime-estimates--application-data-compression-optional--step-2/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

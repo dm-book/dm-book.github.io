@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="Theorem (Erd\H{o}s–Szekeres Theorem, 1935). Any sequence of \(rs+1\) distinct real numbers has an increasing subsequence of length at least \(r+1\) or a…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Partially Ordered Sets › Application: Combinatorial Optimization (Optional) › Lesson 4 | Discrete Mathematics" />
+    <meta property="og:description" content="Theorem (Erd\H{o}s–Szekeres Theorem, 1935). Any sequence of \(rs+1\) distinct real numbers has an increasing subsequence of length at least \(r+1\) or a…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-11-partially-ordered-sets/unit/chapter-11-partially-ordered-sets-unit-6-application-combinatorial-optimization-optional/lesson/partially-ordered-sets--application-combinatorial-optimization-optional--step-4/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-11-partially-ordered-sets/unit/chapter-11-partially-ordered-sets-unit-6-application-combinatorial-optimization-optional/lesson/partially-ordered-sets--application-combinatorial-optimization-optional--step-4/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Partially Ordered Sets › Application: Combinatorial Optimization (Optional) › Lesson 4 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Partially Ordered Sets / Application: Combinatorial Optimization (Optional)</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Partially Ordered Sets · Application: Combinatorial Optimization (Optional)</p>
+        <h1>Lesson 4</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p><strong>Theorem (Erd\H{o}s&ndash;Szekeres Theorem, 1935). </strong><em>Any sequence of&nbsp;<span class="math-tex">\(rs+1\)</span> distinct real numbers has an&nbsp;increasing subsequence of&nbsp;length at least <span class="math-tex">\(r+1\)</span> or a&nbsp;decreasing subsequence of&nbsp;length at least <span class="math-tex">\(s+1\)</span>.</em></p><p> <em>Proof. </em>Let the sequence be <span class="math-tex">\(x_{1}, x_{2}, \dotsc, x_{rs+1}\)</span>. We define a&nbsp;poset on&nbsp;the set of&nbsp;indices <span class="math-tex">\(P = \{1, 2, \dotsc, rs+1\}\)</span>. For two indices <span class="math-tex">\(i, j \in P\)</span>, we say <span class="math-tex">\(i \prec j\)</span> if both <span class="math-tex">\(i &lt; j\)</span> and <span class="math-tex">\(x_{i} &lt; x_{j}\)</span>. Hence, a&nbsp;chain in this poset forms increasing subsequence. And, if we take an&nbsp;antichain and order the indices in it, we would obtain a&nbsp;decreasing subsequence.</p><p>Let <span class="math-tex">\(h\)</span> be&nbsp;the length of&nbsp;the longest chain (longest increasing subsequence) and <span class="math-tex">\(w\)</span> be&nbsp;the size of&nbsp;the largest antichain (longest decreasing subsequence). By Dilworth's theorem, the set <span class="math-tex">\(P\)</span> can be&nbsp;partitioned into <span class="math-tex">\(w\)</span> chains. We have <span class="math-tex">\(rs+1\)</span> elements in&nbsp;<span class="math-tex">\(P\)</span> distributed among <span class="math-tex">\(w\)</span> chains. By&nbsp;the Pigeonhole Principle, at least one of&nbsp;these chains must contain at least <span class="math-tex">\(\lceil \frac{rs+1}{w}\rceil\)</span> elements. The length of&nbsp;the longest chain, <span class="math-tex">\(h\)</span>, must be&nbsp;at least this large: <span class="math-tex">\[h \ge \left\lceil \frac{rs+1}{w}\right\rceil.\]</span> This inequality implies <span class="math-tex">\(h \cdot w \ge rs+1\)</span>. Therefore, either there is an&nbsp;increasing subsequence of&nbsp;length at least <span class="math-tex">\(r+1\)</span>, or a&nbsp;decreasing subsequence of&nbsp;length at least <span class="math-tex">\(s+1\)</span>.<span class="proof-end" aria-label="End of proof">◼</span></p>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-11-partially-ordered-sets/unit/chapter-11-partially-ordered-sets-unit-6-application-combinatorial-optimization-optional/lesson/partially-ordered-sets--application-combinatorial-optimization-optional--step-3/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-11-partially-ordered-sets/unit/chapter-11-partially-ordered-sets-unit-7-zermelo-s-theorem-optional/lesson/partially-ordered-sets--zermelo-s-theorem-optional--step-1/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

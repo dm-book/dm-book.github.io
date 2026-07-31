@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="Proof. We will prove a more general property: for any \(A \in \mathcal{A}\) and any \(A \not \in \mathcal{S} \subseteq \mathcal{A}\) , the inequalities hold…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Conditional Probability › Local Lemma (Optional) › Lesson 4 | Discrete Mathematics" />
+    <meta property="og:description" content="Proof. We will prove a more general property: for any \(A \in \mathcal{A}\) and any \(A \not \in \mathcal{S} \subseteq \mathcal{A}\) , the inequalities hold…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-19-conditional-probability/unit/chapter-19-conditional-probability-unit-6-local-lemma-optional/lesson/conditional-probability--local-lemma-optional--step-4/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-19-conditional-probability/unit/chapter-19-conditional-probability-unit-6-local-lemma-optional/lesson/conditional-probability--local-lemma-optional--step-4/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Conditional Probability › Local Lemma (Optional) › Lesson 4 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Conditional Probability / Local Lemma (Optional)</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Conditional Probability · Local Lemma (Optional)</p>
+        <h1>Lesson 4</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p><em>Proof. </em>We will prove a more general property: for any <span class="math-tex">\(A \in \mathcal{A}\)</span> and&nbsp;any <span class="math-tex">\(A \not \in \mathcal{S} \subseteq \mathcal{A}\)</span>, the inequalities hold <span class="math-tex">\[\begin{align*}\Pr\left[\bigcap_{B \in \mathcal{S}}\overline B \right]&&gt; 0 \\ \Pr\left[A \mid \bigcap_{B \in \mathcal{S}}\overline B \right]&\le p(A) \ .\end{align*}\]</span> (The first inequality guarantees that the conditional probability in the second inequality is used correctly.)</p><p>We will show how these two inequalities imply the statement of the theorem. From the second, we conclude that <span class="math-tex">\[\Pr\left[\overline A \mid \bigcap_{B \in \mathcal{S}}\overline B \right] \ge 1-p(A) \  .\]</span> Then, by the chain rule, we get  <span class="math-tex">\[\Pr[\overline A_{1} \cap \dotsb \cap \overline A_{n}]=\prod_{i \in [n]}\Pr\left[\overline A_{i} \mid \bigcap_{j \in [i-1]}\overline A_{j}\right] \ge \prod_{i \in [n]}(1-p(A_{i})) \  .\]</span>  </p><p>The two inequalities we need will be proven by induction on <span class="math-tex">\(s=|\mathcal{S}|\)</span>. The base case <span class="math-tex">\(s=0\)</span> is satisfied: <span class="math-tex">\(\Pr[\cap_{B \in \varnothing}\overline{B}]=1&gt;0\)</span> and&nbsp;<span class="math-tex">\(\Pr[A] \le p(A)\)</span>. For the transition <span class="math-tex">\(s-1 \to s\)</span>, we first show that the first inequality holds. To do this, fix the event <span class="math-tex">\(A' \in \mathcal{S}\)</span> and let <span class="math-tex">\(\mathcal{S}'=\mathcal{S}\setminus \{A'\}\)</span>. Then, from the first and third inequalities, we conclude that  <span class="math-tex">\[\Pr\left[\bigcap_{B \in \mathcal{S}}\overline B \right]= \Pr\left[\bigcap_{B \in \mathcal{S'}}\overline B\right] \cdot \Pr\left[\overline{A'}\mid \bigcap_{B \in \mathcal{S'}}\overline B \right] &gt;0\]</span>   (the first factor is positive by the induction hypothesis, the second is at least <span class="math-tex">\(1-p(A')\)</span> by the third inequality and therefore positive).</p><p>To prove the second inequality, consider the sets <span class="math-tex">\(\mathcal{S}_{1}=\mathcal{S} \cap \Gamma(A)\)</span> and&nbsp;<span class="math-tex">\(\mathcal{S}_{2} = \mathcal{S} \setminus \mathcal{S}_{1}\)</span>. Write:  <span class="math-tex">\[\Pr\left[A \mid \bigcap_{B \in \mathcal{S}}\overline B\right] = \frac{\Pr\left[A \cap \bigcap_{B \in \mathcal{S_1}}\overline B \mid \bigcap_{B \in \mathcal{S_2}}\overline B \right]}{\Pr\left[\bigcap_{B \in \mathcal{S_1}}\overline B \mid \bigcap_{B \in \mathcal{S_2}}\overline B \right]}\  .\]</span>   The numerator of the resulting fraction is at most  <span class="math-tex">\[\Pr\left[A \mid \bigcap_{B \in \mathcal{S_2}}\overline B \right] = \Pr[A] \le p(A)\prod_{B \in \Gamma(A)}(1-p(B)) \  ,\]</span>   where the equality follows from the independence condition. To estimate the denominator, we write the conjunction of the events <span class="math-tex">\(\mathcal{S}_{1}=\{B_{1}, \dotsc, B_{m}\}\)</span> and estimate the factors by the induction hypothesis (in the conditional part, there will be strict subsets of <span class="math-tex">\(\mathcal{S}\)</span>, so their size will be smaller than&nbsp;<span class="math-tex">\(s\)</span>):  <span class="math-tex">\[\Pr\left[\bigcap_{B \in \mathcal{S_1}}\overline B \mid \bigcap_{B \in \mathcal{S_2}}\overline B \right]=\prod_{i \in [m]}\Pr\left[\overline B_{i} \mid \bigcap_{j \in [i-1]}\overline B_{j} \cap \bigcap_{B \in \mathcal{S_2}}\overline B \right] \ge \prod_{B \in \mathcal{S_1}}(1-p(B)) \  .\]</span>   It remains to estimate the ratio of the obtained estimates:  <span class="math-tex">\[\Pr\left[A \mid \bigcap_{B \in \mathcal{S}}\overline B \right] \le p(A) \prod_{B \in \Gamma(A) \setminus \mathcal{S_1}}(1-p(B)) \le p(A) \  .\]</span>  <span class="proof-end" aria-label="End of proof">◼</span></p>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-19-conditional-probability/unit/chapter-19-conditional-probability-unit-6-local-lemma-optional/lesson/conditional-probability--local-lemma-optional--step-3/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-19-conditional-probability/unit/chapter-19-conditional-probability-unit-6-local-lemma-optional/lesson/conditional-probability--local-lemma-optional--step-5/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

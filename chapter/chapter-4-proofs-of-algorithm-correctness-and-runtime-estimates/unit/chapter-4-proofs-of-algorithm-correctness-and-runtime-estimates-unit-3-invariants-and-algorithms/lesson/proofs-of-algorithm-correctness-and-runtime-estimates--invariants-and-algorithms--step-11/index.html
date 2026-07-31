@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="The strategy we discussed above is quite simple to implement. The code below uses zero-based indexing for moves, volumes, and positions. def…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Proofs of Algorithm Correctness and Runtime Estimates › Invariants and Algorithms › Lesson 11 | Discrete Mathematics" />
+    <meta property="og:description" content="The strategy we discussed above is quite simple to implement. The code below uses zero-based indexing for moves, volumes, and positions. def…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-4-proofs-of-algorithm-correctness-and-runtime-estimates/unit/chapter-4-proofs-of-algorithm-correctness-and-runtime-estimates-unit-3-invariants-and-algorithms/lesson/proofs-of-algorithm-correctness-and-runtime-estimates--invariants-and-algorithms--step-11/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-4-proofs-of-algorithm-correctness-and-runtime-estimates/unit/chapter-4-proofs-of-algorithm-correctness-and-runtime-estimates-unit-3-invariants-and-algorithms/lesson/proofs-of-algorithm-correctness-and-runtime-estimates--invariants-and-algorithms--step-11/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Proofs of Algorithm Correctness and Runtime Estimates › Invariants and Algorithms › Lesson 11 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Proofs of Algorithm Correctness and Runtime Estimates / Invariants and Algorithms</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Proofs of Algorithm Correctness and Runtime Estimates · Invariants and Algorithms</p>
+        <h1>Lesson 11</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p>The strategy we discussed above is quite simple to implement. The code below uses zero-based indexing for moves, volumes, and positions. </p><pre><code class="language-python">def sort_books(books):
+    day = 0
+
+    for i in range(len(books)):
+        j = books.index(i)
+        if j != i:
+            books[i], books[j] = books[j], books[i]
+            print(f'After day {day}: {books}')
+            day += 1
+
+
+sort_books([0, 5, 8, 1, 2, 3, 7, 4, 9, 6])</code></pre><pre><code class="language-auto">After day 0: [0, 1, 8, 5, 2, 3, 7, 4, 9, 6]
+After day 1: [0, 1, 2, 5, 8, 3, 7, 4, 9, 6]
+After day 2: [0, 1, 2, 3, 8, 5, 7, 4, 9, 6]
+After day 3: [0, 1, 2, 3, 4, 5, 7, 8, 9, 6]
+After day 4: [0, 1, 2, 3, 4, 5, 6, 8, 9, 7]
+After day 5: [0, 1, 2, 3, 4, 5, 6, 7, 9, 8]
+After day 6: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+</code></pre><p> The sequence of volumes in the code was sorted in seven moves. Could any sequence of volumes be sorted in seven moves? If not, how can this be proven? And what is the sequence that cannot be sorted in seven moves?</p>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-4-proofs-of-algorithm-correctness-and-runtime-estimates/unit/chapter-4-proofs-of-algorithm-correctness-and-runtime-estimates-unit-3-invariants-and-algorithms/lesson/proofs-of-algorithm-correctness-and-runtime-estimates--invariants-and-algorithms--step-10/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-4-proofs-of-algorithm-correctness-and-runtime-estimates/unit/chapter-4-proofs-of-algorithm-correctness-and-runtime-estimates-unit-3-invariants-and-algorithms/lesson/proofs-of-algorithm-correctness-and-runtime-estimates--invariants-and-algorithms--step-12/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

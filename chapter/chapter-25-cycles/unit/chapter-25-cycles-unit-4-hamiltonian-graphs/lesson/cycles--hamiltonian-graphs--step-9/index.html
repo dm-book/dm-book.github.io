@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="The considered proof is algorithmic and implemented in the library \(\texttt{networkx}\) . import networkx as nx from networkx.algorithms import tournament…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Cycles › Hamiltonian Graphs › Lesson 9 | Discrete Mathematics" />
+    <meta property="og:description" content="The considered proof is algorithmic and implemented in the library \(\texttt{networkx}\) . import networkx as nx from networkx.algorithms import tournament…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-25-cycles/unit/chapter-25-cycles-unit-4-hamiltonian-graphs/lesson/cycles--hamiltonian-graphs--step-9/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-25-cycles/unit/chapter-25-cycles-unit-4-hamiltonian-graphs/lesson/cycles--hamiltonian-graphs--step-9/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Cycles › Hamiltonian Graphs › Lesson 9 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Cycles / Hamiltonian Graphs</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Cycles · Hamiltonian Graphs</p>
+        <h1>Lesson 9</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p>The considered proof is algorithmic and implemented in the library <span class="math- tex">\(\texttt{networkx}\)</span>. </p><pre><code class="language-python">import networkx as nx
+from networkx.algorithms import tournament
+
+G = tournament.random_tournament(n=10, seed=17)
+A = nx.nx_agraph.to_agraph(G)
+A.layout(prog='circo')
+A.draw("tournament.png")
+print(tournament.hamiltonian_path(G))</code></pre><pre><code class="language-auto">[1, 0, 8, 2, 4, 3, 5, 9, 6, 7]
+</code></pre><p style="text-align:center;"><img src="generated/assets/Cycles/Hamiltonian_Graphs=8/image0.png" width="800" ></p>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-25-cycles/unit/chapter-25-cycles-unit-4-hamiltonian-graphs/lesson/cycles--hamiltonian-graphs--step-8/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-25-cycles/unit/chapter-25-cycles-unit-5-traveling-salesman-problem/lesson/cycles--traveling-salesman-problem--step-1/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

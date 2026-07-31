@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="Recall that \(\alpha\) follows a binomial distribution: \(\alpha=\chi_{1}+\dotsb+\chi_{n}\) , where \[\chi_{i}=[\text{\(i\)-th object has the required…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Deviation from the Mean › Sampling Method › Lesson 6 | Discrete Mathematics" />
+    <meta property="og:description" content="Recall that \(\alpha\) follows a binomial distribution: \(\alpha=\chi_{1}+\dotsb+\chi_{n}\) , where \[\chi_{i}=[\text{\(i\)-th object has the required…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-21-deviation-from-the-mean/unit/chapter-21-deviation-from-the-mean-unit-6-sampling-method/lesson/deviation-from-the-mean--sampling-method--step-6/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-21-deviation-from-the-mean/unit/chapter-21-deviation-from-the-mean-unit-6-sampling-method/lesson/deviation-from-the-mean--sampling-method--step-6/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Deviation from the Mean › Sampling Method › Lesson 6 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Deviation from the Mean / Sampling Method</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Deviation from the Mean · Sampling Method</p>
+        <h1>Lesson 6</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p>Recall that <span class="math-tex">\(\alpha\)</span> follows a binomial distribution: <span class="math-tex">\(\alpha=\chi_{1}+\dotsb+\chi_{n}\)</span>, where <span class="math-tex">\[\chi_{i}=[\text{\(i\)-th object has the required property}] \  .\]</span> Then <span class="math-tex">\[\begin{align*}\operatorname{Var}[\alpha]&=\operatorname{Var}[\chi_{1}+\dotsb+\chi_{n}]=\\&=\operatorname{Var}[\chi_{1}]+\dotsb+\operatorname{Var}[\chi_{n}]=\\&=n(p(1-p)) \le \\&\le n \cdot \frac{1}{4} = \frac{n}{4} \  .\end{align*}\]</span> Thus, <span class="math-tex">\[\operatorname{Var}\left[\frac{\alpha}{n}\right]=\frac{\operatorname{Var}[\alpha]}{n^2}\le \frac{1}{4n}\  .\]</span> By Chebyshev's inequality <span class="math-tex">\[\Pr\left[\left|\frac{\alpha}{n}-p\right| \ge 0.04\right] \le \frac{\operatorname{Var}\left[\frac{\alpha}{n}\right]}{(0.04)^2}\le \frac{1}{4n(0.04)^2}=\frac{156.25}{n}\  .\]</span> To ensure this value is at most <span class="math-tex">\(0.05\)</span>, it is sufficient to take <span class="math-tex">\(n \ge 3\ 125\)</span>.</p>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-21-deviation-from-the-mean/unit/chapter-21-deviation-from-the-mean-unit-6-sampling-method/lesson/deviation-from-the-mean--sampling-method--step-5/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-21-deviation-from-the-mean/unit/chapter-21-deviation-from-the-mean-unit-6-sampling-method/lesson/deviation-from-the-mean--sampling-method--step-7/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

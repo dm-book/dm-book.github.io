@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="Enumerability is a natural property of languages. Another natural and stronger property is decidability. A language \(L\) is called decidable if there is an…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Proofs in Computer Science (Optional) › Computability Theory › Lesson 4 | Discrete Mathematics" />
+    <meta property="og:description" content="Enumerability is a natural property of languages. Another natural and stronger property is decidability. A language \(L\) is called decidable if there is an…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-5-proofs-in-computer-science-optional/unit/chapter-5-proofs-in-computer-science-optional-unit-2-computability-theory/lesson/proofs-in-computer-science-optional--computability-theory--step-4/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-5-proofs-in-computer-science-optional/unit/chapter-5-proofs-in-computer-science-optional-unit-2-computability-theory/lesson/proofs-in-computer-science-optional--computability-theory--step-4/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Proofs in Computer Science (Optional) › Computability Theory › Lesson 4 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Proofs in Computer Science (Optional) / Computability Theory</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Proofs in Computer Science (Optional) · Computability Theory</p>
+        <h1>Lesson 4</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p>Enumerability is a natural property of languages. Another natural and stronger property is decidability. A language <span class="math-tex">\(L\)</span> is&nbsp;called <em>decidable</em> if there is an algorithm that outputs&nbsp;1 for <span class="math-tex">\(x \in L\)</span>, and outputs&nbsp;0 for <span class="math-tex">\(x \not \in L\)</span>. Thus, we require that the algorithm halts on any input and outputs either one or zero. The property is indeed stronger: if there is a deciding algorithm <span class="math-tex">\(C\)</span> for the language <span class="math-tex">\(L\)</span>, then there is also a proof system <span class="math-tex">\(S\)</span> in which each <span class="math-tex">\(x \in L\)</span> has an empty proof <span class="math-tex">\(w=\varepsilon\)</span>: <span class="math-tex">\(S(x,\varepsilon)\)</span> simply runs the algorithm <span class="math-tex">\(C\)</span>.</p><p>It is natural to ask: are there languages that are enumerable but not decidable? One of the classic examples of such a language is the <em>halting problem</em>: given an algorithm <span class="math-tex">\(A\)</span> and input <span class="math-tex">\(x\)</span>, determine whether <span class="math-tex">\(A\)</span> halts on <span class="math-tex">\(x\)</span>. The corresponding language is defined as follows: <span class="math-tex">\[H=\{(A,x) \colon A(x)\text{ halts}\} \  .\]</span> It is easy to see that <span class="math-tex">\(H\)</span> is enumerable: one iterates over all triples <span class="math-tex">\((A,x,i)\)</span> (for example, in order of increasing total length) and runs <span class="math-tex">\(A\)</span>&nbsp;on&nbsp;<span class="math-tex">\(x\)</span> for <span class="math-tex">\(i\)</span>&nbsp;steps; if the algorithm halts, one prints <span class="math-tex">\((A,x)\)</span>. At the same time, this language is undecidable, as proven by Alan Turing in 1937.</p>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-5-proofs-in-computer-science-optional/unit/chapter-5-proofs-in-computer-science-optional-unit-2-computability-theory/lesson/proofs-in-computer-science-optional--computability-theory--step-3/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-5-proofs-in-computer-science-optional/unit/chapter-5-proofs-in-computer-science-optional-unit-2-computability-theory/lesson/proofs-in-computer-science-optional--computability-theory--step-5/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="It is not difficult to use the code provided above to find the first \(n\) for which \(p(n)\) is not prime. from itertools import count from sympy import…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Proofs of Existence and Optimality › Constructive Proofs of Existence › Lesson 5 | Discrete Mathematics" />
+    <meta property="og:description" content="It is not difficult to use the code provided above to find the first \(n\) for which \(p(n)\) is not prime. from itertools import count from sympy import…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-2-proofs-of-existence-and-optimality/unit/chapter-2-proofs-of-existence-and-optimality-unit-1-constructive-proofs-of-existence/lesson/proofs-of-existence-and-optimality--constructive-proofs-of-existence--step-5/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-2-proofs-of-existence-and-optimality/unit/chapter-2-proofs-of-existence-and-optimality-unit-1-constructive-proofs-of-existence/lesson/proofs-of-existence-and-optimality--constructive-proofs-of-existence--step-5/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Proofs of Existence and Optimality › Constructive Proofs of Existence › Lesson 5 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Proofs of Existence and Optimality / Constructive Proofs of Existence</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Proofs of Existence and Optimality · Constructive Proofs of Existence</p>
+        <h1>Lesson 5</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p>It is not difficult to use the code provided above to find the first <span class="math-tex">\(n\)</span> for which <span class="math-tex">\(p(n)\)</span> is not prime. </p><pre><code class="language-python">from itertools import count
+from sympy import isprime
+
+
+def p(n):
+    return n ** 2 - n + 41
+
+
+print(next(n for n in count() if not isprime(p(n))))</code></pre><pre><code class="language-auto">41
+</code></pre><p>If you look closely, it is not so surprising that <span class="math-tex">\(p(41)\)</span> is composite: after all, <span class="math-tex">\(p(41)&gt;41\)</span> and <span class="math-tex">\(p(41)\)</span> is divisible by <span class="math-tex">\(41\)</span>. What is surprising is that for all integers <span class="math-tex">\(0 \le n &lt; 41\)</span>, the number <span class="math-tex">\(p(n)\)</span> is prime.</p><details><summary>For the curious 🤓</summary><div style="border-style: solid;">It is known that the number <span class="math-tex">\(41\)</span> is the largest <a href="https://en.wikipedia.org/wiki/Euler%27s_lucky_numbers">Euler's lucky number</a>. These are positive integers <span class="math-tex">\(k\)</span> such that the value of the polynomial <span class="math-tex">\(n^{2}-n+k\)</span> is prime for all integers <span class="math-tex">\(0 \le n &lt; k\)</span>.</div></details>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-2-proofs-of-existence-and-optimality/unit/chapter-2-proofs-of-existence-and-optimality-unit-1-constructive-proofs-of-existence/lesson/proofs-of-existence-and-optimality--constructive-proofs-of-existence--step-4/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-2-proofs-of-existence-and-optimality/unit/chapter-2-proofs-of-existence-and-optimality-unit-1-constructive-proofs-of-existence/lesson/proofs-of-existence-and-optimality--constructive-proofs-of-existence--step-6/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

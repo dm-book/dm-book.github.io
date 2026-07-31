@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="This approach can be generalized to other power sums. For \(k \ge 1\) , let \[S_{k}(n)=1^{k}+2^{k}+\dotsb+n^{k}\] and set \(S_{k}(0)=0\) . The operator…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Generating Functions › Rational Functions › Lesson 4 | Discrete Mathematics" />
+    <meta property="og:description" content="This approach can be generalized to other power sums. For \(k \ge 1\) , let \[S_{k}(n)=1^{k}+2^{k}+\dotsb+n^{k}\] and set \(S_{k}(0)=0\) . The operator…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-16-generating-functions/unit/chapter-16-generating-functions-unit-4-rational-functions/lesson/generating-functions--rational-functions--step-4/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-16-generating-functions/unit/chapter-16-generating-functions-unit-4-rational-functions/lesson/generating-functions--rational-functions--step-4/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Generating Functions › Rational Functions › Lesson 4 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Generating Functions / Rational Functions</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Generating Functions · Rational Functions</p>
+        <h1>Lesson 4</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p>This approach can be generalized to other power sums. For <span class="math-tex">\(k \ge 1\)</span>, let <span class="math-tex">\[S_{k}(n)=1^{k}+2^{k}+\dotsb+n^{k}\]</span> and set <span class="math-tex">\(S_{k}(0)=0\)</span>. The operator <span class="math-tex">\(x\frac{d}{dx}\)</span> multiplies the coefficient at <span class="math-tex">\(x^{n}\)</span> by <span class="math-tex">\(n\)</span>: <span class="math-tex">\[x\frac{d}{dx}\sum_{n=0}^{\infty}a_{n}x^{n}=\sum_{n=0}^{\infty}na_{n}x^{n}.\]</span> Hence, <span class="math-tex">\[\sum_{n=0}^{\infty}n^{k}x^{n}= \left(x\frac{d}{dx}\right)^{k}\frac{1}{1-x}.\]</span> Taking partial sums means multiplying by <span class="math-tex">\(\frac{1}{1-x}\)</span>, so <span class="math-tex">\[\sum_{n=0}^{\infty}S_{k}(n)x^{n}= \frac{1}{1-x}\left(x\frac{d}{dx}\right)^{k}\frac{1}{1-x}.\]</span> Let us explain what kind of rational function this is. If <span class="math-tex">\[\mathcal{A}(x)=\frac{P(x)}{(1-x)^m},\]</span> then <span class="math-tex">\[x\mathcal{A}'(x)= \frac{x\left(P'(x)(1-x)+mP(x)\right)}{(1-x)^{m+1}}.\]</span> Thus, each application of the operator <span class="math-tex">\(x\frac{d}{dx}\)</span> increases the power of <span class="math-tex">\((1-x)\)</span> in the denominator by at&nbsp;most one. Moreover, if <span class="math-tex">\(\deg P \le m-1\)</span>, then the numerator after differentiation has degree at most&nbsp;<span class="math-tex">\(m\)</span>. Starting from <span class="math-tex">\(\frac{1}{1-x}\)</span> and applying this operator <span class="math-tex">\(k\)</span>&nbsp;times, we get a&nbsp;rational function with denominator <span class="math-tex">\((1-x)^{k+1}\)</span> and numerator degree at most&nbsp;<span class="math-tex">\(k\)</span>. Then we multiply by one more factor <span class="math-tex">\(\frac{1}{1-x}\)</span> to take partial sums. Therefore, <span class="math-tex">\[\sum_{n=0}^{\infty}S_{k}(n)x^{n}= \frac{R_k(x)}{(1-x)^{k+2}}\]</span> for some polynomial <span class="math-tex">\(R_{k}(x)\)</span> of degree at most <span class="math-tex">\(k\)</span>.</p><p>Now write <span class="math-tex">\[R_{k}(x)=r_{0}+r_{1}x+\dotsb+r_{k}x^{k}.\]</span> Then the coefficient <span class="math-tex">\(S_{k}(n)\)</span> is a finite sum: <span class="math-tex">\[S_{k}(n)=\sum_{j=0}^{k}r_{j}[x^{n}]\frac{x^j}{(1-x)^{k+2}}.\]</span> For every fixed <span class="math-tex">\(j\)</span>, <span class="math-tex">\[[x^{n}]\frac{x^j}{(1-x)^{k+2}}=\binom{n-j+k+1}{k+1},\]</span> which is a&nbsp;polynomial of degree <span class="math-tex">\(k+1\)</span>. Hence <span class="math-tex">\(S_{k}(n)\)</span> is a finite sum of polynomials of degree at most <span class="math-tex">\(k+1\)</span>, so <span class="math-tex">\(S_{k}(n)\)</span> itself is a polynomial in <span class="math-tex">\(n\)</span> of degree at most <span class="math-tex">\(k+1\)</span>.</p>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-16-generating-functions/unit/chapter-16-generating-functions-unit-4-rational-functions/lesson/generating-functions--rational-functions--step-3/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-16-generating-functions/unit/chapter-16-generating-functions-unit-4-rational-functions/lesson/generating-functions--rational-functions--step-5/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="Recall that to prove that the minimum number of questions needed to guess an integer \(0 \le x &lt; 16\) is equal to four, one needs to come up with a strategy…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Proofs of Algorithm Correctness and Runtime Estimates › Guessing a Number › Lesson 6 | Discrete Mathematics" />
+    <meta property="og:description" content="Recall that to prove that the minimum number of questions needed to guess an integer \(0 \le x &lt; 16\) is equal to four, one needs to come up with a strategy…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-4-proofs-of-algorithm-correctness-and-runtime-estimates/unit/chapter-4-proofs-of-algorithm-correctness-and-runtime-estimates-unit-4-guessing-a-number/lesson/proofs-of-algorithm-correctness-and-runtime-estimates--guessing-a-number--step-6/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-4-proofs-of-algorithm-correctness-and-runtime-estimates/unit/chapter-4-proofs-of-algorithm-correctness-and-runtime-estimates-unit-4-guessing-a-number/lesson/proofs-of-algorithm-correctness-and-runtime-estimates--guessing-a-number--step-6/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Proofs of Algorithm Correctness and Runtime Estimates › Guessing a Number › Lesson 6 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Proofs of Algorithm Correctness and Runtime Estimates / Guessing a Number</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Proofs of Algorithm Correctness and Runtime Estimates · Guessing a Number</p>
+        <h1>Lesson 6</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p>Recall that to&nbsp;prove that the minimum number of&nbsp;questions needed to&nbsp;guess an&nbsp;integer <span class="math-tex">\(0 \le x &lt; 16\)</span> is&nbsp;equal to&nbsp;four, one needs </p><ol><li> to&nbsp;come&nbsp;up with a&nbsp;strategy with four questions, and</li><li> to&nbsp;prove that any strategy with at&nbsp;most three questions works incorrectly for some <span class="math-tex">\(0 \le x &lt; 16\)</span>.</li></ol><p> We've already accomplished the first task. Below, we&nbsp;accomplish the second one.</p><p><strong>Theorem. </strong><em>The minimum number of&nbsp;questions needed to&nbsp;guess an&nbsp;integer <span class="math-tex">\(0 \le x &lt; n\)</span> is <span class="math-tex">\(\lceil \log_{2} n \rceil\)</span>.</em></p><p><em>Proof. </em>To&nbsp;prove an&nbsp;upper bound on&nbsp;the minimum number of&nbsp;questions, it&nbsp;is enough to&nbsp;present a&nbsp;protocol: in <span class="math-tex">\(\lceil \log_{2} n \rceil\)</span> questions, one can reveal all bits of&nbsp;(the binary representation&nbsp;of)&nbsp;<span class="math-tex">\(x\)</span>.</p><p>Below, we&nbsp;give two different proofs of a&nbsp;lower bound.</p><ul><li> <em>Protocol transcript.</em> Given <span class="math-tex">\(k\)</span>&nbsp;answer bits, you (or&nbsp;your function <span class="math- tex">\(\texttt{guess\_{number}(answers)}\)</span>) need to&nbsp;be&nbsp;able to&nbsp;recover&nbsp;<span class="math-tex">\(x\)</span>. There are at&nbsp;most <span class="math-tex">\(2^{k}\)</span> possibilities for <span class="math-tex">\(k\)</span>&nbsp;bits. Hence, if <span class="math-tex">\(2^{k} &lt; n\)</span>, then the protocol is&nbsp;incorrect for sure.</li><li> <em>Adversary argument.</em> Instead of&nbsp;fixing an&nbsp;integer <span class="math-tex">\(0 \le x &lt; n\)</span>, your friend may proceed as&nbsp;follows. Each time she receives a&nbsp;question of&nbsp;the form &ldquo;Is <span class="math-tex">\(x\)</span> in&nbsp;<span class="math-tex">\(S\)</span>?&rdquo; from you, she answers in a&nbsp;way that leaves as&nbsp;many candidate solutions as&nbsp;possible. This way, she guarantees that, with every question, you <em>at&nbsp;most halve</em> the number of&nbsp;candidate solutions. In&nbsp;turn, this means that if&nbsp;you ask less than <span class="math-tex">\(\lceil \log_{2} n \rceil\)</span> questions, then the number of&nbsp;candidates is&nbsp;still greater than one.</li></ul><p><span class="proof-end" aria-label="End of proof">◼</span></p>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-4-proofs-of-algorithm-correctness-and-runtime-estimates/unit/chapter-4-proofs-of-algorithm-correctness-and-runtime-estimates-unit-4-guessing-a-number/lesson/proofs-of-algorithm-correctness-and-runtime-estimates--guessing-a-number--step-5/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-4-proofs-of-algorithm-correctness-and-runtime-estimates/unit/chapter-4-proofs-of-algorithm-correctness-and-runtime-estimates-unit-4-guessing-a-number/lesson/proofs-of-algorithm-correctness-and-runtime-estimates--guessing-a-number--step-7/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

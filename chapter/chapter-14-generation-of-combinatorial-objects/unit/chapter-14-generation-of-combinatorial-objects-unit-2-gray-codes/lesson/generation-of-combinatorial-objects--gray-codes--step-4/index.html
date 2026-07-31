@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="Interestingly, to obtain the Gray code, we need to slightly modify our recursive algorithm for generating binary words. def gray_code(n): if n == 1: return…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Generation of Combinatorial Objects › Gray Codes › Lesson 4 | Discrete Mathematics" />
+    <meta property="og:description" content="Interestingly, to obtain the Gray code, we need to slightly modify our recursive algorithm for generating binary words. def gray_code(n): if n == 1: return…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-14-generation-of-combinatorial-objects/unit/chapter-14-generation-of-combinatorial-objects-unit-2-gray-codes/lesson/generation-of-combinatorial-objects--gray-codes--step-4/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-14-generation-of-combinatorial-objects/unit/chapter-14-generation-of-combinatorial-objects-unit-2-gray-codes/lesson/generation-of-combinatorial-objects--gray-codes--step-4/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Generation of Combinatorial Objects › Gray Codes › Lesson 4 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Generation of Combinatorial Objects / Gray Codes</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Generation of Combinatorial Objects · Gray Codes</p>
+        <h1>Lesson 4</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p>Interestingly, to obtain the Gray code, we need to slightly modify our recursive algorithm for generating binary words.</p><pre><code class="language-python">def gray_code(n):
+    if n == 1:
+        return ['0', '1']
+
+    c = gray_code(n - 1)
+    return ['0' + s for s in c] + ['1' + s for s in reversed(c)]
+
+print(*gray_code(3))</code></pre><pre><code class="language-auto">0000 0001 0011 0010 0110 0111 0101 0100 1100 1101 1111 1110 1010 1011 1001 1000
+</code></pre><p>It is easy to see that the resulting order satisfies the stated properties. We will prove by induction that in the obtained order, any two adjacent strings, as well as the first and last strings, differ in exactly one position. The base case <span class="math-tex">\(n=1\)</span> is obvious. Let <span class="math-tex">\(a,\dotsc,z\)</span> be an order on strings of length <span class="math-tex">\(n-1\)</span>. Then the order on strings of length&nbsp;<span class="math-tex">\(n\)</span> looks like: <span class="math-tex">\[0a, \dotsc, 0z, 1z, \dotsc, 1a \  .\]</span> In the sequences <span class="math-tex">\(0a, \dotsc, 0z\)</span> and <span class="math-tex">\(1z, \dotsc, 1a\)</span>, everything is fine by assumption. There are two “junctions”: <span class="math-tex">\((0z,1z)\)</span> and <span class="math-tex">\((1a,0a)\)</span>. They are also fine. In other words, we first recursively traverse all sequences starting with zero, then move to the layer of sequences starting with one, and traverse them (also recursively) in reverse order, after which we return. This is shown in the diagrams below. </p><ul><li> <span class="math-tex">\(n=2\)</span> <p style="text-align:center;"><img src="generated/assets/Generation_of_Combinatorial_Objects/Gray_Codes=3/image0.png" width="800" ></p></li><li> <span class="math-tex">\(n=3\)</span> <p style="text-align:center;"><img src="generated/assets/Generation_of_Combinatorial_Objects/Gray_Codes=3/image1.png" width="800" ></p></li><li> <span class="math-tex">\(n=4\)</span> <p style="text-align:center;"><img src="generated/assets/Generation_of_Combinatorial_Objects/Gray_Codes=3/image2.png" width="800" ></p></li></ul>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-14-generation-of-combinatorial-objects/unit/chapter-14-generation-of-combinatorial-objects-unit-2-gray-codes/lesson/generation-of-combinatorial-objects--gray-codes--step-3/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-14-generation-of-combinatorial-objects/unit/chapter-14-generation-of-combinatorial-objects-unit-2-gray-codes/lesson/generation-of-combinatorial-objects--gray-codes--step-5/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

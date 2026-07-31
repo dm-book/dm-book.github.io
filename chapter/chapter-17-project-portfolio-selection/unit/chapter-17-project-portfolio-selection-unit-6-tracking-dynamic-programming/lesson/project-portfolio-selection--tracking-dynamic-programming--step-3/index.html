@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="The table has roughly \(nB\) states. If \(m=\max_{i} m_{i}\) , then the direct recurrence tries up to \(m+1\) choices in every state, so its running time is…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Project: Portfolio Selection › Tracking Dynamic Programming › Lesson 3 | Discrete Mathematics" />
+    <meta property="og:description" content="The table has roughly \(nB\) states. If \(m=\max_{i} m_{i}\) , then the direct recurrence tries up to \(m+1\) choices in every state, so its running time is…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-17-project-portfolio-selection/unit/chapter-17-project-portfolio-selection-unit-6-tracking-dynamic-programming/lesson/project-portfolio-selection--tracking-dynamic-programming--step-3/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-17-project-portfolio-selection/unit/chapter-17-project-portfolio-selection-unit-6-tracking-dynamic-programming/lesson/project-portfolio-selection--tracking-dynamic-programming--step-3/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Project: Portfolio Selection › Tracking Dynamic Programming › Lesson 3 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Project: Portfolio Selection / Tracking Dynamic Programming</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Project: Portfolio Selection · Tracking Dynamic Programming</p>
+        <h1>Lesson 3</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p>The table has roughly <span class="math-tex">\(nB\)</span> states. If <span class="math-tex">\(m=\max_{i} m_{i}\)</span>, then the direct recurrence tries up to <span class="math-tex">\(m+1\)</span> choices in every state, so its running time is <span class="math-tex">\(O(nBm)\)</span>. This is a&nbsp;good exact algorithm when the budget is moderate.</p><p>But it is not polynomial in the ordinary input size. The number&nbsp;<span class="math-tex">\(B\)</span> is written using only about <span class="math-tex">\(\log_{2} B\)</span> bits. If <span class="math-tex">\(B=10^{12}\)</span>, the input line containing&nbsp;<span class="math-tex">\(B\)</span> is short, but a&nbsp;table with <span class="math-tex">\(10^{12}\)</span> columns is hopeless. Algorithms of this kind are called <em>pseudo-polynomial</em>: polynomial in the numerical value of the budget, not in the number of bits needed to write it.</p>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-17-project-portfolio-selection/unit/chapter-17-project-portfolio-selection-unit-6-tracking-dynamic-programming/lesson/project-portfolio-selection--tracking-dynamic-programming--step-2/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-17-project-portfolio-selection/unit/chapter-17-project-portfolio-selection-unit-6-tracking-dynamic-programming/lesson/project-portfolio-selection--tracking-dynamic-programming--step-4/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

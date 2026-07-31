@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="The incredible success of Euclid&#39;s axioms leads to a natural question: Can we come up with a nice set of axioms for more general concepts in mathematics? In…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Set Theory › Gödel&#39;s First Incompleteness Theorem (Optional) › Lesson 4 | Discrete Mathematics" />
+    <meta property="og:description" content="The incredible success of Euclid&#39;s axioms leads to a natural question: Can we come up with a nice set of axioms for more general concepts in mathematics? In…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-10-set-theory/unit/chapter-10-set-theory-unit-8-g-del-s-first-incompleteness-theorem-optional/lesson/set-theory--g-del-s-first-incompleteness-theorem-optional--step-4/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-10-set-theory/unit/chapter-10-set-theory-unit-8-g-del-s-first-incompleteness-theorem-optional/lesson/set-theory--g-del-s-first-incompleteness-theorem-optional--step-4/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Set Theory › Gödel&#39;s First Incompleteness Theorem (Optional) › Lesson 4 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Set Theory / Gödel&#39;s First Incompleteness Theorem (Optional)</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Set Theory · Gödel&#39;s First Incompleteness Theorem (Optional)</p>
+        <h1>Lesson 4</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p>The incredible success of Euclid's axioms leads to a natural question: Can we come up with a nice set of axioms for more general concepts in mathematics?</p><p>In the late nineteenth century, mathematicians started to realize that this question was fundamental to their field. For example, the set of natural numbers&nbsp;<span class="math-tex">\(\mathbb{N}\)</span> can be defined as follows. It&nbsp;is known as <em>Peano axiomatization</em> and uses the following non-logical symbols: a&nbsp;constant&nbsp;<span class="math-tex">\(0\)</span> and a&nbsp;unary function symbol&nbsp;<span class="math-tex">\(S\)</span> (standing for <em>successor</em>).</p><ol><li> Zero is a&nbsp;natural number: <span class="math-tex">\(0 \in \mathbb{N}\)</span></li><li> Equality is&nbsp;reflexive: <span class="math-tex">\(\forall x \in \mathbb{N}\colon x=x\)</span> </li><li> Equality is&nbsp;symmetric: <span class="math-tex">\(\forall x,y \in \mathbb{N}\colon x=y \Rightarrow y=x\)</span> </li><li>  Equality is&nbsp;transitive: <span class="math-tex">\(\forall x,y,z \in \mathbb{N}\colon x=y \land y=z \Rightarrow x=z\)</span>  </li><li>  <span class="math-tex">\(\mathbb{N}\)</span> is&nbsp;closed under equality: <span class="math-tex">\(\forall a, b \colon b \in \mathbb{N}\land a=b \Rightarrow a \in \mathbb{N}\)</span>  </li><li> <span class="math-tex">\(\mathbb{N}\)</span> is&nbsp;closed under&nbsp;<span class="math-tex">\(S\)</span>: <span class="math-tex">\(\forall n \in \mathbb{N}\colon S(n) \in \mathbb{N}\)</span></li><li> <span class="math-tex">\(S\)</span>&nbsp;is an&nbsp;injection: <span class="math-tex">\(\forall n,m \in \mathbb{N}\colon S(n)=S(m) \Rightarrow n=m\)</span></li><li> <span class="math-tex">\(0\)</span>&nbsp;is not a&nbsp;successor of&nbsp;anything: <span class="math-tex">\(\forall n \in \mathbb{N}\colon S(n) \neq 0\)</span></li><li>  Induction: <span class="math-tex">\(\forall P \colon \left( (P(0) \land (\forall n \in \mathbb{N}\colon P(n) \Rightarrow P(n+1))) \Rightarrow (\forall n \in \mathbb{N}\colon P(n)) \right)\)</span>  </li></ol><p>Again, the last axiom, induction, is&nbsp;essential as&nbsp;there are models where it&nbsp;does not hold. </p><p style="text-align:center;"><img src="generated/assets/Set_Theory/Gödel's_First_Incompleteness_Theorem_(Optional)=3/image0.png" width="800" ></p>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-10-set-theory/unit/chapter-10-set-theory-unit-8-g-del-s-first-incompleteness-theorem-optional/lesson/set-theory--g-del-s-first-incompleteness-theorem-optional--step-3/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-10-set-theory/unit/chapter-10-set-theory-unit-8-g-del-s-first-incompleteness-theorem-optional/lesson/set-theory--g-del-s-first-incompleteness-theorem-optional--step-5/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

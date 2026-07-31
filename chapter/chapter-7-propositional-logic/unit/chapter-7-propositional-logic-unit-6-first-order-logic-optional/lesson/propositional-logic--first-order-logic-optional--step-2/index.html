@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="A vocabulary \(\Sigma = (\Phi, \Pi, r)\) consists of two disjoint countable sets: a set \(\Phi\) of function symbols , and a set \(\Pi\) of relation symbols…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Propositional Logic › First-Order Logic (Optional) › Lesson 2 | Discrete Mathematics" />
+    <meta property="og:description" content="A vocabulary \(\Sigma = (\Phi, \Pi, r)\) consists of two disjoint countable sets: a set \(\Phi\) of function symbols , and a set \(\Pi\) of relation symbols…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-7-propositional-logic/unit/chapter-7-propositional-logic-unit-6-first-order-logic-optional/lesson/propositional-logic--first-order-logic-optional--step-2/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-7-propositional-logic/unit/chapter-7-propositional-logic-unit-6-first-order-logic-optional/lesson/propositional-logic--first-order-logic-optional--step-2/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Propositional Logic › First-Order Logic (Optional) › Lesson 2 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Propositional Logic / First-Order Logic (Optional)</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Propositional Logic · First-Order Logic (Optional)</p>
+        <h1>Lesson 2</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p>A&nbsp;<em>vocabulary</em> <span class="math-tex">\(\Sigma = (\Phi, \Pi, r)\)</span> consists of&nbsp;two disjoint countable sets: a&nbsp;set&nbsp;<span class="math-tex">\(\Phi\)</span> of&nbsp;<em>function symbols</em>, and&nbsp;a&nbsp;set&nbsp;<span class="math-tex">\(\Pi\)</span> of&nbsp;<em>relation symbols</em>. Here, <span class="math-tex">\(r \colon \Phi \cup \Pi \to \mathbb{Z}_{\ge 0}\)</span> tells us&nbsp;how many arguments each function and&nbsp;relation symbol takes. A&nbsp;function symbol <span class="math-tex">\(f \in \Phi\)</span> with <span class="math-tex">\(r(f) = k\)</span> is&nbsp;called a&nbsp;<em><span class="math-tex">\(k\)</span>-ary function symbol</em>, and&nbsp;a&nbsp;relation symbol <span class="math-tex">\(R \in \Pi\)</span> with <span class="math-tex">\(r(R) = k\)</span> is&nbsp;also <em><span class="math-tex">\(k\)</span>-ary</em>. A&nbsp;<span class="math-tex">\(0\)</span>-ary function symbol is&nbsp;called a&nbsp;<em>constant</em>. Relation symbols are never <span class="math-tex">\(0\)</span>-ary. We&nbsp;shall assume that&nbsp;<span class="math-tex">\(\Pi\)</span> always contains the&nbsp;binary <em>equality relation</em> <span class="math-tex">\(=\)</span>.</p><p>There is&nbsp;also a&nbsp;fixed, countable set of&nbsp;<em>variables</em> <span class="math-tex">\(V = \{x, y, z, &hellip;\}\)</span> which, intuitively, will take values from&nbsp;the universe discussed by&nbsp;the particular expression (and&nbsp;are not to&nbsp;be confused with&nbsp;the Boolean variables of&nbsp;the previous chapter).</p><p>Now, we define inductively the <em>terms</em> over the vocabulary <span class="math-tex">\(\Sigma\)</span>. To&nbsp;start off, any variable in&nbsp;<span class="math-tex">\(V\)</span> is&nbsp;a&nbsp;term. If&nbsp;<span class="math-tex">\(f \in \Phi\)</span> is&nbsp;a&nbsp;<span class="math-tex">\(k\)</span>-ary function symbol and&nbsp;<span class="math-tex">\(t_{1}, &hellip;, t_{k}\)</span> are terms, then the&nbsp;expression <span class="math-tex">\(f(t_{1}, &hellip;, t_{k})\)</span> is&nbsp;a&nbsp;term. Notice that any constant <span class="math-tex">\(c\)</span> is&nbsp;a&nbsp;term: just take <span class="math-tex">\(k = 0\)</span> in&nbsp;the above definition, and&nbsp;omit the&nbsp;parentheses in&nbsp;<span class="math-tex">\(c()\)</span>. Having defined terms, we&nbsp;are finally in&nbsp;a&nbsp;position to&nbsp;start defining what an&nbsp;expression over the vocabulary&nbsp;<span class="math-tex">\(\Sigma\)</span> is. If&nbsp;<span class="math-tex">\(R \in \Pi\)</span> is&nbsp;a&nbsp;<span class="math-tex">\(k\)</span>-ary relation symbol and&nbsp;<span class="math-tex">\(t_{1}, &hellip;, t_{k}\)</span> are terms, then the expression <span class="math-tex">\(R(t_{1}, &hellip;, t_{k})\)</span> is&nbsp;called an&nbsp;<em>atomic expression</em>.</p><p>A&nbsp;<em>first-order expression</em> is&nbsp;defined inductively as&nbsp;follows: First, any atomic expression is&nbsp;a&nbsp;first-order expression. If&nbsp;<span class="math-tex">\(\phi\)</span> and&nbsp;<span class="math-tex">\(\psi\)</span> are expressions, then so&nbsp;are <span class="math-tex">\(\lnot \phi\)</span>, <span class="math-tex">\((\phi \lor \psi)\)</span>, and&nbsp;<span class="math-tex">\((\phi \land \psi)\)</span>. Finally (and here is&nbsp;the most powerful element of&nbsp;this language), if&nbsp;<span class="math-tex">\(\phi\)</span> is&nbsp;a&nbsp;first-order expression, and&nbsp;<span class="math-tex">\(x\)</span> is&nbsp;any variable, then <span class="math-tex">\((\forall x \phi)\)</span> is&nbsp;a&nbsp;first-order expression as&nbsp;well.</p><p>These are all first-order expressions, or&nbsp;<em>expressions</em> for short, over&nbsp;<span class="math-tex">\(\Sigma\)</span>. We&nbsp;shall use in&nbsp;our expressions the shorthands <span class="math-tex">\(\Rightarrow\)</span> and&nbsp;<span class="math-tex">\(\Leftrightarrow\)</span> as&nbsp;in Boolean logic. We&nbsp;shall also use <span class="math-tex">\((\exists x \phi)\)</span> as&nbsp;a&nbsp;shorthand for&nbsp;<span class="math-tex">\(\lnot (\forall x \lnot \phi)\)</span>. The symbols <span class="math-tex">\(\forall\)</span> and&nbsp;<span class="math-tex">\(\exists\)</span> are called <em>quantifiers</em>. As&nbsp;we&nbsp;did in&nbsp;Boolean logic, we&nbsp;shall omit parentheses when there is&nbsp;no risk of&nbsp;ambiguity.</p>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-7-propositional-logic/unit/chapter-7-propositional-logic-unit-6-first-order-logic-optional/lesson/propositional-logic--first-order-logic-optional--step-1/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-7-propositional-logic/unit/chapter-7-propositional-logic-unit-6-first-order-logic-optional/lesson/propositional-logic--first-order-logic-optional--step-3/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="Just as in the example above, one can show for any polynomial that it grows no faster than its leading monomial. For example, \[3n^{3}+2n^{2}+7n+10 \preceq…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Proofs of Algorithm Correctness and Runtime Estimates › Function Growth Rates › Lesson 4 | Discrete Mathematics" />
+    <meta property="og:description" content="Just as in the example above, one can show for any polynomial that it grows no faster than its leading monomial. For example, \[3n^{3}+2n^{2}+7n+10 \preceq…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-4-proofs-of-algorithm-correctness-and-runtime-estimates/unit/chapter-4-proofs-of-algorithm-correctness-and-runtime-estimates-unit-2-function-growth-rates/lesson/proofs-of-algorithm-correctness-and-runtime-estimates--function-growth-rates--step-4/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-4-proofs-of-algorithm-correctness-and-runtime-estimates/unit/chapter-4-proofs-of-algorithm-correctness-and-runtime-estimates-unit-2-function-growth-rates/lesson/proofs-of-algorithm-correctness-and-runtime-estimates--function-growth-rates--step-4/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Proofs of Algorithm Correctness and Runtime Estimates › Function Growth Rates › Lesson 4 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Proofs of Algorithm Correctness and Runtime Estimates / Function Growth Rates</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Proofs of Algorithm Correctness and Runtime Estimates · Function Growth Rates</p>
+        <h1>Lesson 4</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p>Just as in the example above, one can show for any polynomial that it grows no faster than its leading monomial. For example, <span class="math-tex">\[3n^{3}+2n^{2}+7n+10 \preceq n^{3} \  .\]</span> Note, by the way, that <span class="math-tex">\(n^{3}\)</span> also grows no faster than <span class="math-tex">\(3n^{3}+2n^{2}+7n+10\)</span>, and this is immediate (as <span class="math-tex">\(\alpha\)</span> one can simply take one). When for two functions <span class="math-tex">\(f(n)\)</span> and <span class="math-tex">\(g(n)\)</span> it holds that each of them grows no faster than the other, it is said that these two functions <em>grow at the same rate</em> or <em>have the same order of growth</em>. This is denoted as: <span class="math-tex">\(f(n) \asymp g(n)\)</span>.</p><p>Let's compare the growth rates of the power functions <span class="math-tex">\(n^{l}\)</span> and <span class="math-tex">\(n^{k}\)</span> for <span class="math-tex">\(0 \le l &lt; k\)</span>. Of course, <span class="math-tex">\(n^{l} \le n^{k}\)</span> for all positive integers <span class="math-tex">\(n\)</span>, so <span class="math-tex">\(n^{l}\)</span> grows no faster than <span class="math-tex">\(n^{k}\)</span>, i.e., <span class="math-tex">\(n^{l} \preceq n^{k}\)</span>. But the reverse is not true: it is not true that <span class="math-tex">\(n^{k}\)</span> grows no faster than <span class="math-tex">\(n^{l}\)</span>. Indeed, if there existed a constant <span class="math-tex">\(\alpha&gt;0\)</span> such that <span class="math-tex">\(n^{k} \le \alpha \cdot n^{l}\)</span> for all positive integers <span class="math-tex">\(n\)</span>, then after dividing by <span class="math-tex">\(n^{l}\)</span> we would get <span class="math-tex">\[n^{k-l}\le \alpha.\]</span> But <span class="math-tex">\(k-l&gt;0\)</span>, which means the function <span class="math-tex">\(n^{k-l}\)</span> grows indefinitely.</p><p>We say that <em><span class="math-tex">\(f(n)\)</span> grows slower than <span class="math-tex">\(g(n)\)</span></em>, and write <span class="math-tex">\(f(n) \prec g(n)\)</span>, if <span class="math-tex">\(f(n)\)</span> grows no faster than <span class="math-tex">\(g(n)\)</span> (i.e., <span class="math-tex">\(f(n) \preceq g(n)\)</span>), but it is not true that <span class="math-tex">\(g(n)\)</span> grows no faster than <span class="math-tex">\(f(n)\)</span> (i.e., <span class="math-tex">\(g(n) \not \preceq f(n)\)</span>).</p><p>From the reasoning above, we conclude that <span class="math-tex">\[n \prec n^{1.5}\prec n^{2} \prec n^{3} \prec n^{4}.\]</span></p><p><strong>Problem. </strong> Mark the correct statements: </p>
+          <div class="task-card"><div class="task-heading">Multiple choice</div><a class="cogniterra-only-notice" href="https://cogniterra.org/a/697" target="_blank" rel="noreferrer">This problem can only be submitted at Cogniterra.</a><ol class="task-option-list"><li class="task-option"><span class="task-option-number" aria-hidden="true">1</span><div class="task-option-body"><p> <span class="math-tex">\(\sqrt{n}\preceq n^{\frac{1}{3}}\)</span> </p></div></li><li class="task-option"><span class="task-option-number" aria-hidden="true">2</span><div class="task-option-body"><p> <span class="math-tex">\(n^{2} \preceq n^{3}\)</span> </p></div></li><li class="task-option"><span class="task-option-number" aria-hidden="true">3</span><div class="task-option-body"><p> <span class="math-tex">\(n^{2}+n^{3} \preceq n^{2}\)</span> </p></div></li><li class="task-option"><span class="task-option-number" aria-hidden="true">4</span><div class="task-option-body"><p> <span class="math-tex">\(\sqrt[3]{n}\preceq n^{\frac{3}{8}}\)</span> </p></div></li></ol></div>
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-4-proofs-of-algorithm-correctness-and-runtime-estimates/unit/chapter-4-proofs-of-algorithm-correctness-and-runtime-estimates-unit-2-function-growth-rates/lesson/proofs-of-algorithm-correctness-and-runtime-estimates--function-growth-rates--step-3/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-4-proofs-of-algorithm-correctness-and-runtime-estimates/unit/chapter-4-proofs-of-algorithm-correctness-and-runtime-estimates-unit-2-function-growth-rates/lesson/proofs-of-algorithm-correctness-and-runtime-estimates--function-growth-rates--step-5/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

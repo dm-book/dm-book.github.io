@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="Each of the graphs shown above is a tree. A tree is a connected acyclic graph. It is not difficult to check that every graph above is indeed connected and…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="What is a Graph? › Basic Graphs › Lesson 8 | Discrete Mathematics" />
+    <meta property="og:description" content="Each of the graphs shown above is a tree. A tree is a connected acyclic graph. It is not difficult to check that every graph above is indeed connected and…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-23-what-is-a-graph/unit/chapter-23-what-is-a-graph-unit-3-basic-graphs/lesson/what-is-a-graph--basic-graphs--step-8/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-23-what-is-a-graph/unit/chapter-23-what-is-a-graph-unit-3-basic-graphs/lesson/what-is-a-graph--basic-graphs--step-8/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>What is a Graph? › Basic Graphs › Lesson 8 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / What is a Graph? / Basic Graphs</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">What is a Graph? · Basic Graphs</p>
+        <h1>Lesson 8</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p>Each of&nbsp;the graphs shown above is a&nbsp;tree. A&nbsp;<em>tree</em> is a&nbsp;connected acyclic graph. It&nbsp;is not difficult to&nbsp;check that every graph above is&nbsp;indeed connected and does not contain cycles. Also, some of&nbsp;the graphs above are just paths: </p><p style="text-align:center;"><img src="generated/assets/What_is_a_Graph/Basic_Graphs=7/image0.png" width="800" ></p><p> Indeed, a&nbsp;path is a&nbsp;special case of a&nbsp;tree: it&nbsp;is clearly connected and acyclic.</p><p>There are many ways of&nbsp;defining a&nbsp;tree. Below, we&nbsp;show three of&nbsp;them and prove that they are equivalent. Throughout the whole section we&nbsp;assume that the considered graphs are undirected.</p><p><strong>Theorem. </strong><em>The following definitions are equivalent. </p><ol><li> A&nbsp;<em>tree</em> is a&nbsp;connected graph without cycles.</li><li> A&nbsp;<em>tree</em> is a&nbsp;connected graph on&nbsp;<span class="math-tex">\(n\)</span>&nbsp;vertices with <span class="math-tex">\(n-1\)</span> edges.</li><li> A&nbsp;<em>tree</em> is a&nbsp;graph having a&nbsp;unique simple path between any pair of&nbsp;its vertices.</li></ol><p></em></p><p><em>Proof. </em>We&nbsp;prove the theorem by&nbsp;establishing the following implications: <span class="math-tex">\[1 \Rightarrow 2 \Rightarrow 3 \Rightarrow 1.\]</span> </p><ul><li><strong><span class="math-tex">\(1 \Rightarrow 2.\)</span></strong>&nbsp; Need to&nbsp;prove that a&nbsp;connected acyclic graph on&nbsp;<span class="math-tex">\(n\)</span>&nbsp;vertices has <span class="math-tex">\(n-1\)</span> edges. We&nbsp;prove this by&nbsp;induction on&nbsp;<span class="math-tex">\(n\)</span>. The base case <span class="math-tex">\(n=1\)</span> is&nbsp;clear. For the induction step <span class="math-tex">\(n-1 \to n\)</span>, take a&nbsp;connected acyclic graph on&nbsp;<span class="math-tex">\(n\)</span> vertices and remove one of&nbsp;its edges. This breaks the graph into two connected components with <span class="math-tex">\(n_{1}\)</span> and <span class="math-tex">\(n_{2}\)</span> vertices such that <span class="math-tex">\(n_{1}+n_{2}=n\)</span> (if&nbsp;the resulting graph contained a&nbsp;single connected component, the original graph would not be&nbsp;acyclic). Clearly, both components are connected and acyclic. By&nbsp;the induction hypothesis, they have <span class="math-tex">\(n_{1}-1\)</span> and <span class="math-tex">\(n_{2}-1\)</span> edges, respectively. Hence, the number of&nbsp;edges of&nbsp;the original graph&nbsp;is <span class="math-tex">\[(n_{1}-1)+(n_{2}-1)+1=n_{1}+n_{2}-1=n-1.\]</span></li><li><strong><span class="math-tex">\(2 \Rightarrow 3.\)</span></strong>&nbsp; Need to&nbsp;show that in&nbsp;any connected graph on&nbsp;<span class="math-tex">\(n\)</span>&nbsp;vertices with <span class="math-tex">\(n-1\)</span> edges there is a&nbsp;unique path between any pair of&nbsp;vertices. Assume that there are two paths between some pair of&nbsp;vertices. If&nbsp;these two paths do&nbsp;not share edges, then their union contains a&nbsp;simple cycle. For example, the union of&nbsp;two paths <span class="math-tex">\[A-E-C \quad\text{and}\quad A-B-F-C\]</span> is a&nbsp;cycle <span class="math-tex">\[A-E-C-F-B-A.\]</span> <p style="text-align:center;"><img src="generated/assets/What_is_a_Graph/Basic_Graphs=7/image1.png" width="800" ></p> The paths however may share some edges: <span class="math-tex">\[A - E - D - G - H - C \quad\text{and}\quad A - E - F - B - G - H - C.\]</span> In this case, these two paths still contain a&nbsp;simple cycle: <span class="math-tex">\[E - D - G - B - F - E.\]</span> <p style="text-align:center;"><img src="generated/assets/What_is_a_Graph/Basic_Graphs=7/image2.png" width="800" ></p> Fix such a&nbsp;cycle. It&nbsp;contains <span class="math-tex">\(m\)</span>&nbsp;vertices and <span class="math-tex">\(m\)</span>&nbsp;edges. Let's recover all edges of&nbsp;the graph one by&nbsp;one starting from this cycle. In&nbsp;order to&nbsp;connect all vertices, we have to&nbsp;add at&nbsp;least <span class="math-tex">\(n-m\)</span> edges. But then, the number of&nbsp;edges is&nbsp;at&nbsp;least&nbsp;<span class="math-tex">\(n\)</span>, a&nbsp;contradiction.</li><li><strong><span class="math-tex">\(3 \Rightarrow 1.\)</span></strong>&nbsp; Need to&nbsp;show that a&nbsp;graph having a&nbsp;unique simple path between any two vertices is&nbsp;connected and acyclic. Since for any pair of&nbsp;vertices, there is a&nbsp;path joining them, the graph is&nbsp;connected. If&nbsp;it had a&nbsp;cycle, there would be&nbsp;at&nbsp;least two paths between any two vertices of&nbsp;this cycle. For example, in a&nbsp;cycle <span class="math-tex">\[A-B-C-D-E-A\]</span> there are two paths between <span class="math-tex">\(A\)</span>&nbsp;and&nbsp;<span class="math-tex">\(C\)</span>: <span class="math-tex">\[A-B-C \quad\text{and}\quad A-E-D-C.\]</span><br><p style="text-align:center;"><img src="generated/assets/What_is_a_Graph/Basic_Graphs=7/image3.png" width="800" ></p></li></ul><p><span class="proof-end" aria-label="End of proof">◼</span></p>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-23-what-is-a-graph/unit/chapter-23-what-is-a-graph-unit-3-basic-graphs/lesson/what-is-a-graph--basic-graphs--step-7/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-23-what-is-a-graph/unit/chapter-23-what-is-a-graph-unit-3-basic-graphs/lesson/what-is-a-graph--basic-graphs--step-9/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

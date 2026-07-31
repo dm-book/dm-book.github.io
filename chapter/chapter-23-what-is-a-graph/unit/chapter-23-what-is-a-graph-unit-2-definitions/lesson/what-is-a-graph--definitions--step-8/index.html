@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="Now, assume that the graph \(G(V,E)\) is directed and use the following as a working toy example: \[V=\{A, B, C, D\} \text{ and }E=\{(A, B), (B, C), (C, D),…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="What is a Graph? › Definitions › Lesson 8 | Discrete Mathematics" />
+    <meta property="og:description" content="Now, assume that the graph \(G(V,E)\) is directed and use the following as a working toy example: \[V=\{A, B, C, D\} \text{ and }E=\{(A, B), (B, C), (C, D),…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-23-what-is-a-graph/unit/chapter-23-what-is-a-graph-unit-2-definitions/lesson/what-is-a-graph--definitions--step-8/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-23-what-is-a-graph/unit/chapter-23-what-is-a-graph-unit-2-definitions/lesson/what-is-a-graph--definitions--step-8/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>What is a Graph? › Definitions › Lesson 8 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / What is a Graph? / Definitions</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">What is a Graph? · Definitions</p>
+        <h1>Lesson 8</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p>Now, assume that the graph&nbsp;<span class="math-tex">\(G(V,E)\)</span> is&nbsp;directed and use the following as&nbsp;a&nbsp;working toy example: <span class="math-tex">\[V=\{A, B, C, D\} \text{ and }E=\{(A, B), (B, C), (C, D), (B, D), (A, D), (D, A)\}.\]</span>  </p><p style="text-align:center;"><img src="generated/assets/What_is_a_Graph/Definitions=7/image0.png" width="800" ></p><p> For directed graphs, one distinguishes between <em>incoming degree</em> and <em>outgoing degree</em> of&nbsp;a&nbsp;node called, respectively, <em>indegree</em> and <em>outdegree</em>: <span class="math-tex">\[\begin{align*}\operatorname{indeg}(v)&=|\{u \in V \colon (u, v) \in E\}|,\\ \operatorname{outdeg}(v)&=|\{u \in V \colon (v, u) \in E\}|.\end{align*}\]</span> For example,  <span class="math-tex">\[\operatorname{indeg}(A)=1,\  \operatorname{outdeg}(A)=2,\  \operatorname{indeg}(D)=3,\  \operatorname{outdeg}(D)=1.\]</span>  </p><pre><code class="language-python">from networkx import DiGraph
+
+graph = DiGraph(['AB', 'BC', 'AD', 'BD', 'CD', 'DA'])
+
+for node in ('A', 'D'):
+    print(f'indeg({node})={graph.in_degree(node)}', end=' ')
+    print(f'outdeg({node})={graph.out_degree(node)}', end=' ')</code></pre><pre><code class="language-auto">indeg(A)=1 outdeg(A)=2 indeg(D)=3 outdeg(D)=1
+</code></pre><p>Walks, paths, and cycles in&nbsp;directed graphs are defined similarly to&nbsp;the undirected case, but they need to&nbsp;respect the directions on&nbsp;edges. For example, <span class="math-tex">\(B \to D \to C\)</span> is not a&nbsp;walk in&nbsp;the toy graph above, since there is&nbsp;no&nbsp;edge <span class="math-tex">\((D,C)\)</span> in&nbsp;the graph.</p>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-23-what-is-a-graph/unit/chapter-23-what-is-a-graph-unit-2-definitions/lesson/what-is-a-graph--definitions--step-7/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-23-what-is-a-graph/unit/chapter-23-what-is-a-graph-unit-2-definitions/lesson/what-is-a-graph--definitions--step-9/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

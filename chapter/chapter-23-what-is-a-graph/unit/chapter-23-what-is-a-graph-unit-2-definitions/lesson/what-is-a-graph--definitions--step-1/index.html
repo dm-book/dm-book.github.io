@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="Below, we introduce basic notation for graphs. In the following, we assume that \(G(V,E)\) is an undirected graph. The degree of a node \(v \in V\) is the…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="What is a Graph? › Definitions › Lesson 1 | Discrete Mathematics" />
+    <meta property="og:description" content="Below, we introduce basic notation for graphs. In the following, we assume that \(G(V,E)\) is an undirected graph. The degree of a node \(v \in V\) is the…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-23-what-is-a-graph/unit/chapter-23-what-is-a-graph-unit-2-definitions/lesson/what-is-a-graph--definitions--step-1/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-23-what-is-a-graph/unit/chapter-23-what-is-a-graph-unit-2-definitions/lesson/what-is-a-graph--definitions--step-1/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>What is a Graph? › Definitions › Lesson 1 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / What is a Graph? / Definitions</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">What is a Graph? · Definitions</p>
+        <h1>Lesson 1</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p>Below, we&nbsp;introduce basic notation for graphs. In&nbsp;the following, we&nbsp;assume that <span class="math-tex">\(G(V,E)\)</span>&nbsp;is&nbsp;an&nbsp;undirected graph.</p><p>The <em>degree</em> of a&nbsp;node&nbsp;<span class="math-tex">\(v \in V\)</span> is&nbsp;the number of&nbsp;its incident edges: <span class="math-tex">\[\deg(v) = |\{e \in E \colon v \in e\}|.\]</span> In&nbsp;other words, <span class="math-tex">\(\deg(v)\)</span> is&nbsp;the number of&nbsp;neighbors of&nbsp;<span class="math-tex">\(v\)</span>: we&nbsp;say that a&nbsp;node <span class="math-tex">\(u\)</span>&nbsp;is a&nbsp;neighbor of&nbsp;<span class="math-tex">\(v\)</span> if&nbsp;<span class="math-tex">\(u\)</span>&nbsp;and&nbsp;<span class="math-tex">\(v\)</span> are joined by&nbsp;an&nbsp;edge (that is, <span class="math-tex">\(\{u,v\} \in E\)</span>). A&nbsp;node of&nbsp;degree&nbsp;<span class="math-tex">\(0\)</span> is&nbsp;called <em>isolated</em>. The degree of&nbsp;<span class="math-tex">\(G\)</span>, denoted <span class="math-tex">\(\Delta(G)\)</span>, is&nbsp;the maximum degree of&nbsp;its nodes: <span class="math-tex">\[\Delta(G) = \max \{\deg(v) \colon v \in V\} \  .\]</span></p><p>For example, if <span class="math-tex">\[V=\{A, B, C, K, L, M\} \text{ and }E=\{\{A, C\}, \{B, C\}, \{B, K\}, \{K, A\}, \{K, C\}, \{L, K\}\}\ ,\]</span>  then  <span class="math-tex">\[\deg(A)=2,\  \deg(B)=2,\  \deg(C)=3,\  \deg(K)=4,\  \deg(L)=1,\  \deg(M)=0.\]</span>   </p><p style="text-align:center;"><img src="generated/assets/What_is_a_Graph/Definitions=0/image0.png" width="800" ></p><pre><code class="language-python">from networkx import Graph
+
+graph = Graph(['AC', 'BC', 'BK', 'KA', 'KC', 'LK'])
+print(list(graph.degree()))
+print(list(graph.neighbors('B')))</code></pre><pre><code class="language-auto">[('A', 2), ('B', 2), ('C', 3), ('K', 4), ('L', 1), ('M', 0)]
+['C', 'K']
+</code></pre>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-23-what-is-a-graph/unit/chapter-23-what-is-a-graph-unit-1-graphs/lesson/what-is-a-graph--graphs--step-16/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-23-what-is-a-graph/unit/chapter-23-what-is-a-graph-unit-2-definitions/lesson/what-is-a-graph--definitions--step-2/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

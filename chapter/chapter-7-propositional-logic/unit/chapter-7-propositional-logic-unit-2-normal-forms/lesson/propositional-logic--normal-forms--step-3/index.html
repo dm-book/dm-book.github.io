@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="Below, we define a decomposition of a function \(f(x_{1},\dotsc,x_{n}) \in B_{n}\) . Let \(f_{0},f_{1} \in B_{n-1}\) be the subfunctions of \(f\) , obtained…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Propositional Logic › Normal Forms › Lesson 3 | Discrete Mathematics" />
+    <meta property="og:description" content="Below, we define a decomposition of a function \(f(x_{1},\dotsc,x_{n}) \in B_{n}\) . Let \(f_{0},f_{1} \in B_{n-1}\) be the subfunctions of \(f\) , obtained…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-7-propositional-logic/unit/chapter-7-propositional-logic-unit-2-normal-forms/lesson/propositional-logic--normal-forms--step-3/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-7-propositional-logic/unit/chapter-7-propositional-logic-unit-2-normal-forms/lesson/propositional-logic--normal-forms--step-3/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Propositional Logic › Normal Forms › Lesson 3 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Propositional Logic / Normal Forms</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Propositional Logic · Normal Forms</p>
+        <h1>Lesson 3</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p>Below, we define a decomposition of a&nbsp;function <span class="math-tex">\(f(x_{1},\dotsc,x_{n}) \in B_{n}\)</span>. Let <span class="math-tex">\(f_{0},f_{1} \in B_{n-1}\)</span> be the subfunctions of <span class="math-tex">\(f\)</span>, obtained by substituting <span class="math-tex">\(x_{1} \gets 0\)</span> and <span class="math-tex">\(x_{1} \gets 1\)</span>, respectively: <span class="math-tex">\[\begin{align*}f_{0}(x_{2}, \dotsc, x_{n})&=f(0, x_{2}, \dotsc, x_{n})\  ,\\ f_{1}(x_{2}, \dotsc, x_{n})&=f(1, x_{2}, \dotsc, x_{n})\  .\end{align*}\]</span> It is easy to see that  <span class="math-tex">\[f(x_{1}, \dotsc, x_{n})= (\overline{x_1}\land f_{0}(x_{2}, \dotsc, x_{n})) \lor (x_{1} \land f_{1}(x_{2}, \dotsc, x_{n})) \  .\]</span>   Thus, we have decomposed the function <span class="math-tex">\(f\)</span> by the variable <span class="math-tex">\(x_{1}\)</span>. In fact, it is also possible to decompose by several variables:  <span class="math-tex">\[f(x_{1}, \dotsc, x_{n})=\bigvee_{a \in \{0,1\}^m}[x_{1}=a_{1}, \dotsc, x_{m}=a_{m}] \land f_{a}(x_{m+1}, \dotsc, x_{n}) \  .\]</span>   Here <span class="math-tex">\([x_{1}=a_{1}, \dotsc, x_{m}=a_{m}]\)</span> is a function of <span class="math-tex">\(x_{1}, \dotsc, x_{m}\)</span> that equals one at exactly one point <span class="math-tex">\((a_{1}, \dotsc, a_{m})\)</span>, while <span class="math-tex">\(f_{a}(x_{m+1}, \dotsc, x_{n})\)</span> is the subfunction of <span class="math-tex">\(f\)</span>, obtained by substituting constants <span class="math-tex">\(a_{1}, \dotsc, a_{m}\)</span> instead of variables <span class="math-tex">\(x_{1}, \dotsc, x_{m}\)</span>.</p>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-7-propositional-logic/unit/chapter-7-propositional-logic-unit-2-normal-forms/lesson/propositional-logic--normal-forms--step-2/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-7-propositional-logic/unit/chapter-7-propositional-logic-unit-2-normal-forms/lesson/propositional-logic--normal-forms--step-4/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="Here is a more interesting example. Let \(T(n)\) be the number of ways to tile a \(3 \times n\) rectangle with dominoes of size \(1 \times 2\) . For…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Recurrence Relations › Transfer-Matrix Method (Optional) › Lesson 9 | Discrete Mathematics" />
+    <meta property="og:description" content="Here is a more interesting example. Let \(T(n)\) be the number of ways to tile a \(3 \times n\) rectangle with dominoes of size \(1 \times 2\) . For…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-15-recurrence-relations/unit/chapter-15-recurrence-relations-unit-7-transfer-matrix-method-optional/lesson/recurrence-relations--transfer-matrix-method-optional--step-9/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-15-recurrence-relations/unit/chapter-15-recurrence-relations-unit-7-transfer-matrix-method-optional/lesson/recurrence-relations--transfer-matrix-method-optional--step-9/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Recurrence Relations › Transfer-Matrix Method (Optional) › Lesson 9 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Recurrence Relations / Transfer-Matrix Method (Optional)</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Recurrence Relations · Transfer-Matrix Method (Optional)</p>
+        <h1>Lesson 9</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p>Here is a&nbsp;more interesting example. Let <span class="math-tex">\(T(n)\)</span> be the number of ways to tile a&nbsp;<span class="math-tex">\(3 \times n\)</span> rectangle with dominoes of size <span class="math-tex">\(1 \times 2\)</span>.</p><p>For example, here is one possible tiling of a&nbsp;<span class="math-tex">\(3 \times 8\)</span> rectangle: </p><p style="text-align:center;"><img src="generated/assets/Recurrence_Relations/Transfer-Matrix_Method_(Optional)=8/image0.png" width="800" ></p><p>We scan the rectangle from left to right. At any moment, some cells in the next column may already be occupied by horizontal dominoes started in the previous column. Such a&nbsp;pattern is called a&nbsp;<em>profile</em>. Since the height is <span class="math-tex">\(3\)</span>, a&nbsp;profile can be encoded by a&nbsp;binary string of length&nbsp;<span class="math-tex">\(3\)</span>.</p><p>By symmetry, it is enough to keep four types of profiles: <span class="math-tex">\[\texttt{000},\quad \{\texttt{001},\texttt{100}\},\quad \{\texttt{011},\texttt{110}\},\quad \texttt{111}.\]</span> The two remaining profiles, <span class="math- tex">\(\texttt{010}\)</span> and <span class="math- tex">\(\texttt{101}\)</span>, do exist, but they are not reachable from <span class="math- tex">\(\texttt{000}\)</span>.</p><p>If the state vector is ordered as above, then one column is transferred by the matrix <span class="math-tex">\[M= \begin{pmatrix}0&2&0&1\\ 1&0&1&0\\ 0&1&0&0\\ 1&0&0&0\end{pmatrix}.\]</span></p>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-15-recurrence-relations/unit/chapter-15-recurrence-relations-unit-7-transfer-matrix-method-optional/lesson/recurrence-relations--transfer-matrix-method-optional--step-8/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-15-recurrence-relations/unit/chapter-15-recurrence-relations-unit-7-transfer-matrix-method-optional/lesson/recurrence-relations--transfer-matrix-method-optional--step-10/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

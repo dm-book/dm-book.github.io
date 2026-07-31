@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="The tracking objective still contains absolute values. Introduce variables \(d_{i}\ge 0\) and require \[d_{i}\ge p_{i} x_{i}-t_{i},\qquad d_{i}\ge…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Project: Portfolio Selection › Portfolio as an ILP › Lesson 2 | Discrete Mathematics" />
+    <meta property="og:description" content="The tracking objective still contains absolute values. Introduce variables \(d_{i}\ge 0\) and require \[d_{i}\ge p_{i} x_{i}-t_{i},\qquad d_{i}\ge…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-17-project-portfolio-selection/unit/chapter-17-project-portfolio-selection-unit-8-portfolio-as-an-ilp/lesson/project-portfolio-selection--portfolio-as-an-ilp--step-2/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-17-project-portfolio-selection/unit/chapter-17-project-portfolio-selection-unit-8-portfolio-as-an-ilp/lesson/project-portfolio-selection--portfolio-as-an-ilp--step-2/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Project: Portfolio Selection › Portfolio as an ILP › Lesson 2 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Project: Portfolio Selection / Portfolio as an ILP</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Project: Portfolio Selection · Portfolio as an ILP</p>
+        <h1>Lesson 2</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p>The tracking objective still contains absolute values. Introduce variables <span class="math-tex">\(d_{i}\ge 0\)</span> and require <span class="math-tex">\[d_{i}\ge p_{i} x_{i}-t_{i},\qquad d_{i}\ge t_{i}-p_{i} x_{i}.\]</span> Then minimizing <span class="math-tex">\(\sum_{i} d_{i}\)</span> forces <span class="math-tex">\(d_{i}=|p_{i} x_{i}-t_{i}|\)</span> in an&nbsp;optimal solution. This gives an&nbsp;ILP for index tracking with budget, maximum shares, conflicts, dependencies, and sector caps.</p><p>A <em>valid inequality</em> is an&nbsp;extra inequality that every feasible integer portfolio already satisfies. Adding it does not change the set of feasible integer solutions, but it can make search easier. For example, if every stock in a&nbsp;set <span class="math-tex">\(U\)</span> belongs to the same sector and their total price is larger than the sector cap, then not all of them can be selected: <span class="math-tex">\[\sum_{i\in U}y_{i}\le |U|-1.\]</span> Good solvers generate many such inequalities automatically.</p>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-17-project-portfolio-selection/unit/chapter-17-project-portfolio-selection-unit-8-portfolio-as-an-ilp/lesson/project-portfolio-selection--portfolio-as-an-ilp--step-1/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-17-project-portfolio-selection/unit/chapter-17-project-portfolio-selection-unit-9-lp-relaxation/lesson/project-portfolio-selection--lp-relaxation--step-1/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

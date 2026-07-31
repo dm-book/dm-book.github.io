@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="Theorem (Mycielski, 1955). For any \(k \in \mathbb{Z}_{\ge 2}\) , there exists a graph \(G_{k}\) such that \(\omega(G_{k})=2\) and \(\chi(G_{k})=k\) .…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Colorings › Colorings and Cliques › Lesson 3 | Discrete Mathematics" />
+    <meta property="og:description" content="Theorem (Mycielski, 1955). For any \(k \in \mathbb{Z}_{\ge 2}\) , there exists a graph \(G_{k}\) such that \(\omega(G_{k})=2\) and \(\chi(G_{k})=k\) .…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-28-colorings/unit/chapter-28-colorings-unit-3-colorings-and-cliques/lesson/colorings--colorings-and-cliques--step-3/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-28-colorings/unit/chapter-28-colorings-unit-3-colorings-and-cliques/lesson/colorings--colorings-and-cliques--step-3/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Colorings › Colorings and Cliques › Lesson 3 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Colorings / Colorings and Cliques</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Colorings · Colorings and Cliques</p>
+        <h1>Lesson 3</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p><strong>Theorem (Mycielski, 1955). </strong><em>For any <span class="math-tex">\(k \in \mathbb{Z}_{\ge 2}\)</span>, there exists a graph <span class="math-tex">\(G_{k}\)</span> such that <span class="math-tex">\(\omega(G_{k})=2\)</span> and <span class="math-tex">\(\chi(G_{k})=k\)</span>.</em></p><p><em>Proof. </em>We will construct the graph&nbsp;<span class="math-tex">\(G_{k}\)</span> with the desired properties sequentially for all <span class="math-tex">\(k \ge 2\)</span>. For <span class="math-tex">\(k=2\)</span> it is simply an edge. The graph <span class="math-tex">\(G_{k+1}\)</span> is obtained from the graph <span class="math-tex">\(G_{k}\)</span> as follows. Let <span class="math-tex">\(G_{k}=(V,E)\)</span>, where <span class="math-tex">\(V=\{v_{1}, \dotsc, v_{n}\}\)</span>. The graph <span class="math-tex">\(G_{k+1}=(V \cup U \cup \{z\},E')\)</span> is obtained from <span class="math-tex">\(G_{k}\)</span> by adding a “mirror copy” of each of its vertices (<span class="math-tex">\(U=\{u_{1}, \dotsc, u_{n}\}\)</span>) and a new vertex&nbsp;<span class="math-tex">\(z\)</span> connected to the entire set&nbsp;<span class="math-tex">\(U\)</span>:  <span class="math-tex">\[E'=E \cup \{\{z, u_{i}\} \colon i \in [n]\} \cup \{\{u_{i},v_{j}\} \colon i \neq j \in [n],\  \{v_{i},v_{j}\} \in E\} \  .\]</span>   The graphs <span class="math-tex">\(G_{2}\)</span>, <span class="math-tex">\(G_{3}\)</span>, <span class="math-tex">\(G_{4}\)</span> are shown in the previous problem.</p><p style="text-align:center;"><img src="generated/assets/Colorings/Colorings_and_Cliques=2/image0.png" width="800" ></p><p>It is easy to see that the resulting graph cannot contain triangles. Coloring the graph <span class="math-tex">\(G_{k+1}\)</span> in <span class="math-tex">\(k+1\)</span> colors is also straightforward: color the vertices from&nbsp;<span class="math-tex">\(U\)</span> the same as the corresponding vertices from&nbsp;<span class="math-tex">\(V\)</span>, and color the vertex&nbsp;<span class="math-tex">\(z\)</span> with a new color. It remains to show that <span class="math-tex">\(G_{k+1}\)</span> cannot be colored in <span class="math-tex">\(k\)</span> colors. Suppose we managed to color <span class="math-tex">\(G_{k+1}\)</span> with <span class="math-tex">\(k\)</span> colors and suppose vertex&nbsp;<span class="math-tex">\(z\)</span> is colored with color&nbsp;<span class="math-tex">\(k\)</span>. Then the vertices in set&nbsp;<span class="math-tex">\(U\)</span> are colored with colors <span class="math-tex">\(\{1, \dotsc, k-1\}\)</span>. In the subgraph induced by&nbsp;<span class="math-tex">\(V\)</span>, recolor each vertex&nbsp;<span class="math-tex">\(v_{i}\)</span> that has color&nbsp;<span class="math-tex">\(k\)</span> with the color of vertex&nbsp;<span class="math-tex">\(u_{i}\)</span>. The resulting coloring of&nbsp;<span class="math-tex">\(V\)</span> remains proper. Indeed, two adjacent vertices&nbsp;<span class="math-tex">\(v_{i}\)</span> and&nbsp;<span class="math-tex">\(v_{j}\)</span> could not both have had color&nbsp;<span class="math-tex">\(k\)</span>. If only <span class="math-tex">\(v_{i}\)</span> is recolored, then <span class="math-tex">\(u_{i}\)</span> is adjacent to&nbsp;<span class="math-tex">\(v_{j}\)</span> by construction, so the new color of&nbsp;<span class="math-tex">\(v_{i}\)</span> differs from the color of&nbsp;<span class="math-tex">\(v_{j}\)</span>. Thus, we obtain a proper coloring of&nbsp;<span class="math-tex">\(G_{k}\)</span> with <span class="math-tex">\(k-1\)</span> colors&mdash;a contradiction with <span class="math-tex">\(\chi(G_{k})=k\)</span>.<span class="proof-end" aria-label="End of proof">◼</span></p>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-28-colorings/unit/chapter-28-colorings-unit-3-colorings-and-cliques/lesson/colorings--colorings-and-cliques--step-2/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-28-colorings/unit/chapter-28-colorings-unit-3-colorings-and-cliques/lesson/colorings--colorings-and-cliques--step-4/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

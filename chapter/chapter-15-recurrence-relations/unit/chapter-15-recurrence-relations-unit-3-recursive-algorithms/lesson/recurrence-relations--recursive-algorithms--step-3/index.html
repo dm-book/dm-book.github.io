@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="We have already encountered this recurrence relation when considering the number of nodes in a complete binary tree of height \(n\) , and we know that…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Recurrence Relations › Recursive Algorithms › Lesson 3 | Discrete Mathematics" />
+    <meta property="og:description" content="We have already encountered this recurrence relation when considering the number of nodes in a complete binary tree of height \(n\) , and we know that…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-15-recurrence-relations/unit/chapter-15-recurrence-relations-unit-3-recursive-algorithms/lesson/recurrence-relations--recursive-algorithms--step-3/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-15-recurrence-relations/unit/chapter-15-recurrence-relations-unit-3-recursive-algorithms/lesson/recurrence-relations--recursive-algorithms--step-3/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Recurrence Relations › Recursive Algorithms › Lesson 3 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Recurrence Relations / Recursive Algorithms</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Recurrence Relations · Recursive Algorithms</p>
+        <h1>Lesson 3</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p>We have already encountered this recurrence relation when considering the number of nodes in a complete binary tree of height <span class="math-tex">\(n\)</span>, and we know that <span class="math-tex">\(M(n)=2^{n}-1\)</span>. We have seen one way of deriving this solution: guessing and proving. Let us consider another method. If the recurrence relation had no additive constant (i.e., <span class="math-tex">\(M(n)=2M(n-1)\)</span>), it would be immediately clear that the solution is powers of two. It turns out that the constant can be eliminated as follows. Consider the function (or sequence) <span class="math-tex">\(M'(n)=M(n)+1\)</span>. It satisfies the following recurrence relation: <span class="math-tex">\[\begin{align*}M'(n)&=M(n)+1=\\&=(2M(n-1)+1)+1=\\&=2M(n-1)+2=\\&=2M'(n-1).\end{align*}\]</span> From this (and the initial condition <span class="math-tex">\(M'(1)=2\)</span>), it is clear that <span class="math-tex">\(M'(n)=2^{n}\)</span>, and we conclude that <span class="math-tex">\(M(n)=M'(n)-1=2^{n}-1\)</span>.</p>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-15-recurrence-relations/unit/chapter-15-recurrence-relations-unit-3-recursive-algorithms/lesson/recurrence-relations--recursive-algorithms--step-2/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-15-recurrence-relations/unit/chapter-15-recurrence-relations-unit-3-recursive-algorithms/lesson/recurrence-relations--recursive-algorithms--step-4/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

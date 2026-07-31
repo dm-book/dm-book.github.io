@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="The step of the algorithm (increasing the flow) consists of choosing a path from source to sink in the residual network. Such a path can be found, for…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Flows and Connectivity › Flows › Lesson 6 | Discrete Mathematics" />
+    <meta property="og:description" content="The step of the algorithm (increasing the flow) consists of choosing a path from source to sink in the residual network. Such a path can be found, for…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-26-flows-and-connectivity/unit/chapter-26-flows-and-connectivity-unit-2-flows/lesson/flows-and-connectivity--flows--step-6/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-26-flows-and-connectivity/unit/chapter-26-flows-and-connectivity-unit-2-flows/lesson/flows-and-connectivity--flows--step-6/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Flows and Connectivity › Flows › Lesson 6 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Flows and Connectivity / Flows</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Flows and Connectivity · Flows</p>
+        <h1>Lesson 6</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p>The step of the algorithm (increasing the flow) consists of choosing a path from source to sink in the residual network. Such a path can be found, for example, by breadth-first search, and once it is found, we increase the flow along it as much as possible (the limiting factor is the edge with the smallest capacity in the residual network). If there are no paths from <span class="math-tex">\(s\)</span> to <span class="math-tex">\(t\)</span> in the residual network, the algorithm stops.</p><p>For example, for the flow </p><p style="text-align:center;"><img src="generated/assets/Flows_and_Connectivity/Flows=5/image0.png" width="800" ></p><p> the residual network will look like this: </p><p style="text-align:center;"><img src="generated/assets/Flows_and_Connectivity/Flows=5/image1.png" width="800" ></p><p>It is easy to see that in the case of <em>integer</em> capacities this algorithm will stop sooner or later: at each step the flow increases by at least one (in the general case this is not true). However, we still haven’t proven that our algorithm always finds the optimal flow. We’ll prove that in the next section.</p>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-26-flows-and-connectivity/unit/chapter-26-flows-and-connectivity-unit-2-flows/lesson/flows-and-connectivity--flows--step-5/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-26-flows-and-connectivity/unit/chapter-26-flows-and-connectivity-unit-2-flows/lesson/flows-and-connectivity--flows--step-7/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

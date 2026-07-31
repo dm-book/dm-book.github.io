@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="In general, however, our favorite model may have an axiomatization that consists of an infinite set of expressions. So, our proof system must be generalized…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Propositional Logic › First-Order Logic (Optional) › Lesson 13 | Discrete Mathematics" />
+    <meta property="og:description" content="In general, however, our favorite model may have an axiomatization that consists of an infinite set of expressions. So, our proof system must be generalized…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-7-propositional-logic/unit/chapter-7-propositional-logic-unit-6-first-order-logic-optional/lesson/propositional-logic--first-order-logic-optional--step-13/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-7-propositional-logic/unit/chapter-7-propositional-logic-unit-6-first-order-logic-optional/lesson/propositional-logic--first-order-logic-optional--step-13/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Propositional Logic › First-Order Logic (Optional) › Lesson 13 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Propositional Logic / First-Order Logic (Optional)</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Propositional Logic · First-Order Logic (Optional)</p>
+        <h1>Lesson 13</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p>In general, however, our favorite model may have an&nbsp;axiomatization that consists of an&nbsp;infinite set of expressions. So, our proof system must&nbsp;be generalized to&nbsp;allow for <em>proofs from infinitely many premises</em>. Let&nbsp;<span class="math-tex">\(\Delta\)</span> be a&nbsp;set of expressions, and&nbsp;<span class="math-tex">\(\phi\)</span> another expression. We say that&nbsp;<span class="math-tex">\(\phi\)</span> is a&nbsp;<em>valid consequence</em> of&nbsp;<span class="math-tex">\(\Delta\)</span>, written&nbsp;<span class="math-tex">\(\Delta \models \phi\)</span>, if any model that satisfies each expression in&nbsp;<span class="math-tex">\(\Delta\)</span> must also satisfy&nbsp;<span class="math-tex">\(\phi\)</span>. In our intended application to&nbsp;axiomatization, presumably the&nbsp;valid consequences of&nbsp;<span class="math-tex">\(\Delta\)</span> will be all properties of&nbsp;<span class="math-tex">\(M_{0}\)</span>, and just these. So, we&nbsp;are very much interested in systematically generating all valid consequences of&nbsp;<span class="math-tex">\(\Delta\)</span>.</p><p>We introduce next a&nbsp;proof system, which is a&nbsp;natural extension of the one above for validity, and is&nbsp;helpful in&nbsp;identifying valid consequences. Let&nbsp;<span class="math-tex">\(\Delta\)</span> be a&nbsp;set of expressions. Let&nbsp;<span class="math-tex">\(S\)</span> be a&nbsp;finite sequence of first-order expressions&nbsp;<span class="math-tex">\(S = (\phi_{1}, \phi_{2}, &hellip;, \phi_{n})\)</span>, such that, for each expression&nbsp;<span class="math-tex">\(\phi_{i}\)</span> in the sequence, <span class="math-tex">\(1 \leq i \leq n\)</span>, either (a)&nbsp;<span class="math-tex">\(\phi \in \Lambda\)</span>, or (b)&nbsp;<span class="math-tex">\(\phi \in \Delta\)</span>, or (c)&nbsp;there are two expressions of the form&nbsp;<span class="math-tex">\(\psi\)</span>,&nbsp;<span class="math-tex">\(\psi \Rightarrow \phi\)</span> among the expressions&nbsp;<span class="math-tex">\(\phi_{1}, &hellip;, \phi_{i-1}\)</span>. Then we say that&nbsp;<span class="math-tex">\(S\)</span> is a&nbsp;<em>proof</em> of&nbsp;<span class="math-tex">\(\phi = \phi_{n}\)</span> from&nbsp;<span class="math-tex">\(\Delta\)</span>. The expression&nbsp;<span class="math-tex">\(\phi\)</span> is then called a&nbsp;<em><span class="math-tex">\(\Delta\)</span>-first-order theorem</em>, and we write&nbsp;<span class="math-tex">\(\Delta \vdash \phi\)</span> (compare with&nbsp;<span class="math-tex">\(\Delta \models \phi\)</span>).</p><p>In other words, a&nbsp;<span class="math-tex">\(\Delta\)</span>-first-order theorem would be an&nbsp;ordinary first-order theorem if we allowed all expressions in&nbsp;<span class="math-tex">\(\Delta\)</span> to be added to our logical axioms. In this context, the expressions in&nbsp;<span class="math-tex">\(\Delta\)</span> are called the <em>nonlogical axioms</em> of our system.</p>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-7-propositional-logic/unit/chapter-7-propositional-logic-unit-6-first-order-logic-optional/lesson/propositional-logic--first-order-logic-optional--step-12/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-7-propositional-logic/unit/chapter-7-propositional-logic-unit-6-first-order-logic-optional/lesson/propositional-logic--first-order-logic-optional--step-14/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

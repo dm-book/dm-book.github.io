@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="Approximate Algorithms. The algorithms listed above are, of course, not practical. One might ask: if a graph is 3-colorable, how can we quickly find a…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Colorings › Application: Algorithms for Coloring › Lesson 2 | Discrete Mathematics" />
+    <meta property="og:description" content="Approximate Algorithms. The algorithms listed above are, of course, not practical. One might ask: if a graph is 3-colorable, how can we quickly find a…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-28-colorings/unit/chapter-28-colorings-unit-6-application-algorithms-for-coloring/lesson/colorings--application-algorithms-for-coloring--step-2/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-28-colorings/unit/chapter-28-colorings-unit-6-application-algorithms-for-coloring/lesson/colorings--application-algorithms-for-coloring--step-2/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Colorings › Application: Algorithms for Coloring › Lesson 2 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Colorings / Application: Algorithms for Coloring</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Colorings · Application: Algorithms for Coloring</p>
+        <h1>Lesson 2</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p><strong>Approximate Algorithms.</strong> The algorithms listed above are, of course, not practical. One might ask: if a graph is 3-colorable, how can we quickly find a coloring using not too many colors?</p><p><strong>Theorem (Wigderson, 1983). </strong><em> Any <span class="math-tex">\(3\)</span>-colorable graph on <span class="math-tex">\(n\)</span> vertices can be colored in <span class="math-tex">\(3 \sqrt n\)</span> colors in polynomial time.</em></p><p><em>Proof. </em>We proceed as follows: while the graph has a vertex of degree at least <span class="math-tex">\(\sqrt n\)</span>, color its neighbors with two new colors and remove them from the graph. The neighbors are 2-colorable precisely because we know the original graph is 3-colorable. After no more than <span class="math-tex">\(\sqrt n\)</span> iterations, we are left with a graph of degree less than <span class="math-tex">\(\sqrt n\)</span>, which can be colored using <span class="math-tex">\(\sqrt n\)</span> colors.<span class="proof-end" aria-label="End of proof">◼</span></p>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-28-colorings/unit/chapter-28-colorings-unit-6-application-algorithms-for-coloring/lesson/colorings--application-algorithms-for-coloring--step-1/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-28-colorings/unit/chapter-28-colorings-unit-6-application-algorithms-for-coloring/lesson/colorings--application-algorithms-for-coloring--step-3/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

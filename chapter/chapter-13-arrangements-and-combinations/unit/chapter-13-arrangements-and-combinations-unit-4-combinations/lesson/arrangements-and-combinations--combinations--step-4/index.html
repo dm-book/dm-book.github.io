@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="If each of the \(n\) teams played once with every other team, then the total number of games was \(\frac{n(n-1)}{2}\) . Let us consider two proofs.…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Arrangements and Combinations › Combinations › Lesson 4 | Discrete Mathematics" />
+    <meta property="og:description" content="If each of the \(n\) teams played once with every other team, then the total number of games was \(\frac{n(n-1)}{2}\) . Let us consider two proofs.…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-13-arrangements-and-combinations/unit/chapter-13-arrangements-and-combinations-unit-4-combinations/lesson/arrangements-and-combinations--combinations--step-4/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-13-arrangements-and-combinations/unit/chapter-13-arrangements-and-combinations-unit-4-combinations/lesson/arrangements-and-combinations--combinations--step-4/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Arrangements and Combinations › Combinations › Lesson 4 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Arrangements and Combinations / Combinations</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Arrangements and Combinations · Combinations</p>
+        <h1>Lesson 4</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p>If each of the <span class="math-tex">\(n\)</span> teams played once with every other team, then the total number of games was <span class="math-tex">\(\frac{n(n-1)}{2}\)</span>. Let us consider two proofs. </p><ul><li><strong>Combinatorial.</strong>&nbsp; Each game is determined by two teams. There are <span class="math-tex">\(n\)</span> ways to choose the first team and <span class="math-tex">\((n-1)\)</span> ways to choose the second team. With this counting method, the game between teams <span class="math-tex">\(i\)</span> and <span class="math-tex">\(j\)</span> is counted twice: once as game <span class="math-tex">\(ij\)</span> and once as game <span class="math-tex">\(ji\)</span>.<br><pre><code class="language-python">from itertools import combinations
+
+for c in combinations('abcdefgh', 2):
+    print(*c, sep='')</code></pre><pre><code class="language-auto">ab
+ac
+ad
+ae
+af
+ag
+ah
+bc
+bd
+be
+bf
+bg
+bh
+cd
+ce
+cf
+cg
+ch
+de
+df
+dg
+dh
+ef
+eg
+eh
+fg
+fh
+gh
+</code></pre></li><li><strong>Recursive.</strong>&nbsp; Let <span class="math-tex">\(T(n)\)</span> be the number of games. Then team <span class="math-tex">\(n\)</span> played exactly <span class="math-tex">\(n-1\)</span> games, and all other teams must play among themselves. Thus, <span class="math-tex">\(T(n)=n-1+T(n-1)\)</span>. This recurrence relation can be unfolded step by step: <span class="math-tex">\[\begin{align*}T(n)&=(n-1)+T(n-1)=\\&=(n-1)+(n-2)+T(n-2)=\\&=(n-1)+(n-2)+(n-3)+T(n-3)=\\&=\dotsb=\\&=(n-1)+(n-2)+\dotsb+1\end{align*}\]</span> According to the formula for the sum of an arithmetic progression, this equals <span class="math-tex">\(\frac{n(n-1)}{2}\)</span>.<br><pre><code class="language-python">def number_of_games(n):
+    return 0 if n &lt;= 1 else (n - 1) + number_of_games(n - 1)
+
+
+print(number_of_games(8))</code></pre><pre><code class="language-auto">28
+</code></pre></li></ul>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-13-arrangements-and-combinations/unit/chapter-13-arrangements-and-combinations-unit-4-combinations/lesson/arrangements-and-combinations--combinations--step-3/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-13-arrangements-and-combinations/unit/chapter-13-arrangements-and-combinations-unit-4-combinations/lesson/arrangements-and-combinations--combinations--step-5/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

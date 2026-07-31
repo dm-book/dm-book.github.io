@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="The unsatisfiability of the pigeonhole formula can be easily proved in stronger proof systems. For example, the cutting planes (CP) proof system operates…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Satisfiability Problem › Formal Verification and Proof Systems › Lesson 7 | Discrete Mathematics" />
+    <meta property="og:description" content="The unsatisfiability of the pigeonhole formula can be easily proved in stronger proof systems. For example, the cutting planes (CP) proof system operates…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-8-satisfiability-problem/unit/chapter-8-satisfiability-problem-unit-5-formal-verification-and-proof-systems/lesson/satisfiability-problem--formal-verification-and-proof-systems--step-7/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-8-satisfiability-problem/unit/chapter-8-satisfiability-problem-unit-5-formal-verification-and-proof-systems/lesson/satisfiability-problem--formal-verification-and-proof-systems--step-7/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Satisfiability Problem › Formal Verification and Proof Systems › Lesson 7 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Satisfiability Problem / Formal Verification and Proof Systems</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Satisfiability Problem · Formal Verification and Proof Systems</p>
+        <h1>Lesson 7</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p>The unsatisfiability of the pigeonhole formula can be easily proved in stronger proof systems. For example, the cutting planes (CP) proof system operates with linear <em>inequalities</em> where variables take values from <span class="math-tex">\(\{0,1\}\)</span> and coefficients are integers. There are two inference rules: one can add two inequalities after multiplying them by positive numbers, and one can divide the coefficients of an inequality by their greatest common divisor and round up the free term (if <span class="math-tex">\(2x+2y \ge 3\)</span>, then <span class="math-tex">\(x+y \ge \lceil \frac{3}{2} \rceil\)</span>).</p><p>A CNF formula can be easily transformed into a system of inequalities. For example, the clause <span class="math-tex">\((\overline{x}\lor y \lor \overline{z})\)</span> can be rewritten as the inequality <span class="math-tex">\((1-x)+y+(1-z) \ge 1\)</span>. Then the goal is to derive the inequality <span class="math-tex">\(1 \le 0\)</span>.</p><p>In the CP proof system the pigeonhole principle is proved easily, but there are other formulas that have no short proofs of unsatisfiability even in the&nbsp;CP system.</p><details><summary>For the curious 🤓</summary><div style="border-style: solid;">If one constructs a proof system in which every unsatisfiable formula has a short proof, then <span class="math-tex">\(\text{NP}=\text{co-NP}\)</span>. On the other hand, if it is proved that no proof system exists in which every unsatisfiable formula has a short proof, then <span class="math-tex">\(\text{NP}\neq \text{co-NP}\)</span>, from which it follows that <span class="math-tex">\(\text{P}\neq \text{NP}\)</span>.</div></details>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-8-satisfiability-problem/unit/chapter-8-satisfiability-problem-unit-5-formal-verification-and-proof-systems/lesson/satisfiability-problem--formal-verification-and-proof-systems--step-6/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-8-satisfiability-problem/unit/chapter-8-satisfiability-problem-unit-6-application-fine-grained-complexity-optional/lesson/satisfiability-problem--application-fine-grained-complexity-optional--step-1/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

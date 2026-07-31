@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="The search becomes much larger with four inputs. Now, we will optimize a simple brute-force by exploring only circuits in the normal form . Call a Boolean…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Project: Optimal Circuit Synthesis with SAT › Searching Small Circuits › Lesson 4 | Discrete Mathematics" />
+    <meta property="og:description" content="The search becomes much larger with four inputs. Now, we will optimize a simple brute-force by exploring only circuits in the normal form . Call a Boolean…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-12-project-optimal-circuit-synthesis-with-sat/unit/chapter-12-project-optimal-circuit-synthesis-with-sat-unit-2-searching-small-circuits/lesson/project-optimal-circuit-synthesis-with-sat--searching-small-circuits--step-4/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-12-project-optimal-circuit-synthesis-with-sat/unit/chapter-12-project-optimal-circuit-synthesis-with-sat-unit-2-searching-small-circuits/lesson/project-optimal-circuit-synthesis-with-sat--searching-small-circuits--step-4/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Project: Optimal Circuit Synthesis with SAT › Searching Small Circuits › Lesson 4 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Project: Optimal Circuit Synthesis with SAT / Searching Small Circuits</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Project: Optimal Circuit Synthesis with SAT · Searching Small Circuits</p>
+        <h1>Lesson 4</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p>The search becomes much larger with four inputs. Now, we&nbsp;will optimize a&nbsp;simple brute-force by&nbsp;exploring only circuits in&nbsp;the <em>normal form</em>. Call a&nbsp;Boolean function <em>normal</em>, if&nbsp;its value on all zeroes is&nbsp;zero.</p><p>We&nbsp;can make every internal (non-output) gate normal without changing the function computed by&nbsp;the circuit as&nbsp;follows. If&nbsp;a&nbsp;gate's output&nbsp;<span class="math-tex">\(g\)</span> is&nbsp;one at&nbsp;<span class="math-tex">\(00&hellip; 0\)</span>, replace it by&nbsp;<span class="math-tex">\(g'=\lnot g\)</span> and change the function computed of&nbsp;every later gate that uses it. For example, a&nbsp;later operation <span class="math-tex">\(g\land z\)</span> becomes <span class="math-tex">\(\lnot g'\land z\)</span>.</p><p>If&nbsp;the target function&nbsp;<span class="math-tex">\(f\)</span> is&nbsp;normal, the process will finish with a&nbsp;circuit which computes a&nbsp;normal function at&nbsp;every gate. Otherwise, instead of&nbsp;searching for a&nbsp;circuit for <span class="math-tex">\(f\)</span>, search for the normal function <span class="math-tex">\(\neg f\)</span>. Since now every gate with inputs <span class="math-tex">\(u, v\)</span> is&nbsp;normal and depends on&nbsp;both inputs, it&nbsp;must be&nbsp;one of&nbsp;the following: <span class="math-tex">\(u \land v\)</span>, <span class="math-tex">\(u\land\lnot v\)</span>, <span class="math-tex">\(\lnot u\land v\)</span>, <span class="math-tex">\(u \oplus v\)</span>, or <span class="math-tex">\(u \lor v\)</span>.</p>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-12-project-optimal-circuit-synthesis-with-sat/unit/chapter-12-project-optimal-circuit-synthesis-with-sat-unit-2-searching-small-circuits/lesson/project-optimal-circuit-synthesis-with-sat--searching-small-circuits--step-3/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-12-project-optimal-circuit-synthesis-with-sat/unit/chapter-12-project-optimal-circuit-synthesis-with-sat-unit-2-searching-small-circuits/lesson/project-optimal-circuit-synthesis-with-sat--searching-small-circuits--step-5/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

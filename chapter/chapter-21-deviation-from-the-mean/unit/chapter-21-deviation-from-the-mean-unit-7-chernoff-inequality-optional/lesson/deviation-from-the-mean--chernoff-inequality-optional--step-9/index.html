@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="To prove Chernoff&#39;s theorem, we start by proving an auxiliary lemma. Already from its formulation, one notices that one of the ideas of the proof is to…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Deviation from the Mean › Chernoff Inequality (Optional) › Lesson 9 | Discrete Mathematics" />
+    <meta property="og:description" content="To prove Chernoff&#39;s theorem, we start by proving an auxiliary lemma. Already from its formulation, one notices that one of the ideas of the proof is to…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-21-deviation-from-the-mean/unit/chapter-21-deviation-from-the-mean-unit-7-chernoff-inequality-optional/lesson/deviation-from-the-mean--chernoff-inequality-optional--step-9/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-21-deviation-from-the-mean/unit/chapter-21-deviation-from-the-mean-unit-7-chernoff-inequality-optional/lesson/deviation-from-the-mean--chernoff-inequality-optional--step-9/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Deviation from the Mean › Chernoff Inequality (Optional) › Lesson 9 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Deviation from the Mean / Chernoff Inequality (Optional)</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Deviation from the Mean · Chernoff Inequality (Optional)</p>
+        <h1>Lesson 9</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p>To&nbsp;prove Chernoff's theorem, we&nbsp;start by&nbsp;proving an&nbsp;auxiliary lemma. Already from its formulation, one notices that one of&nbsp;the ideas of&nbsp;the proof is&nbsp;to consider the random variable <span class="math-tex">\(\varepsilon^{\alpha}\)</span>.</p><p><strong>Lemma. </strong><em>Let <span class="math-tex">\(\alpha_{1},\dotsc,\alpha_{n}\)</span> be independent random variables taking values in <span class="math-tex">\([0,1]\)</span>, let <span class="math-tex">\(\alpha=\alpha_{1}+\dotsb+\alpha_{n}\)</span>, and let <span class="math-tex">\(\varepsilon\ge1\)</span>. Then <span class="math-tex">\[\operatorname{E}[\varepsilon^{\alpha}] \le e^{(\varepsilon-1)\operatorname{E}[\alpha]}&nbsp;,\]</span> </em> <em>Proof. </em>It is known that the function <span class="math-tex">\(\varepsilon^{x}\)</span> is convex for <span class="math-tex">\(\varepsilon \ge 1\)</span>, therefore for all <span class="math-tex">\(0 \le x \le 1\)</span> the inequality <span class="math-tex">\(\varepsilon^{x} \le 1+(\varepsilon-1)x\)</span> holds.</p><p style="text-align:center;"><img src="generated/assets/Deviation_from_the_Mean/Chernoff_Inequality_(Optional)=8/image0.png" width="800" ></p><p>First, we prove that the required inequality holds for <span class="math-tex">\(\alpha_{i}\)</span>. In the formula below, summation is carried out over all values of the random variable <span class="math-tex">\(\alpha_{i}\)</span>. We will significantly use the fact that all of them lie in the interval <span class="math-tex">\([0,1]\)</span>.</p><p> <span class="math-tex">\[\begin{align*}\operatorname{E}[\varepsilon^{\alpha_i}]&=\sum_{a}\varepsilon^{a}\Pr[\alpha_{i}=a] \le&\text{(convexity)}\\&\le \sum_{a}(1+(\varepsilon-1)a)\Pr[\alpha_{i}=a] =\\&=\sum_{a}\Pr[\alpha_{i}=a]+(\varepsilon-1)\sum_{a}a\Pr[\alpha_{i}=a]=\\&=1+(\varepsilon-1)\operatorname{E}[\alpha_{i}]\le&\text{(\(1+x \le e^{x}\))}\\&\le e^{(\varepsilon-1)E[\alpha_i]}&nbsp;.\end{align*}\]</span>  </p><p>Now we prove it for <span class="math-tex">\(\alpha=\alpha_{1}+\dotsb+\alpha_{n}\)</span>. In the inequality below, we will use the statement of the lemma just proven for all <span class="math-tex">\(\alpha_{i}\)</span>, as well as the fact that any functions of independent random variables are also independent.</p><p> <span class="math-tex">\[\begin{align*}\operatorname{E}[\varepsilon^{\alpha}]&=\operatorname{E}\left[\varepsilon^{\alpha_1+\dotsb+\alpha_n}\right]=\\&=\operatorname{E}\left[\varepsilon^{\alpha_1}\dotsb\varepsilon^{\alpha_n}\right]\le&\text{(independence)}\\&= e^{(\varepsilon-1)\operatorname{E}[\alpha_1]}\dotsb e^{(\varepsilon-1)\operatorname{E}[\alpha_n]}=\\&= e^{(\varepsilon-1)(\operatorname{E}[\alpha_1]+\dotsb +\operatorname{E}[\alpha_n])}=\\&=e^{(\varepsilon-1)E[\alpha]}&nbsp;.\end{align*}\]</span>  <span class="proof-end" aria-label="End of proof">◼</span></p>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-21-deviation-from-the-mean/unit/chapter-21-deviation-from-the-mean-unit-7-chernoff-inequality-optional/lesson/deviation-from-the-mean--chernoff-inequality-optional--step-8/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-21-deviation-from-the-mean/unit/chapter-21-deviation-from-the-mean-unit-7-chernoff-inequality-optional/lesson/deviation-from-the-mean--chernoff-inequality-optional--step-10/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="First consider \(T=\varnothing\) . Since \(k \equiv |V(G)| \pmod 2\) , the graph \(H\) has an even number of vertices. Also, \(H\) is connected because…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Matchings › Tutte&#39;s Theorem and Berge&#39;s Formula (Optional) › Lesson 8 | Discrete Mathematics" />
+    <meta property="og:description" content="First consider \(T=\varnothing\) . Since \(k \equiv |V(G)| \pmod 2\) , the graph \(H\) has an even number of vertices. Also, \(H\) is connected because…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-27-matchings/unit/chapter-27-matchings-unit-6-tutte-s-theorem-and-berge-s-formula-optional/lesson/matchings--tutte-s-theorem-and-berge-s-formula-optional--step-8/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-27-matchings/unit/chapter-27-matchings-unit-6-tutte-s-theorem-and-berge-s-formula-optional/lesson/matchings--tutte-s-theorem-and-berge-s-formula-optional--step-8/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Matchings › Tutte&#39;s Theorem and Berge&#39;s Formula (Optional) › Lesson 8 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Matchings / Tutte&#39;s Theorem and Berge&#39;s Formula (Optional)</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Matchings · Tutte&#39;s Theorem and Berge&#39;s Formula (Optional)</p>
+        <h1>Lesson 8</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p>First consider <span class="math-tex">\(T=\varnothing\)</span>. Since <span class="math-tex">\(k \equiv |V(G)| \pmod 2\)</span>, the graph&nbsp;<span class="math-tex">\(H\)</span> has an&nbsp;even number of vertices. Also, <span class="math-tex">\(H\)</span> is connected because <span class="math-tex">\(k&gt;0\)</span>. Thus <span class="math-tex">\(o(H)=0\)</span>.</p><p>Now let <span class="math-tex">\(T \subseteq V(H)\)</span> be nonempty. We need to prove that <span class="math-tex">\(o(H-T)\le |T|\)</span>.</p><p>If <span class="math-tex">\(T\)</span> does not contain all vertices of&nbsp;<span class="math-tex">\(W\)</span>, then <span class="math-tex">\(H-T\)</span> has a&nbsp;vertex from&nbsp;<span class="math-tex">\(W\)</span>. This vertex is adjacent to all other remaining vertices, so <span class="math-tex">\(H-T\)</span> is connected. Hence <span class="math-tex">\(o(H-T)\le 1 \le |T|\)</span>.</p><p>Now suppose <span class="math-tex">\(T=W \cup S\)</span>, where <span class="math-tex">\(S \subseteq V(G)\)</span>. Then <span class="math-tex">\[o(H-T)=o(G-S) \le k+|S|=|T| \  ,\]</span> by the definition of&nbsp;<span class="math-tex">\(k\)</span>.</p><p>So <span class="math-tex">\(H\)</span> satisfies Tutte's condition and therefore has a&nbsp;perfect matching&nbsp;<span class="math-tex">\(N\)</span>. After deleting from&nbsp;<span class="math-tex">\(N\)</span> all edges incident to vertices of&nbsp;<span class="math-tex">\(W\)</span>, we get a&nbsp;matching in&nbsp;<span class="math-tex">\(G\)</span> that covers at least <span class="math-tex">\(|V(H)|-2k=|V(G)|-k\)</span> vertices of&nbsp;<span class="math-tex">\(G\)</span>. Therefore <span class="math-tex">\[\alpha'(G) \ge \frac{|V(G)|-k}{2}\  ,\]</span> which is the same as <span class="math-tex">\(\operatorname{def}(G)\le k\)</span>. This completes the proof of Berge's formula.</p><p>Equivalently, the maximum size of a&nbsp;matching is  <span class="math-tex">\[\alpha'(G)=\frac{|V(G)|-\operatorname{def}(G)}{2}=\frac{|V(G)|-\max_{S\subseteq V(G)}(o(G-S)-|S|)}{2}\  .\]</span>  </p>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-27-matchings/unit/chapter-27-matchings-unit-6-tutte-s-theorem-and-berge-s-formula-optional/lesson/matchings--tutte-s-theorem-and-berge-s-formula-optional--step-7/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-27-matchings/unit/chapter-27-matchings-unit-7-theory-problems/lesson/matchings--theory-problems--step-1/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

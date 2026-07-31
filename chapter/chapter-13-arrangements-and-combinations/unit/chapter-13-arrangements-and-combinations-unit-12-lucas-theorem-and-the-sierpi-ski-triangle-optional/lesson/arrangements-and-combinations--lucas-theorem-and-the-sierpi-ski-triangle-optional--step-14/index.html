@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="The same idea works modulo any prime \(p\) . For \(p=3\) , every entry has residue \(0\) , \(1\) , or \(2\) ; for example, one may color…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Arrangements and Combinations › Lucas Theorem and the Sierpiński Triangle (Optional) › Lesson 14 | Discrete Mathematics" />
+    <meta property="og:description" content="The same idea works modulo any prime \(p\) . For \(p=3\) , every entry has residue \(0\) , \(1\) , or \(2\) ; for example, one may color…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-13-arrangements-and-combinations/unit/chapter-13-arrangements-and-combinations-unit-12-lucas-theorem-and-the-sierpi-ski-triangle-optional/lesson/arrangements-and-combinations--lucas-theorem-and-the-sierpi-ski-triangle-optional--step-14/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-13-arrangements-and-combinations/unit/chapter-13-arrangements-and-combinations-unit-12-lucas-theorem-and-the-sierpi-ski-triangle-optional/lesson/arrangements-and-combinations--lucas-theorem-and-the-sierpi-ski-triangle-optional--step-14/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Arrangements and Combinations › Lucas Theorem and the Sierpiński Triangle (Optional) › Lesson 14 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Arrangements and Combinations / Lucas Theorem and the Sierpiński Triangle (Optional)</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Arrangements and Combinations · Lucas Theorem and the Sierpiński Triangle (Optional)</p>
+        <h1>Lesson 14</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p>The same idea works modulo any prime&nbsp;<span class="math-tex">\(p\)</span>. For <span class="math-tex">\(p=3\)</span>, every entry has residue <span class="math-tex">\(0\)</span>, <span class="math-tex">\(1\)</span>, or&nbsp;<span class="math-tex">\(2\)</span>; for example, one may color <span class="math-tex">\[0=\text{white},\qquad 1=\text{blue},\qquad 2=\text{red}.\]</span> For <span class="math-tex">\(p=5\)</span>, there are five colors. The exact color of every cell is still determined by Lucas's theorem digit by digit.</p><p>Here are complete power pictures for several moduli: <span class="math-tex">\(3^{4}\)</span> rows modulo&nbsp;<span class="math-tex">\(3\)</span>, <span class="math-tex">\(5^{3}\)</span> rows modulo&nbsp;<span class="math-tex">\(5\)</span>, <span class="math-tex">\(6^{3}\)</span> rows modulo&nbsp;<span class="math-tex">\(6\)</span>, and <span class="math-tex">\(7^{3}\)</span> rows modulo&nbsp;<span class="math-tex">\(7\)</span>. Entries divisible by the modulus are shown in light gray, and the other entries are colored according to their residue. </p><p style="text-align:center;"><img src="generated/assets/Arrangements_and_Combinations/Lucas_Theorem_and_the_Sierpiński_Triangle_(Optional)=13/image0.png" width="800" ></p><p> The modulus&nbsp;<span class="math-tex">\(6\)</span> is included only as a&nbsp;comparison: it is not prime, so Lucas's theorem does not apply to it directly. However, its pattern is still structured because residues modulo&nbsp;<span class="math-tex">\(6\)</span> are determined by residues modulo&nbsp;<span class="math-tex">\(2\)</span> and modulo&nbsp;<span class="math-tex">\(3\)</span>.</p><p>This happens because of the following. Suppose <span class="math-tex">\[n=ap^{r}+n',\qquad k=bp^{r}+k',\]</span> where <span class="math-tex">\(0\le a,b&lt;p\)</span> and <span class="math-tex">\(0\le n',k'&lt;p^{r}\)</span>. Then Lucas's theorem gives <span class="math-tex">\[\binom{n}{k}\equiv \binom{a}{b}\binom{n'}{k'}\pmod p.\]</span> Thus each large block is either zero (when <span class="math-tex">\(b&gt;a\)</span>) or a&nbsp;scaled copy of the smaller pattern. For <span class="math-tex">\(p=2\)</span>, the only nonzero scale is&nbsp;<span class="math-tex">\(1\)</span>, so the pattern is the usual Sierpiński triangle. For larger primes, Pascal's triangle modulo&nbsp;<span class="math-tex">\(p\)</span> produces a&nbsp;<span class="math-tex">\(p\)</span>-ary analogue of the same fractal behavior.</p>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-13-arrangements-and-combinations/unit/chapter-13-arrangements-and-combinations-unit-12-lucas-theorem-and-the-sierpi-ski-triangle-optional/lesson/arrangements-and-combinations--lucas-theorem-and-the-sierpi-ski-triangle-optional--step-13/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-13-arrangements-and-combinations/unit/chapter-13-arrangements-and-combinations-unit-13-theory-problems/lesson/arrangements-and-combinations--theory-problems--step-1/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

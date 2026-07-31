@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="Let us construct the transition matrix for this process. The probability of drawing a ball of a given color is proportional to the number of balls of that…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Project: PageRank Algorithm › Markov Chains › Lesson 10 | Discrete Mathematics" />
+    <meta property="og:description" content="Let us construct the transition matrix for this process. The probability of drawing a ball of a given color is proportional to the number of balls of that…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-30-project-pagerank-algorithm/unit/chapter-30-project-pagerank-algorithm-unit-2-markov-chains/lesson/project-pagerank-algorithm--markov-chains--step-10/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-30-project-pagerank-algorithm/unit/chapter-30-project-pagerank-algorithm-unit-2-markov-chains/lesson/project-pagerank-algorithm--markov-chains--step-10/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Project: PageRank Algorithm › Markov Chains › Lesson 10 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Project: PageRank Algorithm / Markov Chains</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Project: PageRank Algorithm · Markov Chains</p>
+        <h1>Lesson 10</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p> Let&nbsp;us construct the transition matrix for&nbsp;this process. The probability of&nbsp;drawing a&nbsp;ball of&nbsp;a&nbsp;given color is&nbsp;proportional to&nbsp;the number of&nbsp;balls of&nbsp;that color remaining in&nbsp;the bag. Therefore, if we order&nbsp;the states as&nbsp;red, green, and blue, the transition&nbsp;matrix is <span class="math-tex">\[\mathbf{T}= \begin{bmatrix}1/8 & 2/8 & 2/8 \\ 3/8 & 2/8 & 3/8 \\ 4/8 & 4/8 & 3/8\end{bmatrix}\]</span> Initially, a&nbsp;red ball is&nbsp;drawn, so&nbsp;the initial distribution&nbsp;<span class="math-tex">\(\mathbf{r}= (1, 0, 0)^{T}\)</span>. Now, to&nbsp;find the probability distribution after&nbsp;<span class="math-tex">\(2\)</span> steps, we simply calculate <span class="math-tex">\[\mathbf{T}^{2} \mathbf{r}= \begin{bmatrix}15/64 \\ 21/64 \\ 28/64\end{bmatrix}\]</span> Since we are&nbsp;interested in&nbsp;the probability of&nbsp;drawing a&nbsp;green ball, the answer is&nbsp;<span class="math-tex">\(21/64\)</span>.</p>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-30-project-pagerank-algorithm/unit/chapter-30-project-pagerank-algorithm-unit-2-markov-chains/lesson/project-pagerank-algorithm--markov-chains--step-9/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-30-project-pagerank-algorithm/unit/chapter-30-project-pagerank-algorithm-unit-3-stationary-distributions/lesson/project-pagerank-algorithm--stationary-distributions--step-1/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

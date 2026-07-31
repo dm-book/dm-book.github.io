@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="The theorem just proven allows us to conclude that the logarithmic function (and even any power of it) grows slower than any polynomial function. First,…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Proofs of Algorithm Correctness and Runtime Estimates › Function Growth Rates › Lesson 7 | Discrete Mathematics" />
+    <meta property="og:description" content="The theorem just proven allows us to conclude that the logarithmic function (and even any power of it) grows slower than any polynomial function. First,…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-4-proofs-of-algorithm-correctness-and-runtime-estimates/unit/chapter-4-proofs-of-algorithm-correctness-and-runtime-estimates-unit-2-function-growth-rates/lesson/proofs-of-algorithm-correctness-and-runtime-estimates--function-growth-rates--step-7/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-4-proofs-of-algorithm-correctness-and-runtime-estimates/unit/chapter-4-proofs-of-algorithm-correctness-and-runtime-estimates-unit-2-function-growth-rates/lesson/proofs-of-algorithm-correctness-and-runtime-estimates--function-growth-rates--step-7/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Proofs of Algorithm Correctness and Runtime Estimates › Function Growth Rates › Lesson 7 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Proofs of Algorithm Correctness and Runtime Estimates / Function Growth Rates</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Proofs of Algorithm Correctness and Runtime Estimates · Function Growth Rates</p>
+        <h1>Lesson 7</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p>The theorem just proven allows us to conclude that the logarithmic function (and even any power of it) grows slower than any polynomial function.</p><p>First, let's show that for constants <span class="math-tex">\(a,b&gt;1\)</span>, the functions <span class="math-tex">\(\log_{a}{n}\)</span> and <span class="math-tex">\(\log_{b}{n}\)</span> have the same order of growth. Indeed, by the base change formula for logarithms, these two functions differ from each other by a constant multiplier: <span class="math-tex">\[\frac{\log_{a}{n}}{\log_{b}{n}}=\frac{\frac{\log_{2}{n}}{\log_{2}{a}}}{\frac{\log_{2}{n}}{\log_{2}{b}}}=\frac{\log_{2}{b}}{\log_{2}{a}}.\]</span> For this reason, often in asymptotic estimates, the base of the logarithm is not specified at all, and you might encounter statements like: &ldquo;The runtime of this sorting algorithm grows as <span class="math-tex">\(n\log{n}\)</span>&rdquo;.</p><p>Now, let's show that for any <span class="math-tex">\(a&gt;0\)</span>, <span class="math-tex">\(b&gt;1\)</span>, and <span class="math-tex">\(k&gt;1\)</span>, the function <span class="math-tex">\((\log_{b}{n})^{a}\)</span> (called a&nbsp;<em>polylogarithmic</em> function) grows slower than the power function <span class="math-tex">\(n^{k}\)</span>: <span class="math-tex">\[(\log_{b}{n})^{a} \prec n^{k} \  .\]</span> Indeed, let <span class="math-tex">\(m=\log_{b}{n}\)</span>. The parameter <span class="math-tex">\(m\)</span> increases with <span class="math-tex">\(n\)</span>. Then <span class="math-tex">\((\log_{b}{n})^{a}=m^{a}\)</span>, that is, in terms of <span class="math-tex">\(m\)</span> it is simply a <em>power function</em>. And the function <span class="math-tex">\(n^{k}\)</span> is <em>exponential</em> in terms of <span class="math-tex">\(m\)</span>: <span class="math-tex">\[n^{k}=\left(b^{\log_{b}{n}}\right)^{k}=\left(b^{m}\right)^{k}=b^{mk}=\left(b^{k}\right)^{m} .\]</span> As we already know, the function <span class="math-tex">\(m^{a}\)</span> grows slower than the function <span class="math-tex">\((b^{k})^{m}\)</span>.</p>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-4-proofs-of-algorithm-correctness-and-runtime-estimates/unit/chapter-4-proofs-of-algorithm-correctness-and-runtime-estimates-unit-2-function-growth-rates/lesson/proofs-of-algorithm-correctness-and-runtime-estimates--function-growth-rates--step-6/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-4-proofs-of-algorithm-correctness-and-runtime-estimates/unit/chapter-4-proofs-of-algorithm-correctness-and-runtime-estimates-unit-2-function-growth-rates/lesson/proofs-of-algorithm-correctness-and-runtime-estimates--function-growth-rates--step-8/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

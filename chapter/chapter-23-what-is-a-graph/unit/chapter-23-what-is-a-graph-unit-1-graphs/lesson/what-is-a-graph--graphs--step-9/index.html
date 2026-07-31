@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="This is how such a walk could look like. Starting at the northern part, we visit bridges one by one. By the end of the day, we end up on the eastern part…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="What is a Graph? › Graphs › Lesson 9 | Discrete Mathematics" />
+    <meta property="og:description" content="This is how such a walk could look like. Starting at the northern part, we visit bridges one by one. By the end of the day, we end up on the eastern part…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-23-what-is-a-graph/unit/chapter-23-what-is-a-graph-unit-1-graphs/lesson/what-is-a-graph--graphs--step-9/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-23-what-is-a-graph/unit/chapter-23-what-is-a-graph-unit-1-graphs/lesson/what-is-a-graph--graphs--step-9/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>What is a Graph? › Graphs › Lesson 9 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / What is a Graph? / Graphs</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">What is a Graph? · Graphs</p>
+        <h1>Lesson 9</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p>This is how such a&nbsp;walk could look like. Starting at&nbsp;the northern part, we visit bridges one by&nbsp;one. By&nbsp;the end of&nbsp;the day, we end&nbsp;up on&nbsp;the eastern part after visiting six out of&nbsp;seven bridges. </p><p style="text-align:center;"><img src="generated/assets/What_is_a_Graph/Graphs=8/image0.png" width="800" ></p><p> We missed one bridge and we cannot traverse it without visiting some other bridge again, thus failing to&nbsp;solve the &ldquo;Seven Bridges of&nbsp;Königsberg&rdquo; puzzle. But our failure does not imply that the puzzle has no&nbsp;solution! Indeed, maybe there is a&nbsp;better strategy that results in a&nbsp;walk visiting each bridge exactly once.</p><p>It&nbsp;was Leonhard Euler who proved that there&nbsp;is no&nbsp;such walk. To&nbsp;prove this, Euler transformed the map of&nbsp;Königsberg to&nbsp;a&nbsp;graph. Each of&nbsp;four parts corresponds to a&nbsp;node in&nbsp;the graph and each bridge corresponds to an&nbsp;edge connecting two nodes. </p><p style="text-align:center;"><img src="generated/assets/What_is_a_Graph/Graphs=8/image1.png" width="800" ></p><p> Afterwards, we remove the map of&nbsp;the city. What is&nbsp;left is a&nbsp;simple graph. Our goal is&nbsp;to&nbsp;find a&nbsp;walk in&nbsp;this graph that visits every edge exactly once (such walks are called <em>Eulerian</em>). </p><p style="text-align:center;"><img src="generated/assets/What_is_a_Graph/Graphs=8/image2.png" width="800" ></p><p>Euler argued as&nbsp;follows. Consider a&nbsp;walk in&nbsp;the graph, e.g., <span class="math-tex">\[C \to B \to A \to D \to B \to A\]</span> (this is&nbsp;not an&nbsp;Eulerian walk: it&nbsp;does not cover all the edges). </p><p style="text-align:center;"><img src="generated/assets/What_is_a_Graph/Graphs=8/image3.png" width="800" ></p><p> In&nbsp;this walk, <span class="math-tex">\(C\)</span>&nbsp;is the starting node, <span class="math-tex">\(A\)</span>&nbsp;is the end node, and <span class="math-tex">\(B\)</span>&nbsp;and&nbsp;<span class="math-tex">\(D\)</span> are intermediate nodes. A&nbsp;simple, but crucial observation: </p><blockquote style="color:black">for each intermediate node, the number of&nbsp;times the walk enters&nbsp;it is&nbsp;equal&nbsp;to the number of&nbsp;times the walk leaves&nbsp;it.</blockquote><p> For example, the walk enters&nbsp;<span class="math-tex">\(B\)</span> two times: <span class="math-tex">\[C \color{mc}\overset{1}{\to}\color{black}B \to A \to D \color{mc}\overset{2}{\to}\color{black}B \to A.\]</span> Clearly, the number of&nbsp;times the walk leaves&nbsp;<span class="math-tex">\(B\)</span> is&nbsp;the same: <span class="math-tex">\[C \to B \color{mc}\overset{1}{\to}\color{black}A \to D \to B \color{mc}\overset{2}{\to}\color{black}A.\]</span></p><p>Thus, if&nbsp;there is a&nbsp;walk that goes through all graph edges, then all the nodes, except for possibly two (the start node and the end node), should have an&nbsp;even number of&nbsp;edges incident to&nbsp;it. In&nbsp;the Seven Bridges graph however each node has an&nbsp;odd number of&nbsp;edges making the puzzle unsolvable.</p>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-23-what-is-a-graph/unit/chapter-23-what-is-a-graph-unit-1-graphs/lesson/what-is-a-graph--graphs--step-8/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-23-what-is-a-graph/unit/chapter-23-what-is-a-graph-unit-1-graphs/lesson/what-is-a-graph--graphs--step-10/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="We are ready to dive into the main topic: the PageRank algorithm. Earlier, we outlined two key principles that guide our approach: Links as Votes. A…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Project: PageRank Algorithm › PageRank Algorithm › Lesson 1 | Discrete Mathematics" />
+    <meta property="og:description" content="We are ready to dive into the main topic: the PageRank algorithm. Earlier, we outlined two key principles that guide our approach: Links as Votes. A…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-30-project-pagerank-algorithm/unit/chapter-30-project-pagerank-algorithm-unit-4-pagerank-algorithm/lesson/project-pagerank-algorithm--pagerank-algorithm--step-1/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-30-project-pagerank-algorithm/unit/chapter-30-project-pagerank-algorithm-unit-4-pagerank-algorithm/lesson/project-pagerank-algorithm--pagerank-algorithm--step-1/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Project: PageRank Algorithm › PageRank Algorithm › Lesson 1 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Project: PageRank Algorithm / PageRank Algorithm</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Project: PageRank Algorithm · PageRank Algorithm</p>
+        <h1>Lesson 1</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p>We&nbsp;are ready to&nbsp;dive into the main topic: the PageRank algorithm. Earlier, we outlined two key principles that guide our approach: </p><ul><li><strong>Links as&nbsp;Votes.</strong>&nbsp; A&nbsp;hyperlink from one page to&nbsp;another one is&nbsp;interpreted as&nbsp;a&nbsp;vote of&nbsp;confidence or&nbsp;endorsement. The more votes a&nbsp;page receives, the more important it&nbsp;is.</li><li><strong>Importance of&nbsp;the Voter.</strong>&nbsp; Crucially, not all votes are equal. A&nbsp;vote from an&nbsp;important or&nbsp;authoritative page (one with a&nbsp;high PageRank itself) counts for more than a&nbsp;vote from an&nbsp;unimportant page.</li></ul><p> Notice that these principles perfectly describe the behavior of a user randomly surfing the web: the user is more likely to visit popular pages and follow links from those pages to discover new content.</p><p>A&nbsp;natural approach to&nbsp;ranking web pages is to&nbsp;consider the stationary distribution of a&nbsp;random walk on&nbsp;the web graph. While this idea is appealing in&nbsp;principle, some challenges arise when we try&nbsp;to apply&nbsp;it directly. We cannot guarantee that the web graph will satisfy the conditions of&nbsp;the Ergodic Theorem: it may&nbsp;not be irreducible, aperiodic, or free of sink nodes. To&nbsp;address these issues, we introduce a&nbsp;damping factor&nbsp;<span class="math-tex">\(d\)</span> and connect all pairs of&nbsp;nodes with edges of&nbsp;small weight&nbsp;<span class="math-tex">\(\frac{1-d}{n}\)</span>, where&nbsp;<span class="math-tex">\(n\)</span> is&nbsp;the total number of&nbsp;pages. To&nbsp;preserve the stochasticity of&nbsp;the transition matrix, we multiply the original edge weights by&nbsp;<span class="math-tex">\(d\)</span>. Thus, the new update matrix&nbsp;<span class="math-tex">\(\mathbf{U}\)</span> becomes: <span class="math-tex">\[\mathbf{U}=d\mathbf{T}+\frac{1-d}{n}\mathbf{J},\]</span> where <span class="math-tex">\(\mathbf{J}=\mathbf{1}_{n \times n}\)</span> is the all-ones matrix.</p><p>For&nbsp;our toy&nbsp;graph and <span class="math-tex">\(d=0.85\)</span>, it will&nbsp;look like&nbsp;this:</p><p style="text-align:center;"><img src="generated/assets/Project$_PageRank_Algorithm/PageRank_Algorithm=0/image0.png" width="800" ></p><p>It&nbsp;is easy to&nbsp;see that this modified graph satisfies the conditions of&nbsp;the Ergodic&nbsp;Theorem. Consequently, we&nbsp;can perform a&nbsp;random walk on this graph and compute its stationary distribution, which gives us the PageRank scores of&nbsp;the pages.</p><p>For a&nbsp;more intuitive understanding, from the perspective of&nbsp;a&nbsp;random walk, this is equivalent to&nbsp;the following process: A&nbsp;random surfer starts at&nbsp;a&nbsp;random page and on each step with probability <span class="math-tex">\(d\)</span> follows links at&nbsp;random, however, with probability&nbsp;<span class="math-tex">\(1-d\)</span> the surfer gets bored and jumps to&nbsp;a&nbsp;random page instead&nbsp;of following a&nbsp;link.</p><p>In&nbsp;practice, solving the equation&nbsp;<span class="math-tex">\(\mathbf{U}\mathbf{r}= \mathbf{r}\)</span> to&nbsp;determine the stationary distribution can&nbsp;be&nbsp;computationally expensive (taking time <span class="math-tex">\(O(n^{3})\)</span>), particularly for large graphs such&nbsp;as&nbsp;the web&nbsp;graph. Instead, an&nbsp;iterative random walk is&nbsp;often employed. In&nbsp;this approach, an&nbsp;initial vector, typically a&nbsp;uniform distribution, is&nbsp;repeatedly multiplied by&nbsp;the transition matrix&nbsp;<span class="math-tex">\(\mathbf{U}\)</span> until the changes in&nbsp;the distribution become sufficiently&nbsp;small. This method converges exponentially to&nbsp;the stationary distribution, owing to&nbsp;the properties guaranteed by&nbsp;the Ergodic Theorem.</p>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-30-project-pagerank-algorithm/unit/chapter-30-project-pagerank-algorithm-unit-3-stationary-distributions/lesson/project-pagerank-algorithm--stationary-distributions--step-6/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-30-project-pagerank-algorithm/unit/chapter-30-project-pagerank-algorithm-unit-4-pagerank-algorithm/lesson/project-pagerank-algorithm--pagerank-algorithm--step-2/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="Let&#39;s now show how to use local search to get stronger bounds! Theorem. Let \(F\) be a 3-CNF formula on \(n\) variables, and \(\alpha \in \{0,1\}^{n}\) an…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Satisfiability Problem › Algorithms for SAT (Optional) › Lesson 4 | Discrete Mathematics" />
+    <meta property="og:description" content="Let&#39;s now show how to use local search to get stronger bounds! Theorem. Let \(F\) be a 3-CNF formula on \(n\) variables, and \(\alpha \in \{0,1\}^{n}\) an…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-8-satisfiability-problem/unit/chapter-8-satisfiability-problem-unit-4-algorithms-for-sat-optional/lesson/satisfiability-problem--algorithms-for-sat-optional--step-4/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-8-satisfiability-problem/unit/chapter-8-satisfiability-problem-unit-4-algorithms-for-sat-optional/lesson/satisfiability-problem--algorithms-for-sat-optional--step-4/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Satisfiability Problem › Algorithms for SAT (Optional) › Lesson 4 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Satisfiability Problem / Algorithms for SAT (Optional)</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Satisfiability Problem · Algorithms for SAT (Optional)</p>
+        <h1>Lesson 4</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p>Let's now show how to use local search to get stronger bounds!</p><p><strong>Theorem. </strong><em>Let <span class="math-tex">\(F\)</span>&nbsp;be a 3-CNF formula on <span class="math-tex">\(n\)</span>&nbsp;variables, and <span class="math-tex">\(\alpha \in \{0,1\}^{n}\)</span>&nbsp;an assignment to the variables. Checking for a satisfying assignment for&nbsp;<span class="math-tex">\(F\)</span> in the ball <span class="math-tex">\[\operatorname{Ball}(\alpha, r)=\{u \in \{0,1\}^{n} \colon \operatorname{dist}(\alpha, u) \le r\}\]</span> can be done in time <span class="math-tex">\(O^{*}(3^{r})\)</span>.</em></p><p><em>Proof. </em>Suppose right away that there exists a satisfying assignment <span class="math-tex">\(\beta \in \{0,1\}^{n}\)</span> in the ball: if not, we will still spend <span class="math-tex">\(O^{*}(3^{r})\)</span> and return nothing. At each moment we will be at some assignment <span class="math-tex">\(\gamma \in \{0,1\}^{n}\)</span>, initially <span class="math-tex">\(\gamma=\alpha\)</span>. If <span class="math-tex">\(\gamma\)</span> satisfies the formula, we stop with a shout of “hooray!”. Otherwise, take a clause&nbsp;<span class="math-tex">\(C\)</span> violated by&nbsp;<span class="math-tex">\(\gamma\)</span>, and assume it depends on variables <span class="math-tex">\(x_{i}, x_{j}, x_{k}\)</span>. A simple but important observation: <span class="math-tex">\(\beta\)</span> assigns at least one of these variables to the opposite of&nbsp;<span class="math-tex">\(\gamma\)</span> (otherwise <span class="math-tex">\(\beta\)</span> would also violate this clause!). So we do the following: make recursive calls for the three assignments obtained from&nbsp;<span class="math-tex">\(\gamma\)</span> by flipping <span class="math-tex">\(x_{i}\)</span>, <span class="math-tex">\(x_{j}\)</span>, and <span class="math-tex">\(x_{k}\)</span>. In one of these branches we move closer to&nbsp;<span class="math-tex">\(\beta\)</span>. We don’t know, of course, which one, but that’s okay. Building such a tree of depth&nbsp;<span class="math-tex">\(r\)</span>, we are guaranteed to find&nbsp;<span class="math-tex">\(\beta\)</span> and spend at most&nbsp;<span class="math-tex">\(O^{*}(3^{r})\)</span> time.<span class="proof-end" aria-label="End of proof">◼</span></p><p style="text-align:center;"><img src="generated/assets/Satisfiability_Problem/Algorithms_for_SAT_(Optional)=3/image0.png" width="800" ></p><p><strong>Theorem. </strong><em>The 3-satisfiability problem can be solved in time <span class="math-tex">\(O^{*}(1{,}74^{n})\)</span> by a deterministic algorithm and&nbsp;in&nbsp;time <span class="math-tex">\(O^{*}(1{,}5^{n})\)</span> by a probabilistic algorithm.</em></p><p><em>Proof. </em>The whole space can be covered by two balls of radius&nbsp;<span class="math-tex">\(\frac{n}{2}\)</span>, so it suffices to check the balls <span class="math-tex">\(\operatorname{Ball}(0^{n}, n/2)\)</span> and&nbsp;<span class="math-tex">\(\operatorname{Ball}(1^{n}, n/2)\)</span>. The running time will then be <span class="math-tex">\(O^{*}(3^{n/2})=O^{*}(1{,}73\dotsc^{n})\)</span>.</p><p>Balls of radius <span class="math-tex">\(\frac{n}{4}\)</span> would already require exponentially many, and it’s not clear how to cover everything with fewer such balls. So we use a standard trick: choose the ball’s center randomly and&nbsp;search in it. The success probability in one step equals <span class="math-tex">\(p=\frac{\operatorname{Vol}(n/4)}{2^n}\)</span>. Hence, after <span class="math-tex">\(\frac{1}{p}\)</span> repetitions the success probability becomes constant. The running time is <span class="math-tex">\[O^{*}\left(3^{\frac{n}{4}}\cdot \frac{2^n}{\operatorname{Vol}(n/4)}\right)= O^{*}\left(2^{\frac{n\log 3}{4}}\cdot 2^{n-n(\frac{1}{4}\cdot \log 4 + \frac{3}{4} \cdot \log \frac{4}{3})}\right)= O^{*}\left(\left(\frac{3}{2}\right)^{n}\right) \  .\]</span> <span class="proof-end" aria-label="End of proof">◼</span></p>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-8-satisfiability-problem/unit/chapter-8-satisfiability-problem-unit-4-algorithms-for-sat-optional/lesson/satisfiability-problem--algorithms-for-sat-optional--step-3/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-8-satisfiability-problem/unit/chapter-8-satisfiability-problem-unit-5-formal-verification-and-proof-systems/lesson/satisfiability-problem--formal-verification-and-proof-systems--step-1/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

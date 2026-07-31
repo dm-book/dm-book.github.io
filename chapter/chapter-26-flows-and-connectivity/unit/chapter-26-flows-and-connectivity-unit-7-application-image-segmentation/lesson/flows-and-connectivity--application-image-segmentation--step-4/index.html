@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="Theorem. Let \((L,R)\) be a minimum cut in \(G&#39;\) . Then \((L \setminus \{s\}, R \setminus \{t\})\) is an optimal segmentation. Proof. Let \(F=L \setminus…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Flows and Connectivity › Application: Image Segmentation › Lesson 4 | Discrete Mathematics" />
+    <meta property="og:description" content="Theorem. Let \((L,R)\) be a minimum cut in \(G&#39;\) . Then \((L \setminus \{s\}, R \setminus \{t\})\) is an optimal segmentation. Proof. Let \(F=L \setminus…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-26-flows-and-connectivity/unit/chapter-26-flows-and-connectivity-unit-7-application-image-segmentation/lesson/flows-and-connectivity--application-image-segmentation--step-4/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-26-flows-and-connectivity/unit/chapter-26-flows-and-connectivity-unit-7-application-image-segmentation/lesson/flows-and-connectivity--application-image-segmentation--step-4/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Flows and Connectivity › Application: Image Segmentation › Lesson 4 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Flows and Connectivity / Application: Image Segmentation</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Flows and Connectivity · Application: Image Segmentation</p>
+        <h1>Lesson 4</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p><strong>Theorem. </strong><em>Let <span class="math-tex">\((L,R)\)</span> be a minimum cut in <span class="math-tex">\(G'\)</span>. Then <span class="math-tex">\((L \setminus \{s\}, R \setminus \{t\})\)</span> is an optimal segmentation.</em></p><p><em>Proof. </em>Let <span class="math-tex">\(F=L \setminus \{s\}\)</span>, <span class="math-tex">\(B=R \setminus \{t\}\)</span>. The cut <span class="math-tex">\((L,R)\)</span> includes three types of edges: </p><ul><li> <span class="math-tex">\((i,j)\)</span> where <span class="math-tex">\(i \in F\)</span>, <span class="math-tex">\(j \in B\)</span>;</li><li> <span class="math-tex">\((s,i)\)</span> where <span class="math-tex">\(i \in B\)</span>,</li><li> <span class="math-tex">\((i,t)\)</span> where <span class="math-tex">\(i \in F\)</span>.</li></ul><p> For example, the capacity of the cut <span class="math-tex">\(L=\{s,1,2\}\)</span> is equal to <span class="math-tex">\[p_{23}+p_{14}+f_{3}+f_{4}+b_{1}+b_{2} \  .\]</span></p><p style="text-align:center;"><img src="generated/assets/Flows_and_Connectivity/Application$_Image_Segmentation=3/image0.png" width="800" ></p><p>Then,  <span class="math-tex">\[\begin{align*}\operatorname{capacity}(L,R)&=\sum_{i \in B}f_{i}+\sum_{i \in F}b_{i}+\sum_{\substack{\{i,j\} \in E\\|B \cap \{i,j\}|=1}}p_{ij}=\\&=\left(\sum_{i}(f_{i}+b_{i})-\sum_{i \in F}f_{i}-\sum_{i \in B}b_{i}\right)+\sum_{\substack{\{i,j\} \in E\\|B \cap \{i,j\}|=1}}p_{ij}=\\&=\sum_{i}(f_{i}+b_{i})-q(F,B) \  .\end{align*}\]</span>   Thus, by minimizing the cut, we maximize the value <span class="math-tex">\(q(F,B)\)</span>.<span class="proof-end" aria-label="End of proof">◼</span></p>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-26-flows-and-connectivity/unit/chapter-26-flows-and-connectivity-unit-7-application-image-segmentation/lesson/flows-and-connectivity--application-image-segmentation--step-3/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-26-flows-and-connectivity/unit/chapter-26-flows-and-connectivity-unit-8-flow-polynomial-optional/lesson/flows-and-connectivity--flow-polynomial-optional--step-1/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="The code below implements exactly all this. It also contains an additional technical detail: the function \(\texttt{varnum}\) converts a pair of indices \(0…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Satisfiability Problem › SAT solvers › Lesson 3 | Discrete Mathematics" />
+    <meta property="og:description" content="The code below implements exactly all this. It also contains an additional technical detail: the function \(\texttt{varnum}\) converts a pair of indices \(0…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-8-satisfiability-problem/unit/chapter-8-satisfiability-problem-unit-2-sat-solvers/lesson/satisfiability-problem--sat-solvers--step-3/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-8-satisfiability-problem/unit/chapter-8-satisfiability-problem-unit-2-sat-solvers/lesson/satisfiability-problem--sat-solvers--step-3/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Satisfiability Problem › SAT solvers › Lesson 3 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Satisfiability Problem / SAT solvers</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Satisfiability Problem · SAT solvers</p>
+        <h1>Lesson 3</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p>The code below implements exactly all this. It also contains an additional technical detail: the function <span class="math- tex">\(\texttt{varnum}\)</span> converts a pair of indices <span class="math-tex">\(0 \le i,j &lt; n\)</span> into a unique index from <span class="math-tex">\(\{1, 2, \dotsc, n^{2}\}\)</span>.</p><pre><code class="language-python">from itertools import combinations, product
+from pycosat import solve
+
+n = 30
+clauses = []
+
+
+# converts a pair of integers into a unique integer
+def varnum(i, j):
+    assert i in range(n) and j in range(n)
+    return i * n + j + 1
+
+
+# each row contains at least one queen
+for i in range(n):
+    clauses.append([varnum(i, j) for j in range(n)])
+
+# each row contains at most one queen
+for i, (j1, j2) in product(range(n), combinations(range(n), 2)):
+    clauses.append([-varnum(i, j1), -varnum(i, j2)])
+
+# each column contains at most one queen
+for j, (i1, i2) in product(range(n), combinations(range(n), 2)):
+    clauses.append([-varnum(i1, j), -varnum(i2, j)])
+
+# no two queens stay on the same diagonal
+for (i1, i2), (j1, j2) in product(combinations(range(n), 2), product(range(n), repeat=2)):
+    if abs(i1 - i2) == abs(j1 - j2):
+        clauses.append([-varnum(i1, j1), -varnum(i2, j2)])
+
+
+assignment = solve(clauses)
+for i, j in product(range(n), repeat=2):
+    if assignment[varnum(i, j) - 1] &gt; 0:
+        print(j, end=' ')</code></pre><pre><code class="language-auto">26 24 22 25 23 17 4 9 11 8 21 3 6 0 19 15 7 27 2 28 1 29 18 20 12 14 16 10 13 5
+</code></pre>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-8-satisfiability-problem/unit/chapter-8-satisfiability-problem-unit-2-sat-solvers/lesson/satisfiability-problem--sat-solvers--step-2/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-8-satisfiability-problem/unit/chapter-8-satisfiability-problem-unit-2-sat-solvers/lesson/satisfiability-problem--sat-solvers--step-4/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

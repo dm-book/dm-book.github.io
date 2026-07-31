@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="Universal Hashing For finite sets \(X,Y\) , let \(Y^{X}\) denote the set of all functions from \(X\) to \(Y\) . A family of functions \(\mathcal{H}\subseteq…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Probability in Computer Science › Hashing (Optional) › Lesson 1 | Discrete Mathematics" />
+    <meta property="og:description" content="Universal Hashing For finite sets \(X,Y\) , let \(Y^{X}\) denote the set of all functions from \(X\) to \(Y\) . A family of functions \(\mathcal{H}\subseteq…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-22-probability-in-computer-science/unit/chapter-22-probability-in-computer-science-unit-2-hashing-optional/lesson/probability-in-computer-science--hashing-optional--step-1/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-22-probability-in-computer-science/unit/chapter-22-probability-in-computer-science-unit-2-hashing-optional/lesson/probability-in-computer-science--hashing-optional--step-1/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Probability in Computer Science › Hashing (Optional) › Lesson 1 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Probability in Computer Science / Hashing (Optional)</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Probability in Computer Science · Hashing (Optional)</p>
+        <h1>Lesson 1</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p><strong>Universal Hashing</strong></p><p>For finite sets <span class="math-tex">\(X,Y\)</span>, let <span class="math-tex">\(Y^{X}\)</span> denote the set of all functions from <span class="math-tex">\(X\)</span> to <span class="math-tex">\(Y\)</span>. A family of functions <span class="math-tex">\(\mathcal{H}\subseteq Y^{X}\)</span> is called <em>universal</em> if for any <span class="math-tex">\(x \neq x' \in X\)</span> <span class="math-tex">\[\Pr[h(x)=h(x')]\le \frac{1}{|Y|}\ ,\]</span> where <span class="math-tex">\(h\)</span> is chosen randomly (and uniformly) from <span class="math-tex">\(\mathcal{H}\)</span>. A family <span class="math-tex">\(\mathcal{H}\subseteq Y^{X}\)</span> is called <em>strongly universal</em> (or <em>2-universal</em>) if for any <span class="math-tex">\(x \neq x' \in X\)</span> and any <span class="math-tex">\(y,y' \in Y\)</span> <span class="math-tex">\[\Pr[h(x)=y,\ h(x')=y']=\frac{1}{|Y|^2}\ .\]</span> It is easy to see that strong universality is indeed a stronger property: <span class="math-tex">\[\Pr[h(x)=h(x')]=\sum_{y \in Y}\Pr[h(x)=y,\  h(x')=y]=\frac{1}{|Y|}\  .\]</span></p><p>From the definition of strong universality, it follows that the events <span class="math-tex">\(h(x)=y\)</span> and <span class="math-tex">\(h(x')=y'\)</span> are independent. To show this, it is sufficient to prove that for any <span class="math-tex">\(x \in X\)</span> and <span class="math-tex">\(y \in Y\)</span> <span class="math-tex">\[\Pr[h(x)=y]=\frac{1}{|Y|}\  .\]</span> Let us fix an arbitrary <span class="math-tex">\(x' \in X\)</span> such that <span class="math-tex">\(x' \neq x\)</span>. Then <span class="math-tex">\[\begin{align*}\Pr[h(x)=y]&=\sum_{y' \in Y}\Pr[h(x)=y,\ h(x')=y']\\&=\frac{1}{|Y|}\  .\end{align*}\]</span></p><p>Now, let us construct a strongly universal family.</p><p><strong>Theorem. </strong><em> Let <span class="math-tex">\(\mathbb{F}\)</span> be a finite field, and let <span class="math-tex">\(a, b \in \mathbb{F}\)</span> be any two of its elements. Define the function <span class="math-tex">\(f_{a,b}\colon \mathbb{F} \to \mathbb{F}\)</span> as follows: <span class="math-tex">\(f_{a,b}(x)=ax+b\)</span>. Then the family of functions <span class="math-tex">\[\mathcal{F}=\{f_{a,b}\colon a, b \in \mathbb{F}\}\]</span> is 2-universal.</em></p><p><em>Proof. </em>Let <span class="math-tex">\(x \neq x', y, y' \in \mathbb{F}\)</span>. Then  <span class="math-tex">\[\begin{align*}\Pr[h(x)=y,\ h(x')=y']&=\Pr[ax+b=y,\ ax'+b=y']=\\&=\Pr\left[a=\frac{y'-y}{x'-x}, \ b=y-\frac{y'-y}{x'-x}\cdot x\right]=\\&=\frac{1}{|\mathbb{F|^2}}\  .\end{align*}\]</span>  <span class="proof-end" aria-label="End of proof">◼</span></p>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-22-probability-in-computer-science/unit/chapter-22-probability-in-computer-science-unit-1-randomized-algorithms/lesson/probability-in-computer-science--randomized-algorithms--step-11/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-22-probability-in-computer-science/unit/chapter-22-probability-in-computer-science-unit-2-hashing-optional/lesson/probability-in-computer-science--hashing-optional--step-2/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="Proof. [Proof of Menger&#39;s Theorem] We construct a set of vertex- (edge-) disjoint \((s,t)\) -paths \(P\) and a set of vertices (edges) \(Y\) , whose removal…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Flows and Connectivity › Menger’s Theorem › Lesson 7 | Discrete Mathematics" />
+    <meta property="og:description" content="Proof. [Proof of Menger&#39;s Theorem] We construct a set of vertex- (edge-) disjoint \((s,t)\) -paths \(P\) and a set of vertices (edges) \(Y\) , whose removal…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-26-flows-and-connectivity/unit/chapter-26-flows-and-connectivity-unit-4-menger-s-theorem/lesson/flows-and-connectivity--menger-s-theorem--step-7/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-26-flows-and-connectivity/unit/chapter-26-flows-and-connectivity-unit-4-menger-s-theorem/lesson/flows-and-connectivity--menger-s-theorem--step-7/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Flows and Connectivity › Menger’s Theorem › Lesson 7 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Flows and Connectivity / Menger’s Theorem</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Flows and Connectivity · Menger’s Theorem</p>
+        <h1>Lesson 7</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p><em>Proof. </em>[Proof of Menger's Theorem] We construct a set of vertex- (edge-) disjoint <span class="math-tex">\((s,t)\)</span>-paths&nbsp;<span class="math-tex">\(P\)</span> and a set of vertices (edges)&nbsp;<span class="math-tex">\(Y\)</span>, whose removal leaves no <span class="math-tex">\((s,t)\)</span>-paths. It suffices to show that <span class="math-tex">\[|P| \ge |Y|\]</span> Indeed, <span class="math-tex">\[\max_{P}|P| \le \min_{Y}|Y| \ ,\]</span> so if we find objects with&nbsp;<span class="math-tex">\(|P| \ge |Y|\)</span>, then maximum and minimum above are equal.</p><ol><li> Start with the <em>edge</em> version of the theorem for <em>directed</em> graphs. Let <span class="math-tex">\(P\)</span> be a maximum-size set of edge-disjoint paths from&nbsp;<span class="math-tex">\(s\)</span> to&nbsp;<span class="math-tex">\(t\)</span>. By the just-proven lemma, there is an <span class="math-tex">\((s,t)\)</span>-flow of size&nbsp;<span class="math-tex">\(|P|\)</span>, and by the Ford–Fulkerson Theorem, there is also an <span class="math-tex">\((s,t)\)</span>-cut of size&nbsp;<span class="math-tex">\(|P|\)</span>. Let <span class="math-tex">\(Y\)</span> be all the edges of this cut: their removal separates vertices&nbsp;<span class="math-tex">\(s\)</span> and&nbsp;<span class="math-tex">\(t\)</span>. Thus, we constructed <span class="math-tex">\(P\)</span> and <span class="math-tex">\(Y\)</span> such that <span class="math-tex">\(|P|=\operatorname{size}(f)=|Y|\)</span>.</li><li> The <em>edge</em> version for <em>undirected</em> graphs is obtained by reducing to directed graphs. Namely, we transform an undirected graph into a network by replacing each edge <span class="math-tex">\(\{u,v\}\)</span> with two edges <span class="math-tex">\((u,v)\)</span> and <span class="math-tex">\((v,u)\)</span>. As in the previous step, we construct <span class="math-tex">\(P\)</span> and <span class="math-tex">\(Y\)</span> with <span class="math-tex">\(|P|=\operatorname{size}(f)=|Y|\)</span>. There’s a subtle technical point: the found paths in <span class="math-tex">\(P\)</span> are edge-disjoint in the <em>network</em>, but may intersect in the original undirected graph if one path uses edge <span class="math-tex">\((u,v)\)</span> and another uses <span class="math-tex">\((v,u)\)</span>. To avoid this, we should “clean” the maximum flow&nbsp;<span class="math-tex">\(f\)</span> beforehand: zero out the flow on all such <span class="math-tex">\(u \to v \to u\)</span> cycles.</li><li> The <em>vertex</em> version reduces to the edge one as follows. Take a network&nbsp;<span class="math-tex">\(G\)</span> and split each vertex&nbsp;<span class="math-tex">\(v \ne s,t\)</span> as follows: <p style="text-align:center;"><img src="generated/assets/Flows_and_Connectivity/Menger’s_Theorem=6/image0.png" width="800" ></p>Call the resulting graph (and corresponding network)&nbsp;<span class="math-tex">\(G'\)</span>. Let <span class="math-tex">\(P\)</span> be the maximum-size set of <em>vertex-</em> disjoint <span class="math-tex">\((s,t)\)</span>-paths in&nbsp;<span class="math-tex">\(G\)</span>, and <span class="math-tex">\(P'\)</span> be the maximum-size set of <em>edge-</em> disjoint <span class="math-tex">\((s,t)\)</span>-paths in&nbsp;<span class="math-tex">\(G'\)</span>. It’s easy to see that <span class="math-tex">\(|P| \ge |P'|\)</span>: if the paths are edge-disjoint in&nbsp;<span class="math-tex">\(G'\)</span>, then they are vertex-disjoint in&nbsp;<span class="math-tex">\(G\)</span>. We already know that in <span class="math-tex">\(G'\)</span> there is a set of edges <span class="math-tex">\(Y'\)</span>, whose removal separates <span class="math-tex">\(s\)</span>&nbsp;and&nbsp;<span class="math-tex">\(t\)</span>, such that <span class="math-tex">\(|Y'|=|P'|\)</span>. Let <span class="math-tex">\(Y\)</span> be a minimum-size set of vertices to remove in&nbsp;<span class="math-tex">\(G\)</span> to separate&nbsp;<span class="math-tex">\(s\)</span> and&nbsp;<span class="math-tex">\(t\)</span>. Note that <span class="math-tex">\(|Y'| \ge |Y|\)</span>: in each edge from <span class="math-tex">\(Y'\)</span>, we can remove one endpoint, distinct from <span class="math-tex">\(s\)</span> and&nbsp;<span class="math-tex">\(t\)</span>, in&nbsp;<span class="math-tex">\(G\)</span>. Hence, <span class="math-tex">\[|P| \ge |P'|=|Y'| \ge |Y| \  .\]</span></li></ol><p><span class="proof-end" aria-label="End of proof">◼</span></p>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-26-flows-and-connectivity/unit/chapter-26-flows-and-connectivity-unit-4-menger-s-theorem/lesson/flows-and-connectivity--menger-s-theorem--step-6/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-26-flows-and-connectivity/unit/chapter-26-flows-and-connectivity-unit-4-menger-s-theorem/lesson/flows-and-connectivity--menger-s-theorem--step-8/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

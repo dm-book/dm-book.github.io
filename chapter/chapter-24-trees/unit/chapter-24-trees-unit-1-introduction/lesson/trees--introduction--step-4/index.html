@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="As we have already seen, for many connected graphs, there are many ways to remove some edges from them so that the remaining graph turns out to be a tree.…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Trees › Introduction › Lesson 4 | Discrete Mathematics" />
+    <meta property="og:description" content="As we have already seen, for many connected graphs, there are many ways to remove some edges from them so that the remaining graph turns out to be a tree.…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-24-trees/unit/chapter-24-trees-unit-1-introduction/lesson/trees--introduction--step-4/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-24-trees/unit/chapter-24-trees-unit-1-introduction/lesson/trees--introduction--step-4/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Trees › Introduction › Lesson 4 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Trees / Introduction</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Trees · Introduction</p>
+        <h1>Lesson 4</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p>As we have already seen, for many connected graphs, there are many ways to remove some edges from them so that the remaining graph turns out to be a tree. Such a tree is called <em>spanning</em>. There are also many ways to construct such trees. Two common construction strategies are depth-first search and breadth-first search. Each of these searches starts constructing a spanning tree from a given vertex&nbsp;<span class="math-tex">\(s\)</span>, with breadth-first search traversing vertices in order of increasing distance from&nbsp;<span class="math-tex">\(s\)</span>, and depth-first search repeatedly going to an&nbsp;unvisited neighbor whenever possible. These two strategies are often used in algorithms.</p><p style="text-align:center;"><img src="generated/assets/Trees/Introduction=3/image0.png" width="800" ></p><pre><code class="language-python">from networkx import Graph, dfs_tree, bfs_tree, nx_agraph
+
+graph = Graph([(1, 2), (2, 3), (4, 5), (5, 6), (7, 8), (8, 9), (1, 4), (4, 7), (2, 5), (5, 8), (6, 9)])
+
+nx_agraph.to_agraph(dfs_tree(graph, source=1)).draw('dfs_tree.png', prog='dot')
+nx_agraph.to_agraph(bfs_tree(graph, source=1)).draw('bfs_tree.png', prog='dot')</code></pre><p style="text-align:center;"><img src="generated/assets/Trees/Introduction=3/image1.png" width="800" ></p>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-24-trees/unit/chapter-24-trees-unit-1-introduction/lesson/trees--introduction--step-3/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-24-trees/unit/chapter-24-trees-unit-1-introduction/lesson/trees--introduction--step-5/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

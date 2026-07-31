@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="The method of mathematical induction is equivalent to the following important property of positive integers: any non-empty subset has a minimal element. It…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Proofs of Universal Statements: Mathematical Induction › Well Ordering Principle › Lesson 1 | Discrete Mathematics" />
+    <meta property="og:description" content="The method of mathematical induction is equivalent to the following important property of positive integers: any non-empty subset has a minimal element. It…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-3-proofs-of-universal-statements-mathematical-induction/unit/chapter-3-proofs-of-universal-statements-mathematical-induction-unit-4-well-ordering-principle/lesson/proofs-of-universal-statements-mathematical-induction--well-ordering-principle--step-1/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-3-proofs-of-universal-statements-mathematical-induction/unit/chapter-3-proofs-of-universal-statements-mathematical-induction-unit-4-well-ordering-principle/lesson/proofs-of-universal-statements-mathematical-induction--well-ordering-principle--step-1/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Proofs of Universal Statements: Mathematical Induction › Well Ordering Principle › Lesson 1 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Proofs of Universal Statements: Mathematical Induction / Well Ordering Principle</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Proofs of Universal Statements: Mathematical Induction · Well Ordering Principle</p>
+        <h1>Lesson 1</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p>The method of mathematical induction is equivalent to the following important property of positive integers: any non-empty subset has a&nbsp;minimal element. It&nbsp;is known as&nbsp;the <em>well-ordering principle</em>. Note that this property holds for positive integers, but does not hold for many other sets: for example, the sets <span class="math-tex">\(\{-1, -2, -3, \dotsc\}\)</span> (negative integers) and <span class="math-tex">\((2, 3)\)</span> (real numbers&nbsp;<span class="math-tex">\(x\)</span> such that <span class="math-tex">\(2&lt;x&lt;3\)</span>) do&nbsp;<em>not</em> contain minimal elements.</p><details><summary>For the curious 🤓</summary><div style="border-style: solid;">Formal statement: <span class="math-tex">\[\forall \varnothing \neq S \subseteq \mathbb{Z}_{&gt;0}\colon (\exists m \in S \colon (\forall x \in S \colon m \le x)) \  .\]</span>We will show that this property can be proven by induction. Consider a non-empty set <span class="math-tex">\(S \subseteq \mathbb{Z}_{&gt;0}\)</span> and assume that it has no minimal element. Clearly, <span class="math-tex">\(1 \not \in S\)</span> (otherwise, it&nbsp;would be the minimal element). Now consider the predicate <span class="math-tex">\[A(n)=[[n] \cap S = \varnothing].\]</span> The statement <span class="math-tex">\(A(1)\)</span> is true, so the base case holds. We will prove the step <span class="math-tex">\(n \to n+1\)</span>: if <span class="math-tex">\(A(n)\)</span> holds but <span class="math-tex">\(A(n+1)\)</span> does not, then <span class="math-tex">\(n+1\)</span> is the minimal element of <span class="math-tex">\(S\)</span>. Thus, for all <span class="math-tex">\(n \in \mathbb{Z}_{&gt;0}\)</span>, <span class="math-tex">\(n \not \in S\)</span>, meaning the set <span class="math-tex">\(S\)</span> is actually empty.Now we will show how the principle of mathematical induction follows from this property. Consider the predicate <span class="math-tex">\(A \colon \mathbb{Z}_{&gt;0}\to \{0,1\}\)</span>, for which it is known that <span class="math-tex">\(A(1)\)</span> is true and <span class="math-tex">\(A(n) \Rightarrow A(n+1)\)</span> for all <span class="math-tex">\(n \in \mathbb{Z}_{&gt;0}\)</span>. Suppose there exists an <span class="math-tex">\(n \in \mathbb{Z}_{&gt;0}\)</span> for which <span class="math-tex">\(A(n)\)</span> is false. Then the set <span class="math-tex">\(S=\{n \in \mathbb{Z}_{&gt;0}\colon \neg A(n)\}\)</span> is non-empty. By the property, it has a minimal element <span class="math-tex">\(m\)</span>, meaning <span class="math-tex">\(A(m)\)</span> is false. Since <span class="math-tex">\(A(1)\)</span> is true, <span class="math-tex">\(m&gt;1\)</span>. Thus, <span class="math-tex">\(m-1 \in \mathbb{Z}_{&gt;0}\)</span> and <span class="math-tex">\(A(m-1)\)</span> is false: if <span class="math-tex">\(A(m-1)\)</span> were true, then <span class="math-tex">\(A(m)\)</span> would also have to be true. But this contradicts the minimality of <span class="math-tex">\(m\)</span>. Therefore, the set <span class="math-tex">\(S\)</span> is actually empty, which means that <span class="math-tex">\(A(n)\)</span> holds for all <span class="math-tex">\(n\)</span>.</div></details>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-3-proofs-of-universal-statements-mathematical-induction/unit/chapter-3-proofs-of-universal-statements-mathematical-induction-unit-3-complete-induction/lesson/proofs-of-universal-statements-mathematical-induction--complete-induction--step-7/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-3-proofs-of-universal-statements-mathematical-induction/unit/chapter-3-proofs-of-universal-statements-mathematical-induction-unit-4-well-ordering-principle/lesson/proofs-of-universal-statements-mathematical-induction--well-ordering-principle--step-2/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

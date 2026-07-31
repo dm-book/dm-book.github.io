@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="Third Proof: Pascal&#39;s Triangle with a Wall. Recall that in Pascal&#39;s triangle, each cell contains the number of ways to reach that cell. We are now…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Arrangements and Combinations › Catalan Numbers: Proof of the Formula › Lesson 6 | Discrete Mathematics" />
+    <meta property="og:description" content="Third Proof: Pascal&#39;s Triangle with a Wall. Recall that in Pascal&#39;s triangle, each cell contains the number of ways to reach that cell. We are now…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-13-arrangements-and-combinations/unit/chapter-13-arrangements-and-combinations-unit-10-catalan-numbers-proof-of-the-formula/lesson/arrangements-and-combinations--catalan-numbers-proof-of-the-formula--step-6/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-13-arrangements-and-combinations/unit/chapter-13-arrangements-and-combinations-unit-10-catalan-numbers-proof-of-the-formula/lesson/arrangements-and-combinations--catalan-numbers-proof-of-the-formula--step-6/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Arrangements and Combinations › Catalan Numbers: Proof of the Formula › Lesson 6 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Arrangements and Combinations / Catalan Numbers: Proof of the Formula</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Arrangements and Combinations · Catalan Numbers: Proof of the Formula</p>
+        <h1>Lesson 6</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p><strong>Third Proof: Pascal's Triangle with a Wall.</strong></p><p>Recall that in Pascal's triangle, each cell contains the number of ways to reach that cell.</p><p style="text-align:center;"><img src="generated/assets/Arrangements_and_Combinations/Catalan_Numbers$_Proof_of_the_Formula=5/image0.png" width="800" ></p><p>We are now interested not in all such paths but only in paths ending on the central vertical line and not entering the left half of the triangle. Along the central vertical line, the Catalan numbers will appear.</p><p style="text-align:center;"><img src="generated/assets/Arrangements_and_Combinations/Catalan_Numbers$_Proof_of_the_Formula=5/image1.png" width="800" ></p><p>In our truncated triangle, the property &ldquo;the value in a cell equals the sum of the two values directly above it&rdquo; holds for all cells except the cells on the central vertical line. However, it is not hard to adjust so that it holds for them as well.</p><p style="text-align:center;"><img src="generated/assets/Arrangements_and_Combinations/Catalan_Numbers$_Proof_of_the_Formula=5/image2.png" width="800" ></p><p>Now comes the trick: reflect half of the triangle across the vertical line with zeros.</p><p style="text-align:center;"><img src="generated/assets/Arrangements_and_Combinations/Catalan_Numbers$_Proof_of_the_Formula=5/image3.png" width="800" ></p><p>This view is convenient: the usual Pascal triangle grows (by Pascal's rule) from a single vertex labeled 1. Now instead of this vertex, we have two vertices&mdash;1 and -1. We grow the triangle by the same rule or equivalently grow two triangles&mdash;one from <span class="math-tex">\(1\)</span> and the other from <span class="math-tex">\(-1\)</span>. Each cell contains the sum of the values in the two corresponding cells from these triangles.</p><p>Thus, the value we are interested in equals the difference between the central value and its neighbor to the right: <span class="math-tex">\[\binom{2n}{n}-\binom{2n}{n+1}\  .\]</span></p>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-13-arrangements-and-combinations/unit/chapter-13-arrangements-and-combinations-unit-10-catalan-numbers-proof-of-the-formula/lesson/arrangements-and-combinations--catalan-numbers-proof-of-the-formula--step-5/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-13-arrangements-and-combinations/unit/chapter-13-arrangements-and-combinations-unit-11-catalan-numbers-various-manifestations/lesson/arrangements-and-combinations--catalan-numbers-various-manifestations--step-1/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

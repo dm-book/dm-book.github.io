@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="Let \(x_{i}\in\mathbb{Z}_{\ge 0}\) be the number of shares of stock \(i\) . Let \(y_{i}\) be a 0/1-variable that records whether stock \(i\) is used at all.…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Project: Portfolio Selection › Portfolio as an ILP › Lesson 1 | Discrete Mathematics" />
+    <meta property="og:description" content="Let \(x_{i}\in\mathbb{Z}_{\ge 0}\) be the number of shares of stock \(i\) . Let \(y_{i}\) be a 0/1-variable that records whether stock \(i\) is used at all.…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-17-project-portfolio-selection/unit/chapter-17-project-portfolio-selection-unit-8-portfolio-as-an-ilp/lesson/project-portfolio-selection--portfolio-as-an-ilp--step-1/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-17-project-portfolio-selection/unit/chapter-17-project-portfolio-selection-unit-8-portfolio-as-an-ilp/lesson/project-portfolio-selection--portfolio-as-an-ilp--step-1/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Project: Portfolio Selection › Portfolio as an ILP › Lesson 1 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Project: Portfolio Selection / Portfolio as an ILP</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Project: Portfolio Selection · Portfolio as an ILP</p>
+        <h1>Lesson 1</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p>Let <span class="math-tex">\(x_{i}\in\mathbb{Z}_{\ge 0}\)</span> be the number of shares of stock&nbsp;<span class="math-tex">\(i\)</span>. Let <span class="math-tex">\(y_{i}\)</span> be a&nbsp;0/1-variable that records whether stock&nbsp;<span class="math-tex">\(i\)</span> is used at all. The connection between them is <span class="math-tex">\[0\le x_{i}\le m_{i} y_{i},\qquad y_{i}\le x_{i}\quad\text{when }m_{i}&gt;0.\]</span> The second inequality is optional if the objective never rewards setting <span class="math-tex">\(y_{i}=1\)</span> for no reason, but writing it makes the meaning exact.</p><p>The budget and sector caps are <span class="math-tex">\[\sum_{i} p_{i} x_{i}\le B,\qquad \sum_{i\in S_j}p_{i} x_{i}\le C_{j}.\]</span> A conflict between <span class="math-tex">\(u\)</span> and <span class="math-tex">\(v\)</span> is <span class="math-tex">\[y_{u}+y_{v}\le 1.\]</span> A dependency <span class="math-tex">\(u\to v\)</span> means that selecting stock&nbsp;<span class="math-tex">\(u\)</span> requires selecting stock&nbsp;<span class="math-tex">\(v\)</span> as well; it is written as <span class="math-tex">\[y_{u}\le y_{v}.\]</span></p>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-17-project-portfolio-selection/unit/chapter-17-project-portfolio-selection-unit-7-frontiers/lesson/project-portfolio-selection--frontiers--step-6/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-17-project-portfolio-selection/unit/chapter-17-project-portfolio-selection-unit-8-portfolio-as-an-ilp/lesson/project-portfolio-selection--portfolio-as-an-ilp--step-2/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

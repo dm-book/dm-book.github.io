@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="Theorem (Local CLT of de Moivre — Laplace). Let \(\alpha \sim \operatorname{Binomial}(n,p)\) , where \(0&lt;p&lt;1\) . Then for all \(k \in [np-\Delta,…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Deviation from the Mean › Central Limit Theorem (Optional) › Lesson 2 | Discrete Mathematics" />
+    <meta property="og:description" content="Theorem (Local CLT of de Moivre — Laplace). Let \(\alpha \sim \operatorname{Binomial}(n,p)\) , where \(0&lt;p&lt;1\) . Then for all \(k \in [np-\Delta,…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-21-deviation-from-the-mean/unit/chapter-21-deviation-from-the-mean-unit-5-central-limit-theorem-optional/lesson/deviation-from-the-mean--central-limit-theorem-optional--step-2/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-21-deviation-from-the-mean/unit/chapter-21-deviation-from-the-mean-unit-5-central-limit-theorem-optional/lesson/deviation-from-the-mean--central-limit-theorem-optional--step-2/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Deviation from the Mean › Central Limit Theorem (Optional) › Lesson 2 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Deviation from the Mean / Central Limit Theorem (Optional)</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Deviation from the Mean · Central Limit Theorem (Optional)</p>
+        <h1>Lesson 2</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p><strong>Theorem (Local CLT of de Moivre &mdash; Laplace). </strong><em>Let <span class="math-tex">\(\alpha \sim \operatorname{Binomial}(n,p)\)</span>, where <span class="math-tex">\(0&lt;p&lt;1\)</span>. Then for all <span class="math-tex">\(k \in [np-\Delta, np+\Delta]\)</span>, where <span class="math-tex">\(\Delta=o(n^{2/3})\)</span>, it holds that  <span class="math-tex">\[\Pr[\alpha=k]=\frac{1}{\sqrt{2\pi np(1-p)}}\exp\left(-\frac{(k-np)^2}{2np(1-p)}\right)(1+o(1)) \  .\]</span>  </em></p><p> <em>Proof. </em>We use Stirling's formula <span class="math-tex">\[n! \sim \sqrt{2\pi n}\left(\frac{n}{e}\right)^{n} \  ,\]</span> to estimate the required probability:  <span class="math-tex">\[\begin{align*}\Pr[\alpha=k]&=\binom{n}{k}p^{k}(1-p)^{n-k}=\\&=\frac{n!}{k!(n-k)!}p^{k}(1-p)^{n-k}\sim \\&\sim \frac{\sqrt{2\pi n}}{\sqrt{2\pi k} \sqrt{2\pi(n-k)}}\frac{n^ne^ke^{n-k}}{e^nk^k(n-k)^{n-k}}p^{k}(1-p)^{n-k}\sim \\&\sim \frac{1}{\sqrt{2\pi p(1-p)n}}\frac{n^n}{k^k(n-k)^{n-k}}p^{k}(1-p)^{n-k}= \\&\sim \frac{1}{\sqrt{2\pi p(1-p)n}}\frac{(np)^k}{k^k}\frac{(n(1-p))^{n-k}}{(n-k)^{n-k}}\  .\end{align*}\]</span>   Now let <span class="math-tex">\(\delta=k-np=o(n^{2/3})\)</span>. Then <span class="math-tex">\(n-k=n(1-p)-\delta\)</span>. For further estimation, we use the Taylor series of the function <span class="math-tex">\(\ln(1+x)\)</span> (Mercator series): <span class="math-tex">\[\ln(1+x)=x-\frac{x^2}{2}+\frac{x^3}{3}-\dotsb = \sum_{i=1}^{\infty}\frac{(-1)^{i+1}}{i}x^{i}\]</span> (the series converges for <span class="math-tex">\(|x|&lt;1\)</span>).</p><p> <span class="math-tex">\[\begin{align*}\ln\left(\frac{k^k}{(np)^k}\right)&=k\ln\left(1+\frac{\delta}{np}\right)=\\&=(np+\delta)\left(\frac{\delta}{np}-\frac{\delta^2}{2(np)^2}+\frac{\delta^3}{3(np)^3}-\dotsb\right)=\\&=\delta+\frac{\delta^2}{2np}+o(1) \  .\end{align*}\]</span>   Similarly, <span class="math-tex">\[\ln\left(\frac{(n-k)^{n-k}}{(n(1-p))^{n-k}}\right)=-\delta+\frac{\delta^2}{2n(1-p)}+o(1) \  .\]</span> Adding these two estimates, we get  <span class="math-tex">\[\begin{align*}\ln\left( \frac{(np)^k}{k^k}\frac{(n(1-p))^{n-k}}{(n-k)^{n-k}}\right)&=-\frac{\delta^2}{2np}-\frac{\delta^2}{2n(1-p)}+o(1)=\\&=-\frac{\delta^2}{2np(1-p)}+o(1)=\\&=-\frac{(k-np)^2}{2np(1-p)}+o(1) \  .\end{align*}\]</span>   <span class="proof-end" aria-label="End of proof">◼</span></p>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-21-deviation-from-the-mean/unit/chapter-21-deviation-from-the-mean-unit-5-central-limit-theorem-optional/lesson/deviation-from-the-mean--central-limit-theorem-optional--step-1/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-21-deviation-from-the-mean/unit/chapter-21-deviation-from-the-mean-unit-5-central-limit-theorem-optional/lesson/deviation-from-the-mean--central-limit-theorem-optional--step-3/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

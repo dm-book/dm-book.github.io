@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="At the same time, it is not always the case that a graph is given together with a partition of the set of nodes into two parts. For example, the following…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Matchings › Bipartite Graphs › Lesson 3 | Discrete Mathematics" />
+    <meta property="og:description" content="At the same time, it is not always the case that a graph is given together with a partition of the set of nodes into two parts. For example, the following…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-27-matchings/unit/chapter-27-matchings-unit-3-bipartite-graphs/lesson/matchings--bipartite-graphs--step-3/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-27-matchings/unit/chapter-27-matchings-unit-3-bipartite-graphs/lesson/matchings--bipartite-graphs--step-3/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Matchings › Bipartite Graphs › Lesson 3 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Matchings / Bipartite Graphs</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Matchings · Bipartite Graphs</p>
+        <h1>Lesson 3</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p>At&nbsp;the same time, it&nbsp;is not always the case that a&nbsp;graph is&nbsp;given together with a&nbsp;partition of&nbsp;the set of&nbsp;nodes into two parts. For example, the following <span class="math-tex">\(7 \times 4\)</span> grid graph is&nbsp;bipartite though it&nbsp;may not be&nbsp;immediate from its drawing. </p><p style="text-align:center;"><img src="generated/assets/Matchings/Bipartite_Graphs=2/image0.png" width="800" ></p><p> To&nbsp;ensure that it&nbsp;is bipartite, one may specify, for each node, the part it&nbsp;belongs&nbsp;to. To&nbsp;do this, one just assigns labels <span class="math-tex">\(1\)</span>&nbsp;and&nbsp;<span class="math-tex">\(2\)</span> to&nbsp;all nodes and ensures that every edge joins two nodes with different labels. Instead&nbsp;of (or&nbsp;together with) the labels <span class="math-tex">\(1\)</span>&nbsp;and&nbsp;<span class="math-tex">\(2\)</span>, one may also use two different colors. Being bipartite is&nbsp;the same as&nbsp;being <em>2-colorable</em>: we&nbsp;say that a&nbsp;graph is&nbsp;<em>2-colorable</em> if&nbsp;it is&nbsp;possible to&nbsp;assign one of&nbsp;two colors to&nbsp;every node such that no&nbsp;edge has endpoints of&nbsp;the same color. </p><p style="text-align:center;"><img src="generated/assets/Matchings/Bipartite_Graphs=2/image1.png" width="800" ></p><pre><code class="language-python">from networkx import grid_2d_graph, is_bipartite
+
+print(is_bipartite(grid_2d_graph(7, 4)))</code></pre><pre><code class="language-auto">True
+</code></pre>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-27-matchings/unit/chapter-27-matchings-unit-3-bipartite-graphs/lesson/matchings--bipartite-graphs--step-2/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-27-matchings/unit/chapter-27-matchings-unit-3-bipartite-graphs/lesson/matchings--bipartite-graphs--step-4/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

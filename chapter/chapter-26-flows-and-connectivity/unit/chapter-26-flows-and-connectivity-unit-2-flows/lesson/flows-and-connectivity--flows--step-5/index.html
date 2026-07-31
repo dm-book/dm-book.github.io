@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="How to find the maximum flow? Let&#39;s at least try something to start with: begin with zero flow and, as long as possible, find a path from \(s\) to \(t\) and…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Flows and Connectivity › Flows › Lesson 5 | Discrete Mathematics" />
+    <meta property="og:description" content="How to find the maximum flow? Let&#39;s at least try something to start with: begin with zero flow and, as long as possible, find a path from \(s\) to \(t\) and…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-26-flows-and-connectivity/unit/chapter-26-flows-and-connectivity-unit-2-flows/lesson/flows-and-connectivity--flows--step-5/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-26-flows-and-connectivity/unit/chapter-26-flows-and-connectivity-unit-2-flows/lesson/flows-and-connectivity--flows--step-5/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Flows and Connectivity › Flows › Lesson 5 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Flows and Connectivity / Flows</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Flows and Connectivity · Flows</p>
+        <h1>Lesson 5</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p>How to find the maximum flow? Let's at least try something to start with: begin with zero flow and, as long as possible, find a path from <span class="math-tex">\(s\)</span> to <span class="math-tex">\(t\)</span> and increase the flow along the edges of this path as much as possible. It turns out that even this simple approach finds the optimal flow in networks with integer capacities (though in practice it may run slowly if the capacities are large).</p><p>Consider the following toy network as an example. </p><p style="text-align:center;"><img src="generated/assets/Flows_and_Connectivity/Flows=4/image0.png" width="800" ></p><p> The maximum flow in it is two: you can send one unit of liquid along the upper and lower paths. But what if our algorithm chooses the path <span class="math-tex">\(s \to a \to b \to t\)</span> on the very first step? Along it we send one unit of flow and at the same time both the upper and lower paths get blocked.</p><p>However, note that new paths can go against the existing flow, thus <em>reducing</em> it. For example, the path <span class="math-tex">\(s\to b \to a \to t\)</span> goes from <span class="math-tex">\(b\)</span> to <span class="math-tex">\(a\)</span>, which actually means stopping the flow from <span class="math-tex">\(a\)</span> to <span class="math-tex">\(b\)</span>.</p><p>In the general case, our algorithm looks for a path from <span class="math-tex">\(s\)</span> to <span class="math-tex">\(t\)</span>, composed of edges <span class="math-tex">\((u,v)\)</span> of two types: </p><ol><li> Edge <span class="math-tex">\((u,v)\)</span> exists in the original network but not all its capacity is used.</li><li> The reverse edge <span class="math-tex">\((v,u)\)</span> exists in the original network, and there is nonzero flow along it.</li></ol><p> In the first case, we can additionally send <span class="math-tex">\(c(u,v) - f(u,v)\)</span> units along edge <span class="math-tex">\((u,v)\)</span> (where <span class="math-tex">\(f\)</span> is the current flow), and in the second case <span class="math-tex">\(f(v,u)\)</span> units (reducing fully or partially the existing flow along edge <span class="math-tex">\((v,u)\)</span>). We can say that we have a <em>residual network</em> <span class="math-tex">\(G^{f} = (V,E^{f})\)</span>. For all <span class="math-tex">\(u \neq v \in V\)</span> define the <em>residual capacity</em>: <span class="math-tex">\[c^{f}(u,v)=(c(u,v)-f(u,v))+f(v,u) \  .\]</span> We assume that only those edges enter the residual network whose residual capacity is positive: <span class="math-tex">\[E^{f}=\{(u,v) \colon c^{f}(u,v) &gt; 0\} \  .\]</span></p>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-26-flows-and-connectivity/unit/chapter-26-flows-and-connectivity-unit-2-flows/lesson/flows-and-connectivity--flows--step-4/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-26-flows-and-connectivity/unit/chapter-26-flows-and-connectivity-unit-2-flows/lesson/flows-and-connectivity--flows--step-6/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

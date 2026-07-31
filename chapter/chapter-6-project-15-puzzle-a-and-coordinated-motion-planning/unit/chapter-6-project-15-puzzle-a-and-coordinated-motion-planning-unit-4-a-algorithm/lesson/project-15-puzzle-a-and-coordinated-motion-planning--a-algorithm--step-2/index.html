@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="Let us now describe the algorithm more precisely. We maintain a set of discovered configurations that have not yet been processed. This set is usually…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Project: 15 Puzzle, A*, and Coordinated Motion Planning › $A^{*}$ Algorithm › Lesson 2 | Discrete Mathematics" />
+    <meta property="og:description" content="Let us now describe the algorithm more precisely. We maintain a set of discovered configurations that have not yet been processed. This set is usually…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-6-project-15-puzzle-a-and-coordinated-motion-planning/unit/chapter-6-project-15-puzzle-a-and-coordinated-motion-planning-unit-4-a-algorithm/lesson/project-15-puzzle-a-and-coordinated-motion-planning--a-algorithm--step-2/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-6-project-15-puzzle-a-and-coordinated-motion-planning/unit/chapter-6-project-15-puzzle-a-and-coordinated-motion-planning-unit-4-a-algorithm/lesson/project-15-puzzle-a-and-coordinated-motion-planning--a-algorithm--step-2/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Project: 15 Puzzle, A*, and Coordinated Motion Planning › $A^{*}$ Algorithm › Lesson 2 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Project: 15 Puzzle, A*, and Coordinated Motion Planning / $A^{*}$ Algorithm</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Project: 15 Puzzle, A*, and Coordinated Motion Planning · $A^{*}$ Algorithm</p>
+        <h1>Lesson 2</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p>Let&nbsp;us now describe the algorithm more precisely. We&nbsp;maintain a&nbsp;set of&nbsp;discovered configurations that have not yet been processed. This set is&nbsp;usually called the <em>open set</em>. For each configuration&nbsp;<span class="math-tex">\(v\)</span>, we&nbsp;store: </p><ul><li> the value&nbsp;<span class="math-tex">\(g(v)\)</span>;</li><li> the value&nbsp;<span class="math-tex">\(f(v)=g(v)+h(v)\)</span>;</li><li> the previous configuration on&nbsp;the currently best known path to&nbsp;<span class="math-tex">\(v\)</span>.</li></ul><p>Initially, the open set contains only the starting configuration&nbsp;<span class="math-tex">\(s\)</span>. We&nbsp;set <span class="math-tex">\[g(s)=0\]</span> and compute&nbsp;<span class="math-tex">\(f(s)=h(s)\)</span>.</p><p>Then we&nbsp;repeat the following steps: </p><ol><li> Take from the open set a&nbsp;configuration&nbsp;<span class="math-tex">\(v\)</span> with the smallest value of&nbsp;<span class="math-tex">\(f(v)\)</span>.</li><li> If&nbsp;<span class="math-tex">\(v\)</span> is&nbsp;the target configuration, stop: a&nbsp;shortest path has been found.</li><li> Otherwise, consider all configurations that can be&nbsp;obtained from&nbsp;<span class="math-tex">\(v\)</span> by&nbsp;one move.</li><li> For each such neighbor&nbsp;<span class="math-tex">\(u\)</span>, check whether the path through&nbsp;<span class="math-tex">\(v\)</span> improves the currently known value of&nbsp;<span class="math-tex">\(g(u)\)</span>.</li><li> If&nbsp;it does, update&nbsp;<span class="math-tex">\(g(u)\)</span>, recompute&nbsp;<span class="math-tex">\(f(u)=g(u)+h(u)\)</span>, remember that&nbsp;<span class="math-tex">\(v\)</span> is&nbsp;the predecessor of&nbsp;<span class="math-tex">\(u\)</span>, and add&nbsp;<span class="math-tex">\(u\)</span> to&nbsp;the open set if&nbsp;necessary.</li></ol><p>After the target configuration is&nbsp;reached, we&nbsp;reconstruct the answer by&nbsp;following the predecessor pointers backwards.</p>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-6-project-15-puzzle-a-and-coordinated-motion-planning/unit/chapter-6-project-15-puzzle-a-and-coordinated-motion-planning-unit-4-a-algorithm/lesson/project-15-puzzle-a-and-coordinated-motion-planning--a-algorithm--step-1/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-6-project-15-puzzle-a-and-coordinated-motion-planning/unit/chapter-6-project-15-puzzle-a-and-coordinated-motion-planning-unit-4-a-algorithm/lesson/project-15-puzzle-a-and-coordinated-motion-planning--a-algorithm--step-3/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

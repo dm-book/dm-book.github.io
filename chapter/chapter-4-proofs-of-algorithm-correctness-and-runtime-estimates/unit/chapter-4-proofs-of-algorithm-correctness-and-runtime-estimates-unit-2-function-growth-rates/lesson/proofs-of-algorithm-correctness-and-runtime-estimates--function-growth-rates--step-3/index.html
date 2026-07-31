@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="Consider two functions \(f, g \colon \mathbb{Z}_{&gt;0}\to \mathbb{R}_{&gt;0}\) ( \(f\) and \(g\) take positive integers as inputs and yield positive real…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Proofs of Algorithm Correctness and Runtime Estimates › Function Growth Rates › Lesson 3 | Discrete Mathematics" />
+    <meta property="og:description" content="Consider two functions \(f, g \colon \mathbb{Z}_{&gt;0}\to \mathbb{R}_{&gt;0}\) ( \(f\) and \(g\) take positive integers as inputs and yield positive real…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-4-proofs-of-algorithm-correctness-and-runtime-estimates/unit/chapter-4-proofs-of-algorithm-correctness-and-runtime-estimates-unit-2-function-growth-rates/lesson/proofs-of-algorithm-correctness-and-runtime-estimates--function-growth-rates--step-3/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-4-proofs-of-algorithm-correctness-and-runtime-estimates/unit/chapter-4-proofs-of-algorithm-correctness-and-runtime-estimates-unit-2-function-growth-rates/lesson/proofs-of-algorithm-correctness-and-runtime-estimates--function-growth-rates--step-3/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Proofs of Algorithm Correctness and Runtime Estimates › Function Growth Rates › Lesson 3 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Proofs of Algorithm Correctness and Runtime Estimates / Function Growth Rates</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Proofs of Algorithm Correctness and Runtime Estimates · Function Growth Rates</p>
+        <h1>Lesson 3</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p>Consider two functions <span class="math-tex">\(f, g \colon \mathbb{Z}_{&gt;0}\to \mathbb{R}_{&gt;0}\)</span> (<span class="math-tex">\(f\)</span> and <span class="math-tex">\(g\)</span> take positive integers as inputs and yield positive real numbers). We say that <em><span class="math-tex">\(f\)</span> grows no faster than <span class="math-tex">\(g\)</span></em> and write <span class="math-tex">\(f(n) \preceq g(n)\)</span> if there exists a constant <span class="math-tex">\(\alpha&gt;0\)</span> such that for all positive integers <span class="math-tex">\(n\)</span> the inequality <span class="math-tex">\[f(n) \le \alpha \cdot g(n) \  .\]</span> holds.</p><p>Returning to the example from the previous step, let's show that <span class="math-tex">\(2n^{2}+5n+3\)</span> grows no faster than <span class="math-tex">\(n^{2}\)</span>. Indeed, for all positive integers <span class="math-tex">\(n\)</span> the inequalities <span class="math-tex">\(1 \le n\)</span> and <span class="math-tex">\(n \le n^{2}\)</span> hold, therefore <span class="math-tex">\[2n^{2}+5n+3 \le 2n^{2}+5n^{2}+3n^{2}=10n^{2}.\]</span> Thus, we can take <span class="math-tex">\(\alpha=10\)</span>.</p><details><summary>For the curious 🤓</summary><div style="border-style: solid;">In the literature, you can find a more general definition: it is said that <span class="math-tex">\(f(n) \preceq g(n)\)</span> if there exist such <span class="math-tex">\(N\)</span> and <span class="math-tex">\(\alpha\)</span> that for all <span class="math-tex">\(n \ge N\)</span> the inequality <span class="math-tex">\(f(n) \le \alpha \cdot g(n)\)</span> holds. For functions <span class="math-tex">\(f, g \colon \mathbb{Z}_{&gt;0}\to \mathbb{R}_{&gt;0}\)</span> (i.e., defined on positive integers and having positive values) these two definitions are equivalent. Indeed, if <span class="math-tex">\(f(n) \le \alpha g(n)\)</span> for all <span class="math-tex">\(n \ge N\)</span>, take <span class="math-tex">\[\gamma=\max\left(\{\alpha\}\cup\left\{\frac{f(n)}{g(n)}\colon 1 \le n &lt; N \right\}\right).\]</span> This maximum is defined even when <span class="math-tex">\(N=1\)</span>, because the set still contains&nbsp;<span class="math-tex">\(\alpha\)</span>. Let's now show that <span class="math-tex">\(f(n) \le \gamma g(n)\)</span> for all positive integers <span class="math-tex">\(n\)</span>. For this, consider two cases. <ol><li> <span class="math-tex">\(n &lt; N\)</span>. Then <span class="math-tex">\(\frac{f(n)}{g(n)}\le \gamma\)</span>, i.e., <span class="math-tex">\(f(n) \le \gamma \cdot g(n)\)</span>.</li><li> <span class="math-tex">\(n \ge N\)</span>. Then <span class="math-tex">\(f(n) \le \alpha g(n) \le \gamma \cdot g(n)\)</span>.</li></ol></div></details>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-4-proofs-of-algorithm-correctness-and-runtime-estimates/unit/chapter-4-proofs-of-algorithm-correctness-and-runtime-estimates-unit-2-function-growth-rates/lesson/proofs-of-algorithm-correctness-and-runtime-estimates--function-growth-rates--step-2/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-4-proofs-of-algorithm-correctness-and-runtime-estimates/unit/chapter-4-proofs-of-algorithm-correctness-and-runtime-estimates-unit-2-function-growth-rates/lesson/proofs-of-algorithm-correctness-and-runtime-estimates--function-growth-rates--step-4/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

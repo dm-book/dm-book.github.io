@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="Let the minimum number of moves be denoted by \(M(n)\) . Clearly, \(M(1)=1\) . It is easy to see that \(M(n) \leq 2M(n-1)+1\) : first, move the top \(n-1\)…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Recurrence Relations › Recursive Algorithms › Lesson 2 | Discrete Mathematics" />
+    <meta property="og:description" content="Let the minimum number of moves be denoted by \(M(n)\) . Clearly, \(M(1)=1\) . It is easy to see that \(M(n) \leq 2M(n-1)+1\) : first, move the top \(n-1\)…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-15-recurrence-relations/unit/chapter-15-recurrence-relations-unit-3-recursive-algorithms/lesson/recurrence-relations--recursive-algorithms--step-2/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-15-recurrence-relations/unit/chapter-15-recurrence-relations-unit-3-recursive-algorithms/lesson/recurrence-relations--recursive-algorithms--step-2/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Recurrence Relations › Recursive Algorithms › Lesson 2 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Recurrence Relations / Recursive Algorithms</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Recurrence Relations · Recursive Algorithms</p>
+        <h1>Lesson 2</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p>Let the minimum number of moves be denoted by <span class="math-tex">\(M(n)\)</span>. Clearly, <span class="math-tex">\(M(1)=1\)</span>. It is easy to see that <span class="math-tex">\(M(n) \leq 2M(n-1)+1\)</span>: first, move the top <span class="math-tex">\(n-1\)</span> disks (this takes <span class="math-tex">\(M(n-1)\)</span> moves; the largest disk does not interfere), then move the largest disk to the free rod (one move), and finally move the <span class="math-tex">\(n-1\)</span> disks onto the largest disk (another <span class="math-tex">\(M(n-1)\)</span> moves). This gives an <em>upper bound</em> for <span class="math-tex">\(M(n)\)</span>.</p><p>A <em>lower bound</em> <span class="math-tex">\(M(n) \geq 2M(n-1)+1\)</span> can also be proved. Consider the first moment when the largest disk is moved. At this moment, the rod containing the largest disk has only that disk; there is also an empty rod (since the largest disk can only be moved to an empty rod); therefore, all other disks must be on the remaining rod. This means that at least <span class="math-tex">\(M(n-1)\)</span> moves were spent up to this point.</p><p style="text-align:center;"><img src="generated/assets/Recurrence_Relations/Recursive_Algorithms=1/image0.png" width="800" ></p><p>After this, the largest disk is moved. We again need to move all <span class="math-tex">\(n-1\)</span> disks, requiring at least <span class="math-tex">\(M(n-1)\)</span> moves.</p><p style="text-align:center;"><img src="generated/assets/Recurrence_Relations/Recursive_Algorithms=1/image1.png" width="800" ></p><p>This leads to the recurrence relation: <span class="math-tex">\[M(1)=1, \quad M(n)=2M(n-1)+1 \  .\]</span></p>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-15-recurrence-relations/unit/chapter-15-recurrence-relations-unit-3-recursive-algorithms/lesson/recurrence-relations--recursive-algorithms--step-1/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-15-recurrence-relations/unit/chapter-15-recurrence-relations-unit-3-recursive-algorithms/lesson/recurrence-relations--recursive-algorithms--step-3/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="In a more general formulation, this problem is known as the coupon collector problem, which is used to analyze various games: there are \(n\) types of…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Random Variables › Linearity of Mathematical Expectation › Lesson 11 | Discrete Mathematics" />
+    <meta property="og:description" content="In a more general formulation, this problem is known as the coupon collector problem, which is used to analyze various games: there are \(n\) types of…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-20-random-variables/unit/chapter-20-random-variables-unit-7-linearity-of-mathematical-expectation/lesson/random-variables--linearity-of-mathematical-expectation--step-11/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-20-random-variables/unit/chapter-20-random-variables-unit-7-linearity-of-mathematical-expectation/lesson/random-variables--linearity-of-mathematical-expectation--step-11/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Random Variables › Linearity of Mathematical Expectation › Lesson 11 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Random Variables / Linearity of Mathematical Expectation</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Random Variables · Linearity of Mathematical Expectation</p>
+        <h1>Lesson 11</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p>In a more general formulation, this problem is known as the coupon collector problem, which is used to analyze various games: there are <span class="math-tex">\(n\)</span> types of coupons, and each purchase gives you a random type of coupon; how many coupons on average must you buy to collect all of them?</p><p>For analysis, the idea of segments, which we used when considering the problem of the expected waiting time for the first six to appear, will help. Let our coupons be numbers from <span class="math-tex">\([n]\)</span>, and we write down the received coupons in a row. Insert a line break after each <em>new</em> type of coupon. </p><pre><code class="language-python">from random import randint, seed
+
+seed(17)
+
+seen = set()
+while len(seen) &lt; 6:
+    x = randint(1, 6)
+    print(x, end=' ' if x in seen else '\n')
+    seen.add(x)</code></pre><pre><code class="language-auto">5
+4
+3
+3 3 2
+6
+6 5 6 3 1
+</code></pre><p> The length of each such segment is a random variable. Denote them by <span class="math-tex">\(\alpha_{1}, \dotsc, \alpha_{n}\)</span>. Then we need to find <span class="math-tex">\[\operatorname{E}[\alpha_{1}+\dotsb+\alpha_{n}] \  .\]</span> This, of course, reduces to finding <span class="math-tex">\(\operatorname{E}[\alpha_{i}]\)</span>. <span class="math-tex">\(\operatorname{E}[\alpha_{i}]\)</span> is the average length of the <span class="math-tex">\(i\)</span>-th segment, i.e., the segment ending with the <span class="math-tex">\(i\)</span>-th new coupon. When filling this segment, there are <span class="math-tex">\(i-1\)</span> coupons that are not new and <span class="math-tex">\(n-i+1\)</span> coupons that have not yet appeared. That is, the probability of encountering a new coupon at each step (when filling the <span class="math-tex">\(i\)</span>-th segment) is <span class="math-tex">\(\frac{n-i+1}{n}\)</span>. Therefore, <span class="math-tex">\(\operatorname{E}[\alpha_{i}]\)</span> is simply the expected waiting time for the first success, where at each step success occurs with probability <span class="math-tex">\(\frac{n-i+1}{n}\)</span>. Consequently, <span class="math-tex">\[\operatorname{E}[\alpha_{i}]=\frac{n}{n-i+1}\  .\]</span> This corresponds to reality: the larger <span class="math-tex">\(i\)</span>, the greater this expectation. Thus, the required expectation is estimated as <span class="math-tex">\[\sum_{i=1}^{n}\frac{n}{n-i+1}=n\sum_{i=1}^{n}\frac{1}{i}=nH_{n} \approx n (\ln n + \gamma) \  ,\]</span> where <span class="math-tex">\(H_{n}=\sum_{i=1}^{n}\frac{1}{i}\)</span> is the harmonic number, and <span class="math-tex">\(\gamma=\lim_{n \to \infty}(H_{n}-\ln n)\approx 0.577\)</span> is the Euler-Mascheroni constant.</p>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-20-random-variables/unit/chapter-20-random-variables-unit-7-linearity-of-mathematical-expectation/lesson/random-variables--linearity-of-mathematical-expectation--step-10/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-20-random-variables/unit/chapter-20-random-variables-unit-7-linearity-of-mathematical-expectation/lesson/random-variables--linearity-of-mathematical-expectation--step-12/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

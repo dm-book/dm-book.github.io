@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="Informally, such inequalities state that the sum of mutually independent random variables exceeds its expectation by a factor of \(\varepsilon\) with…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Deviation from the Mean › Chernoff Inequality (Optional) › Lesson 7 | Discrete Mathematics" />
+    <meta property="og:description" content="Informally, such inequalities state that the sum of mutually independent random variables exceeds its expectation by a factor of \(\varepsilon\) with…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-21-deviation-from-the-mean/unit/chapter-21-deviation-from-the-mean-unit-7-chernoff-inequality-optional/lesson/deviation-from-the-mean--chernoff-inequality-optional--step-7/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-21-deviation-from-the-mean/unit/chapter-21-deviation-from-the-mean-unit-7-chernoff-inequality-optional/lesson/deviation-from-the-mean--chernoff-inequality-optional--step-7/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Deviation from the Mean › Chernoff Inequality (Optional) › Lesson 7 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Deviation from the Mean / Chernoff Inequality (Optional)</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Deviation from the Mean · Chernoff Inequality (Optional)</p>
+        <h1>Lesson 7</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p>Informally, such inequalities state that the sum of mutually independent random variables exceeds its expectation by&nbsp;a factor of&nbsp;<span class="math-tex">\(\varepsilon\)</span> <em>with exponentially small probability</em>.</p><p>Let's start with a special case formulation, the frequency of heads when flipping a fair coin. We will leave it without proof.</p><p><strong>Theorem (Chernoff, 1952). </strong><em>Let <span class="math-tex">\(\alpha\)</span> be the frequency of heads among <span class="math-tex">\(n\)</span> flips of a fair coin. Then <span class="math-tex">\[\Pr\left[\left|\alpha-\frac{1}{2}\right| \ge \varepsilon \right] \le 2e^{-2\varepsilon^2n}\  .\]</span></em></p><p>It is clear that this bound is <em>much</em> stronger than the bound <span class="math-tex">\(\frac{4}{n}\)</span>, which we previously derived from Chebyshev’s inequality. Another way to compare the two bounds: Chebyshev’s inequality tells us that <span class="math-tex">\(\alpha\)</span> deviates from its mean by at least <span class="math-tex">\(1/4\)</span> with probability at most <span class="math-tex">\(4/n\)</span>. Meanwhile, Chernoff’s inequality states that even for <span class="math-tex">\(\varepsilon=\sqrt{\ln n/(2n)}\)</span> (which is much smaller than <span class="math-tex">\(1/4\)</span>), the deviation occurs with probability no greater than <span class="math-tex">\(4/n\)</span>.</p>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-21-deviation-from-the-mean/unit/chapter-21-deviation-from-the-mean-unit-7-chernoff-inequality-optional/lesson/deviation-from-the-mean--chernoff-inequality-optional--step-6/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-21-deviation-from-the-mean/unit/chapter-21-deviation-from-the-mean-unit-7-chernoff-inequality-optional/lesson/deviation-from-the-mean--chernoff-inequality-optional--step-8/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

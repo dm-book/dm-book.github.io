@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="A program is a sequence of instructions, where each instruction consists of a set of bit flags that determine the following: the ALU operation to be…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Boolean Circuits › NAND Game: Processor (Optional) › Lesson 3 | Discrete Mathematics" />
+    <meta property="og:description" content="A program is a sequence of instructions, where each instruction consists of a set of bit flags that determine the following: the ALU operation to be…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-9-boolean-circuits/unit/chapter-9-boolean-circuits-unit-9-nand-game-processor-optional/lesson/boolean-circuits--nand-game-processor-optional--step-3/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-9-boolean-circuits/unit/chapter-9-boolean-circuits-unit-9-nand-game-processor-optional/lesson/boolean-circuits--nand-game-processor-optional--step-3/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Boolean Circuits › NAND Game: Processor (Optional) › Lesson 3 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Boolean Circuits / NAND Game: Processor (Optional)</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Boolean Circuits · NAND Game: Processor (Optional)</p>
+        <h1>Lesson 3</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p>A&nbsp;program is a&nbsp;sequence of instructions, where each instruction consists of a&nbsp;set of bit flags that determine the following: </p><ul><li> the ALU operation to be performed,</li><li> the registers to be used as inputs, and</li><li> the register or registers in&nbsp;which the result is to be stored.</li></ul><p>The control unit chooses between data instructions and ALU instructions. The gate <span class="math- tex">\(\texttt{SPLIT16}\)</span> takes one 16-bit value and writes its 16 bits from most to least significant.</p><p><strong>Problem. </strong> Synthesize a&nbsp;circuit of&nbsp;size&nbsp;<span class="math-tex">\(6\)</span> over <span class="math-tex">\(\{\operatorname{NAND}_{2},\allowbreak \operatorname{CONTROLSELECTOR}_{16},\allowbreak \operatorname{SPLIT}_{16},\allowbreak \operatorname{SELECT}_{16},\allowbreak \operatorname{ALU}_{16},\allowbreak \operatorname{CONDITION}_{16}\}\)</span> computing the control-unit function: <span class="math-tex">\[\operatorname{CONTROLUNIT}_{16}(I,A,D,\texttt{*A})=(R,a,d,\texttt{*a},j).\]</span> The values <span class="math-tex">\(I,A,D\)</span>, <span class="math- tex">\(\texttt{*A}\)</span>, and&nbsp;<span class="math-tex">\(R\)</span> are 16-bit; the remaining variables are bits.</p><p>Let <span class="math-tex">\(Y=A\)</span> when <span class="math-tex">\(\texttt{I}[12]=0\)</span> and <span class="math-tex">\(Y=\texttt{*A}\)</span> otherwise, and define <span class="math-tex">\[\begin{aligned}R_1&=\operatorname{ALU}_{16}(\texttt{I}[10],\texttt{I}[9],\texttt{I}[8],\texttt{I}[7],\texttt{I}[6],D,Y),\\ (a_1,d_1,\texttt{*a}_1)&=(\texttt{I}[5],\texttt{I}[4],\texttt{I}[3]),\\ j_1&=\operatorname{CONDITION}_{16}(\texttt{I}[2],\texttt{I}[1],\texttt{I}[0],R_1).\end{aligned}\]</span> If <span class="math-tex">\(\texttt{I}[15]=1\)</span>, return <span class="math-tex">\((R_{1},a_{1},d_{1},\texttt{*a}_{1},j_{1})\)</span>; otherwise return <span class="math-tex">\((I,1,0,0,0)\)</span>.</p>
+          <div class="task-card"><div class="task-heading">String task, Advanced problem</div><a class="cogniterra-only-notice" href="https://cogniterra.org/a/697" target="_blank" rel="noreferrer">This problem can only be submitted at Cogniterra.</a></div>
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-9-boolean-circuits/unit/chapter-9-boolean-circuits-unit-9-nand-game-processor-optional/lesson/boolean-circuits--nand-game-processor-optional--step-2/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-9-boolean-circuits/unit/chapter-9-boolean-circuits-unit-9-nand-game-processor-optional/lesson/boolean-circuits--nand-game-processor-optional--step-4/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

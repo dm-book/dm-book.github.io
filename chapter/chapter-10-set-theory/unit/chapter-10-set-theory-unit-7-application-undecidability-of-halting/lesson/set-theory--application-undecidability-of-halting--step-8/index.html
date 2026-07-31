@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="Moreover, this could potentially help us find answers to many open questions in mathematics! Let us provide some examples. Imagine that we have such a…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Set Theory › Application: Undecidability of Halting › Lesson 8 | Discrete Mathematics" />
+    <meta property="og:description" content="Moreover, this could potentially help us find answers to many open questions in mathematics! Let us provide some examples. Imagine that we have such a…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-10-set-theory/unit/chapter-10-set-theory-unit-7-application-undecidability-of-halting/lesson/set-theory--application-undecidability-of-halting--step-8/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-10-set-theory/unit/chapter-10-set-theory-unit-7-application-undecidability-of-halting/lesson/set-theory--application-undecidability-of-halting--step-8/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Set Theory › Application: Undecidability of Halting › Lesson 8 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Set Theory / Application: Undecidability of Halting</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Set Theory · Application: Undecidability of Halting</p>
+        <h1>Lesson 8</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p>Moreover, this could potentially help us find answers to many open questions in mathematics! Let us provide some examples. Imagine that we have such a&nbsp;correctly working method. </p><pre><code class="language-python">is_halting(program_file_name, input_file_name)</code></pre><ul><li><strong>Perfect numbers.</strong>&nbsp; Recall that a number is called <em>perfect</em> if it equals the sum of its divisors (excluding itself): <span class="math-tex">\(6=1+2+3\)</span>. We still do not know if there exists an odd perfect number. It exists if and only if the following program halts. <pre><code class="language-python">from itertools import count
+
+
+def is_perfect(x):
+    return sum([d for d in range(1, x) if x % d == 0]) == x
+
+
+print(next(filter(is_perfect, count(start=1, step=2))))</code></pre></li><li><strong>Goldbach's conjecture.</strong>&nbsp; Goldbach's conjecture states that every even <span class="math-tex">\(n \in \mathbb{Z}_{\ge 4}\)</span> can be expressed as the sum of two primes. The following program halts if this conjecture is false. <pre><code class="language-python">from itertools import count
+
+
+def goldbach_conjecture():
+    for n in count(start=4, step=2):
+        if not is_sum_of_two_primes(n):
+            return</code></pre></li><li><strong>Fermat's Last Theorem.</strong>&nbsp; The following program halts if there exist <span class="math-tex">\(u \in \mathbb{Z}_{&gt;0}\)</span> and integers <span class="math-tex">\(3 \le n &lt; u\)</span>, <span class="math-tex">\(1 \le a, b, c &lt; u\)</span>, such that <span class="math-tex">\[a^{n}+b^{n}=c^{n}\]</span> <pre><code class="language-python">from itertools import count, product
+
+
+for upper in count(start=1):
+    for n in range(3, upper):
+        for a, b, c, in product(range(1, upper), repeat=3):
+            if a ** n + b ** n == c ** n:
+                exit()</code></pre></li><li><strong>Twin primes.</strong>&nbsp; We still do not know whether there are infinitely many pairs of prime numbers differing by two. The following code halts if and only if this is not the case. <pre><code class="language-python">from itertools import count
+from sympy.ntheory import isprime
+
+
+def exists_large_twins(lower):
+    for p in count(start=lower):
+        if isprime(p) and isprime(p + 2):
+            return
+
+
+for lower in count(start=1):
+    if not is_halting(exists_large_twins, lower):
+        exit()</code></pre></li></ul>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-10-set-theory/unit/chapter-10-set-theory-unit-7-application-undecidability-of-halting/lesson/set-theory--application-undecidability-of-halting--step-7/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-10-set-theory/unit/chapter-10-set-theory-unit-7-application-undecidability-of-halting/lesson/set-theory--application-undecidability-of-halting--step-9/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

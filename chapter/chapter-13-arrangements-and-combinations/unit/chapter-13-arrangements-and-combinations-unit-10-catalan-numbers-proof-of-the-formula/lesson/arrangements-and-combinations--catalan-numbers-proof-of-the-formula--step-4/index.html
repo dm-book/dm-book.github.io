@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="First Proof: Reflection and Bad Paths. Let us count the number of paths from \((0,0)\) to \((n,n)\) that do not enter the upper triangle (where each step is…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Arrangements and Combinations › Catalan Numbers: Proof of the Formula › Lesson 4 | Discrete Mathematics" />
+    <meta property="og:description" content="First Proof: Reflection and Bad Paths. Let us count the number of paths from \((0,0)\) to \((n,n)\) that do not enter the upper triangle (where each step is…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-13-arrangements-and-combinations/unit/chapter-13-arrangements-and-combinations-unit-10-catalan-numbers-proof-of-the-formula/lesson/arrangements-and-combinations--catalan-numbers-proof-of-the-formula--step-4/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-13-arrangements-and-combinations/unit/chapter-13-arrangements-and-combinations-unit-10-catalan-numbers-proof-of-the-formula/lesson/arrangements-and-combinations--catalan-numbers-proof-of-the-formula--step-4/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Arrangements and Combinations › Catalan Numbers: Proof of the Formula › Lesson 4 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Arrangements and Combinations / Catalan Numbers: Proof of the Formula</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Arrangements and Combinations · Catalan Numbers: Proof of the Formula</p>
+        <h1>Lesson 4</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p><strong>First Proof: Reflection and&nbsp;Bad Paths.</strong></p><p>Let us count the number of paths from <span class="math-tex">\((0,0)\)</span> to <span class="math-tex">\((n,n)\)</span> that do not enter the upper triangle (where each step is either a step to the right or upward). These are known as <em>Dyck paths</em>. It is easy to see that there is a natural bijection between such paths and&nbsp;valid bracket sequences.</p><p>The total number of paths from <span class="math-tex">\((0,0)\)</span> to <span class="math-tex">\((n,n)\)</span> is <span class="math-tex">\(\binom{2n}{n}\)</span>. Below, we will focus on counting the number of <em>bad</em> such paths, i.e., paths that enter the upper triangle. Such paths touch or cross the line <span class="math-tex">\((0,1)-(n-1,n)\)</span>, shown dashed in the figure below.</p><p style="text-align:center;"><img src="generated/assets/Arrangements_and_Combinations/Catalan_Numbers$_Proof_of_the_Formula=3/image0.png" width="800" ></p><p>Consider the <em>last</em> moment where the bad path crosses the dashed line, and&nbsp;reflect the entire part of the bad path starting from this moment relative to this line. We obtain a path from <span class="math-tex">\((0,0)\)</span> to <span class="math-tex">\((n-1,n+1)\)</span>.</p><p style="text-align:center;"><img src="generated/assets/Arrangements_and_Combinations/Catalan_Numbers$_Proof_of_the_Formula=3/image1.png" width="800" ></p><p>An important observation: bad paths from <span class="math-tex">\((0,0)\)</span> to <span class="math-tex">\((n,n)\)</span> are in one-to-one correspondence with all paths from <span class="math-tex">\((0,0)\)</span> to <span class="math-tex">\((n-1,n+1)\)</span>, and the mapping we considered establishes this correspondence (yes, we want to use the bijection rule). Indeed, any path from <span class="math-tex">\((0,0)\)</span> to <span class="math-tex">\((n-1,n+1)\)</span> must cross the dashed line (it starts below the line and ends above); reflecting its part after the last crossing, we obtain a bad path from <span class="math-tex">\((0,0)\)</span> to <span class="math-tex">\((n,n)\)</span>. Performing the same operation on the resulting path, we obtain the original path, so this is indeed a bijection.</p><p>Thus, the number of bad paths equals <span class="math-tex">\(\binom{2n}{n+1}\)</span>. Therefore, <span class="math-tex">\[\begin{align*}C(n)&=\binom{2n}{n}-\binom{2n}{n+1}=\\&=\binom{2n}{n}-\frac{(2n)!}{(n+1)!(n-1)!}=\\&=\binom{2n}{n}-\frac{n}{n+1}\cdot \binom{2n}{n}=\\&=\frac{1}{n+1}\cdot \binom{2n}{n}\  .\end{align*}\]</span></p>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-13-arrangements-and-combinations/unit/chapter-13-arrangements-and-combinations-unit-10-catalan-numbers-proof-of-the-formula/lesson/arrangements-and-combinations--catalan-numbers-proof-of-the-formula--step-3/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-13-arrangements-and-combinations/unit/chapter-13-arrangements-and-combinations-unit-10-catalan-numbers-proof-of-the-formula/lesson/arrangements-and-combinations--catalan-numbers-proof-of-the-formula--step-5/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

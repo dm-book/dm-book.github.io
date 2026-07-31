@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="Let \(W_{1}=V(H)\cap V_{i}\) and \(W_{2}=V(H)\cap V_{i+1}\) . If one of these sets has size \(1\) , then \(H\) is a star and certainly \(e(H)\le v(H)\le…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Cycles › Cycles of Even Length (Optional) › Lesson 10 | Discrete Mathematics" />
+    <meta property="og:description" content="Let \(W_{1}=V(H)\cap V_{i}\) and \(W_{2}=V(H)\cap V_{i+1}\) . If one of these sets has size \(1\) , then \(H\) is a star and certainly \(e(H)\le v(H)\le…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-25-cycles/unit/chapter-25-cycles-unit-7-cycles-of-even-length-optional/lesson/cycles--cycles-of-even-length-optional--step-10/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-25-cycles/unit/chapter-25-cycles-unit-7-cycles-of-even-length-optional/lesson/cycles--cycles-of-even-length-optional--step-10/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Cycles › Cycles of Even Length (Optional) › Lesson 10 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Cycles / Cycles of Even Length (Optional)</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Cycles · Cycles of Even Length (Optional)</p>
+        <h1>Lesson 10</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p>Let <span class="math-tex">\(W_{1}=V(H)\cap V_{i}\)</span> and <span class="math-tex">\(W_{2}=V(H)\cap V_{i+1}\)</span>. If one of these sets has size&nbsp;<span class="math-tex">\(1\)</span>, then <span class="math-tex">\(H\)</span> is a star and certainly <span class="math-tex">\(e(H)\le v(H)\le 2\ell v(H)\)</span>. Thus, assume <span class="math-tex">\(|W_{1}|,|W_{2}|\ge 2\)</span>.</p><p>Choose a spanning tree&nbsp;<span class="math-tex">\(T\)</span> of&nbsp;<span class="math-tex">\(G'\)</span> rooted at&nbsp;<span class="math-tex">\(c\)</span>, where each vertex outside <span class="math-tex">\(V_{0}\)</span> is connected to one parent in the previous level. Let <span class="math-tex">\(a\in V_{h}\)</span> be a vertex of largest possible level&nbsp;<span class="math-tex">\(h\)</span> such that all vertices of&nbsp;<span class="math-tex">\(W_{1}\)</span> are descendants of&nbsp;<span class="math-tex">\(a\)</span> in&nbsp;<span class="math-tex">\(T\)</span>. Since <span class="math-tex">\(|W_{1}|\ge 2\)</span>, we have <span class="math-tex">\(h&lt;i\)</span>. Choose a child <span class="math-tex">\(b\in V_{h+1}\)</span> of&nbsp;<span class="math-tex">\(a\)</span> such that at least one path from&nbsp;<span class="math-tex">\(a\)</span> to a vertex of&nbsp;<span class="math-tex">\(W_{1}\)</span> goes through&nbsp;<span class="math-tex">\(b\)</span>. By the choice of&nbsp;<span class="math-tex">\(a\)</span>, not all such paths go through&nbsp;<span class="math-tex">\(b\)</span>.</p><p>Now color the vertices of&nbsp;<span class="math-tex">\(H\)</span> with three colors:  <span class="math-tex">\[\rho(x)= \begin{cases}0, & x\in W_2,\\ 1, & x\in W_1\text{ and the }ax\text{-path in }T\text{ goes through }b,\\ 2, & x\in W_1\text{ and the }ax\text{-path in }T\text{ does not go through }b.\end{cases}\]</span>   All three colors appear.</p><p>Set <span class="math-tex">\[t=2(\ell-i+h).\]</span> Since <span class="math-tex">\(i&lt;\ell\)</span>, we have <span class="math-tex">\(t\ge 2\)</span>, and the number&nbsp;<span class="math-tex">\(t\)</span> is even. If the coloring&nbsp;<span class="math-tex">\(\rho\)</span> were <span class="math-tex">\(t\)</span>-periodic, then it would use at most two colors: for <span class="math-tex">\(t=2\)</span> this is the corollary above; for <span class="math-tex">\(t&gt;2\)</span> it follows from one of the lemmas shown above, since <span class="math-tex">\(e(H)&gt;2\ell v(H)\ge t v(H)\)</span>. Therefore <span class="math-tex">\(\rho\)</span> is not <span class="math-tex">\(t\)</span>-periodic.</p><p>Hence there is a simple path&nbsp;<span class="math-tex">\(P\)</span> of length&nbsp;<span class="math-tex">\(t\)</span> in&nbsp;<span class="math-tex">\(H\)</span> whose endpoints have different colors. Since <span class="math-tex">\(H\)</span> is bipartite with parts <span class="math-tex">\(W_{1}\)</span> and&nbsp;<span class="math-tex">\(W_{2}\)</span>, and <span class="math-tex">\(t\)</span> is even, both endpoints of&nbsp;<span class="math-tex">\(P\)</span> lie in the same part. They cannot both lie in&nbsp;<span class="math-tex">\(W_{2}\)</span>, because all vertices of&nbsp;<span class="math-tex">\(W_{2}\)</span> have color&nbsp;<span class="math-tex">\(0\)</span>. Thus, there exist <span class="math-tex">\(x,y\in W_{1}\)</span> with <span class="math-tex">\(\rho(x)=1\)</span>, <span class="math-tex">\(\rho(y)=2\)</span>, joined by a path&nbsp;<span class="math-tex">\(P\)</span> of length&nbsp;<span class="math-tex">\(t\)</span> in&nbsp;<span class="math-tex">\(H\)</span>.</p><p>Let <span class="math-tex">\(Q\)</span> be the <span class="math-tex">\(ax\)</span>-path in&nbsp;<span class="math-tex">\(T\)</span> and let <span class="math-tex">\(S\)</span> be the <span class="math-tex">\(ay\)</span>-path in&nbsp;<span class="math-tex">\(T\)</span>. The path <span class="math-tex">\(Q\)</span> goes through&nbsp;<span class="math-tex">\(b\)</span>, while <span class="math-tex">\(S\)</span> does not; since <span class="math-tex">\(T\)</span> is a tree, the paths <span class="math-tex">\(Q\)</span> and&nbsp;<span class="math-tex">\(S\)</span> do not meet except at&nbsp;<span class="math-tex">\(a\)</span>. Also, they do not meet&nbsp;<span class="math-tex">\(P\)</span> except at <span class="math-tex">\(x\)</span> and&nbsp;<span class="math-tex">\(y\)</span>, because all internal vertices of <span class="math-tex">\(Q\)</span> and&nbsp;<span class="math-tex">\(S\)</span> lie on levels below <span class="math-tex">\(i\)</span>. Therefore <span class="math-tex">\(P\cup Q\cup S\)</span> is a cycle. The diagram below shows the three paths.</p><p style="text-align:center;"><img src="generated/assets/Cycles/Cycles_of_Even_Length_(Optional)=9/image0.png" width="800" ></p><p>The length of this cycle is <span class="math-tex">\[2(i-h)+t=2(i-h)+2(\ell-i+h)=2\ell.\]</span> This contradiction proves that <span class="math-tex">\(m_{i} \le 2 \ell (|V_{i}| + |V_{i + 1}|)\)</span> for <span class="math-tex">\(i &lt; \ell\)</span>.</p>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-25-cycles/unit/chapter-25-cycles-unit-7-cycles-of-even-length-optional/lesson/cycles--cycles-of-even-length-optional--step-9/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-25-cycles/unit/chapter-25-cycles-unit-7-cycles-of-even-length-optional/lesson/cycles--cycles-of-even-length-optional--step-11/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

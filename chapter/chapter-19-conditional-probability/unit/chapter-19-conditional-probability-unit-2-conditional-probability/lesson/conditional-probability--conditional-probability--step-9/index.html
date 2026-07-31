@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="The formula \(\Pr[A \mid B]=\frac{\Pr[A \cap B]}{\Pr[B]}\) can be rewritten as: \[\Pr[A \cap B] = \Pr[B] \cdot \Pr[A \mid B] \ .\] Then it reads as follows:…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Conditional Probability › Conditional Probability › Lesson 9 | Discrete Mathematics" />
+    <meta property="og:description" content="The formula \(\Pr[A \mid B]=\frac{\Pr[A \cap B]}{\Pr[B]}\) can be rewritten as: \[\Pr[A \cap B] = \Pr[B] \cdot \Pr[A \mid B] \ .\] Then it reads as follows:…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-19-conditional-probability/unit/chapter-19-conditional-probability-unit-2-conditional-probability/lesson/conditional-probability--conditional-probability--step-9/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-19-conditional-probability/unit/chapter-19-conditional-probability-unit-2-conditional-probability/lesson/conditional-probability--conditional-probability--step-9/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Conditional Probability › Conditional Probability › Lesson 9 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Conditional Probability / Conditional Probability</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Conditional Probability · Conditional Probability</p>
+        <h1>Lesson 9</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p>The formula <span class="math-tex">\(\Pr[A \mid B]=\frac{\Pr[A \cap B]}{\Pr[B]}\)</span> can be rewritten as: <span class="math-tex">\[\Pr[A \cap B] = \Pr[B] \cdot \Pr[A \mid B] \  .\]</span> Then it reads as follows: the probability of both events <span class="math-tex">\(A\)</span> and <span class="math-tex">\(B\)</span> occurring is equal to the probability of event <span class="math-tex">\(B\)</span>, multiplied by the conditional probability of event <span class="math-tex">\(A\)</span> given <span class="math-tex">\(B\)</span>. (In fact, we have already used conditional probability when drawing trees: when several edges emerge from the next vertex, the sum of probabilities on which is equal to one, these are precisely conditional probabilities! The condition in this case is that we arrived at this vertex.) This naturally generalizes to an arbitrary number of events. Namely, for any <span class="math-tex">\(n\)</span> events <span class="math-tex">\(A_{1}, \dotsc, A_{n}\)</span>, it holds that  <span class="math-tex">\[\Pr[A_{1} \cap \dotsb \cap A_{n}]=\Pr[A_{1}]\cdot\Pr[A_{2} \mid A_{1}] \cdot \Pr[A_{3} \mid A_{1} \cap A_{2}] \dotsb = \prod_{i \in [n]}\Pr\left[A_{i} \mid \bigcap_{j \in [i-1]}A_{j}\right]\]</span>   Of course, the formula remains valid for conditional probabilities:  <span class="math-tex">\[\Pr[A_{1} \cap \dotsb \cap A_{n} \mid B] = \prod_{i \in [n]}\Pr\left[A_{i} \mid \left(B \cap \bigcap_{j \in [i-1]}A_{j}\right)\right].\]</span>  </p>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-19-conditional-probability/unit/chapter-19-conditional-probability-unit-2-conditional-probability/lesson/conditional-probability--conditional-probability--step-8/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-19-conditional-probability/unit/chapter-19-conditional-probability-unit-2-conditional-probability/lesson/conditional-probability--conditional-probability--step-10/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

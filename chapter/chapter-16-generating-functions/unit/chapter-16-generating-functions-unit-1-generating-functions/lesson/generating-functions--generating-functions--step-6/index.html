@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="Again, these eleven numbers can be found directly, but what is more important now is that they are the coefficients of the polynomial \(D^{2}(x)\) , where…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Generating Functions › Generating Functions › Lesson 6 | Discrete Mathematics" />
+    <meta property="og:description" content="Again, these eleven numbers can be found directly, but what is more important now is that they are the coefficients of the polynomial \(D^{2}(x)\) , where…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-16-generating-functions/unit/chapter-16-generating-functions-unit-1-generating-functions/lesson/generating-functions--generating-functions--step-6/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-16-generating-functions/unit/chapter-16-generating-functions-unit-1-generating-functions/lesson/generating-functions--generating-functions--step-6/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Generating Functions › Generating Functions › Lesson 6 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Generating Functions / Generating Functions</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Generating Functions · Generating Functions</p>
+        <h1>Lesson 6</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p>Again, these eleven numbers can be found directly, but what is more important now is that they are the coefficients of the polynomial <span class="math-tex">\(D^{2}(x)\)</span>, where <span class="math-tex">\[D(x)=x+x^{2}+x^{3}+x^{4}+x^{5}+x^{6}.\]</span></p><pre><code class="language-python">from sympy import expand
+from sympy.abc import x
+
+print(expand(sum(x ** d for d in range(1, 7)) ** 2))</code></pre><pre><code class="language-auto">x**12 + 2*x**11 + 3*x**10 + 4*x**9 + 5*x**8 + 6*x**7 + 5*x**6 + 4*x**5 + 3*x**4 + 2*x**3 + x**2
+</code></pre>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-16-generating-functions/unit/chapter-16-generating-functions-unit-1-generating-functions/lesson/generating-functions--generating-functions--step-5/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-16-generating-functions/unit/chapter-16-generating-functions-unit-1-generating-functions/lesson/generating-functions--generating-functions--step-7/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

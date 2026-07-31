@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="An Eulerian path is a route that passes through all edges of a graph exactly once (the word “route” emphasizes that its vertices may be repeated). An…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Cycles › Eulerian Graphs › Lesson 3 | Discrete Mathematics" />
+    <meta property="og:description" content="An Eulerian path is a route that passes through all edges of a graph exactly once (the word “route” emphasizes that its vertices may be repeated). An…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-25-cycles/unit/chapter-25-cycles-unit-3-eulerian-graphs/lesson/cycles--eulerian-graphs--step-3/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-25-cycles/unit/chapter-25-cycles-unit-3-eulerian-graphs/lesson/cycles--eulerian-graphs--step-3/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Cycles › Eulerian Graphs › Lesson 3 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Cycles / Eulerian Graphs</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Cycles · Eulerian Graphs</p>
+        <h1>Lesson 3</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p>An&nbsp;<em>Eulerian path</em> is&nbsp;a&nbsp;route that passes through all edges of a&nbsp;graph exactly once (the word &ldquo;route&rdquo; emphasizes that its vertices may be&nbsp;repeated). An&nbsp;<em>Eulerian cycle</em> is an&nbsp;Eulerian path where the first and last vertices coincide.</p><p><strong>Theorem. </strong><em>A&nbsp;directed graph without isolated vertices (i.e., vertices of degree zero) contains an Eulerian cycle if and only if it is strongly connected and for every vertex, the in-degree equals the out-degree.</em></p><p><em>Proof. </em>One direction is simple: if we managed to traverse all edges of the graph, then the graph is strongly connected (recall that there are no isolated vertices) and all degrees are balanced: we entered each vertex as many times as we exited.</p><p>Now suppose the graph is strongly connected and all its degrees are balanced. We will construct an Eulerian cycle in this graph. We start at an arbitrary vertex and walk along the edges, each time choosing an edge we have not yet traversed. Due to the balance of all vertices, there is exactly one situation in which this process can stop&nbsp;&mdash; when we return to the starting vertex and have no outgoing edges left that we have not yet traversed.</p><p>For example, we start from vertex&nbsp;<span class="math-tex">\(a\)</span> and traverse the cycle <span class="math-tex">\(a\to b\to c \to h \to a\)</span>. </p><p style="text-align:center;"><img src="generated/assets/Cycles/Eulerian_Graphs=2/image0.png" width="800" ></p><p> What to do next? We have not traversed the entire graph and are stuck at vertex&nbsp;<span class="math-tex">\(a\)</span>. An important observation: since the graph is strongly connected, at least one vertex of our cycle has an edge we have not yet traversed. Moreover, in the cycle we built, there is no start and end: we can start from any vertex. So we start from the vertex that still has untraversed edges.</p><p>Returning to our example, we see that vertex <span class="math-tex">\(c\)</span>&nbsp;has such edges. Let us assume that our previous cycle started at&nbsp;<span class="math-tex">\(c\)</span>: <span class="math-tex">\[c\to h \to a \to b \to c \ .\]</span> Now we can continue the walk from&nbsp;<span class="math-tex">\(c\)</span>! For example, we traverse the edges <span class="math-tex">\(c \to d \to g \to c\)</span>. We obtain the following cycle: <span class="math-tex">\[c\to h \to a \to b \to c \to d \to g \to c \  .\]</span> </p><p style="text-align:center;"><img src="generated/assets/Cycles/Eulerian_Graphs=2/image1.png" width="800" ></p><p> We are stuck again. We move the start to vertex&nbsp;<span class="math-tex">\(g\)</span> and traverse the cycle <span class="math-tex">\(g \to h \to g\)</span>. Thus, we gradually traverse all edges.<span class="proof-end" aria-label="End of proof">◼</span></p>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-25-cycles/unit/chapter-25-cycles-unit-3-eulerian-graphs/lesson/cycles--eulerian-graphs--step-2/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-25-cycles/unit/chapter-25-cycles-unit-3-eulerian-graphs/lesson/cycles--eulerian-graphs--step-4/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

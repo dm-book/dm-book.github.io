@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="This limitation is not an accident of our recurrence. Even the much simpler question “can some subset of numbers have total sum exactly \(T\) ?” is the…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Project: Portfolio Selection › Tracking Dynamic Programming › Lesson 4 | Discrete Mathematics" />
+    <meta property="og:description" content="This limitation is not an accident of our recurrence. Even the much simpler question “can some subset of numbers have total sum exactly \(T\) ?” is the…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-17-project-portfolio-selection/unit/chapter-17-project-portfolio-selection-unit-6-tracking-dynamic-programming/lesson/project-portfolio-selection--tracking-dynamic-programming--step-4/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-17-project-portfolio-selection/unit/chapter-17-project-portfolio-selection-unit-6-tracking-dynamic-programming/lesson/project-portfolio-selection--tracking-dynamic-programming--step-4/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Project: Portfolio Selection › Tracking Dynamic Programming › Lesson 4 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Project: Portfolio Selection / Tracking Dynamic Programming</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Project: Portfolio Selection · Tracking Dynamic Programming</p>
+        <h1>Lesson 4</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p>This limitation is not an&nbsp;accident of our recurrence. Even the much simpler question &ldquo;can some subset of numbers have total sum exactly&nbsp;<span class="math-tex">\(T\)</span>?&rdquo; is the subset sum problem. Its generating function is <span class="math-tex">\[\prod_{i}(1+z^{s_i}),\]</span> and the question asks whether the coefficient of <span class="math-tex">\(z^{T}\)</span> is nonzero. This is the same kind of object that appears in our portfolio polynomial.</p><details><summary>For the curious 🤓</summary><div style="border-style: solid;">It is worth pausing on how far the <a href="https://en.wikipedia.org/wiki/Subset_sum_problem">subset sum problem</a> has been pushed, because the two algorithms in this project are exactly its two classical lines of attack.The dynamic-programming table is the <em>pseudo-polynomial</em> side. For a&nbsp;target&nbsp;<span class="math-tex">\(T\)</span>, the textbook bound is <span class="math-tex">\(O(nT)\)</span>, and it was eventually improved all the way to a&nbsp;randomized, essentially linear <span class="math-tex">\(\widetilde{O}(n+T)\)</span> algorithm (Bringmann, 2017). This is essentially optimal: under the Strong Exponential Time Hypothesis, no algorithm runs in time <span class="math-tex">\(T^{1-\varepsilon}\ 2^{o(n)}\)</span>.Meet in the middle is the <em>exponential</em> side. Its <span class="math-tex">\(O^{*}(2^{n/2})\)</span> running time goes back to Horowitz and Sahni in&nbsp;1974, and, remarkably, no one knows how to do substantially better in the worst case: whether subset sum admits an&nbsp;<span class="math-tex">\(O^{*}\!\left(2^{(1/2-\varepsilon)n}\right)\)</span> algorithm is a&nbsp;long-standing open problem.</div></details>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-17-project-portfolio-selection/unit/chapter-17-project-portfolio-selection-unit-6-tracking-dynamic-programming/lesson/project-portfolio-selection--tracking-dynamic-programming--step-3/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-17-project-portfolio-selection/unit/chapter-17-project-portfolio-selection-unit-6-tracking-dynamic-programming/lesson/project-portfolio-selection--tracking-dynamic-programming--step-5/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

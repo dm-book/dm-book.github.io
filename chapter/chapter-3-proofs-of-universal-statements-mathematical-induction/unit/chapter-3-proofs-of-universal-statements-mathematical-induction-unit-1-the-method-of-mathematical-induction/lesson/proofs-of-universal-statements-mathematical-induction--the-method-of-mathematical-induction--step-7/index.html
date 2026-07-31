@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="Theorem (inequality of arithmetic and geometric means, AM–GM inequality). For any positive integer \(n\) and any \(x_{1}, \dotsc, x_{n} \in…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Proofs of Universal Statements: Mathematical Induction › The Method of Mathematical Induction › Lesson 7 | Discrete Mathematics" />
+    <meta property="og:description" content="Theorem (inequality of arithmetic and geometric means, AM–GM inequality). For any positive integer \(n\) and any \(x_{1}, \dotsc, x_{n} \in…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-3-proofs-of-universal-statements-mathematical-induction/unit/chapter-3-proofs-of-universal-statements-mathematical-induction-unit-1-the-method-of-mathematical-induction/lesson/proofs-of-universal-statements-mathematical-induction--the-method-of-mathematical-induction--step-7/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-3-proofs-of-universal-statements-mathematical-induction/unit/chapter-3-proofs-of-universal-statements-mathematical-induction-unit-1-the-method-of-mathematical-induction/lesson/proofs-of-universal-statements-mathematical-induction--the-method-of-mathematical-induction--step-7/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Proofs of Universal Statements: Mathematical Induction › The Method of Mathematical Induction › Lesson 7 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Proofs of Universal Statements: Mathematical Induction / The Method of Mathematical Induction</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Proofs of Universal Statements: Mathematical Induction · The Method of Mathematical Induction</p>
+        <h1>Lesson 7</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p><strong>Theorem (inequality of&nbsp;arithmetic and geometric means, AM&ndash;GM inequality). </strong><em>For any positive integer&nbsp;<span class="math-tex">\(n\)</span> and any <span class="math-tex">\(x_{1}, \dotsc, x_{n} \in \mathbb{R}_{&gt;0}\)</span>, <span class="math-tex">\[\frac{x_1+x_2+\dotsb+x_n}{n}\ge \sqrt[n]{x_1x_2 \dotsb x_n}\  .\]</span></em></p><p><em>Proof. </em>Let&nbsp;us scale the given numbers. That&nbsp;is, fix a&nbsp;positive constant&nbsp;<span class="math-tex">\(\alpha\)</span> and consider the following numbers: <span class="math-tex">\[\begin{align*}y_{1}&=\alpha x_{1},\\ y_{2}&=\alpha x_{2},\\&\vdots\\ y_{n}&=\alpha x_{n}.\\\end{align*}\]</span> When moving from <span class="math-tex">\(x_{1}, \dotsc, x_{n}\)</span> to&nbsp;<span class="math-tex">\(y_{1}, \dotsc, y_{n}\)</span>, both the arithmetic mean and the geometric mean are multiplied by&nbsp;<span class="math-tex">\(\alpha\)</span>: <span class="math-tex">\[\begin{align*}\frac{y_1+\dotsb+y_n}{n}&= \alpha \cdot \frac{x_1+\dotsb+x_n}{n}\\ \sqrt[n]{y_1 \dotsb y_n}&= \alpha \cdot \sqrt[n]{x_1 \dotsb x_n}\end{align*}\]</span> Hence, it&nbsp;suffices to&nbsp;prove the inequality for <span class="math-tex">\(y_{1}, \dotsc, y_{n}\)</span>.</p><p>Now, fix <span class="math-tex">\[\alpha=\frac{1}{\sqrt[n]{x_1 \dotsb x_n}}.\]</span> Then, the product of&nbsp;<span class="math-tex">\(y\)</span>'s is&nbsp;<span class="math-tex">\(1\)</span>:  <span class="math-tex">\[y_{1}\dotsb y_{n}=(\alpha x_{1})\dotsb (\alpha x_{n})=\alpha^{n} (x_{1}\dotsb x_{n})=\frac{1}{x_1\dotsb x_n}\cdot (x_{1}\dotsb x_{n})=1.\]</span>  </p><p>Thus, it&nbsp;suffices to&nbsp;prove the following statement: </p><blockquote style="color:black">for any positive integer&nbsp;<span class="math-tex">\(n\)</span> and any <span class="math-tex">\(y_{1}, \dotsc, y_{n} \in \mathbb{R}_{&gt;0}\)</span> such that <span class="math-tex">\(y_{1} \dotsb y_{n}=1\)</span>, <span class="math-tex">\[y_{1}+\dotsb+y_{n} \ge n\  .\]</span></blockquote><p> We&nbsp;prove this by&nbsp;induction on&nbsp;<span class="math-tex">\(n\)</span>. The base case <span class="math-tex">\(n=1\)</span> is&nbsp;directly verified, so&nbsp;we proceed to&nbsp;the induction step <span class="math-tex">\(n-1 \to n\)</span>. Since the product of&nbsp;<span class="math-tex">\(y_{1}, \dotsc, y_{n}\)</span> is&nbsp;<span class="math-tex">\(1\)</span>, among them there is a&nbsp;number not greater than one, and a&nbsp;number not less than one. Without loss of generality, assume that <span class="math-tex">\(y_{1} \le 1\)</span> and <span class="math-tex">\(y_{2} \ge 1\)</span>. Then, <span class="math-tex">\((y_{1}-1)(y_{2}-1) \le 0\)</span> and hence <span class="math-tex">\(y_{1}+y_{2} \ge y_{1}y_{2}+1\)</span>. Also, the product of the following <span class="math-tex">\(n-1\)</span> numbers is equal to&nbsp;<span class="math-tex">\(1\)</span>: <span class="math-tex">\[(y_{1}y_{2}),\  y_{3}, \dotsc, y_{n}.\]</span> Thus,  <span class="math-tex">\[\begin{align*}y_{1}+y_{2}+y_{3}+\dotsb+y_{n}&\ge 1+y_{1}y_{2}+y_{3}+\dotsb+y_{n}&\text{(\(y_{1}+y_{2} \ge y_{1}y_{2}+1\))}\\&\ge 1+(n-1)&\text{(hypothesis)}\\&=n.\end{align*}\]</span>  <span class="proof-end" aria-label="End of proof">◼</span></p>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-3-proofs-of-universal-statements-mathematical-induction/unit/chapter-3-proofs-of-universal-statements-mathematical-induction-unit-1-the-method-of-mathematical-induction/lesson/proofs-of-universal-statements-mathematical-induction--the-method-of-mathematical-induction--step-6/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-3-proofs-of-universal-statements-mathematical-induction/unit/chapter-3-proofs-of-universal-statements-mathematical-induction-unit-1-the-method-of-mathematical-induction/lesson/proofs-of-universal-statements-mathematical-induction--the-method-of-mathematical-induction--step-8/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

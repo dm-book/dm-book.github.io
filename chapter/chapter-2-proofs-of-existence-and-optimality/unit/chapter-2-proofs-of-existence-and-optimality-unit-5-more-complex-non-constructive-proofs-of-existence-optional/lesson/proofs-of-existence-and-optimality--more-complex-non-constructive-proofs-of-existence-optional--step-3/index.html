@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="It turns out that the first player has a winning strategy! We will prove this non-constructively, that is, without presenting an explicit strategy. Theorem.…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Proofs of Existence and Optimality › More Complex Non-constructive Proofs of Existence (Optional) › Lesson 3 | Discrete Mathematics" />
+    <meta property="og:description" content="It turns out that the first player has a winning strategy! We will prove this non-constructively, that is, without presenting an explicit strategy. Theorem.…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-2-proofs-of-existence-and-optimality/unit/chapter-2-proofs-of-existence-and-optimality-unit-5-more-complex-non-constructive-proofs-of-existence-optional/lesson/proofs-of-existence-and-optimality--more-complex-non-constructive-proofs-of-existence-optional--step-3/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-2-proofs-of-existence-and-optimality/unit/chapter-2-proofs-of-existence-and-optimality-unit-5-more-complex-non-constructive-proofs-of-existence-optional/lesson/proofs-of-existence-and-optimality--more-complex-non-constructive-proofs-of-existence-optional--step-3/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Proofs of Existence and Optimality › More Complex Non-constructive Proofs of Existence (Optional) › Lesson 3 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Proofs of Existence and Optimality / More Complex Non-constructive Proofs of Existence (Optional)</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Proofs of Existence and Optimality · More Complex Non-constructive Proofs of Existence (Optional)</p>
+        <h1>Lesson 3</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p>It turns out that the first player has a winning strategy! We will prove this non-constructively, that is, without presenting an explicit strategy.</p><p><strong>Theorem. </strong><em>In the Hex game, the first player has a&nbsp;winning strategy.</em></p><p><em>Proof. </em></p><ul><li><strong>No&nbsp;draws.</strong>&nbsp; First, let's prove that there are no draws in&nbsp;the game. Consider a&nbsp;board completely filled with cells. Think of&nbsp;the four sides of&nbsp;the field as&nbsp;four additional colored regions: two blue ones and two red ones. To&nbsp;such a&nbsp;filled board, correspond the following graph. The vertices of this graph are all the vertices of&nbsp;the hexagons, as&nbsp;well&nbsp;as the four corners of&nbsp;the field. Draw an&nbsp;edge between two neighboring vertices whenever the two regions on&nbsp;the sides of&nbsp;this edge have different colors. In&nbsp;other words, the graph traces the boundary between red and blue regions, including the boundary between a&nbsp;cell and an&nbsp;outer side of&nbsp;the field. Then, each internal vertex has a&nbsp;degree of&nbsp;zero or&nbsp;two, and the four corner vertices have a&nbsp;degree of one. This means that our graph is a&nbsp;set of cycles, as&nbsp;well as&nbsp;two paths with ends in&nbsp;the corner cells, and these paths do&nbsp;not intersect.<br><p style="text-align:center;"><img src="generated/assets/Proofs_of_Existence_and_Optimality/More_Complex_Non-constructive_Proofs_of_Existence_(Optional)=2/image0.png" width="800" ></p>The way these corner vertices are connected by&nbsp;paths determines the winner.<br><p style="text-align:center;"><img src="generated/assets/Proofs_of_Existence_and_Optimality/More_Complex_Non-constructive_Proofs_of_Existence_(Optional)=2/image1.png" width="800" ></p>In the example above, the corner-to-corner paths connect the corners vertically, so&nbsp;the blue player is&nbsp;the winner.</li><li><strong>Stealing a&nbsp;strategy.</strong>&nbsp; Now, assume that the second player has a strategy. The first player can &ldquo;borrow&rdquo; it from the second player as follows: the first player makes their initial move arbitrarily, and then starts playing according to the second player's strategy. This guarantees a win for the first player, which cannot be (since the second player has a strategy). Therefore, the second player cannot have a winning strategy, and since there is no draw, the first player must have one.<br>In this reasoning, we implicitly used the fact that the initial move of the first player (which they make arbitrarily) cannot prevent them from winning. More carefully, it should be said as follows: when the first player needs to make a move according to the second player's strategy, they mentally erase one of their pieces (so that the number of pieces on the field becomes odd) and see how the second player would move in such a situation; if the second player's strategy suggests placing a piece in the spot where the first player's (mentally erased) piece already stands, the first player simply places a piece in an arbitrary spot again.</li></ul><p><span class="proof-end" aria-label="End of proof">◼</span></p>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-2-proofs-of-existence-and-optimality/unit/chapter-2-proofs-of-existence-and-optimality-unit-5-more-complex-non-constructive-proofs-of-existence-optional/lesson/proofs-of-existence-and-optimality--more-complex-non-constructive-proofs-of-existence-optional--step-2/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-2-proofs-of-existence-and-optimality/unit/chapter-2-proofs-of-existence-and-optimality-unit-5-more-complex-non-constructive-proofs-of-existence-optional/lesson/proofs-of-existence-and-optimality--more-complex-non-constructive-proofs-of-existence-optional--step-4/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="Theorem (Ore, 1960). If for any two non-adjacent vertices \(u\) and \(v\) of an undirected graph the condition \(\deg(u)+\deg(v) \ge n-1\) holds, then the…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Cycles › Hamiltonian Graphs › Lesson 5 | Discrete Mathematics" />
+    <meta property="og:description" content="Theorem (Ore, 1960). If for any two non-adjacent vertices \(u\) and \(v\) of an undirected graph the condition \(\deg(u)+\deg(v) \ge n-1\) holds, then the…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-25-cycles/unit/chapter-25-cycles-unit-4-hamiltonian-graphs/lesson/cycles--hamiltonian-graphs--step-5/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-25-cycles/unit/chapter-25-cycles-unit-4-hamiltonian-graphs/lesson/cycles--hamiltonian-graphs--step-5/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Cycles › Hamiltonian Graphs › Lesson 5 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Cycles / Hamiltonian Graphs</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Cycles · Hamiltonian Graphs</p>
+        <h1>Lesson 5</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p><strong>Theorem (Ore, 1960). </strong><em></p><ol><li> If for any two non-adjacent vertices&nbsp;<span class="math-tex">\(u\)</span> and&nbsp;<span class="math-tex">\(v\)</span> of an undirected graph the condition <span class="math-tex">\(\deg(u)+\deg(v) \ge n-1\)</span> holds, then the graph has a Hamiltonian <em>path</em>.</li><li> If for any two non-adjacent vertices&nbsp;<span class="math-tex">\(u\)</span> and&nbsp;<span class="math-tex">\(v\)</span> of an undirected graph the condition <span class="math-tex">\(\deg(u)+\deg(v) \ge n\)</span> holds, then the graph has a Hamiltonian <em>cycle</em>.</li></ol><p></em></p><p style="text-align:center;"><img src="generated/assets/Cycles/Hamiltonian_Graphs=4/image0.png" width="800" ></p><p><em>Proof. </em></p><ol><li> If <span class="math-tex">\(n=2\)</span>, then everything is obvious. Now let <span class="math-tex">\(n&gt;2\)</span>. Note that the graph is connected: if there is no edge between two vertices, then the condition on their degrees guarantees that they have a common neighbor (and, therefore, a path of length two). Let <span class="math-tex">\(v_{1} \to v_{2} \to \dotsb \to v_{k}\)</span> be the longest (simple) path in&nbsp;<span class="math-tex">\(G\)</span>. If <span class="math-tex">\(k=n\)</span>, then there is nothing to prove, so assume that <span class="math-tex">\(k&lt;n\)</span> (and arrive at a contradiction). If <span class="math-tex">\(\{v_{1},v_{k}\} \in E\)</span>, then there is also a cycle of length&nbsp;<span class="math-tex">\(k\)</span>, and if <span class="math-tex">\(\{v_{1},v_{k}\} \not \in E\)</span>, then the existence of such a cycle is guaranteed by the lemma (since <span class="math-tex">\(\deg(v_{1})+\deg(v_{k}) \ge n-1 \ge k\)</span>). This <span class="math-tex">\(k\)</span>-cycle must be connected to the remaining part of the graph, but then there is also a path of length&nbsp;<span class="math-tex">\(k+1\)</span>.</li><li> A Hamiltonian path <span class="math-tex">\(v_{1} \to \dotsb \to v_{n}\)</span> exists by point&nbsp;<span class="math-tex">\(1\)</span>. If <span class="math-tex">\(\{v_{1}, v_{n}\} \in E\)</span>, then there is also a Hamiltonian cycle. If <span class="math-tex">\(\{v_{1}, v_{n}\} \not \in E\)</span>, then a Hamiltonian cycle exists by the lemma.</li></ol><p><span class="proof-end" aria-label="End of proof">◼</span></p>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-25-cycles/unit/chapter-25-cycles-unit-4-hamiltonian-graphs/lesson/cycles--hamiltonian-graphs--step-4/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-25-cycles/unit/chapter-25-cycles-unit-4-hamiltonian-graphs/lesson/cycles--hamiltonian-graphs--step-6/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

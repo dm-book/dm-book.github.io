@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="Consider the following polynomial: \[\begin{align*}P(x, y, z)&amp;= \prod_{i = 1}^{n}\left( (\pi - \omega^{i}\hbar)\ x + e\ y - \omega^{i}\pi e\ z \right) +…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Proofs of Universal Statements: Mathematical Induction › Application: Algorithm for Perfect Matching (Optional) › Lesson 1 | Discrete Mathematics" />
+    <meta property="og:description" content="Consider the following polynomial: \[\begin{align*}P(x, y, z)&amp;= \prod_{i = 1}^{n}\left( (\pi - \omega^{i}\hbar)\ x + e\ y - \omega^{i}\pi e\ z \right) +…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-3-proofs-of-universal-statements-mathematical-induction/unit/chapter-3-proofs-of-universal-statements-mathematical-induction-unit-7-application-algorithm-for-perfect-matching-optional/lesson/proofs-of-universal-statements-mathematical-induction--application-algorithm-for-perfect-matching-optional--step-1/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-3-proofs-of-universal-statements-mathematical-induction/unit/chapter-3-proofs-of-universal-statements-mathematical-induction-unit-7-application-algorithm-for-perfect-matching-optional/lesson/proofs-of-universal-statements-mathematical-induction--application-algorithm-for-perfect-matching-optional--step-1/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Proofs of Universal Statements: Mathematical Induction › Application: Algorithm for Perfect Matching (Optional) › Lesson 1 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Proofs of Universal Statements: Mathematical Induction / Application: Algorithm for Perfect Matching (Optional)</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Proofs of Universal Statements: Mathematical Induction · Application: Algorithm for Perfect Matching (Optional)</p>
+        <h1>Lesson 1</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p>Consider the&nbsp;following polynomial: <span class="math-tex">\[\begin{align*}P(x, y, z)&= \prod_{i = 1}^{n}\left( (\pi - \omega^{i}\hbar)\  x + e\  y - \omega^{i}\pi e\  z \right) + \\&+\prod_{i = 1}^{n}\left( (\hbar - \omega^{i}e)\  x + \omega^{i}\pi\  y + (\pi e - \omega^{i}\hbar)\  z \right) +\\&+\prod_{i = 1}^{n}\left( (e - \omega^{i}\pi)\  x - (\pi + \omega^{i}e)\  y + \hbar\  z \right),\end{align*}\]</span> where <span class="math-tex">\(\omega^{n}= 1\)</span> and <span class="math-tex">\(\hbar\)</span> denotes Planck's constant. Is&nbsp;it equal to&nbsp;zero? In&nbsp;other words, does&nbsp;it evaluate to&nbsp;zero on&nbsp;all input points? One possibility to&nbsp;check this is&nbsp;to try to&nbsp;expand this as&nbsp;a&nbsp;sum of&nbsp;monomials, but this will take exponential time. A&nbsp;simpler example is: an&nbsp;expansion of&nbsp;<span class="math-tex">\((1+x_{1})(1+x_{2})\dotsb(1+x_{n})\)</span> has <span class="math-tex">\(2^{n}\)</span>&nbsp;terms.</p><p>The question above is a&nbsp;special case of&nbsp;the following computational problem known as&nbsp;<em>polynomial identity testing</em> (commonly abbreviated as&nbsp;PIT): given a&nbsp;<em>multivariate</em> polynomial <span class="math-tex">\(P(x_{1}, x_{2}, \dotsc, x_{n})\)</span> over a&nbsp;field&nbsp;<span class="math-tex">\(\mathbb{F}\)</span>, is <span class="math-tex">\(P\)</span>&nbsp;the zero polynomial (i.e., does <span class="math-tex">\(P(x_{1}, \dotsc, x_{n}) = 0\)</span>, for all <span class="math-tex">\(x_{1}, \dotsc, x_{n} \in \mathbb{F}\)</span>)? It&nbsp;is straightforward to&nbsp;perform a&nbsp;check if&nbsp;<span class="math-tex">\(P\)</span> is&nbsp;specified by a&nbsp;list of&nbsp;its monomials, but, as&nbsp;the example above shows, this is&nbsp;not always the case. In&nbsp;general, it&nbsp;is common to&nbsp;assume that a&nbsp;polynomial is&nbsp;given as&nbsp;an&nbsp;<em>arithmetic circuit</em> (it&nbsp;roughly corresponds to&nbsp;a&nbsp;simple program that computes the polynomial step-by-step using summations and multiplications).</p><p>Designing an&nbsp;efficient <em>deterministic</em> algorithm for PIT is&nbsp;a&nbsp;challenging open problem. At&nbsp;the same time, PIT can be&nbsp;solved by&nbsp;an&nbsp;efficient <em>randomized</em> algorithm! The algorithm is&nbsp;surprisingly simple: evaluate the polynomial at&nbsp;a&nbsp;random point and report &ldquo;non-zero&rdquo; if&nbsp;the resulting value is&nbsp;non-zero. If, on&nbsp;the other hand, the result is&nbsp;zero, there are two cases: either the polynomial is&nbsp;zero or&nbsp;the polynomial is&nbsp;non-zero, but we&nbsp;hit its root. Below, we&nbsp;estimate the probability of&nbsp;hitting a&nbsp;root of&nbsp;a&nbsp;non-zero polynomial.</p><details><summary>For the curious 🤓</summary><div style="border-style: solid;">It&nbsp;turns out, that for the sample polynomial above, there&nbsp;is a&nbsp;short certificate (of&nbsp;the fact that the polynomial is&nbsp;zero). Denote <span class="math-tex">\[\begin{align*}a&= \pi\  x + e\  y,\\ b&= \hbar\  x + \pi e\  z, \\ c&= e\  x - \pi\  y + \hbar\  z.\end{align*}\]</span> Then, the polynomial turns into  <span class="math-tex">\[\begin{align*}\prod_{i = 1}^{n}(a - \omega^{i}b) + \prod_{i = 1}^{n}(b - \omega^{i}c) + \prod_{i = 1}^{n}(c - \omega^{i}a)&= (a^{n}- b^{n}) + (b^{n}- c^{n}) + (c^{n}- a^{n}) \\&= 0.\end{align*}\]</span>   Still, this is&nbsp;just a&nbsp;special case. Designing an&nbsp;efficient deterministic algorithm for PIT is&nbsp;a&nbsp;challenging open problem.</div></details>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-3-proofs-of-universal-statements-mathematical-induction/unit/chapter-3-proofs-of-universal-statements-mathematical-induction-unit-6-nested-statements-optional/lesson/proofs-of-universal-statements-mathematical-induction--nested-statements-optional--step-3/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-3-proofs-of-universal-statements-mathematical-induction/unit/chapter-3-proofs-of-universal-statements-mathematical-induction-unit-7-application-algorithm-for-perfect-matching-optional/lesson/proofs-of-universal-statements-mathematical-induction--application-algorithm-for-perfect-matching-optional--step-2/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

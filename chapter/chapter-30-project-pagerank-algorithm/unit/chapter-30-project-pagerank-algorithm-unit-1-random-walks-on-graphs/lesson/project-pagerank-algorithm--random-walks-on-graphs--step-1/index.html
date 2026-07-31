@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="The early days of the World Wide Web were characterized by rapid growth and the challenge of information discovery. Before sophisticated algorithms, the…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Project: PageRank Algorithm › Random Walks on Graphs › Lesson 1 | Discrete Mathematics" />
+    <meta property="og:description" content="The early days of the World Wide Web were characterized by rapid growth and the challenge of information discovery. Before sophisticated algorithms, the…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-30-project-pagerank-algorithm/unit/chapter-30-project-pagerank-algorithm-unit-1-random-walks-on-graphs/lesson/project-pagerank-algorithm--random-walks-on-graphs--step-1/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-30-project-pagerank-algorithm/unit/chapter-30-project-pagerank-algorithm-unit-1-random-walks-on-graphs/lesson/project-pagerank-algorithm--random-walks-on-graphs--step-1/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Project: PageRank Algorithm › Random Walks on Graphs › Lesson 1 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Project: PageRank Algorithm / Random Walks on Graphs</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Project: PageRank Algorithm · Random Walks on Graphs</p>
+        <h1>Lesson 1</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p>The early days of the World Wide Web were characterized by&nbsp;rapid growth and the challenge of information discovery. Before sophisticated algorithms, the internet lacked a&nbsp;reliable navigation map. Early search engines and directories relied primarily on&nbsp;simple methods that quickly exposed their fundamental limitations.</p><p>In&nbsp;the mid-1990s, the primary tools for finding information were human-curated web directories and search engines based on simple keyword matching. Services like <em>Yahoo! Directory</em> were organized taxonomically, requiring human editors to&nbsp;categorize websites. While robust for general browsing, this approach was non-scalable and inherently biased by&nbsp;editorial judgment.</p><p>Search engines like <em>AltaVista</em> moved beyond directories by&nbsp;indexing the full text of&nbsp;web pages. Their ranking algorithms were primarily based on&nbsp;the frequency and location of&nbsp;keywords within a document. A&nbsp;page containing the search term ten times was generally ranked higher than a&nbsp;page containing&nbsp;it five times.</p><p>The simplicity of early ranking metrics led to two major, critical flaws: </p><ul><li><strong>Relevance vs. Importance.</strong>&nbsp; Keyword matching conflates <em>relevance</em> (how much a&nbsp;page talks about a&nbsp;topic) with <em>importance</em> (how trustworthy or&nbsp;authoritative the page&nbsp;is). A&nbsp;page filled with repetitive keywords (a&nbsp;technique known as <em>keyword stuffing</em>) could easily outrank a&nbsp;high-quality, authoritative source.</li><li><strong>Vulnerability to Manipulation.</strong>&nbsp; Because ranking relied purely on&nbsp;on-page content, black-hat SEO techniques could easily game the system, resulting in&nbsp;low-quality or&nbsp;spam websites appearing at the top of search results. This compromised user experience and reduced trust in the search results.</li></ul><p>These limitations created a&nbsp;strong demand for a&nbsp;ranking mechanism that could measure a&nbsp;website's intrinsic quality or&nbsp;authority, independent of&nbsp;its content. This need paved the way for the development of&nbsp;PageRank.</p><p style="text-align:center;"><img src="generated/assets/Project$_PageRank_Algorithm/Random_Walks_on_Graphs=0/image0.png" width="800" ></p><p>PageRank, an&nbsp;algorithm developed by&nbsp;Larry Page and Sergey Brin at&nbsp;Stanford University, fundamentally shifted search engine philosophy. Instead of&nbsp;relying solely on a page's content, PageRank measures the <em>quality</em> and <em>quantity</em> of&nbsp;links pointing to&nbsp;a&nbsp;page, treating the entire World Wide Web as&nbsp;a&nbsp;massive graph.</p><p>The algorithm is based on&nbsp;two key principles, often explained through the analogy of a&nbsp;<em>random web surfer</em>. </p><ul><li><strong>Links as&nbsp;Votes.</strong>&nbsp; A&nbsp;hyperlink from one page to&nbsp;another one is&nbsp;interpreted as&nbsp;a&nbsp;vote of&nbsp;confidence or&nbsp;endorsement. The more votes a&nbsp;page receives, the more important it&nbsp;is.</li><li><strong>Importance of&nbsp;the Voter.</strong>&nbsp; Crucially, not all votes are equal. A&nbsp;vote from an&nbsp;important or&nbsp;authoritative page (one with a&nbsp;high PageRank itself) counts for more than a&nbsp;vote from an&nbsp;unimportant page.</li></ul>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-29-planar-graphs/unit/chapter-29-planar-graphs-unit-9-theory-problems/lesson/planar-graphs--theory-problems--step-3/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-30-project-pagerank-algorithm/unit/chapter-30-project-pagerank-algorithm-unit-1-random-walks-on-graphs/lesson/project-pagerank-algorithm--random-walks-on-graphs--step-2/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="Now we are ready to prove the theorem about recurrence relations. Proof. Expand the recurrence relation \(T(n)=cn^{d}+aT(n/b)\) :…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Recurrence Relations › Application: Divide and Conquer › Lesson 6 | Discrete Mathematics" />
+    <meta property="og:description" content="Now we are ready to prove the theorem about recurrence relations. Proof. Expand the recurrence relation \(T(n)=cn^{d}+aT(n/b)\) :…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-15-recurrence-relations/unit/chapter-15-recurrence-relations-unit-5-application-divide-and-conquer/lesson/recurrence-relations--application-divide-and-conquer--step-6/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-15-recurrence-relations/unit/chapter-15-recurrence-relations-unit-5-application-divide-and-conquer/lesson/recurrence-relations--application-divide-and-conquer--step-6/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Recurrence Relations › Application: Divide and Conquer › Lesson 6 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Recurrence Relations / Application: Divide and Conquer</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Recurrence Relations · Application: Divide and Conquer</p>
+        <h1>Lesson 6</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p>Now we are ready to prove the theorem about recurrence relations.</p><p><em>Proof. </em>Expand the recurrence relation <span class="math-tex">\(T(n)=cn^{d}+aT(n/b)\)</span>:  <span class="math-tex">\[\begin{align*}T(n)&=cn^{d}+aT(n/b)\\&=cn^{d}+a(c(n/b)^{d}+aT(n/b^{2}))=cn^{d}+ca(n/b)^{d}+a^{2}T(n/b^{2})=\\&\vdots\\&=cn^{d}+ca(n/b)^{d}+ca^{2}(n/b^{2})^{d}+\dotsb=\\&=\sum_{l=0}^{\log_bn}ca^{l}\left(\frac{n}{b^l}\right)^{d}=\\&=\sum_{l=0}^{\log_bn}a^{l} \cdot c \cdot \frac{n^d}{b^{ld}}=\\&=cn^{d}\sum_{l=0}^{\log_bn}\frac{a^l}{b^{ld}}=\\&=cn^{d}\sum_{l=0}^{\log_bn}\left(\frac{a}{b^{d}}\right)^{l}=\\&=cn^{d}\sum_{l=0}^{\log_bn}\alpha^{l},\end{align*}\]</span>   where <span class="math-tex">\(\alpha=\frac{a}{b^d}\)</span>. Below, we show a slightly more visual method of deriving this formula. We will then estimate the resulting expression.</p><p>The recursion tree of the algorithm is shown below. For each level, the number of problems, their sizes, and the total work performed by the algorithm at that level are displayed. </p><p style="text-align:center;"><img src="generated/assets/Recurrence_Relations/Application$_Divide_and_Conquer=5/image0.png" width="800" ></p><p> At each lower level, the size of subproblems decreases by a factor of <span class="math-tex">\(b\)</span>, while the number of subproblems increases by a factor of <span class="math-tex">\(a\)</span>. At level <span class="math-tex">\(l\)</span>, there are <span class="math-tex">\(a^{l}\)</span> tasks of size <span class="math-tex">\(n/b^{l}\)</span>, and the total work at this level is <span class="math-tex">\[a^{l} \cdot c \cdot \left( \frac{n}{b^l}\right)^{d} \  .\]</span> Summing over all levels <span class="math-tex">\[l=0,1,\dotsc,\log_{b}n,\]</span> we obtain <span class="math-tex">\(\sum_{l=0}^{\log_bn}ca^{l}\left(\frac{n}{b^l}\right)^{d}\)</span>. Thus, it remains to evaluate <span class="math-tex">\(cn^{d}\sum_{l=0}^{\log_bn}\alpha^{l}\)</span>.</p><p>Consider three cases.</p><ol><li> <span class="math-tex">\(a&gt;b^{d}\)</span>. Then  <span class="math-tex">\[cn^{d}\cdot \left(\frac{a}{b^{d}}\right)^{\log_{b}n}=cn^{d} \cdot \frac{a^{\log_{b}n}}{b^{d\log_{b}n}}= cn^{d}\cdot \frac{n^{\log_{b}a}}{n^d}=c\cdot n^{\log_{b}a}=O(n^{\log_{b}a}) \  .\]</span>   (We used the equalities <span class="math-tex">\(a^{\log_{b}n}=n^{\log_{b}a}\)</span> and <span class="math-tex">\(b^{\log_{b}n}=n\)</span>.)</li><li> <span class="math-tex">\(a=b^{d}\)</span>. Then <span class="math-tex">\[cn^{d} \cdot O(\log_{b}n)=O(n^{d}\log n) \  .\]</span> (The logarithm base inside <span class="math-tex">\(O(\cdot)\)</span> can be omitted if it is constant.)</li><li> <span class="math-tex">\(a&lt;b^{d}\)</span>. Then <span class="math-tex">\[cn^{d}\cdot O(1)=O(n^{d}) \  .\]</span></li></ol><p><span class="proof-end" aria-label="End of proof">◼</span></p>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-15-recurrence-relations/unit/chapter-15-recurrence-relations-unit-5-application-divide-and-conquer/lesson/recurrence-relations--application-divide-and-conquer--step-5/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-15-recurrence-relations/unit/chapter-15-recurrence-relations-unit-5-application-divide-and-conquer/lesson/recurrence-relations--application-divide-and-conquer--step-7/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

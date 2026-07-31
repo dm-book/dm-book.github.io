@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="Programming problem. Given a grid with obstacles and several robots, determine whether all robots can move from their starting cells to their target cells…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Project: 15 Puzzle, A*, and Coordinated Motion Planning › Coordinated Motion Planning › Lesson 5 | Discrete Mathematics" />
+    <meta property="og:description" content="Programming problem. Given a grid with obstacles and several robots, determine whether all robots can move from their starting cells to their target cells…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-6-project-15-puzzle-a-and-coordinated-motion-planning/unit/chapter-6-project-15-puzzle-a-and-coordinated-motion-planning-unit-5-coordinated-motion-planning/lesson/project-15-puzzle-a-and-coordinated-motion-planning--coordinated-motion-planning--step-5/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-6-project-15-puzzle-a-and-coordinated-motion-planning/unit/chapter-6-project-15-puzzle-a-and-coordinated-motion-planning-unit-5-coordinated-motion-planning/lesson/project-15-puzzle-a-and-coordinated-motion-planning--coordinated-motion-planning--step-5/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Project: 15 Puzzle, A*, and Coordinated Motion Planning › Coordinated Motion Planning › Lesson 5 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Project: 15 Puzzle, A*, and Coordinated Motion Planning / Coordinated Motion Planning</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Project: 15 Puzzle, A*, and Coordinated Motion Planning · Coordinated Motion Planning</p>
+        <h1>Lesson 5</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p><strong>Programming problem. </strong> Given a&nbsp;grid with obstacles and several robots, determine whether all robots can move from their starting cells to&nbsp;their target cells without collisions.</p><ul><li><strong>Input format.</strong>&nbsp; The first line contains two integers <span class="math-tex">\(n\)</span> and&nbsp;<span class="math-tex">\(k\)</span> (<span class="math-tex">\(2\le n\le 5\)</span>, <span class="math-tex">\(1\le k\le3\)</span>). The next <span class="math-tex">\(n\)</span>&nbsp;lines use&nbsp;<span class="math- tex">\(\texttt{.}\)</span> for a&nbsp;free cell and&nbsp;<span class="math- tex">\(\texttt{\#}\)</span> for an&nbsp;obstacle. Each of&nbsp;the next <span class="math-tex">\(k\)</span>&nbsp;lines contains <span class="math-tex">\(s_{x},s_{y},t_{x},t_{y}\)</span> for one robot; coordinates range from&nbsp;<span class="math-tex">\(0\)</span> to&nbsp;<span class="math-tex">\(n-1\)</span>. All starting cells are&nbsp;different, all target cells are&nbsp;different, and all specified cells are&nbsp;free.</li><li><strong>Output format.</strong>&nbsp; Output&nbsp;<span class="math-tex">\(1\)</span> if&nbsp;there exists a&nbsp;collision-free schedule that moves every robot to&nbsp;its target, and&nbsp;<span class="math-tex">\(0\)</span> otherwise.</li></ul>
+          <div class="task-card programming-card">
+        
+        <a class="cogniterra-only-notice" href="https://cogniterra.org/a/697" target="_blank" rel="noreferrer">This problem can only be submitted at Cogniterra.</a>
+        <section class="programming-samples" aria-label="Public programming samples">
+          <div class="task-heading">Public samples</div>
+          <article class="programming-sample">
+            <strong>Public sample 1</strong>
+            <div class="programming-result-grid">
+              <div><div class="result-field-label">Input</div><pre>3 2
+...
+...
+...
+0 0 0 2
+0 2 0 0</pre></div>
+              <div><div class="result-field-label">Example output</div><pre>1</pre></div>
+            </div>
+          </article>
+          <article class="programming-sample">
+            <strong>Public sample 2</strong>
+            <div class="programming-result-grid">
+              <div><div class="result-field-label">Input</div><pre>3 2
+...
+###
+###
+0 0 0 2
+0 2 0 0</pre></div>
+              <div><div class="result-field-label">Example output</div><pre>0</pre></div>
+            </div>
+          </article>
+        </section>
+      </div>
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-6-project-15-puzzle-a-and-coordinated-motion-planning/unit/chapter-6-project-15-puzzle-a-and-coordinated-motion-planning-unit-5-coordinated-motion-planning/lesson/project-15-puzzle-a-and-coordinated-motion-planning--coordinated-motion-planning--step-4/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-6-project-15-puzzle-a-and-coordinated-motion-planning/unit/chapter-6-project-15-puzzle-a-and-coordinated-motion-planning-unit-6-optimal-coordinated-motion-planning-with-a/lesson/project-15-puzzle-a-and-coordinated-motion-planning--optimal-coordinated-motion-planning-with-a--step-1/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

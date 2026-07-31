@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="The flow polynomial and the chromatic polynomial are more than parallel constructions: for planar graphs they are essentially the same polynomial, viewed…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Flows and Connectivity › Flow Polynomial (Optional) › Lesson 10 | Discrete Mathematics" />
+    <meta property="og:description" content="The flow polynomial and the chromatic polynomial are more than parallel constructions: for planar graphs they are essentially the same polynomial, viewed…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-26-flows-and-connectivity/unit/chapter-26-flows-and-connectivity-unit-8-flow-polynomial-optional/lesson/flows-and-connectivity--flow-polynomial-optional--step-10/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-26-flows-and-connectivity/unit/chapter-26-flows-and-connectivity-unit-8-flow-polynomial-optional/lesson/flows-and-connectivity--flow-polynomial-optional--step-10/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Flows and Connectivity › Flow Polynomial (Optional) › Lesson 10 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Flows and Connectivity / Flow Polynomial (Optional)</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Flows and Connectivity · Flow Polynomial (Optional)</p>
+        <h1>Lesson 10</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p>The&nbsp;flow polynomial and the&nbsp;chromatic polynomial are more than parallel constructions: for planar graphs they are essentially the&nbsp;same polynomial, viewed through the&nbsp;lens of planar duality!</p><p>A&nbsp;<em>proper face <span class="math-tex">\(q\)</span>-coloring</em> of <span class="math-tex">\(G\)</span> is an&nbsp;assignment of colors from <span class="math-tex">\([q]\)</span> to the&nbsp;faces of <span class="math-tex">\(G\)</span> (including the&nbsp;unbounded outer face) such that, for every edge, the&nbsp;two faces lying on its two sides receive different colors.</p><p><strong>Theorem (Tutte, 1954). </strong><em>Let <span class="math-tex">\(G\)</span> be a&nbsp;connected plane graph, and let <span class="math-tex">\(F_{G}(q)\)</span> be the&nbsp;number of proper face <span class="math-tex">\(q\)</span>-colorings of <span class="math-tex">\(G\)</span>. Then for every <span class="math-tex">\(q\ge 2\)</span>, <span class="math-tex">\[F_{G}(q)=q\Phi_{G}(q) \  .\]</span> In particular, the&nbsp;faces of <span class="math-tex">\(G\)</span> admit a&nbsp;proper <span class="math-tex">\(q\)</span>-coloring if and only if <span class="math-tex">\(G\)</span> has a&nbsp;nowhere-zero <span class="math-tex">\(\mathbb{Z}_{q}\)</span>-circulation.</em></p><p><em>Proof. </em>Think of the&nbsp;<span class="math-tex">\(q\)</span> colors as elements of <span class="math-tex">\(\mathbb{Z}_{q}\)</span>. Orient the&nbsp;edges of <span class="math-tex">\(G\)</span> arbitrarily. For an&nbsp;oriented edge <span class="math-tex">\(e\)</span>, let <span class="math-tex">\(L(e)\)</span> be the&nbsp;face on the&nbsp;left of <span class="math-tex">\(e\)</span> and <span class="math-tex">\(R(e)\)</span> the&nbsp;face on the&nbsp;right. From a&nbsp;proper face coloring <span class="math-tex">\(c\)</span>, define <span class="math-tex">\[\phi(e)=c(L(e))-c(R(e)) \in \mathbb{Z}_{q} \  .\]</span> The&nbsp;two faces on the&nbsp;sides of <span class="math-tex">\(e\)</span> have different colors, so <span class="math-tex">\(\phi(e)\ne 0\)</span>. At a&nbsp;vertex, list the&nbsp;incident faces in cyclic order as <span class="math-tex">\(c_{1},c_{2},&hellip;,c_{d}\)</span>. The&nbsp;signed contributions of the&nbsp;incident edges are <span class="math-tex">\(c_{1}-c_{2},c_{2}-c_{3},&hellip;,c_{d}-c_{1}\)</span>, and their sum is <span class="math-tex">\(0\)</span>. So <span class="math-tex">\(\phi\)</span> is a&nbsp;nowhere-zero circulation.</p><p>Conversely, suppose that <span class="math-tex">\(\phi\)</span> is a&nbsp;nowhere-zero <span class="math-tex">\(\mathbb{Z}_{q}\)</span>-circulation. Choose one face and give it color <span class="math-tex">\(0\)</span>. To color any other face, walk from the&nbsp;starting face to it by repeatedly crossing edges of <span class="math-tex">\(G\)</span>; when we cross an&nbsp;edge from its right side to its left side, add <span class="math-tex">\(\phi(e)\)</span>, and when we cross it the&nbsp;other way, subtract <span class="math-tex">\(\phi(e)\)</span>. We need to know that the&nbsp;resulting color does not depend on the&nbsp;sequence of edge-crossings we used. For a&nbsp;walk of edge-crossings that returns to the&nbsp;starting face, the&nbsp;total color change is the&nbsp;signed sum of <span class="math-tex">\(\phi\)</span>-values on the&nbsp;crossed edges; after canceling edges crossed twice in opposite directions, what remains is the&nbsp;circulation across the&nbsp;cut separating the&nbsp;vertices enclosed by the&nbsp;walk from the&nbsp;rest of <span class="math-tex">\(G\)</span>, which is&nbsp;<span class="math-tex">\(0\)</span> by the&nbsp;cut lemma. Hence the&nbsp;colors are well-defined, and across every edge the&nbsp;two face colors differ by the&nbsp;nonzero value <span class="math-tex">\(\phi(e)\)</span>.</p><p>Finally, two proper face colorings give the&nbsp;same circulation if and only if they differ by a&nbsp;global additive constant in <span class="math-tex">\(\mathbb{Z}_{q}\)</span>: shifting every face color by the&nbsp;same element leaves all the&nbsp;differences <span class="math-tex">\(\phi(e)=c(L(e))-c(R(e))\)</span> unchanged, and once one face's color is fixed, the&nbsp;rest are determined by the&nbsp;argument above. Hence each circulation corresponds to exactly <span class="math-tex">\(q\)</span> proper face colorings, which gives <span class="math-tex">\(F_{G}(q)=q\Phi_{G}(q)\)</span>.<span class="proof-end" aria-label="End of proof">◼</span></p>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-26-flows-and-connectivity/unit/chapter-26-flows-and-connectivity-unit-8-flow-polynomial-optional/lesson/flows-and-connectivity--flow-polynomial-optional--step-9/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-26-flows-and-connectivity/unit/chapter-26-flows-and-connectivity-unit-8-flow-polynomial-optional/lesson/flows-and-connectivity--flow-polynomial-optional--step-11/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

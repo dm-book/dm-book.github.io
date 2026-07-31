@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="Using standard generators in Python, you can enumerate subsets like this. from itertools import product u = [5, 3, 7, 4] for seq in product(range(2),…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Generation of Combinatorial Objects › Generating Subsets › Lesson 9 | Discrete Mathematics" />
+    <meta property="og:description" content="Using standard generators in Python, you can enumerate subsets like this. from itertools import product u = [5, 3, 7, 4] for seq in product(range(2),…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-14-generation-of-combinatorial-objects/unit/chapter-14-generation-of-combinatorial-objects-unit-1-generating-subsets/lesson/generation-of-combinatorial-objects--generating-subsets--step-9/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-14-generation-of-combinatorial-objects/unit/chapter-14-generation-of-combinatorial-objects-unit-1-generating-subsets/lesson/generation-of-combinatorial-objects--generating-subsets--step-9/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Generation of Combinatorial Objects › Generating Subsets › Lesson 9 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Generation of Combinatorial Objects / Generating Subsets</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Generation of Combinatorial Objects · Generating Subsets</p>
+        <h1>Lesson 9</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p>Using standard generators in Python, you can enumerate subsets like this. </p><pre><code class="language-python">from itertools import product
+
+u = [5, 3, 7, 4]
+
+for seq in product(range(2), repeat=len(u)):
+    print([u[i] for i in range(len(u)) if seq[i] == 1], end=' ')</code></pre><pre><code class="language-auto">[] [4] [7] [7, 4] [3] [3, 4] [3, 7] [3, 7, 4] [5] [5, 4] [5, 7] [5, 7, 4] [5, 3] [5, 3, 4] [5, 3, 7] [5, 3, 7, 4]
+</code></pre><p>In Python, it is also easy to enumerate all subsets of a fixed size: </p><pre><code class="language-python">from itertools import combinations
+
+print(*combinations([5, 3, 7, 4], 2))</code></pre><pre><code class="language-auto">(5, 3) (5, 7) (5, 4) (3, 7) (3, 4) (7, 4)
+</code></pre><p> By iterating through all possible sizes, we get all subsets: </p><pre><code class="language-python">from itertools import chain, combinations
+
+u = [5, 3, 7, 4]
+print(*chain.from_iterable(combinations(u, k) for k in range(len(u) + 1)))</code></pre><pre><code class="language-auto">() (5,) (3,) (7,) (4,) (5, 3) (5, 7) (5, 4) (3, 7) (3, 4) (7, 4) (5, 3, 7) (5, 3, 4) (5, 7, 4) (3, 7, 4) (5, 3, 7, 4)
+</code></pre><p>Our manual method of enumerating subsets can be adapted to enumerate subsets of fixed size like this: </p><pre><code class="language-python">def combinations(universe, k):
+    def helper(subset, index):
+        if len(subset) == k:
+            yield subset
+        else:
+            for last_index in range(index, len(universe)):
+                yield from helper(subset + [universe[last_index]], last_index + 1)
+
+    yield from helper(subset=[], index=0)
+
+print(*combinations([5, 3, 7, 4], 2))</code></pre><pre><code class="language-auto">[5, 3] [5, 7] [5, 4] [3, 7] [3, 4] [7, 4]
+</code></pre>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-14-generation-of-combinatorial-objects/unit/chapter-14-generation-of-combinatorial-objects-unit-1-generating-subsets/lesson/generation-of-combinatorial-objects--generating-subsets--step-8/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-14-generation-of-combinatorial-objects/unit/chapter-14-generation-of-combinatorial-objects-unit-2-gray-codes/lesson/generation-of-combinatorial-objects--gray-codes--step-1/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

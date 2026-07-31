@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="It is not true that every language has a proof system. This is just because there are “more” languages than proof systems: the set of proof systems is…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Proofs in Computer Science (Optional) › Computability Theory › Lesson 3 | Discrete Mathematics" />
+    <meta property="og:description" content="It is not true that every language has a proof system. This is just because there are “more” languages than proof systems: the set of proof systems is…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-5-proofs-in-computer-science-optional/unit/chapter-5-proofs-in-computer-science-optional-unit-2-computability-theory/lesson/proofs-in-computer-science-optional--computability-theory--step-3/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-5-proofs-in-computer-science-optional/unit/chapter-5-proofs-in-computer-science-optional-unit-2-computability-theory/lesson/proofs-in-computer-science-optional--computability-theory--step-3/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Proofs in Computer Science (Optional) › Computability Theory › Lesson 3 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Proofs in Computer Science (Optional) / Computability Theory</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Proofs in Computer Science (Optional) · Computability Theory</p>
+        <h1>Lesson 3</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p>It&nbsp;is not true that every language has a&nbsp;proof system. This is&nbsp;just because there are &ldquo;more&rdquo; languages than proof systems: the set of&nbsp;proof systems is&nbsp;countable, whereas the set of&nbsp;languages is&nbsp;not.</p><p>In the literature, a&nbsp;more commonly used definition of enumerability is: a&nbsp;language is enumerable if there exists an algorithm that prints all elements of this language and only them. It is easy to see that this definition is equivalent to the one introduced above. Indeed, if a language has a proof system <span class="math-tex">\(S\)</span>, then there is also an enumerating algorithm: this algorithm iterates over pairs <span class="math-tex">\((x,w)\)</span> (say, in order of increasing input size) and prints those <span class="math-tex">\(x\)</span> for which <span class="math-tex">\(S(x,w)=1\)</span>. Conversely, if there is an enumerating algorithm <span class="math-tex">\(E\)</span>, then there is also a proof system <span class="math-tex">\(S\)</span>: as a proof <span class="math-tex">\(w\)</span> for a string <span class="math-tex">\(x \in L\)</span>, one can take, for example, the number of steps after which <span class="math-tex">\(E\)</span> prints <span class="math-tex">\(x\)</span>; the algorithm <span class="math-tex">\(S\)</span> then simply runs the algorithm <span class="math-tex">\(E\)</span> for the required number of steps and verifies that the string <span class="math-tex">\(x\)</span> is printed. (Recall that the algorithm <span class="math-tex">\(E\)</span> may potentially never terminate. For this reason, we use the number of steps as a parameter above.)</p>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-5-proofs-in-computer-science-optional/unit/chapter-5-proofs-in-computer-science-optional-unit-2-computability-theory/lesson/proofs-in-computer-science-optional--computability-theory--step-2/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-5-proofs-in-computer-science-optional/unit/chapter-5-proofs-in-computer-science-optional-unit-2-computability-theory/lesson/proofs-in-computer-science-optional--computability-theory--step-4/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

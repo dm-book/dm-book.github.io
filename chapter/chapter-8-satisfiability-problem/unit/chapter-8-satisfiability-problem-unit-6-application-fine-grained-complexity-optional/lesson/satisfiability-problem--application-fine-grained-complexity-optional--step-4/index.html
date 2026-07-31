@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="In the orthogonal vectors problem two sets of \(d\) -dimensional binary vectors of size \(n\) are given: \(A,B \subseteq \{0,1\}^{d}\) , \(|A|=|B|=n\) . It…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Satisfiability Problem › Application: Fine-Grained Complexity (Optional) › Lesson 4 | Discrete Mathematics" />
+    <meta property="og:description" content="In the orthogonal vectors problem two sets of \(d\) -dimensional binary vectors of size \(n\) are given: \(A,B \subseteq \{0,1\}^{d}\) , \(|A|=|B|=n\) . It…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-8-satisfiability-problem/unit/chapter-8-satisfiability-problem-unit-6-application-fine-grained-complexity-optional/lesson/satisfiability-problem--application-fine-grained-complexity-optional--step-4/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-8-satisfiability-problem/unit/chapter-8-satisfiability-problem-unit-6-application-fine-grained-complexity-optional/lesson/satisfiability-problem--application-fine-grained-complexity-optional--step-4/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Satisfiability Problem › Application: Fine-Grained Complexity (Optional) › Lesson 4 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Satisfiability Problem / Application: Fine-Grained Complexity (Optional)</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Satisfiability Problem · Application: Fine-Grained Complexity (Optional)</p>
+        <h1>Lesson 4</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p>In the <em>orthogonal vectors problem</em> two sets of <span class="math-tex">\(d\)</span>-dimensional binary vectors of size&nbsp;<span class="math-tex">\(n\)</span> are given: <span class="math-tex">\(A,B \subseteq \{0,1\}^{d}\)</span>, <span class="math-tex">\(|A|=|B|=n\)</span>. It is required to check whether there exist two vectors <span class="math-tex">\(a \in A, b \in B\)</span> whose dot product is zero: <span class="math-tex">\(\sum_{i=1}^{d}a_{i}b_{i}=0\)</span>. The naive algorithm for this problem has running time <span class="math-tex">\(O(dn^{2})\)</span>. It turns out that speeding up such exhaustive search is a major open problem.</p><p><strong>Theorem (Williams, 2005). </strong><em>If for the orthogonal vectors problem there is an algorithm with running time <span class="math-tex">\(O(n^{2-\varepsilon}\operatorname{poly}(d))\)</span>, then for the satisfiability problem there is an algorithm with running time <span class="math-tex">\(O^{*}((2-\delta(\varepsilon))^{n})\)</span>.</em></p><p><em>Proof. </em>Let <span class="math-tex">\(F\)</span> be a formula over <span class="math-tex">\(n\)</span> variables and <span class="math-tex">\(m\)</span> clauses. We split the variables into two parts of sizes <span class="math-tex">\(n_{1}=\lfloor n/2\rfloor\)</span> and <span class="math-tex">\(n_{2}=\lceil n/2\rceil\)</span>. The set <span class="math-tex">\(A \subseteq \{0,1\}^{m}\)</span> will consist of <span class="math-tex">\(2^{n_1}\)</span> vectors, one vector for each assignment&nbsp;<span class="math-tex">\(u\)</span> of the first part: <span class="math-tex">\(a_{u}[i]=0\)</span> if and only if assignment&nbsp;<span class="math-tex">\(u\)</span> satisfies the <span class="math-tex">\(i\)</span>-th clause of the formula. The set&nbsp;<span class="math-tex">\(B\)</span> consists similarly of <span class="math-tex">\(2^{n_2}\)</span> vectors, one for each assignment of the second part. It is easy to see that sets&nbsp;<span class="math-tex">\(A\)</span> and&nbsp;<span class="math-tex">\(B\)</span> have an orthogonal pair of vectors if and only if the formula <span class="math-tex">\(F\)</span> is satisfiable.<span class="proof-end" aria-label="End of proof">◼</span></p>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-8-satisfiability-problem/unit/chapter-8-satisfiability-problem-unit-6-application-fine-grained-complexity-optional/lesson/satisfiability-problem--application-fine-grained-complexity-optional--step-3/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-8-satisfiability-problem/unit/chapter-8-satisfiability-problem-unit-7-theory-problems/lesson/satisfiability-problem--theory-problems--step-1/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

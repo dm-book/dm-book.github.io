@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="Optional Problems. (20 points) A derangement is a permutation \(p\) of \([n]\) such that \(p[i] \neq i\) for all \(i\) . Design an algorithm to find the…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Generation of Combinatorial Objects › Theory Problems › Lesson 3 | Discrete Mathematics" />
+    <meta property="og:description" content="Optional Problems. (20 points) A derangement is a permutation \(p\) of \([n]\) such that \(p[i] \neq i\) for all \(i\) . Design an algorithm to find the…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-14-generation-of-combinatorial-objects/unit/chapter-14-generation-of-combinatorial-objects-unit-10-theory-problems/lesson/generation-of-combinatorial-objects--theory-problems--step-3/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-14-generation-of-combinatorial-objects/unit/chapter-14-generation-of-combinatorial-objects-unit-10-theory-problems/lesson/generation-of-combinatorial-objects--theory-problems--step-3/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Generation of Combinatorial Objects › Theory Problems › Lesson 3 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Generation of Combinatorial Objects / Theory Problems</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Generation of Combinatorial Objects · Theory Problems</p>
+        <h1>Lesson 3</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p><strong>Optional Problems.</strong></p><ol><li data-theory-problem>(20 points) A&nbsp;derangement is&nbsp;a permutation <span class="math-tex">\(p\)</span> of&nbsp;<span class="math-tex">\([n]\)</span> such&nbsp;that <span class="math-tex">\(p[i] \neq i\)</span> for&nbsp;all <span class="math-tex">\(i\)</span>. Design an&nbsp;algorithm to&nbsp;find the&nbsp;<span class="math-tex">\(k\)</span>-th lexicographically ordered derangement of&nbsp;size <span class="math-tex">\(n\)</span> in&nbsp;time <span class="math-tex">\(O(n^{2})\)</span>.</li><li data-theory-problem>(20 points) Describe an&nbsp;algorithm that, for&nbsp;a&nbsp;given sequence of&nbsp;<span class="math-tex">\(n\)</span>&nbsp;positive integers, checks if&nbsp;it&nbsp;is possible to&nbsp;partition these numbers into three parts with equal sums in&nbsp;<span class="math-tex">\(O(ns^{2})\)</span> time, where <span class="math-tex">\(s\)</span>&nbsp;is&nbsp;the sum of&nbsp;these numbers.</li><li data-theory-problem>(20 points) Given a&nbsp;string <span class="math-tex">\(S\)</span> of&nbsp;length <span class="math-tex">\(n\)</span>, determine the&nbsp;total number of&nbsp;its palindromic subsequences. You&nbsp;are required to&nbsp;solve this problem within <span class="math-tex">\(O(n^{2})\)</span> time complexity and&nbsp;<span class="math-tex">\(O(n)\)</span> space complexity.</li><li data-theory-problem>(20 points) Given two strings, <span class="math-tex">\(s\)</span> and <span class="math-tex">\(t\)</span>, over the lowercase Latin alphabet, you are&nbsp;required to&nbsp;delete zero or&nbsp;more characters from each of&nbsp;them. The goal is&nbsp;to&nbsp;obtain two identical strings. The resulting common string must have the maximum possible length. For instance, if&nbsp;the given sequences are&nbsp;<span class="math-tex">\(acbaaba\)</span> and <span class="math-tex">\(bcacb\)</span>, the longest common subsequences have a&nbsp;length of&nbsp;3. Examples of&nbsp;such subsequences include <span class="math-tex">\(acb\)</span>, <span class="math-tex">\(bab\)</span>, and <span class="math-tex">\(cab\)</span>. Your task is&nbsp;to&nbsp;find the specific longest common subsequence that comes first in&nbsp;lexicographical order in time <span class="math-tex">\(O(|s| \cdot |t|)\)</span>.</li><li data-theory-problem>(30 points) Assume that one needs to&nbsp;compute the&nbsp;dynamic programming values for&nbsp;all <span class="math-tex">\(1 \le i \le j \le n\)</span>, which are defined by&nbsp;the&nbsp;following recurrence relation: <span class="math-tex">\[\operatorname{dp}(i, j) = C(i, j) + \min_{i \le k &lt; j}\{\operatorname{dp}(i, k) + \operatorname{dp}(k+1, j)\}.\]</span> The&nbsp;base case is&nbsp;given by&nbsp;<span class="math-tex">\(\operatorname{dp}(i, i) = 0\)</span>.The&nbsp;cost function <span class="math-tex">\(C(i, j)\)</span> satisfies two important properties for&nbsp;any integers <span class="math-tex">\(a \le b \le c \le d\)</span>: <ul><li><strong>(Monotonicity)</strong>&nbsp; <span class="math-tex">\(C(b, c) \le C(a, d)\)</span>;</li><li><strong>(QI)</strong>&nbsp; <span class="math-tex">\(C(a, c) + C(b, d) \le C(a, d) + C(b, c)\)</span>.</li></ul>A&nbsp;standard algorithm to&nbsp;solve this problem involves three nested loops, resulting in&nbsp;a&nbsp;time complexity of&nbsp;<span class="math-tex">\(O(n^{3})\)</span>. Show that this dynamic programming can be calculated in time <span class="math-tex">\(O(n^{2})\)</span>.<details><summary>Hint:</summary><div style="border-style: solid;">The&nbsp;core idea behind the&nbsp;optimization is&nbsp;to&nbsp;reduce the&nbsp;search space. Let's define <span class="math-tex">\(\operatorname{opt}(i, j)\)</span> as&nbsp;the&nbsp;smallest index <span class="math-tex">\(k\)</span> in&nbsp;the&nbsp;range <span class="math-tex">\([i, j-1]\)</span> that minimizes the&nbsp;expression for&nbsp;<span class="math-tex">\(\operatorname{dp}(i, j)\)</span>: <span class="math-tex">\[\operatorname{opt}(i, j) = \arg\min_{i \le k &lt; j}\{\operatorname{dp}(i, k) + \operatorname{dp}(k+1, j)\}.\]</span> It&nbsp;can be&nbsp;proven that if&nbsp;the&nbsp;cost function <span class="math-tex">\(C(i, j)\)</span> satisfies the&nbsp;quadrangle inequality and is&nbsp;monotone, then the&nbsp;optimal split points themselves exhibit a&nbsp;monotonic property: <span class="math-tex">\[\operatorname{opt}(i, j-1) \le \operatorname{opt}(i, j) \le \operatorname{opt}(i+1, j).\]</span></div></details></li></ol>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-14-generation-of-combinatorial-objects/unit/chapter-14-generation-of-combinatorial-objects-unit-10-theory-problems/lesson/generation-of-combinatorial-objects--theory-problems--step-2/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-15-recurrence-relations/unit/chapter-15-recurrence-relations-unit-1-partition-combinatorics/lesson/recurrence-relations--partition-combinatorics--step-1/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

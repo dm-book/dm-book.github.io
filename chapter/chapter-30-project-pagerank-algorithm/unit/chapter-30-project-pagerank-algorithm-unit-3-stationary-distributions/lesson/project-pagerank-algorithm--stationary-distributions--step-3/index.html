@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="For various dynamical systems, it is natural to ask whether they stabilize somewhere. In the context of Markov chains, this question can be formulated in…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Project: PageRank Algorithm › Stationary Distributions › Lesson 3 | Discrete Mathematics" />
+    <meta property="og:description" content="For various dynamical systems, it is natural to ask whether they stabilize somewhere. In the context of Markov chains, this question can be formulated in…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-30-project-pagerank-algorithm/unit/chapter-30-project-pagerank-algorithm-unit-3-stationary-distributions/lesson/project-pagerank-algorithm--stationary-distributions--step-3/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-30-project-pagerank-algorithm/unit/chapter-30-project-pagerank-algorithm-unit-3-stationary-distributions/lesson/project-pagerank-algorithm--stationary-distributions--step-3/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Project: PageRank Algorithm › Stationary Distributions › Lesson 3 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Project: PageRank Algorithm / Stationary Distributions</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Project: PageRank Algorithm · Stationary Distributions</p>
+        <h1>Lesson 3</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p>For various dynamical systems, it&nbsp;is natural to ask whether they stabilize somewhere. In&nbsp;the context of&nbsp;Markov chains, this question can be&nbsp;formulated in&nbsp;terms of&nbsp;the existence of a&nbsp;probability distribution&nbsp;<span class="math-tex">\(\mathbf{r}\)</span> such&nbsp;that, if&nbsp;the system starts in&nbsp;this distribution, it&nbsp;remains unchanged after&nbsp;applying the transition matrix (that is, <span class="math-tex">\(\mathbf{T}\mathbf{r}= \mathbf{r}\)</span>). The resulting vector <span class="math-tex">\(\mathbf{r}\)</span> defined up&nbsp;to a&nbsp;multiplicative constant (so it&nbsp;is&nbsp;usually normalized by&nbsp;dividing by&nbsp;the sum of&nbsp;its components to&nbsp;obtain a&nbsp;valid probability distribution) is&nbsp;called a&nbsp;<em>stationary distribution</em>. Intuitively, <span class="math-tex">\(\mathbf{r}\)</span>&nbsp;represents a&nbsp;distribution of probability mass that remains stable under the transition step.</p><p>For&nbsp;example, in&nbsp;the ball drawing problem considered above, it is&nbsp;easy to&nbsp;observe that&nbsp;if we&nbsp;continue drawing balls with&nbsp;replacement for a&nbsp;long&nbsp;time, the probability of&nbsp;drawing a&nbsp;ball of a&nbsp;given color will eventually stabilize. In&nbsp;this&nbsp;case, the stationary distribution is&nbsp;proportional to&nbsp;the number of&nbsp;balls of&nbsp;each color in the bag: <span class="math-tex">\(\mathbf{r}= (\frac{2}{9}, \frac{3}{9}, \frac{4}{9})\)</span> for red, green, and blue balls, respectively. If we substitute this distribution into the equation&nbsp;<span class="math-tex">\(\mathbf{T}\mathbf{r}= \mathbf{r}\)</span>, we can&nbsp;verify that it indeed satisfies the relation. <span class="math-tex">\[\begin{bmatrix}1/8 & 2/8 & 2/8 \\ 3/8 & 2/8 & 3/8 \\ 4/8 & 4/8 & 3/8\end{bmatrix} \cdot \begin{bmatrix}2/9 \\ 3/9 \\ 4/9\end{bmatrix} = \begin{bmatrix}2/9 \\ 3/9 \\ 4/9\end{bmatrix}\]</span></p><p><strong>Problem. </strong> Find the stationary distribution for our toy graph: output five space-separated numbers <span class="math-tex">\(p_{0}, \dotsc, p_{4}\)</span> where <span class="math-tex">\(p_{i}=\Pr[v=i]\)</span>. Specify three decimal digits for each of the five numbers (for example, <span class="math- tex">\(\texttt{0.333 0.008 0.333 0.275 0.050}\)</span>).</p><p style="text-align:center;"><img src="generated/assets/Project$_PageRank_Algorithm/Stationary_Distributions=2/image0.png" width="800" ></p><details><summary>Hint:</summary><div style="border-style: solid;">Recall how we computed the probability of landing in&nbsp;each vertex given an&nbsp;initial distribution.</div></details>
+          <div class="task-card"><a class="cogniterra-only-notice" href="https://cogniterra.org/a/697" target="_blank" rel="noreferrer">This problem can only be submitted at Cogniterra.</a></div>
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-30-project-pagerank-algorithm/unit/chapter-30-project-pagerank-algorithm-unit-3-stationary-distributions/lesson/project-pagerank-algorithm--stationary-distributions--step-2/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-30-project-pagerank-algorithm/unit/chapter-30-project-pagerank-algorithm-unit-3-stationary-distributions/lesson/project-pagerank-algorithm--stationary-distributions--step-4/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="import matplotlib.pyplot as plt import numpy as np n = np.linspace(2, 13) plt.plot(n, n ** 3, label=&#39;$n^3$&#39;) plt.plot(n, 2 ** n, label=&#39;$2^n$&#39;) plt.legend()…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Proofs of Universal Statements: Mathematical Induction › Base of Induction › Lesson 2 | Discrete Mathematics" />
+    <meta property="og:description" content="import matplotlib.pyplot as plt import numpy as np n = np.linspace(2, 13) plt.plot(n, n ** 3, label=&#39;$n^3$&#39;) plt.plot(n, 2 ** n, label=&#39;$2^n$&#39;) plt.legend()…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-3-proofs-of-universal-statements-mathematical-induction/unit/chapter-3-proofs-of-universal-statements-mathematical-induction-unit-2-base-of-induction/lesson/proofs-of-universal-statements-mathematical-induction--base-of-induction--step-2/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-3-proofs-of-universal-statements-mathematical-induction/unit/chapter-3-proofs-of-universal-statements-mathematical-induction-unit-2-base-of-induction/lesson/proofs-of-universal-statements-mathematical-induction--base-of-induction--step-2/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Proofs of Universal Statements: Mathematical Induction › Base of Induction › Lesson 2 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Proofs of Universal Statements: Mathematical Induction / Base of Induction</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Proofs of Universal Statements: Mathematical Induction · Base of Induction</p>
+        <h1>Lesson 2</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <pre><code class="language-python">import matplotlib.pyplot as plt
+import numpy as np
+
+n = np.linspace(2, 13)
+plt.plot(n, n ** 3, label='$n^3$')
+plt.plot(n, 2 ** n, label='$2^n$')
+plt.legend()
+plt.savefig('polyexp.png')</code></pre><p style="text-align:center;"><img src="generated/assets/Proofs_of_Universal_Statements$_Mathematical_Induction/Base_of_Induction=1/image0.png" width="800" ></p><p>The graph shows that <span class="math-tex">\(2^{n}\)</span> starts to surpass <span class="math-tex">\(n^{3}\)</span> right around <span class="math-tex">\(n=10\)</span>. As <span class="math-tex">\(n\)</span>&nbsp;grows, the first function will move further away from the second, and this will be evident in our proof of the inequality. Below, we&nbsp;prove that <span class="math-tex">\(2^{n} \ge n^{3}\)</span>, for all integers <span class="math-tex">\(n \ge 10\)</span>, by&nbsp;induction on&nbsp;<span class="math-tex">\(n\)</span>. </p><ul><li><strong>Base <span class="math-tex">\(n=10\)</span>.</strong>&nbsp; It is directly verified: <span class="math-tex">\(1024 &gt; 1000\)</span>.</li><li><strong>Step <span class="math-tex">\(n \to n+1\)</span>.</strong>&nbsp; When transitioning from <span class="math-tex">\(n\)</span> to <span class="math-tex">\(n+1\)</span>, the left part is multiplied by&nbsp;two, whereas the right part is&nbsp;multiplied&nbsp;by <span class="math-tex">\[\frac{(n+1)^3}{n^3}=\left(1+\frac{1}{n} \right)^{3} \  .\]</span> For <span class="math-tex">\(n \ge 10\)</span>, this number is no more than <span class="math-tex">\(1.1^{3} &lt; 2\)</span>.</li></ul><details><summary>For the curious 🤓</summary><div style="border-style: solid;">In&nbsp;general, any exponential function grows faster than any polynomial function. In&nbsp;terms of <span class="math-tex">\(O\)</span>-notation, this is written as follows: for any <span class="math-tex">\(a &gt; 1\)</span> and <span class="math-tex">\(b \ge 0\)</span>, it holds that <span class="math-tex">\(n^{b} = O(a^{n})\)</span>. We will soon prove this rigorously.</div></details>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-3-proofs-of-universal-statements-mathematical-induction/unit/chapter-3-proofs-of-universal-statements-mathematical-induction-unit-2-base-of-induction/lesson/proofs-of-universal-statements-mathematical-induction--base-of-induction--step-1/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-3-proofs-of-universal-statements-mathematical-induction/unit/chapter-3-proofs-of-universal-statements-mathematical-induction-unit-2-base-of-induction/lesson/proofs-of-universal-statements-mathematical-induction--base-of-induction--step-3/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

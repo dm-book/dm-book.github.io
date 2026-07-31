@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="In Python, you can find the maximum flow and minimum cut like this. import networkx as nx G = nx.DiGraph() for u, v, c in [ (&#39;S&#39;, &#39;A&#39;, 6), (&#39;S&#39;, &#39;B&#39;, 1),…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Flows and Connectivity › Ford–Fulkerson Theorem › Lesson 5 | Discrete Mathematics" />
+    <meta property="og:description" content="In Python, you can find the maximum flow and minimum cut like this. import networkx as nx G = nx.DiGraph() for u, v, c in [ (&#39;S&#39;, &#39;A&#39;, 6), (&#39;S&#39;, &#39;B&#39;, 1),…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-26-flows-and-connectivity/unit/chapter-26-flows-and-connectivity-unit-3-ford-fulkerson-theorem/lesson/flows-and-connectivity--ford-fulkerson-theorem--step-5/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-26-flows-and-connectivity/unit/chapter-26-flows-and-connectivity-unit-3-ford-fulkerson-theorem/lesson/flows-and-connectivity--ford-fulkerson-theorem--step-5/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Flows and Connectivity › Ford–Fulkerson Theorem › Lesson 5 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Flows and Connectivity / Ford–Fulkerson Theorem</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Flows and Connectivity · Ford–Fulkerson Theorem</p>
+        <h1>Lesson 5</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p>In Python, you can find the maximum flow and minimum cut like this. </p><pre><code class="language-python">import networkx as nx
+G = nx.DiGraph()
+
+for u, v, c in [
+    ('S', 'A', 6), ('S', 'B', 1), ('S', 'C', 10),
+    ('A', 'B', 2), ('C', 'B', 2), ('A', 'E', 1),
+    ('A', 'D', 4), ('D', 'E', 2), ('D', 'G', 5),
+    ('E', 'G', 10), ('B', 'E', 20), ('C', 'F', 5),
+    ('E', 'F', 6), ('F', 'T', 4), ('G', 'T', 12)
+]:
+    G.add_edge(u, v, capacity=c)
+
+print(nx.maximum_flow(G, 'S', 'T')[0])
+print(nx.minimum_cut(G, 'S', 'T'))</code></pre><pre><code class="language-auto">13
+(13, ({'C', 'F', 'S'}, {'T', 'E', 'B', 'G', 'D', 'A'}))
+</code></pre><p style="text-align:center;"><img src="generated/assets/Flows_and_Connectivity/Ford–Fulkerson_Theorem=4/image0.png" width="800" ></p>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-26-flows-and-connectivity/unit/chapter-26-flows-and-connectivity-unit-3-ford-fulkerson-theorem/lesson/flows-and-connectivity--ford-fulkerson-theorem--step-4/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-26-flows-and-connectivity/unit/chapter-26-flows-and-connectivity-unit-3-ford-fulkerson-theorem/lesson/flows-and-connectivity--ford-fulkerson-theorem--step-6/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

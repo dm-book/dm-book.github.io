@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="A walk in a graph is a sequence of edges such that each edge (except for the first one) starts with a node where the previous edge ended. The length of a…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="What is a Graph? › Definitions › Lesson 4 | Discrete Mathematics" />
+    <meta property="og:description" content="A walk in a graph is a sequence of edges such that each edge (except for the first one) starts with a node where the previous edge ended. The length of a…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-23-what-is-a-graph/unit/chapter-23-what-is-a-graph-unit-2-definitions/lesson/what-is-a-graph--definitions--step-4/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-23-what-is-a-graph/unit/chapter-23-what-is-a-graph-unit-2-definitions/lesson/what-is-a-graph--definitions--step-4/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>What is a Graph? › Definitions › Lesson 4 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / What is a Graph? / Definitions</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">What is a Graph? · Definitions</p>
+        <h1>Lesson 4</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p>A <em>walk</em> in a&nbsp;graph is a&nbsp;sequence of&nbsp;edges such that each edge (except for the first one) starts with a&nbsp;node where the previous edge ended. The <em>length</em> of a&nbsp;walk is the number of edges in&nbsp;it. We&nbsp;say that a&nbsp;walk is&nbsp;<em>closed</em> if&nbsp;it starts and ends at&nbsp;the same node. A&nbsp;<em>path</em> is a&nbsp;walk where all edges are distinct. We&nbsp;say that a&nbsp;path is&nbsp;<em>simple</em> if all its nodes are distinct.</p><p>To&nbsp;give an&nbsp;example, consider the following graph where all edges are named for convenience. </p><p style="text-align:center;"><img src="generated/assets/What_is_a_Graph/Definitions=3/image0.png" width="800" ></p><p> Then, <span class="math-tex">\((e_{1},e_{2},e_{4},e_{5},e_{3},e_{1})\)</span> is a&nbsp;walk of&nbsp;length&nbsp;<span class="math-tex">\(6\)</span> in&nbsp;this graph. It&nbsp;is not a&nbsp;path as&nbsp;it uses the edge&nbsp;<span class="math-tex">\(e_{1}\)</span> twice. At&nbsp;the same time, <span class="math-tex">\((e_{7},e_{6},e_{4},e_{5})\)</span> is a&nbsp;path, but it&nbsp;is not simple as&nbsp;it goes through the node&nbsp;<span class="math-tex">\(S\)</span> more than once. Finally, <span class="math-tex">\((e_{7},e_{6},e_{2},e_{3})\)</span> is a&nbsp;simple path: there are no&nbsp;repeated edges nor repeated nodes.</p><p>It&nbsp;is sometimes convenient to&nbsp;specify a&nbsp;walk by&nbsp;its sequence of&nbsp;nodes (rather than edges). For example, <span class="math-tex">\((P,Q,S)\)</span> defines a&nbsp;walk <span class="math-tex">\((e_{2}, e_{4})\)</span> of&nbsp;length&nbsp;<span class="math-tex">\(2\)</span>. In&nbsp;many cases, we&nbsp;will write <span class="math-tex">\(P \to Q \to S\)</span> instead of&nbsp;<span class="math-tex">\((P,Q,S)\)</span>.</p><p>A&nbsp;<em>cycle</em> is a&nbsp;closed path (that&nbsp;is, its first node is&nbsp;the same as&nbsp;the last one). In&nbsp;particular, all edges of a&nbsp;cycle are distinct. A&nbsp;cycle is&nbsp;called <em>simple</em> if it&nbsp;contains no&nbsp;repeated nodes except for the first node and the last node.</p><p>In&nbsp;the graph above, <span class="math-tex">\((e_{2},e_{3},e_{8},e_{4},e_{7},e_{6})\)</span> is a&nbsp;cycle that starts and ends at&nbsp;the node&nbsp;<span class="math-tex">\(Q\)</span>. It&nbsp;is not simple as&nbsp;it&nbsp;visits&nbsp;<span class="math-tex">\(Q\)</span> three times. However, <span class="math-tex">\((e_{5},e_{4},e_{2},e_{3})\)</span> is a&nbsp;simple cycle.</p><p>It&nbsp;is not difficult to&nbsp;see that if&nbsp;there&nbsp;is a&nbsp;path from a&nbsp;node&nbsp;<span class="math-tex">\(u\)</span> to&nbsp;a&nbsp;different node&nbsp;<span class="math-tex">\(v\)</span>, then there&nbsp;is also a&nbsp;simple path. This is&nbsp;best illustrated with a&nbsp;toy example. For the graph above, a&nbsp;path <span class="math-tex">\[U \to P \to Q \to S \to R \to Q \to T\]</span> is&nbsp;not simple as&nbsp;it&nbsp;goes through the node&nbsp;<span class="math-tex">\(Q\)</span> twice. However, one can just cut everything between the two visits to&nbsp;<span class="math-tex">\(Q\)</span> to&nbsp;get a&nbsp;simple path: <span class="math-tex">\[U \to P \to Q \to T\ .\]</span></p>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-23-what-is-a-graph/unit/chapter-23-what-is-a-graph-unit-2-definitions/lesson/what-is-a-graph--definitions--step-3/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-23-what-is-a-graph/unit/chapter-23-what-is-a-graph-unit-2-definitions/lesson/what-is-a-graph--definitions--step-5/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

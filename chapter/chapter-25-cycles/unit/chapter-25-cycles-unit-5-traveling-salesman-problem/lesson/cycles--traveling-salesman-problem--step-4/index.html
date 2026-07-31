@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="We present a \(2\) -approximation algorithm for the traveling salesman problem in a metric graph. A complete undirected graph \(G(V,E=\binom{V}{2})\) is…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Cycles › Traveling Salesman Problem › Lesson 4 | Discrete Mathematics" />
+    <meta property="og:description" content="We present a \(2\) -approximation algorithm for the traveling salesman problem in a metric graph. A complete undirected graph \(G(V,E=\binom{V}{2})\) is…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-25-cycles/unit/chapter-25-cycles-unit-5-traveling-salesman-problem/lesson/cycles--traveling-salesman-problem--step-4/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-25-cycles/unit/chapter-25-cycles-unit-5-traveling-salesman-problem/lesson/cycles--traveling-salesman-problem--step-4/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Cycles › Traveling Salesman Problem › Lesson 4 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Cycles / Traveling Salesman Problem</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Cycles · Traveling Salesman Problem</p>
+        <h1>Lesson 4</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p>We present a <span class="math-tex">\(2\)</span>-approximation algorithm for the traveling salesman problem in a metric graph. A complete undirected graph <span class="math-tex">\(G(V,E=\binom{V}{2})\)</span> is called <em>metric</em> if the weight function <span class="math-tex">\(w \colon E \to \mathbb{R}_{\ge 0}\)</span> of its edges is a metric: for any three distinct vertices <span class="math-tex">\(u,v,z\in V\)</span> the triangle inequality holds <span class="math-tex">\[w(u,v) \le w(u,z)+w(z,v) \  .\]</span> (The two remaining metric axioms are automatically satisfied: there are no loops in the graph, so we can assume <span class="math-tex">\(w(u,u)=0\)</span>, and the graph is undirected, so <span class="math-tex">\(w(u,v)=w(v,u)\)</span>.)</p><p>It is easy to see that for any undirected graph (whose edge weights are non-negative), the minimum weight of a spanning tree is no greater than the minimum weight of a Hamiltonian path (or cycle). Indeed, a Hamiltonian path is a special case of a spanning tree, and deleting any edge of a&nbsp;Hamiltonian cycle gives a&nbsp;spanning tree. (It is interesting to note that a&nbsp;spanning tree has <span class="math-tex">\(n-1\)</span> edges and forms a&nbsp;connected subgraph, whereas a&nbsp;Hamiltonian cycle has <span class="math-tex">\(n\)</span> edges and every vertex has degree&nbsp;two. This additional, seemingly harmless, requirement significantly increases the computational complexity of the problem: the minimum spanning tree can be found in almost linear time, while no polynomial-time exact algorithm for the traveling salesman problem is&nbsp;known.)</p><p>Thus, in the first step, the algorithm constructs the minimum spanning tree of the graph. Its weight is certainly no greater than <span class="math-tex">\(\text{OPT}\)</span>, the minimum Hamiltonian cycle. For example, for the graph</p><p style="text-align:center;"><img src="generated/assets/Cycles/Traveling_Salesman_Problem=3/image0.png" width="800" ></p><p>such a tree can be obtained. </p><p style="text-align:center;"><img src="generated/assets/Cycles/Traveling_Salesman_Problem=3/image1.png" width="800" ></p><p> In the next step, we double each edge of the tree. The weight of the resulting set of edges will be no greater than <span class="math-tex">\(2\text{OPT}\)</span>. </p><p style="text-align:center;"><img src="generated/assets/Cycles/Traveling_Salesman_Problem=3/image2.png" width="800" ></p><p> The resulting graph is connected, and the degree of each vertex is even. Therefore, it contains an Eulerian cycle, which can be quickly found. For example, such a cycle: <span class="math-tex">\[3 \to 4\to 3 \to 2 \to 5 \to 2 \to 3 \to 1 \to 3 \  .\]</span> As seen, vertices repeat in it, but these repetitions can simply be discarded (we go through the list of vertices in the Eulerian cycle and skip the vertex if we have already been there): <span class="math-tex">\[3 \to 4 \to 2 \to 5 \to 1 \to 3 \  .\]</span> By discarding repetitions, we certainly did not increase the cycle length because the weights of the edges satisfy the triangle inequality. For example, the path <span class="math-tex">\(5 \to 2 \to 3 \to 1\)</span> is certainly not lighter than the path <span class="math-tex">\(5 \to 1\)</span>. Thus, the weight of the resulting Hamiltonian cycle is certainly no greater than <span class="math-tex">\(2\text{OPT}\)</span>. </p><p style="text-align:center;"><img src="generated/assets/Cycles/Traveling_Salesman_Problem=3/image3.png" width="800" ></p>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-25-cycles/unit/chapter-25-cycles-unit-5-traveling-salesman-problem/lesson/cycles--traveling-salesman-problem--step-3/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-25-cycles/unit/chapter-25-cycles-unit-6-application-genome-assembly-and-de-bruijn-graphs/lesson/cycles--application-genome-assembly-and-de-bruijn-graphs--step-1/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

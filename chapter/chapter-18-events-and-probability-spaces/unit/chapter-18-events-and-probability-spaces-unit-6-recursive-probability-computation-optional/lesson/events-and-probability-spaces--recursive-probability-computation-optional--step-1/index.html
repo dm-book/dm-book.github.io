@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="In this section, we will see how to calculate probabilities recursively. To do this, we will consider the simplest version of a gambling game and calculate…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Events and Probability Spaces › Recursive Probability Computation (Optional) › Lesson 1 | Discrete Mathematics" />
+    <meta property="og:description" content="In this section, we will see how to calculate probabilities recursively. To do this, we will consider the simplest version of a gambling game and calculate…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-18-events-and-probability-spaces/unit/chapter-18-events-and-probability-spaces-unit-6-recursive-probability-computation-optional/lesson/events-and-probability-spaces--recursive-probability-computation-optional--step-1/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-18-events-and-probability-spaces/unit/chapter-18-events-and-probability-spaces-unit-6-recursive-probability-computation-optional/lesson/events-and-probability-spaces--recursive-probability-computation-optional--step-1/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Events and Probability Spaces › Recursive Probability Computation (Optional) › Lesson 1 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Events and Probability Spaces / Recursive Probability Computation (Optional)</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Events and Probability Spaces · Recursive Probability Computation (Optional)</p>
+        <h1>Lesson 1</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p> In this section, we will see how to calculate probabilities recursively. To do this, we will consider the simplest version of a gambling game and calculate the probability of <em>gambler's ruin</em>. The theory of probability arose from the analysis of gambling games: the questions of predicting wins were posed by Gerolamo Cardano, Blaise Pascal, Pierre Fermat, and Christiaan Huygens.</p><p>Let <span class="math-tex">\(n\)</span>&nbsp;denote the initial capital of the player, who makes a&nbsp;series of bets. If the bet wins, the player's capital increases by one unit, and if it loses, it decreases by one unit. Let <span class="math-tex">\(p\)</span>&nbsp;be the probability of a&nbsp;win, and <span class="math-tex">\(q=1-p\)</span> be the probability of a&nbsp;loss. When <span class="math-tex">\(p=q=\frac{1}{2}\)</span>, the game is called <em>unbiased</em> or <em>symmetrical</em>, otherwise it is called <em>biased</em> or <em>asymmetrical</em>.</p><p>An abstract model of such a&nbsp;game is a&nbsp;random walk on a&nbsp;line. Initially, the particle is at&nbsp;point&nbsp;<span class="math-tex">\(n\)</span>. With probability&nbsp;<span class="math-tex">\(p\)</span>, the particle moves one step to&nbsp;the right, and with the remaining probability <span class="math-tex">\(q=(1-p)\)</span>, it moves one step to&nbsp;the left. Then, the walk continues.</p><p style="text-align:center;"><img src="generated/assets/Events_and_Probability_Spaces/Recursive_Probability_Computation_(Optional)=0/image0.png" width="800" ></p><p>In the original gambling game, there is a&nbsp;natural lower bound on&nbsp;the capital: when the capital becomes zero, the game ends. This event is called <em>gambler's ruin</em>. There may also be an upper bound: if the player's goal is to increase the capital to&nbsp;<span class="math-tex">\(t\)</span>, then the amount <span class="math-tex">\(t-n\)</span> is called the <em>intended profit</em>. In this situation, the particle wanders in the corridor <span class="math-tex">\([0, t]\)</span>. As&nbsp;soon&nbsp;as the particle reaches one of the walls of the corridor, the walk ends. The trajectory of the particle can be conveniently visualized as follows.</p><p style="text-align:center;"><img src="generated/assets/Events_and_Probability_Spaces/Recursive_Probability_Computation_(Optional)=0/image1.png" width="800" ></p>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-18-events-and-probability-spaces/unit/chapter-18-events-and-probability-spaces-unit-5-probability-of-union/lesson/events-and-probability-spaces--probability-of-union--step-6/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-18-events-and-probability-spaces/unit/chapter-18-events-and-probability-spaces-unit-6-recursive-probability-computation-optional/lesson/events-and-probability-spaces--recursive-probability-computation-optional--step-2/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

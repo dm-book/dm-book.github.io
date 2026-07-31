@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="Although there are standard methods to enumerate binary sequences, it’s important to be able to implement such enumeration manually: this is useful when…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Generation of Combinatorial Objects › Generating Subsets › Lesson 5 | Discrete Mathematics" />
+    <meta property="og:description" content="Although there are standard methods to enumerate binary sequences, it’s important to be able to implement such enumeration manually: this is useful when…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-14-generation-of-combinatorial-objects/unit/chapter-14-generation-of-combinatorial-objects-unit-1-generating-subsets/lesson/generation-of-combinatorial-objects--generating-subsets--step-5/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-14-generation-of-combinatorial-objects/unit/chapter-14-generation-of-combinatorial-objects-unit-1-generating-subsets/lesson/generation-of-combinatorial-objects--generating-subsets--step-5/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Generation of Combinatorial Objects › Generating Subsets › Lesson 5 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Generation of Combinatorial Objects / Generating Subsets</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Generation of Combinatorial Objects · Generating Subsets</p>
+        <h1>Lesson 5</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p>Although there are standard methods to enumerate binary sequences, it’s important to be able to implement such enumeration manually: this is useful when developing efficient algorithms.</p><p>The sequences of length <span class="math-tex">\(n=4\)</span> generated above suggest the following method: the first half of the strings starts with zero, and the second with one. Thus, to enumerate all binary sequences of length&nbsp;<span class="math-tex">\(n\)</span>, take all binary sequences of length&nbsp;<span class="math-tex">\(n-1\)</span> and prepend <span class="math-tex">\(0\)</span> to them, then take the same ones and prepend <span class="math-tex">\(1\)</span> to them. (By the way, you can append instead of prepend. Then you’ll still enumerate all binary strings of length&nbsp;<span class="math-tex">\(n\)</span>, just in a different order.)</p><pre><code class="language-python">def binary_strings(n):
+    if n &gt; 0:
+        yield from (head + tail for head in '01' for tail in binary_strings(n - 1))
+    else:
+        yield ''
+
+print(*binary_strings(4))</code></pre><pre><code class="language-auto">0000 0001 0010 0011 0100 0101 0110 0111 1000 1001 1010 1011 1100 1101 1110 1111
+</code></pre>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-14-generation-of-combinatorial-objects/unit/chapter-14-generation-of-combinatorial-objects-unit-1-generating-subsets/lesson/generation-of-combinatorial-objects--generating-subsets--step-4/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-14-generation-of-combinatorial-objects/unit/chapter-14-generation-of-combinatorial-objects-unit-1-generating-subsets/lesson/generation-of-combinatorial-objects--generating-subsets--step-6/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

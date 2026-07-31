@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="We will solve the independent set problem for a non-rooted tree, even though a rooted tree is given in the problem statement. Our approach will be as…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Trees › Dynamic Programming › Lesson 3 | Discrete Mathematics" />
+    <meta property="og:description" content="We will solve the independent set problem for a non-rooted tree, even though a rooted tree is given in the problem statement. Our approach will be as…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-24-trees/unit/chapter-24-trees-unit-3-dynamic-programming/lesson/trees--dynamic-programming--step-3/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-24-trees/unit/chapter-24-trees-unit-3-dynamic-programming/lesson/trees--dynamic-programming--step-3/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Trees › Dynamic Programming › Lesson 3 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Trees / Dynamic Programming</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Trees · Dynamic Programming</p>
+        <h1>Lesson 3</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p>We will solve the independent set problem for a non-rooted tree, even though a rooted tree is given in the problem statement. Our approach will be as follows: we will immediately take an arbitrary leaf (a vertex of degree one) into the independent set, then remove it and its parent from the tree, and continue recursively. This is an example of a greedy algorithm. Why does it always lead to an optimal solution? Consider some leaf and its parent. In the maximum independent set, at least one of them must be included: if neither were included, we could add the leaf. And if the parent is included, it can always be replaced with the leaf.</p><p>There is one subtlety in this approach. When removing the parent of a leaf from the tree, the tree may become disconnected. However, this does not cause any issues: it is clear that to find the maximum independent set in a forest of trees, it is sufficient to find the maximum independent set in each tree separately. Therefore, we will continue finding leaves while there are edges in the forest. When no edges remain, we simply add all remaining vertices to the independent set.</p><pre><code class="language-python">from networkx import number_of_edges, nx_agraph, random_tree
+
+tree = random_tree(n=13, seed=18)
+nx_agraph.to_agraph(tree).draw('ind_set_tree.png', prog='fdp')
+
+max_ind_set = []
+while number_of_edges(tree):
+    leaf = [v for v in tree.nodes() if tree.degree[v] == 1][0]
+    max_ind_set.append(leaf)
+    neighbor = list(tree.neighbors(leaf))[0]
+    tree.remove_node(leaf)
+    tree.remove_node(neighbor)
+max_ind_set += list(tree.nodes())
+print(max_ind_set)</code></pre><pre><code class="language-auto">[0, 4, 6, 8, 3, 10, 12]
+</code></pre><p style="text-align:center;"><img src="generated/assets/Trees/Dynamic_Programming=2/image0.png" width="800" ></p>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-24-trees/unit/chapter-24-trees-unit-3-dynamic-programming/lesson/trees--dynamic-programming--step-2/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-24-trees/unit/chapter-24-trees-unit-3-dynamic-programming/lesson/trees--dynamic-programming--step-4/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

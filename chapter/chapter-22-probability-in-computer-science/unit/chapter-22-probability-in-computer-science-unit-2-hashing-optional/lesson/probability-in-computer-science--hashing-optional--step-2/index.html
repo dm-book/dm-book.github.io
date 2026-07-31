@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="Perfect hash function For a pre-known set of keys \(K\) , one can construct a hashing scheme that is collision-free and has size \(O(n)\) , where \(n=|K|\)…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Probability in Computer Science › Hashing (Optional) › Lesson 2 | Discrete Mathematics" />
+    <meta property="og:description" content="Perfect hash function For a pre-known set of keys \(K\) , one can construct a hashing scheme that is collision-free and has size \(O(n)\) , where \(n=|K|\)…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-22-probability-in-computer-science/unit/chapter-22-probability-in-computer-science-unit-2-hashing-optional/lesson/probability-in-computer-science--hashing-optional--step-2/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-22-probability-in-computer-science/unit/chapter-22-probability-in-computer-science-unit-2-hashing-optional/lesson/probability-in-computer-science--hashing-optional--step-2/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Probability in Computer Science › Hashing (Optional) › Lesson 2 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Probability in Computer Science / Hashing (Optional)</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Probability in Computer Science · Hashing (Optional)</p>
+        <h1>Lesson 2</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p><strong>Perfect hash function</strong></p><p>For a&nbsp;pre-known set of keys&nbsp;<span class="math-tex">\(K\)</span>, one can construct a&nbsp;hashing scheme that is collision-free and has size <span class="math-tex">\(O(n)\)</span>, where <span class="math-tex">\(n=|K|\)</span> is the number of keys.</p><p>Take a&nbsp;number <span class="math-tex">\(n^{2} \le m &lt; 2n^{2}\)</span> that is a power of two, and fix a universal family of hash functions <span class="math-tex">\(\mathcal{H}=\{h \colon \mathbb{F}_{m} \to \mathbb{F}_{m}\}\)</span>. We will assume that all keys are distinct elements of the field <span class="math-tex">\(\mathbb{F}_{m}\)</span> (they can be embedded in any way): <span class="math-tex">\(K \subseteq \mathbb{F}_{m}\)</span>. Then, when choosing a random hash function <span class="math-tex">\(h \in \mathcal{H}\)</span>, there will be no collisions with a probability of at least <span class="math-tex">\(1/2\)</span>. Indeed, let <span class="math-tex">\(\alpha\)</span> be the number of collisions: <span class="math-tex">\[\alpha=|\{k &lt; k' \in K \colon h(k)=h(k')\}| \  .\]</span> Then <span class="math-tex">\[E[\alpha]\le\binom{n}{2}\cdot \frac{1}{m}&lt; 1/2\ .\]</span> Thus, by Markov's inequality, <span class="math-tex">\[\Pr[\alpha \ge 1] \le \frac{E[\alpha]}{1}&lt; \frac{1}{2}\  .\]</span></p><p>Consequently, within a constant number of trials, one can obtain a hash function that has no collisions on the given set of keys. However, the table size in this case will be quadratic. To reduce memory consumption, we will use a two-level scheme: at the first level, we use a hash table of size <span class="math-tex">\(n \le k &lt; 2n\)</span>, and at the second level, for each chain, we use the collision-free quadratic scheme just constructed. It turns out that the memory will then be linear!</p><p>To estimate the memory consumption, let <span class="math-tex">\(n_{i}\)</span> denote the number of keys that received the value <span class="math-tex">\(0 \le i &lt; k\)</span> at the top level. Then the total memory required for all cells of the first level will be <span class="math-tex">\[\sum_{i=0}^{k-1}n_{i}^{2} \  .\]</span> Let's estimate the expected value of this random variable: <span class="math-tex">\[\begin{align*}E\left[\sum_{i=0}^{k-1}n_{i}^{2}\right]&=E\left[\sum_{i=0}^{k-1}n_{i} + \sum_{i=0}^{k-1}2\binom{n_i}{2}\right]=\\&=E\left[\sum_{i=0}^{k-1}n_{i}\right] + E\left[\sum_{i=0}^{k-1}2\binom{n_i}{2}\right]=\\&=n + 2E\left[\sum_{i=0}^{k-1}\binom{n_i}{2}\right]\end{align*}\]</span> The sum <span class="math-tex">\(\sum_{i=0}^{k-1}\binom{n_i}{2}\)</span> is exactly the number of pairs of keys for which the first-level hash function produces a collision! Since a collision occurs for each pair of keys with a probability of at most <span class="math-tex">\(1/k\)</span>, we have <span class="math-tex">\[E\left[\sum_{i=0}^{k-1}\binom{n_i}{2}\right] \le \frac{1}{k}\binom{n}{2}\le \frac{1}{n}\binom{n}{2}&lt;n \  .\]</span> This means the expected size is no more than <span class="math-tex">\(2n\)</span>. Then, by Markov's inequality, with probability at least <span class="math-tex">\(1/2\)</span>, the total size will be no more than <span class="math-tex">\(4n\)</span>. Thus, within a constant number of trials, a hash function will be found such that the required memory is linear.</p>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-22-probability-in-computer-science/unit/chapter-22-probability-in-computer-science-unit-2-hashing-optional/lesson/probability-in-computer-science--hashing-optional--step-1/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-22-probability-in-computer-science/unit/chapter-22-probability-in-computer-science-unit-2-hashing-optional/lesson/probability-in-computer-science--hashing-optional--step-3/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

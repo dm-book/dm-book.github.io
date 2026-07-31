@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="Another important class is bipartite graphs. An undirected graph is called bipartite if its set of nodes \(V\) can be partitioned into two sets \(V_{1}\)…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="What is a Graph? › Basic Graphs › Lesson 12 | Discrete Mathematics" />
+    <meta property="og:description" content="Another important class is bipartite graphs. An undirected graph is called bipartite if its set of nodes \(V\) can be partitioned into two sets \(V_{1}\)…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-23-what-is-a-graph/unit/chapter-23-what-is-a-graph-unit-3-basic-graphs/lesson/what-is-a-graph--basic-graphs--step-12/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-23-what-is-a-graph/unit/chapter-23-what-is-a-graph-unit-3-basic-graphs/lesson/what-is-a-graph--basic-graphs--step-12/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>What is a Graph? › Basic Graphs › Lesson 12 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / What is a Graph? / Basic Graphs</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">What is a Graph? · Basic Graphs</p>
+        <h1>Lesson 12</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p>Another important class is&nbsp;bipartite graphs. An&nbsp;undirected graph is&nbsp;called <em>bipartite</em> if&nbsp;its set of&nbsp;nodes&nbsp;<span class="math-tex">\(V\)</span> can be&nbsp;partitioned into two sets <span class="math-tex">\(V_{1}\)</span>&nbsp;and&nbsp;<span class="math-tex">\(V_{2}\)</span> such that every edge joins a&nbsp;node from&nbsp;<span class="math-tex">\(V_{1}\)</span> and a&nbsp;node from&nbsp;<span class="math-tex">\(V_{2}\)</span>. (In&nbsp;other words, there are no edges within one part.) In&nbsp;many applications, a&nbsp;graph is&nbsp;given together with a&nbsp;partition and is&nbsp;denoted by&nbsp;<span class="math-tex">\(G(V_{1} \sqcup V_{2}, E)\)</span>. Sometimes, <span class="math-tex">\(V_{1}\)</span>&nbsp;and&nbsp;<span class="math-tex">\(V_{2}\)</span> are called <span class="math-tex">\(L\)</span>&nbsp;and&nbsp;<span class="math-tex">\(R\)</span> and a&nbsp;graph is&nbsp;drawn with the nodes from&nbsp;<span class="math-tex">\(L\)</span> on&nbsp;the left and nodes from&nbsp;<span class="math-tex">\(R\)</span> on&nbsp;the right. Here&nbsp;is an&nbsp;example where it&nbsp;is visually clear that every edge joins two nodes from different parts.</p><p style="text-align:center;"><img src="generated/assets/What_is_a_Graph/Basic_Graphs=11/image0.png" width="800" ></p><p>In&nbsp;applications, the two parts may have different &ldquo;physical meaning&rdquo;: </p><ul><li> boys and girls;</li><li> students and dormitories;</li><li> hospitals and patients;</li><li> servers and requests;</li><li> customers and products.</li></ul><p>At&nbsp;the same time, it&nbsp;is not always the case that a&nbsp;graph is&nbsp;given together with a&nbsp;partition of&nbsp;the set of&nbsp;nodes into two parts. For example, the following <span class="math-tex">\(7 \times 4\)</span> grid graph is&nbsp;bipartite though it&nbsp;may not be&nbsp;immediate from its drawing. </p><p style="text-align:center;"><img src="generated/assets/What_is_a_Graph/Basic_Graphs=11/image1.png" width="800" ></p><p> To&nbsp;ensure that it&nbsp;is bipartite, one may specify, for each node, the part it&nbsp;belongs&nbsp;to. To&nbsp;do this, one just assigns labels <span class="math-tex">\(1\)</span>&nbsp;and&nbsp;<span class="math-tex">\(2\)</span> to&nbsp;all nodes and ensures that every edge joins two nodes with different labels. Instead&nbsp;of (or&nbsp;together with) the labels <span class="math-tex">\(1\)</span>&nbsp;and&nbsp;<span class="math-tex">\(2\)</span>, one may also use two different colors. Being bipartite is&nbsp;the same as&nbsp;being <em>2-colorable</em>: we&nbsp;say that a&nbsp;graph is&nbsp;<em>2-colorable</em> if&nbsp;it is&nbsp;possible to&nbsp;assign one of&nbsp;two colors to&nbsp;every node such that no&nbsp;edge has the endpoints of&nbsp;the same color. </p><p style="text-align:center;"><img src="generated/assets/What_is_a_Graph/Basic_Graphs=11/image2.png" width="800" ></p><p> There exist efficient algorithms that take a&nbsp;graph and check whether it&nbsp;is bipartite (that&nbsp;is, whether its set of&nbsp;nodes can be&nbsp;split into two parts so&nbsp;that every edge joins two nodes from different parts). We&nbsp;will soon learn how it&nbsp;is done. (Roughly, it&nbsp;can be done as&nbsp;follows. Start with any node and color&nbsp;it red. Then, color its neighbors blue. Then, color all their neighbors red, and so&nbsp;on. This way, one either runs into a&nbsp;conflict, in&nbsp;which case it&nbsp;can be&nbsp;shown that a&nbsp;graph is&nbsp;not bipartite for sure, or&nbsp;constructs the required <span class="math-tex">\(2\)</span>-coloring.) In&nbsp;the meantime, we&nbsp;give an&nbsp;example.</p><pre><code class="language-python">from networkx import grid_2d_graph, is_bipartite
+
+print(is_bipartite(grid_2d_graph(7, 4)))</code></pre><pre><code class="language-auto">True
+</code></pre>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-23-what-is-a-graph/unit/chapter-23-what-is-a-graph-unit-3-basic-graphs/lesson/what-is-a-graph--basic-graphs--step-11/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-23-what-is-a-graph/unit/chapter-23-what-is-a-graph-unit-3-basic-graphs/lesson/what-is-a-graph--basic-graphs--step-13/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

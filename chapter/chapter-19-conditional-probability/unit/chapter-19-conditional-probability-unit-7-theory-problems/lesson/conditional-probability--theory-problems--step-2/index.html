@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="Advanced Problems. (20 points) A uniformly random simple graph on \(n\) labeled vertices is chosen (each of the \(2^{\binom{n}{2}}\) graphs is equally…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Conditional Probability › Theory Problems › Lesson 2 | Discrete Mathematics" />
+    <meta property="og:description" content="Advanced Problems. (20 points) A uniformly random simple graph on \(n\) labeled vertices is chosen (each of the \(2^{\binom{n}{2}}\) graphs is equally…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-19-conditional-probability/unit/chapter-19-conditional-probability-unit-7-theory-problems/lesson/conditional-probability--theory-problems--step-2/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-19-conditional-probability/unit/chapter-19-conditional-probability-unit-7-theory-problems/lesson/conditional-probability--theory-problems--step-2/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Conditional Probability › Theory Problems › Lesson 2 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Conditional Probability / Theory Problems</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Conditional Probability · Theory Problems</p>
+        <h1>Lesson 2</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p><strong>Advanced Problems.</strong></p><ol><li data-theory-problem>(20 points) A&nbsp;uniformly random simple graph on&nbsp;<span class="math-tex">\(n\)</span> labeled vertices is&nbsp;chosen (each of&nbsp;the <span class="math-tex">\(2^{\binom{n}{2}}\)</span> graphs is&nbsp;equally likely). Prove that the probability the&nbsp;graph is&nbsp;disconnected tends to&nbsp;<span class="math-tex">\(0\)</span> as&nbsp;<span class="math-tex">\(n\to\infty\)</span>.<details><summary>Hint:</summary><div style="border-style: solid;">Consider the probability that the&nbsp;vertex set <span class="math-tex">\(V\)</span> can be&nbsp;partitioned into two non-empty disjoint sets <span class="math-tex">\(S\)</span> and <span class="math-tex">\(V \setminus S\)</span> such that there are&nbsp;no edges connecting them.</div></details></li><li data-theory-problem>(20 points) Consider a&nbsp;formula <span class="math-tex">\(F\)</span> in <span class="math-tex">\(3\)</span>-CNF over <span class="math-tex">\(n\)</span> variables and <span class="math-tex">\(m\)</span> clauses and assume that each of its clauses has length three (and all three variables in every clause are different). It is not difficult to see that one can satisfy at least a&nbsp;fraction of <span class="math-tex">\(7/8\)</span> of all its clauses. Indeed, a&nbsp;random assignment satisfies every clause with probability <span class="math-tex">\(7/8\)</span>, hence the&nbsp;expected number of clauses satisfied by such an assignment is&nbsp;<span class="math-tex">\(7m/8\)</span>, thus there exists at least one assignment satisfying that many clauses. But how to construct it deterministically? One could enumerate all assignments, but there are <span class="math-tex">\(2^{n}\)</span> of them. Show that one can construct the required assignment in time polynomial in <span class="math-tex">\(n\)</span>.<details><summary>Hint:</summary><div style="border-style: solid;">Construct the required assignment variable by variable. Let <span class="math-tex">\(\alpha\)</span> be the number of clauses satisfied by a&nbsp;random assignment. Thus, <span class="math-tex">\(\operatorname{E}[\alpha] \ge 7m/8\)</span>. Consider the expected value of <span class="math-tex">\(\alpha\)</span> conditioned on the event that the first <span class="math-tex">\(k\)</span> variables were assigned the given values <span class="math-tex">\(a_{1}, \dotsc, a_{k} \in \{0,1\}\)</span>. Show that one can compute such expected values quickly (in time polynomial in <span class="math-tex">\(n\)</span>) and select the value for the next variable so that the expected value still has a&nbsp;high value.</div></details></li><li data-theory-problem>(20 points) A&nbsp;fair coin is&nbsp;tossed repeatedly. What is&nbsp;the probability that&nbsp;the sequence <span class="math-tex">\(HHT\)</span> appears before&nbsp;the sequence <span class="math-tex">\(HTT\)</span>?<details><summary>Hint:</summary><div style="border-style: solid;">Consider the&nbsp;state of&nbsp;the game after&nbsp;the first Head has appeared. Analyze what happens if&nbsp;the next toss is&nbsp;a Head versus a&nbsp;Tail.</div></details></li></ol>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-19-conditional-probability/unit/chapter-19-conditional-probability-unit-7-theory-problems/lesson/conditional-probability--theory-problems--step-1/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-19-conditional-probability/unit/chapter-19-conditional-probability-unit-7-theory-problems/lesson/conditional-probability--theory-problems--step-3/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="Let us apply our estimates to the casino game. Suppose the gambler starts with capital \(n=100\) and bets one coin on red each time, aiming to reach capital…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Events and Probability Spaces › Recursive Probability Computation (Optional) › Lesson 5 | Discrete Mathematics" />
+    <meta property="og:description" content="Let us apply our estimates to the casino game. Suppose the gambler starts with capital \(n=100\) and bets one coin on red each time, aiming to reach capital…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-18-events-and-probability-spaces/unit/chapter-18-events-and-probability-spaces-unit-6-recursive-probability-computation-optional/lesson/events-and-probability-spaces--recursive-probability-computation-optional--step-5/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-18-events-and-probability-spaces/unit/chapter-18-events-and-probability-spaces-unit-6-recursive-probability-computation-optional/lesson/events-and-probability-spaces--recursive-probability-computation-optional--step-5/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Events and Probability Spaces › Recursive Probability Computation (Optional) › Lesson 5 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Events and Probability Spaces / Recursive Probability Computation (Optional)</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Events and Probability Spaces · Recursive Probability Computation (Optional)</p>
+        <h1>Lesson 5</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p>Let us apply our estimates to&nbsp;the casino game. Suppose the gambler starts with capital <span class="math-tex">\(n=100\)</span> and bets one coin on red each time, aiming to reach capital <span class="math-tex">\(t=200\)</span>. What are their chances? The probability of&nbsp;winning a&nbsp;single bet in the casino is <span class="math-tex">\(18/37\)</span> or <span class="math-tex">\(18/38\)</span>, i.e., slightly less than one-half (depending on whether one or two green sectors are added). </p><p style="text-align:center;"><img src="generated/assets/Events_and_Probability_Spaces/Recursive_Probability_Computation_(Optional)=4/image0.png" width="800" ></p><p> Below, we will assume <span class="math-tex">\(p=18/38\)</span>. Then <span class="math-tex">\(r=20/18\)</span>. The probability of winning is then <span class="math-tex">\[\frac{r^{100}-1}{r^{200}-1}=0.0000265607\dotsc\]</span> This seems surprising: the probability of winning each individual bet is slightly less than one-half, yet the overall probability of winning is so small! In general, when <span class="math-tex">\(p&lt;\frac{1}{2}\)</span>, the probability of winning decreases <em>exponentially</em> with the increase in the intended profit <span class="math-tex">\((t-n)\)</span>. Indeed, since <span class="math-tex">\(r^{n}&lt;r^{t}\)</span> <span class="math-tex">\[\Pr[\text{win}]=\frac{r^n-1}{r^t-1}&lt;\frac{r^n}{r^t}=\frac{1}{r^{t-n}}.\]</span> It is clear that this estimate depends only on the intended profit <span class="math-tex">\(t-n\)</span>. For example, if the player wants to increase their capital by <span class="math-tex">\(50\)</span>, their chances of doing so are no more than <span class="math-tex">\[(20/18)^{-50}=0.005153775\dotsc,\]</span> and this estimate holds for any initial capital&nbsp;<span class="math-tex">\(n\)</span>!</p><p>For example, here is a&nbsp;plot of the probability of winning with initial capital&nbsp;<span class="math-tex">\(n\)</span> for a target capital <span class="math-tex">\(t=200\)</span>. It is clear that the probability of winning is not close to zero only when the current capital <span class="math-tex">\(n\)</span> is close to the target.</p><pre><code class="language-python">import matplotlib.pyplot as plt
+
+t, r = 200, 20/18
+plt.plot([(r ** n - 1) / (r ** t - 1) for n in range(t + 1)])
+plt.savefig('gambling_probability.png')</code></pre><p style="text-align:center;"><img src="generated/assets/Events_and_Probability_Spaces/Recursive_Probability_Computation_(Optional)=4/image1.png" width="800" ></p>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-18-events-and-probability-spaces/unit/chapter-18-events-and-probability-spaces-unit-6-recursive-probability-computation-optional/lesson/events-and-probability-spaces--recursive-probability-computation-optional--step-4/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-18-events-and-probability-spaces/unit/chapter-18-events-and-probability-spaces-unit-6-recursive-probability-computation-optional/lesson/events-and-probability-spaces--recursive-probability-computation-optional--step-6/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

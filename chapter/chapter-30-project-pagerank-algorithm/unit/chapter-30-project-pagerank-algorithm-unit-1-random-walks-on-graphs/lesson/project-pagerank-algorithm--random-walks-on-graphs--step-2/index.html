@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="To better understand the behavior of a random web surfer, we start by considering random walks on graphs . Problem. For the toy graph shown below, consider…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Project: PageRank Algorithm › Random Walks on Graphs › Lesson 2 | Discrete Mathematics" />
+    <meta property="og:description" content="To better understand the behavior of a random web surfer, we start by considering random walks on graphs . Problem. For the toy graph shown below, consider…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-30-project-pagerank-algorithm/unit/chapter-30-project-pagerank-algorithm-unit-1-random-walks-on-graphs/lesson/project-pagerank-algorithm--random-walks-on-graphs--step-2/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-30-project-pagerank-algorithm/unit/chapter-30-project-pagerank-algorithm-unit-1-random-walks-on-graphs/lesson/project-pagerank-algorithm--random-walks-on-graphs--step-2/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Project: PageRank Algorithm › Random Walks on Graphs › Lesson 2 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Project: PageRank Algorithm / Random Walks on Graphs</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Project: PageRank Algorithm · Random Walks on Graphs</p>
+        <h1>Lesson 2</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p>To&nbsp;better understand the behavior of&nbsp;a&nbsp;random web surfer, we&nbsp;start by&nbsp;considering <em>random walks on&nbsp;graphs</em>.</p><p><strong>Problem. </strong> For the toy graph shown below, consider the following random walk. Start by&nbsp;selecting (uniformly) a&nbsp;random node&nbsp;<span class="math-tex">\(s\)</span>. Then, select (uniformly) a&nbsp;random edge going out of&nbsp;<span class="math-tex">\(s\)</span> and follow&nbsp;it. Find the probability that one ends&nbsp;up in&nbsp;the node&nbsp;<span class="math-tex">\(3\)</span>.</p><p style="text-align:center;"><img src="generated/assets/Project$_PageRank_Algorithm/Random_Walks_on_Graphs=1/image0.png" width="800" ></p><p>The code below computes an&nbsp;approximation of&nbsp;the corresponding probability by&nbsp;modeling the experiment many times. </p><pre><code class="language-python">from networkx import DiGraph
+from random import choice
+
+edges = ['01', '02', '04', '10', '12', '13', '14', '20', '23', '24', '31', '34', '43']
+graph = DiGraph([(int(e[0]), int(e[1])) for e in edges])
+
+histogram = [0] * graph.number_of_nodes()
+for _ in range(10 ** 5):
+    s = choice(list(graph.nodes()))
+    v = choice(list(graph[s]))
+    histogram[v] += 1
+
+print(histogram[3] / sum(histogram))</code></pre><pre><code class="language-auto">0.31826
+</code></pre>
+          <div class="task-card"><a class="cogniterra-only-notice" href="https://cogniterra.org/a/697" target="_blank" rel="noreferrer">This problem can only be submitted at Cogniterra.</a></div>
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-30-project-pagerank-algorithm/unit/chapter-30-project-pagerank-algorithm-unit-1-random-walks-on-graphs/lesson/project-pagerank-algorithm--random-walks-on-graphs--step-1/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-30-project-pagerank-algorithm/unit/chapter-30-project-pagerank-algorithm-unit-1-random-walks-on-graphs/lesson/project-pagerank-algorithm--random-walks-on-graphs--step-3/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

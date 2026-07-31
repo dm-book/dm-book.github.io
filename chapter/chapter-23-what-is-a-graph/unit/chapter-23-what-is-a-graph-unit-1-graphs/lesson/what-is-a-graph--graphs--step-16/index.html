@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="We use graph applications daily. Navigation. Say, you are a fan of The Beatles and while in New York, you would like to go to Madison Square Garden from…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="What is a Graph? › Graphs › Lesson 16 | Discrete Mathematics" />
+    <meta property="og:description" content="We use graph applications daily. Navigation. Say, you are a fan of The Beatles and while in New York, you would like to go to Madison Square Garden from…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-23-what-is-a-graph/unit/chapter-23-what-is-a-graph-unit-1-graphs/lesson/what-is-a-graph--graphs--step-16/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-23-what-is-a-graph/unit/chapter-23-what-is-a-graph-unit-1-graphs/lesson/what-is-a-graph--graphs--step-16/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>What is a Graph? › Graphs › Lesson 16 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / What is a Graph? / Graphs</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">What is a Graph? · Graphs</p>
+        <h1>Lesson 16</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p>We use graph applications daily.</p><ul><li><strong>Navigation.</strong>&nbsp; Say, you are a&nbsp;fan of&nbsp;The Beatles and while in&nbsp;New York, you would like to&nbsp;go to&nbsp;Madison Square Garden from Strawberry Fields. Most likely, you will open some app on&nbsp;your cellphone and ask for the shortest path. This very moment you use graph algorithms! Namely, you use algorithms for finding the shortest path between two points on&nbsp;a&nbsp;map. <p style="text-align:center;"><img src="generated/assets/What_is_a_Graph/Graphs=15/image0.png" width="800" ></p></li><li><strong>Internet search.</strong>&nbsp; When you search for something on&nbsp;the Internet, you also use graph algorithms. For example, the famous algorithm PageRank by&nbsp;Google tries to&nbsp;show you the most relevant pages based on&nbsp;your search query. To&nbsp;do this, it&nbsp;assigns a&nbsp;rank to&nbsp;every page by&nbsp;analyzing the hyperlinks leading to&nbsp;this page. <p style="text-align:center;"><img src="generated/assets/What_is_a_Graph/Graphs=15/image1.png" width="800" ></p></li><li><strong>Game strategies.</strong>&nbsp; Graphs are often used to&nbsp;develop good strategies for various games. For example, in&nbsp;chess, one may come&nbsp;up with the following graph. Nodes are different game positions and there&nbsp;is a&nbsp;directed edge from one position to&nbsp;another one if&nbsp;one can get to&nbsp;the latter one from the former one in&nbsp;one move. The number of&nbsp;nodes in&nbsp;this graph is&nbsp;huge and the picture below shows a&nbsp;part of&nbsp;it highlighting the two most popular first moves (e2-e4 and d2-d4). For every node of&nbsp;this graph, one can estimate the score of&nbsp;the corresponding position. These scores can then be&nbsp;used to&nbsp;develop good strategies. <p style="text-align:center;"><img src="generated/assets/What_is_a_Graph/Graphs=15/image2.png" width="800" ></p></li><li><strong>Genome assembly.</strong>&nbsp; As&nbsp;the first approximation, you can think of your genome as a&nbsp;3-billion nucleotide long string. Biologists still have not figured out how to&nbsp;read the genome from the first to&nbsp;the last letter like we read a&nbsp;book. Instead, they shatter the genome into millions of&nbsp;small pieces and try to&nbsp;assemble them into contiguous chromosomes. In&nbsp;the Genome Assembly Problem, the goal is&nbsp;to assemble a&nbsp;genome from a&nbsp;collection of its short overlapping fragments called reads, not unlike assembling jigsaw puzzles. Believe&nbsp;it or not, but in&nbsp;order to solve this problem, the state-of-the-art genome assemblers use graph algorithms. We&nbsp;will see the main ideas later in&nbsp;the book. <p style="text-align:center;"><img src="generated/assets/What_is_a_Graph/Graphs=15/image3.png" width="800" ></p></li><li><strong>GSM.</strong>&nbsp; A&nbsp;cellphone network usually has many stations and each of&nbsp;them covers an&nbsp;area which looks more or&nbsp;less like a&nbsp;hexagon. Roughly speaking, there are four frequency ranges and neighboring stations better use different ranges. Is it possible to assign frequency ranges to&nbsp;stations such that no&nbsp;pair of&nbsp;neighbors use the same one? We will see how to&nbsp;model this problem in&nbsp;terms of&nbsp;graphs which will in&nbsp;turn allows&nbsp;us to&nbsp;see four ranges are indeed always enough. <p style="text-align:center;"><img src="generated/assets/What_is_a_Graph/Graphs=15/image4.png" width="800" ></p></li><li><strong>Computer chips.</strong>&nbsp; When producing computer chips, one naturally wants to&nbsp;make connections between elements of&nbsp;the circuit shorter. There are millions of transistors and other elements, and there are millions of&nbsp;connections between them and it&nbsp;is much cheaper to&nbsp;produce such circuits if&nbsp;the connections are short and non-intersecting. Problems like this are also solved using graph theory. <p style="text-align:center;"><img src="generated/assets/What_is_a_Graph/Graphs=15/image5.png" width="800" ></p></li></ul>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-23-what-is-a-graph/unit/chapter-23-what-is-a-graph-unit-1-graphs/lesson/what-is-a-graph--graphs--step-15/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-23-what-is-a-graph/unit/chapter-23-what-is-a-graph-unit-2-definitions/lesson/what-is-a-graph--definitions--step-1/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

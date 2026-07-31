@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="Often in discrete mathematics and computer science, we are interested not in the exact value of some function \(f(n)\) , but in how quickly its value…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Proofs of Algorithm Correctness and Runtime Estimates › Function Growth Rates › Lesson 2 | Discrete Mathematics" />
+    <meta property="og:description" content="Often in discrete mathematics and computer science, we are interested not in the exact value of some function \(f(n)\) , but in how quickly its value…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-4-proofs-of-algorithm-correctness-and-runtime-estimates/unit/chapter-4-proofs-of-algorithm-correctness-and-runtime-estimates-unit-2-function-growth-rates/lesson/proofs-of-algorithm-correctness-and-runtime-estimates--function-growth-rates--step-2/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-4-proofs-of-algorithm-correctness-and-runtime-estimates/unit/chapter-4-proofs-of-algorithm-correctness-and-runtime-estimates-unit-2-function-growth-rates/lesson/proofs-of-algorithm-correctness-and-runtime-estimates--function-growth-rates--step-2/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Proofs of Algorithm Correctness and Runtime Estimates › Function Growth Rates › Lesson 2 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Proofs of Algorithm Correctness and Runtime Estimates / Function Growth Rates</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Proofs of Algorithm Correctness and Runtime Estimates · Function Growth Rates</p>
+        <h1>Lesson 2</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p>Often in discrete mathematics and computer science, we are interested not in the exact value of some function <span class="math-tex">\(f(n)\)</span>, but in <em>how quickly its value increases as <span class="math-tex">\(n\)</span> grows</em>. The easiest way to explain this is with an example where <span class="math-tex">\(f(n)\)</span> is the runtime of an algorithm (i.e., the number of steps the algorithm performs on input data of size <span class="math-tex">\(n\)</span>), but the growth rate estimates we obtain are used far beyond just algorithms. They are also necessary and important in bioinformatics, combinatorics, cryptography, coding theory, game theory, and other areas.</p><p>Let <span class="math-tex">\(f(n)=2n^{2}+3n+5\)</span> be the runtime of some algorithm. As you may have already seen, such precise runtime is usually not specified. For example, here we can discard the terms <span class="math-tex">\(3n\)</span> and <span class="math-tex">\(5\)</span>: at large <span class="math-tex">\(n\)</span>, they anyway have much less impact on the result than the <span class="math-tex">\(n^{2}\)</span> term. After this, we are left with <span class="math-tex">\(2n^{2}\)</span>, but we go even further and discard the multiplier <span class="math-tex">\(2\)</span> (we still do not know exactly how much time each individual step of our algorithm takes on a real computer). After all this, we are left with just <span class="math-tex">\(n^{2}\)</span>, and it is often said that <span class="math-tex">\(f(n)\)</span> <em>grows no&nbsp;faster than quadratically</em>. We will write this as (we will formally introduce this notation soon): <span class="math-tex">\[f(n) \preceq n^{2}.\]</span> The fact that <span class="math-tex">\(f(n)\)</span> grows quadratically allows us to make such convenient conclusions: when <span class="math-tex">\(n\)</span> becomes two times larger, <span class="math-tex">\(f(n)\)</span> becomes roughly four times larger. Let's verify this experimentally. </p><pre><code class="language-python">def f(n):
+    return 2 * n ** 2 + 3 * n + 5
+
+
+n = 10 ** 5
+print(f(2 * n) / f(n))</code></pre><pre><code class="language-auto">3.999969999700012
+</code></pre>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-4-proofs-of-algorithm-correctness-and-runtime-estimates/unit/chapter-4-proofs-of-algorithm-correctness-and-runtime-estimates-unit-2-function-growth-rates/lesson/proofs-of-algorithm-correctness-and-runtime-estimates--function-growth-rates--step-1/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-4-proofs-of-algorithm-correctness-and-runtime-estimates/unit/chapter-4-proofs-of-algorithm-correctness-and-runtime-estimates-unit-2-function-growth-rates/lesson/proofs-of-algorithm-correctness-and-runtime-estimates--function-growth-rates--step-3/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

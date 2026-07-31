@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="Randomized algorithm for Minimum Cut In the minimum cut problem, one is given an undirected graph \(G(V,E)\) and is asked to find a nonempty proper set \(S…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Probability in Computer Science › Randomized Algorithms › Lesson 11 | Discrete Mathematics" />
+    <meta property="og:description" content="Randomized algorithm for Minimum Cut In the minimum cut problem, one is given an undirected graph \(G(V,E)\) and is asked to find a nonempty proper set \(S…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-22-probability-in-computer-science/unit/chapter-22-probability-in-computer-science-unit-1-randomized-algorithms/lesson/probability-in-computer-science--randomized-algorithms--step-11/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-22-probability-in-computer-science/unit/chapter-22-probability-in-computer-science-unit-1-randomized-algorithms/lesson/probability-in-computer-science--randomized-algorithms--step-11/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Probability in Computer Science › Randomized Algorithms › Lesson 11 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Probability in Computer Science / Randomized Algorithms</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Probability in Computer Science · Randomized Algorithms</p>
+        <h1>Lesson 11</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p><strong>Randomized algorithm for Minimum Cut</strong></p><p>In&nbsp;the minimum cut problem, one is&nbsp;given an&nbsp;undirected graph <span class="math-tex">\(G(V,E)\)</span> and is&nbsp;asked to&nbsp;find a&nbsp;nonempty proper set <span class="math-tex">\(S \subsetneq V\)</span> (that&nbsp;is, to&nbsp;partition the set of&nbsp;nodes&nbsp;<span class="math-tex">\(V\)</span> into two parts, <span class="math-tex">\(S\)</span>&nbsp;and&nbsp;<span class="math-tex">\(V \setminus S\)</span>) to&nbsp;minimize the number of&nbsp;edges between&nbsp;<span class="math-tex">\(S\)</span> and <span class="math-tex">\(V \setminus S\)</span>. The following simple randomized algorithm is&nbsp;a&nbsp;basic version of&nbsp;Karger's algorithm.</p><p>Repeat the following operation <span class="math-tex">\(n-2\)</span> times (as&nbsp;usual, <span class="math-tex">\(n\)</span>&nbsp;is the number of&nbsp;nodes): choose a&nbsp;random edge in the graph and contract its endpoints into a single vertex (this may create multi-edges, but we&nbsp;remove all self-loops); at the end, two vertices remain; return the cut induced by this partition (and its value, i.e. the number of parallel edges between them).</p><p>An&nbsp;example of&nbsp;contracting an&nbsp;edge is&nbsp;presented below. </p><p style="text-align:center;"><img src="generated/assets/Probability_in_Computer_Science/Randomized_Algorithms=10/image0.png" width="800" ></p><pre><code class="language-python">def Rand_Min_Cut(G):
+    while G has more than 2 vertices:
+        choose a uniformly random edge (u, v)
+        delete all edges between u and v
+        contract u and v into a single vertex
+
+    return the number of edges between the two remaining vertices</code></pre><p>Below, we&nbsp;prove that a&nbsp;fixed minimum cut survives with probability at least <span class="math-tex">\(\frac{2}{n(n-1)}\)</span>. The cut survives if none of its edges is contracted during the <span class="math-tex">\(n-2\)</span> iterations. From this claim it immediately follows that by repeating the algorithm <span class="math-tex">\(O(n^{2})\)</span> times, one can reduce the error probability to any prescribed constant.</p><p style="text-align:center;"><img src="generated/assets/Probability_in_Computer_Science/Randomized_Algorithms=10/image1.png" width="800" ></p><p>Let us estimate the required probability. <strong>Lemma. </strong><em>The algorithm <span class="math-tex">\(\mathrm{Rand\mbox{-}Min\mbox{-}Cut}\)</span> outputs each minimum cut of a&nbsp;graph with probability at least <span class="math-tex">\(\frac{2}{n(n-1)}\)</span>. The running time of the algorithm is <span class="math-tex">\(O(n^{2})\)</span>.</em> <em>Proof. </em>Fix an arbitrary minimum cut <span class="math-tex">\(C\)</span> and denote its size by&nbsp;<span class="math-tex">\(k\)</span>. Then <span class="math-tex">\(G\)</span> contains at least <span class="math-tex">\(kn/2\)</span> edges, since the degree of each vertex is at least <span class="math-tex">\(k\)</span>. Denote by <span class="math-tex">\(A_{i}\)</span> the event that no edge from <span class="math-tex">\(C\)</span> is chosen at step <span class="math-tex">\(i\)</span>. Then <span class="math-tex">\[\Pr[\text{the algorithm outputs }C] = \Pr[A_{1} \cap A_{2} \cap &hellip; \cap A_{n-2}].\]</span></p><p>We have <span class="math-tex">\[\Pr[A_{1}] \ge 1 - \frac{|C|}{|E|}\ge 1 - \frac{k}{kn/2}= 1 - \frac{2}{n}.\]</span> After the first step, there remain <span class="math-tex">\(n-1\)</span> vertices and at least <span class="math-tex">\(k(n-1)/2\)</span> edges. Hence, <span class="math-tex">\[\Pr[A_{2} \mid A_{1}] \ge 1 - \frac{2}{n-1}.\]</span></p><p>At step <span class="math-tex">\(i\)</span>, the graph has <span class="math-tex">\(n-(i-1)\)</span> vertices. Since the size of a&nbsp;minimum cut is at least <span class="math-tex">\(k\)</span>, the graph contains at least <span class="math-tex">\(k(n-i+1)/2\)</span> edges. Therefore, <span class="math-tex">\[\Pr\!\left[ A_{i} \;\middle|\; \bigcap_{j=1}^{i-1}A_{j} \right] \ge 1 - \frac{2}{n-i+1}.\]</span> Consequently, <span class="math-tex">\[\begin{align*}\Pr\!\left[ \bigcap_{j=1}^{n-2}A_{j} \right]&= \Pr[A_{1}] \cdot \Pr[A_{2} \mid A_{1}] \cdots \Pr\!\left[ A_{n-2}\;\middle|\; \bigcap_{j=1}^{n-3}A_{j} \right] \ge \\&\ge \prod_{i=1}^{n-2}\left( 1 - \frac{2}{n-i+1}\right) = \frac{2}{n(n-1)}.\end{align*}\]</span> <span class="proof-end" aria-label="End of proof">◼</span></p><p>Thus, in&nbsp;order to obtain a&nbsp;constant error probability, it&nbsp;is sufficient to&nbsp;execute this algorithm <span class="math-tex">\(O(n^{2})\)</span> times, which results in&nbsp;a&nbsp;total running time of <span class="math-tex">\(O(n^{4})\)</span>. In the exercises below, you will attempt to&nbsp;improve the&nbsp;algorithm described above by&nbsp;reducing its&nbsp;complexity to&nbsp;<span class="math-tex">\(O(n^{2} \log^{2} n)\)</span>.</p>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-22-probability-in-computer-science/unit/chapter-22-probability-in-computer-science-unit-1-randomized-algorithms/lesson/probability-in-computer-science--randomized-algorithms--step-10/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-22-probability-in-computer-science/unit/chapter-22-probability-in-computer-science-unit-2-hashing-optional/lesson/probability-in-computer-science--hashing-optional--step-1/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

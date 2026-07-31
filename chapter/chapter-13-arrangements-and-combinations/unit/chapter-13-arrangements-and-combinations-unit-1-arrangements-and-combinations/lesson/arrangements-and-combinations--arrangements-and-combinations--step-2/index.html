@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="In the summary list below, \(k=2\) objects are selected from \(n=3\) options \(\Sigma=\{{\tt a},{\tt b},{\tt c}\}\) . In combinatorics, the urn scheme is…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Arrangements and Combinations › Arrangements and Combinations › Lesson 2 | Discrete Mathematics" />
+    <meta property="og:description" content="In the summary list below, \(k=2\) objects are selected from \(n=3\) options \(\Sigma=\{{\tt a},{\tt b},{\tt c}\}\) . In combinatorics, the urn scheme is…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-13-arrangements-and-combinations/unit/chapter-13-arrangements-and-combinations-unit-1-arrangements-and-combinations/lesson/arrangements-and-combinations--arrangements-and-combinations--step-2/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-13-arrangements-and-combinations/unit/chapter-13-arrangements-and-combinations-unit-1-arrangements-and-combinations/lesson/arrangements-and-combinations--arrangements-and-combinations--step-2/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Arrangements and Combinations › Arrangements and Combinations › Lesson 2 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Arrangements and Combinations / Arrangements and Combinations</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Arrangements and Combinations · Arrangements and Combinations</p>
+        <h1>Lesson 2</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p>In the summary list below, <span class="math-tex">\(k=2\)</span> objects are selected from <span class="math-tex">\(n=3\)</span> options <span class="math-tex">\(\Sigma=\{{\tt a},{\tt b},{\tt c}\}\)</span>. In combinatorics, the urn scheme is also used to describe all four types of objects: there is an urn containing <span class="math-tex">\(n=3\)</span> balls <span class="math-tex">\(\Sigma=\{{\tt a},{\tt b},{\tt c}\}\)</span>, and we sequentially draw <span class="math-tex">\(k=2\)</span> balls from it; we may or may not return the ball to the urn, and the order of the drawn balls may or may not matter.</p><ul><li><strong>Arrangements with repetition.</strong>&nbsp; Order matters, elements can repeat. Also known as: a word (or an element of) <span class="math-tex">\(\Sigma^{k}\)</span>. <pre><code class="language-python">from itertools import product
+
+for p in product('abc', repeat=2):
+    print(*p, sep='', end=' ')</code></pre><pre><code class="language-auto">aa ab ac ba bb bc ca cb cc
+</code></pre></li><li><strong>Arrangements without repetition.</strong>&nbsp; Order matters, elements cannot repeat. Also known as: <span class="math-tex">\(k\)</span>-permutation. <pre><code class="language-python">from itertools import permutations
+
+for p in permutations('abc', 2):
+    print(*p, sep='', end=' ')</code></pre><pre><code class="language-auto">ab ac ba bc ca cb
+</code></pre></li><li><strong>Combinations with repetition.</strong>&nbsp; Order does not matter, elements can repeat. Also known as: <span class="math-tex">\(k\)</span>-multiset. <pre><code class="language-python">from itertools import combinations_with_replacement
+
+for p in combinations_with_replacement('abc', 2):
+    print(*p, sep='', end=' ')</code></pre><pre><code class="language-auto">aa ab ac bb bc cc
+</code></pre></li><li><strong>Combinations without repetition.</strong>&nbsp; Order does not matter, elements cannot repeat. Also known as: <span class="math-tex">\(k\)</span>-set. <pre><code class="language-python">from itertools import combinations
+
+for p in combinations('abc', 2):
+    print(*p, sep='', end=' ')</code></pre><pre><code class="language-auto">ab ac bc
+</code></pre></li></ul>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-13-arrangements-and-combinations/unit/chapter-13-arrangements-and-combinations-unit-1-arrangements-and-combinations/lesson/arrangements-and-combinations--arrangements-and-combinations--step-1/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-13-arrangements-and-combinations/unit/chapter-13-arrangements-and-combinations-unit-2-basic-rules/lesson/arrangements-and-combinations--basic-rules--step-1/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

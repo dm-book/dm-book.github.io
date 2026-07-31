@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="The above method generalizes to order \(k\) as follows. The characteristic polynomial will have exactly \(k\) roots (which can be complex or repeated). The…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Recurrence Relations › Linear Recurrence Relations › Lesson 6 | Discrete Mathematics" />
+    <meta property="og:description" content="The above method generalizes to order \(k\) as follows. The characteristic polynomial will have exactly \(k\) roots (which can be complex or repeated). The…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-15-recurrence-relations/unit/chapter-15-recurrence-relations-unit-6-linear-recurrence-relations/lesson/recurrence-relations--linear-recurrence-relations--step-6/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-15-recurrence-relations/unit/chapter-15-recurrence-relations-unit-6-linear-recurrence-relations/lesson/recurrence-relations--linear-recurrence-relations--step-6/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Recurrence Relations › Linear Recurrence Relations › Lesson 6 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Recurrence Relations / Linear Recurrence Relations</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Recurrence Relations · Linear Recurrence Relations</p>
+        <h1>Lesson 6</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p>The above method generalizes to order <span class="math-tex">\(k\)</span> as follows. The characteristic polynomial will have exactly <span class="math-tex">\(k\)</span> roots (which can be complex or repeated). The <em>general solution</em> is a linear combination of <span class="math-tex">\(k\)</span> functions: for a root <span class="math-tex">\(\alpha\)</span> of multiplicity <span class="math-tex">\(t\)</span>, the corresponding terms are <span class="math-tex">\[\alpha^{n}, n\alpha^{n}, n^{2}\alpha^{n}, \dotsc, n^{t-1}\alpha^{n} \  .\]</span> (We omit the proof that any such linear combination is a solution to the recurrence relation.) The coefficients for such a linear combination are determined by the initial conditions.</p><p>Finally, let us briefly discuss how to handle non-homogeneous linear recurrence relations. While we will not provide a general recipe, we will demonstrate how to guess the solution (and then verify it) for a simple non-homogeneous term <span class="math-tex">\(g(n)\)</span>. First, ignore the non-homogeneous part <span class="math-tex">\(g(n)\)</span> and find the solution to the corresponding homogeneous recurrence relation. Then, guess the non-homogeneous addition using the following guidelines: </p><ul><li> If <span class="math-tex">\(g(n)\)</span> is a polynomial (or constant), try adding a polynomial of the same degree, one degree higher, or two degrees higher. For example, if <span class="math-tex">\(g(n)=n\)</span>, first try <span class="math-tex">\(bn+c\)</span>, then <span class="math-tex">\(an^{2}+bn+c\)</span>.</li><li> If <span class="math-tex">\(g(n)=3^{n}\)</span>, try <span class="math-tex">\(c3^{n}\)</span>, then <span class="math-tex">\((bn+c)3^{n}\)</span>, and then <span class="math-tex">\((an^{2}+bn+c)3^{n}\)</span>.</li></ul>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-15-recurrence-relations/unit/chapter-15-recurrence-relations-unit-6-linear-recurrence-relations/lesson/recurrence-relations--linear-recurrence-relations--step-5/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-15-recurrence-relations/unit/chapter-15-recurrence-relations-unit-6-linear-recurrence-relations/lesson/recurrence-relations--linear-recurrence-relations--step-7/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

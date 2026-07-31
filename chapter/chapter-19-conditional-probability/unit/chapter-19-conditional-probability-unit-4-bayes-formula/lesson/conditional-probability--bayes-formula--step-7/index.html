@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="Intuitively, it seems that since the test errs with a probability of no more than ten percent, a randomly chosen person with a positive test should be ill…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Conditional Probability › Bayes&#39; Formula › Lesson 7 | Discrete Mathematics" />
+    <meta property="og:description" content="Intuitively, it seems that since the test errs with a probability of no more than ten percent, a randomly chosen person with a positive test should be ill…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-19-conditional-probability/unit/chapter-19-conditional-probability-unit-4-bayes-formula/lesson/conditional-probability--bayes-formula--step-7/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-19-conditional-probability/unit/chapter-19-conditional-probability-unit-4-bayes-formula/lesson/conditional-probability--bayes-formula--step-7/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Conditional Probability › Bayes&#39; Formula › Lesson 7 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Conditional Probability / Bayes&#39; Formula</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Conditional Probability · Bayes&#39; Formula</p>
+        <h1>Lesson 7</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p>Intuitively, it seems that since the test errs with a probability of no more than ten percent, a randomly chosen person with a positive test should be ill with a probability of about <span class="math-tex">\(0.9\)</span>. But that is far from the case. Let's analyze this.</p><p>Denote the events &ldquo;ill&rdquo; and &ldquo;positive test&rdquo; as&nbsp;<span class="math-tex">\(H\)</span> and&nbsp;<span class="math-tex">\(E\)</span>, respectively (<span class="math-tex">\(H\)</span> is our hypothesis, <span class="math-tex">\(E\)</span> is the observed event). Then <span class="math-tex">\(\Pr[E \mid H]=0.9\)</span> is the probability of a positive test for a sick person. <span class="math-tex">\(\Pr[H]=0.01\)</span> is the probability of being sick. Next, <span class="math-tex">\(\Pr[E \mid \neg H]\Pr[\neg H]=\Pr[E \cap \neg H]=0.99\cdot 0.05\)</span> is the probability of a positive test for a healthy person. Substituting this into Bayes' formula, we get: <span class="math-tex">\[\Pr[H \mid E]= \frac{0.9}{0.01 \cdot 0.9+0.99\cdot 0.05}\cdot 0.01 \approx 0.154 \  .\]</span></p><p>One can look at it differently. Consider <span class="math-tex">\(10\ 000\)</span> people. Of them, <span class="math-tex">\(100\)</span> will be sick on average. Ninety out of one hundred will test positive. The remaining <span class="math-tex">\(9\ 900\)</span> will be healthy. But for <span class="math-tex">\(9\ 900 \cdot 0.05=495\)</span> of them, the test will be positive! Thus, there will be a total of <span class="math-tex">\(90+495=585\)</span> people with a positive test, but only <span class="math-tex">\(90\)</span> of them will actually be sick! (Of course, <span class="math-tex">\(90/585 \approx 0.154\)</span>.) That is, healthy people make a big contribution to the group of people with a positive test: there are <span class="math-tex">\(9900\)</span> healthy people, and even five percent of that number is <span class="math-tex">\(495\)</span>, which is much more than <span class="math-tex">\(90\)</span> (sick people with the disease).</p><p>For clarity, let us now repeat the same reasoning visually. The green rectangle shows the proportion of sick people (<span class="math-tex">\(0.01\)</span>). The pink rectangle shows people with positive tests. Their proportion is <span class="math-tex">\(0.0585\)</span>. In particular, the proportion of people with positive tests among all sick people is <span class="math-tex">\(0.9\)</span>, i.e., <span class="math-tex">\(0.9\)</span> of the green rectangle lies in the pink rectangle. At the same time, as can be seen, there are many healthy people with positive tests. </p><p style="text-align:center;"><img src="generated/assets/Conditional_Probability/Bayes'_Formula=6/image0.png" width="800" ></p>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-19-conditional-probability/unit/chapter-19-conditional-probability-unit-4-bayes-formula/lesson/conditional-probability--bayes-formula--step-6/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-19-conditional-probability/unit/chapter-19-conditional-probability-unit-4-bayes-formula/lesson/conditional-probability--bayes-formula--step-8/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

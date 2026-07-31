@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="Programming problem. Implement an exact branch-and-bound program for the following constrained one-share index-tracking problem. There are \(n\) stocks.…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Project: Portfolio Selection › LP Relaxation › Lesson 6 | Discrete Mathematics" />
+    <meta property="og:description" content="Programming problem. Implement an exact branch-and-bound program for the following constrained one-share index-tracking problem. There are \(n\) stocks.…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-17-project-portfolio-selection/unit/chapter-17-project-portfolio-selection-unit-9-lp-relaxation/lesson/project-portfolio-selection--lp-relaxation--step-6/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-17-project-portfolio-selection/unit/chapter-17-project-portfolio-selection-unit-9-lp-relaxation/lesson/project-portfolio-selection--lp-relaxation--step-6/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Project: Portfolio Selection › LP Relaxation › Lesson 6 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Project: Portfolio Selection / LP Relaxation</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Project: Portfolio Selection · LP Relaxation</p>
+        <h1>Lesson 6</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p><strong>Programming problem. </strong></p><p>Implement an&nbsp;exact branch-and-bound program for the following constrained one-share index-tracking problem. There are <span class="math-tex">\(n\)</span> stocks. Each stock may be selected at most once. For stock&nbsp;<span class="math-tex">\(i\)</span>, we know its price&nbsp;<span class="math-tex">\(p_{i}\)</span>, target amount&nbsp;<span class="math-tex">\(t_{i}\)</span>, and sector&nbsp;<span class="math-tex">\(s_{i}\)</span>. We are also given a&nbsp;budget, an&nbsp;upper bound on the number of selected stocks, a&nbsp;spending cap for each sector, a&nbsp;list of conflicting pairs, and a&nbsp;list of dependencies. A conflicting pair <span class="math-tex">\((u,v)\)</span> means that <span class="math-tex">\(u\)</span> and <span class="math-tex">\(v\)</span> cannot both be selected. A dependency <span class="math-tex">\((u,v)\)</span> means that if <span class="math-tex">\(u\)</span> is selected, then <span class="math-tex">\(v\)</span>&nbsp;must also be selected.</p><ul><li><strong>Input format.</strong>&nbsp; The first line contains four integers <span class="math-tex">\(1 \le n \le 30\)</span>, <span class="math-tex">\(1 \le q \le 6\)</span>, <span class="math-tex">\(0 \le c \le 200\)</span>, and <span class="math-tex">\(0 \le d \le 200\)</span>: the number of stocks, sectors, conflicting pairs, and dependencies. The second line contains two integers <span class="math-tex">\(0 \le B \le 10^{9}\)</span> and <span class="math-tex">\(0 \le k \le n\)</span>. The third line contains integer prices <span class="math-tex">\(1 \le p_{1},\dotsc,p_{n} \le 10^{9}\)</span>. The fourth line contains integer target amounts <span class="math-tex">\(0 \le t_{1},\dotsc,t_{n} \le 10^{9}\)</span>. The fifth line contains integer sector numbers <span class="math-tex">\(1 \le s_{1},\dotsc,s_{n} \le q\)</span>. The sixth line contains integer sector caps <span class="math-tex">\(0 \le C_{1},\dotsc,C_{q} \le B\)</span>. Then <span class="math-tex">\(c\)</span> lines each contain two integers <span class="math-tex">\(u,v\)</span> describing a&nbsp;conflict. Then <span class="math-tex">\(d\)</span> lines each contain two integers <span class="math-tex">\(u,v\)</span> describing a&nbsp;dependency.</li><li><strong>Output format.</strong>&nbsp; Output one integer: the minimum possible tracking error among valid selected sets.</li></ul>
+          <div class="task-card programming-card">
+        
+        <a class="cogniterra-only-notice" href="https://cogniterra.org/a/697" target="_blank" rel="noreferrer">This problem can only be submitted at Cogniterra.</a>
+        <section class="programming-samples" aria-label="Public programming samples">
+          <div class="task-heading">Public samples</div>
+          <article class="programming-sample">
+            <strong>Public sample 1</strong>
+            <div class="programming-result-grid">
+              <div><div class="result-field-label">Input</div><pre>4 2 1 1
+14 2
+4 7 5 9
+4 7 5 9
+1 1 2 2
+10 10
+2 4
+3 1</pre></div>
+              <div><div class="result-field-label">Example output</div><pre>12</pre></div>
+            </div>
+          </article>
+          <article class="programming-sample">
+            <strong>Public sample 2</strong>
+            <div class="programming-result-grid">
+              <div><div class="result-field-label">Input</div><pre>3 1 0 1
+14 2
+5 6 8
+5 6 8
+1 1 1
+14
+2 3</pre></div>
+              <div><div class="result-field-label">Example output</div><pre>5</pre></div>
+            </div>
+          </article>
+        </section>
+      </div>
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-17-project-portfolio-selection/unit/chapter-17-project-portfolio-selection-unit-9-lp-relaxation/lesson/project-portfolio-selection--lp-relaxation--step-5/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-18-events-and-probability-spaces/unit/chapter-18-events-and-probability-spaces-unit-1-events-and-probability-spaces/lesson/events-and-probability-spaces--events-and-probability-spaces--step-1/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="Now we use the estimate on \(m_{i}\) to prove that the levels grow quickly. We will show by induction that, for every \(i&lt;\ell\) ,…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Cycles › Cycles of Even Length (Optional) › Lesson 11 | Discrete Mathematics" />
+    <meta property="og:description" content="Now we use the estimate on \(m_{i}\) to prove that the levels grow quickly. We will show by induction that, for every \(i&lt;\ell\) ,…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-25-cycles/unit/chapter-25-cycles-unit-7-cycles-of-even-length-optional/lesson/cycles--cycles-of-even-length-optional--step-11/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-25-cycles/unit/chapter-25-cycles-unit-7-cycles-of-even-length-optional/lesson/cycles--cycles-of-even-length-optional--step-11/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Cycles › Cycles of Even Length (Optional) › Lesson 11 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Cycles / Cycles of Even Length (Optional)</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Cycles · Cycles of Even Length (Optional)</p>
+        <h1>Lesson 11</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p>Now we use the estimate on&nbsp;<span class="math-tex">\(m_{i}\)</span> to prove that the levels grow quickly. We will show by induction that, for every <span class="math-tex">\(i&lt;\ell\)</span>, <span class="math-tex">\[\frac{|V_{i+1}|}{|V_i|}&gt;\frac{2\delta}{9\ell}.\]</span></p><p>For <span class="math-tex">\(i=0\)</span>, we have <span class="math-tex">\(|V_{0}|=1\)</span> and <span class="math-tex">\(|V_{1}|=\deg(c)&gt;\delta&gt;\frac{2\delta}{9\ell}\)</span>, so the inequality is clear.</p><p>For the induction step, assume <span class="math-tex">\(i\ge 1\)</span> and that the inequality is already known for <span class="math-tex">\(i-1\)</span>. Every edge incident to a&nbsp;vertex of&nbsp;<span class="math-tex">\(V_{i}\)</span> goes either to <span class="math-tex">\(V_{i-1}\)</span> or to&nbsp;<span class="math-tex">\(V_{i+1}\)</span>, hence <span class="math-tex">\[\delta |V_{i}| \le m_{i-1}+m_{i} \le 2\ell(|V_{i-1}|+2|V_{i}|+|V_{i+1}|).\]</span> Here the second inequality follows from the estimate on&nbsp;<span class="math-tex">\(m_{i}\)</span> proved above. By the induction hypothesis, <span class="math-tex">\[\frac{|V_{i-1}|}{|V_i|}&lt;\frac{9\ell}{2\delta}.\]</span> Therefore <span class="math-tex">\[\frac{|V_{i+1}|}{|V_i|}&gt; \frac{1}{2\ell}\left(\delta-4\ell-\frac{9\ell^2}{\delta}\right) \ge \frac{\delta-5\ell}{2\ell}\ge \frac{2\delta}{9\ell},\]</span> where we used <span class="math-tex">\(\delta\ge 9\ell\)</span>. This proves the expansion estimate <span class="math-tex">\(\frac{|V_{i + 1}|}{|V_i|}&gt; \frac{2 \delta}{9 \ell}\)</span>.</p><p>Multiplying it for <span class="math-tex">\(i=0,1,\dotsc,\ell-1\)</span>, we obtain <span class="math-tex">\[|V_{\ell}| &gt; \left(\frac{2\delta}{9\ell}\right)^{\ell} |V_{0}|.\]</span> But we know that <span class="math-tex">\(\frac{2\delta}{9\ell}\ge n^{1/\ell}\)</span>, and <span class="math-tex">\(|V_{0}|=1\)</span>. Hence <span class="math-tex">\[|V_{\ell}|&gt; (n^{1/\ell})^{\ell}=n,\]</span> which is impossible because <span class="math-tex">\(G'\)</span> has at most&nbsp;<span class="math-tex">\(n\)</span> vertices. The contradiction shows that <span class="math-tex">\(G'\)</span> contains a cycle of length&nbsp;<span class="math-tex">\(2\ell\)</span>, and therefore so does&nbsp;<span class="math-tex">\(G\)</span>.</p>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-25-cycles/unit/chapter-25-cycles-unit-7-cycles-of-even-length-optional/lesson/cycles--cycles-of-even-length-optional--step-10/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-25-cycles/unit/chapter-25-cycles-unit-7-cycles-of-even-length-optional/lesson/cycles--cycles-of-even-length-optional--step-12/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

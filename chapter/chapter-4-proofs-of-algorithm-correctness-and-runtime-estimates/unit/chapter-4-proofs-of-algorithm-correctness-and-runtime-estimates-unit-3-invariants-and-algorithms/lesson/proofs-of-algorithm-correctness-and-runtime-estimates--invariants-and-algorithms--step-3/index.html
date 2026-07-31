@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="Let&#39;s try to fill the first two rows somehow so that their sum equals twenty. Since the sum in each column must equal ten, the third row is determined…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Proofs of Algorithm Correctness and Runtime Estimates › Invariants and Algorithms › Lesson 3 | Discrete Mathematics" />
+    <meta property="og:description" content="Let&#39;s try to fill the first two rows somehow so that their sum equals twenty. Since the sum in each column must equal ten, the third row is determined…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-4-proofs-of-algorithm-correctness-and-runtime-estimates/unit/chapter-4-proofs-of-algorithm-correctness-and-runtime-estimates-unit-3-invariants-and-algorithms/lesson/proofs-of-algorithm-correctness-and-runtime-estimates--invariants-and-algorithms--step-3/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-4-proofs-of-algorithm-correctness-and-runtime-estimates/unit/chapter-4-proofs-of-algorithm-correctness-and-runtime-estimates-unit-3-invariants-and-algorithms/lesson/proofs-of-algorithm-correctness-and-runtime-estimates--invariants-and-algorithms--step-3/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Proofs of Algorithm Correctness and Runtime Estimates › Invariants and Algorithms › Lesson 3 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Proofs of Algorithm Correctness and Runtime Estimates / Invariants and Algorithms</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Proofs of Algorithm Correctness and Runtime Estimates · Invariants and Algorithms</p>
+        <h1>Lesson 3</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p>Let's try to fill the first two rows somehow so that their sum equals twenty. </p><p style="text-align:center;"><img src="generated/assets/Proofs_of_Algorithm_Correctness_and_Runtime_Estimates/Invariants_and_Algorithms=2/image0.png" width="800" ></p><p> Since the sum in each column must equal ten, the third row is determined uniquely. </p><p style="text-align:center;"><img src="generated/assets/Proofs_of_Algorithm_Correctness_and_Runtime_Estimates/Invariants_and_Algorithms=2/image1.png" width="800" ></p><p> However, the sum of the numbers in the third row turns out to be ten. Thus, our first attempt did not work, but this <em>does not mean</em> that the mission is impossible: it is still not excluded that if we had started with other numbers in the first two rows, everything would have matched.</p><p>If you look closely at the table above, it becomes clear that the sum in the third row turned out to be ten not by chance: since the sum in each of the five columns equals ten, the sum of the numbers in the entire table equals fifty; and since the sum in each of the first two rows equals twenty, the sum in the third row equals <span class="math-tex">\(50-20-20=10\)</span>. Therefore, it is not possible to fill the table as required.</p><p>The invariant in this problem is the sum of the numbers in the entire table. There is no process in this problem: we simply understand that the sum of the numbers in the entire table should not change depending on whether we sum by rows or by columns. Therefore, recognizing this invariant in the current problem is not difficult. Next, we will see problems where guessing the necessary invariant will be more challenging.</p><p>The technique we used to solve this problem is called <em>double counting</em>.</p>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-4-proofs-of-algorithm-correctness-and-runtime-estimates/unit/chapter-4-proofs-of-algorithm-correctness-and-runtime-estimates-unit-3-invariants-and-algorithms/lesson/proofs-of-algorithm-correctness-and-runtime-estimates--invariants-and-algorithms--step-2/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-4-proofs-of-algorithm-correctness-and-runtime-estimates/unit/chapter-4-proofs-of-algorithm-correctness-and-runtime-estimates-unit-3-invariants-and-algorithms/lesson/proofs-of-algorithm-correctness-and-runtime-estimates--invariants-and-algorithms--step-4/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

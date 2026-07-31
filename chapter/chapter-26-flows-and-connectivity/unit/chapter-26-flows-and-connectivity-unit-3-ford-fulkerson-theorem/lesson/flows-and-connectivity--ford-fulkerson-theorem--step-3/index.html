@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="Theorem (Ford–Fulkerson, 1962). The size of the maximum flow in a network equals the capacity of the minimum \((s,t)\) -cut. Proof. Consider a maximum flow…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Flows and Connectivity › Ford–Fulkerson Theorem › Lesson 3 | Discrete Mathematics" />
+    <meta property="og:description" content="Theorem (Ford–Fulkerson, 1962). The size of the maximum flow in a network equals the capacity of the minimum \((s,t)\) -cut. Proof. Consider a maximum flow…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-26-flows-and-connectivity/unit/chapter-26-flows-and-connectivity-unit-3-ford-fulkerson-theorem/lesson/flows-and-connectivity--ford-fulkerson-theorem--step-3/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-26-flows-and-connectivity/unit/chapter-26-flows-and-connectivity-unit-3-ford-fulkerson-theorem/lesson/flows-and-connectivity--ford-fulkerson-theorem--step-3/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Flows and Connectivity › Ford–Fulkerson Theorem › Lesson 3 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Flows and Connectivity / Ford–Fulkerson Theorem</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Flows and Connectivity · Ford–Fulkerson Theorem</p>
+        <h1>Lesson 3</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p><strong>Theorem (Ford–Fulkerson, 1962). </strong><em>The size of the maximum flow in a network equals the capacity of the minimum <span class="math-tex">\((s,t)\)</span>-cut.</em></p><p style="text-align:center;"><img src="generated/assets/Flows_and_Connectivity/Ford–Fulkerson_Theorem=2/image0.png" width="800" ></p><p><em>Proof. </em>Consider a maximum flow&nbsp;<span class="math-tex">\(f\)</span> and its corresponding residual network&nbsp;<span class="math-tex">\(G^{f}\)</span>. In the network <span class="math-tex">\(G^{f}\)</span>, vertex&nbsp;<span class="math-tex">\(t\)</span> is not reachable from&nbsp;<span class="math-tex">\(s\)</span> (otherwise the flow could be increased). Let&nbsp;<span class="math-tex">\(L\)</span> be the set of vertices <em>reachable</em> from&nbsp;<span class="math-tex">\(s\)</span> in the residual network&nbsp;<span class="math-tex">\(G^{f}\)</span>, and let&nbsp;<span class="math-tex">\(R\)</span> be the rest: <span class="math-tex">\(R = V-L\)</span>.</p><p style="text-align:center;"><img src="generated/assets/Flows_and_Connectivity/Ford–Fulkerson_Theorem=2/image1.png" width="800" ></p><p>We claim that <span class="math-tex">\[\operatorname{size}(f) = \operatorname{capacity}(L,R).\]</span> Indeed, since there are no edges from&nbsp;<span class="math-tex">\(L\)</span> to&nbsp;<span class="math-tex">\(R\)</span> in the residual network, our flow fully saturates the edges from&nbsp;<span class="math-tex">\(L\)</span> to&nbsp;<span class="math-tex">\(R\)</span> in the original network and does not use edges from&nbsp;<span class="math-tex">\(R\)</span> to&nbsp;<span class="math-tex">\(L\)</span>: in the diagram <span class="math-tex">\(f(e) = c(e)\)</span> and <span class="math-tex">\(f(e') = 0\)</span>. Thus, the flow in the network (which can be controlled at the <em>customs border</em> between <span class="math-tex">\(L\)</span> and <span class="math-tex">\(R\)</span>) exactly equals the cut capacity.<span class="proof-end" aria-label="End of proof">◼</span></p>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-26-flows-and-connectivity/unit/chapter-26-flows-and-connectivity-unit-3-ford-fulkerson-theorem/lesson/flows-and-connectivity--ford-fulkerson-theorem--step-2/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-26-flows-and-connectivity/unit/chapter-26-flows-and-connectivity-unit-3-ford-fulkerson-theorem/lesson/flows-and-connectivity--ford-fulkerson-theorem--step-4/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

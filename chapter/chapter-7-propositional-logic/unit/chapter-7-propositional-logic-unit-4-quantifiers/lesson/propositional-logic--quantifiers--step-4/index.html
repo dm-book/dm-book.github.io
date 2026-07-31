@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="Often, multiple quantifiers are used in a statement. For example, Goldbach&#39;s conjecture can be formally written as: \[\forall n \in \mathbb{E}\ \exists p…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Propositional Logic › Quantifiers › Lesson 4 | Discrete Mathematics" />
+    <meta property="og:description" content="Often, multiple quantifiers are used in a statement. For example, Goldbach&#39;s conjecture can be formally written as: \[\forall n \in \mathbb{E}\ \exists p…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-7-propositional-logic/unit/chapter-7-propositional-logic-unit-4-quantifiers/lesson/propositional-logic--quantifiers--step-4/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-7-propositional-logic/unit/chapter-7-propositional-logic-unit-4-quantifiers/lesson/propositional-logic--quantifiers--step-4/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Propositional Logic › Quantifiers › Lesson 4 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Propositional Logic / Quantifiers</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Propositional Logic · Quantifiers</p>
+        <h1>Lesson 4</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p>Often, multiple quantifiers are used in a statement. For example, Goldbach's conjecture can be formally written as: <span class="math-tex">\[\forall n \in \mathbb{E}\  \exists p \in \mathbb{P}\  \exists q \in \mathbb{P}\colon n=p+q \  ,\]</span> where <span class="math-tex">\(\mathbb{E}=\{t \in \mathbb{Z}_{&gt;2}\colon 2 \mid t\}\)</span> is the set of even numbers greater than two. The order of the quantifiers in such statements is <em>important</em>. For example, the statement <span class="math-tex">\[\exists p \in \mathbb{P}\  \exists q \in \mathbb{P}\  \forall n \in \mathbb{E}\colon n=p+q\]</span> is certainly not true: it claims that there exist two prime numbers such that any even number is the sum of them.</p><p>To write the negation of a statement with quantifiers, one can use the following <em>De Morgan's laws for quantified formulas</em>: <span class="math-tex">\[\begin{align*}\neg(\forall x\  P(x))&\equiv (\exists x\  \neg P(x))\\ \neg(\exists x\  P(x))&\equiv (\forall x\  \neg P(x))\end{align*}\]</span> The rules are natural. In what case is the statement <span class="math-tex">\((\forall x\  P(x))\)</span> false? Exactly when there exists an <span class="math-tex">\(x\)</span> for which <span class="math-tex">\(P(x)\)</span> is false. In the case when the set from which the quantifier is taken is finite, these laws are equivalent to the usual De Morgan's laws.</p><p>There is also a &ldquo;mechanical&rdquo; interpretation of this law: <em>when negation passes through a&nbsp;quantifier, the type of quantifier changes to the opposite one</em>. Let's give an example of such negation being pushed inward:  <span class="math-tex">\[\neg(\forall x\  \exists y\colon P(x,y)) \equiv \exists x\colon \neg(\exists y \colon P(x,y)) \equiv \exists x\  \forall y \colon \neg P(x,y) \  .\]</span>  </p>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-7-propositional-logic/unit/chapter-7-propositional-logic-unit-4-quantifiers/lesson/propositional-logic--quantifiers--step-3/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-7-propositional-logic/unit/chapter-7-propositional-logic-unit-4-quantifiers/lesson/propositional-logic--quantifiers--step-5/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

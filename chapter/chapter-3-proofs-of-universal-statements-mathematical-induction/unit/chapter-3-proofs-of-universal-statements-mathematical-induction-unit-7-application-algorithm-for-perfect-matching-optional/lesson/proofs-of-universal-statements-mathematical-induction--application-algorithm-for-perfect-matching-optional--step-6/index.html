@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="Theorem (Tutte, 1947). There exists a perfect matching in \(G\) if and only if the determinant of the Tutte matrix is not the zero polynomial. The theorem…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Proofs of Universal Statements: Mathematical Induction › Application: Algorithm for Perfect Matching (Optional) › Lesson 6 | Discrete Mathematics" />
+    <meta property="og:description" content="Theorem (Tutte, 1947). There exists a perfect matching in \(G\) if and only if the determinant of the Tutte matrix is not the zero polynomial. The theorem…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-3-proofs-of-universal-statements-mathematical-induction/unit/chapter-3-proofs-of-universal-statements-mathematical-induction-unit-7-application-algorithm-for-perfect-matching-optional/lesson/proofs-of-universal-statements-mathematical-induction--application-algorithm-for-perfect-matching-optional--step-6/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-3-proofs-of-universal-statements-mathematical-induction/unit/chapter-3-proofs-of-universal-statements-mathematical-induction-unit-7-application-algorithm-for-perfect-matching-optional/lesson/proofs-of-universal-statements-mathematical-induction--application-algorithm-for-perfect-matching-optional--step-6/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Proofs of Universal Statements: Mathematical Induction › Application: Algorithm for Perfect Matching (Optional) › Lesson 6 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Proofs of Universal Statements: Mathematical Induction / Application: Algorithm for Perfect Matching (Optional)</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Proofs of Universal Statements: Mathematical Induction · Application: Algorithm for Perfect Matching (Optional)</p>
+        <h1>Lesson 6</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p><strong>Theorem (Tutte, 1947). </strong><em>There exists a&nbsp;perfect matching in&nbsp;<span class="math-tex">\(G\)</span> if and only if the&nbsp;determinant of the&nbsp;Tutte matrix is&nbsp;not the&nbsp;zero polynomial.</em></p><p>The theorem follows from the next two lemmas.</p><p><strong>Lemma. </strong><em>If&nbsp;<span class="math-tex">\(G\)</span> has a&nbsp;perfect matching, then&nbsp;<span class="math-tex">\(\det(T) \neq 0\)</span>.</em></p><p><em>Proof. </em>Without loss of&nbsp;generality, suppose <span class="math-tex">\(\{(1, 2), (3, 4), \dotsc, (n-1, n)\}\)</span> is a&nbsp;perfect matching.</p><p>Consider the permutation <span class="math-tex">\(\sigma_{M} = (1, 2)(3, 4) \dotsc (n-1, n)\)</span>. Let&nbsp;us examine the term in the&nbsp;determinant expansion that corresponds to&nbsp;<span class="math-tex">\(\sigma_{M}\)</span>. We&nbsp;aim to&nbsp;show that this term cannot be cancelled, implying that the&nbsp;determinant is&nbsp;non-zero.</p><p> <span class="math-tex">\[\begin{align*}\prod_{i=1}^{n}T_{i, \sigma_M(i)}&= x_{1,2}\cdot (-x_{1,2}) \cdot x_{3,4}\cdot (-x_{3,4}) \cdot &hellip; \cdot x_{n-1,n}\cdot (-x_{n-1,n}) \\&= (-1)^{n/2}(x_{1,2})^{2} \cdot (x_{3,4})^{2} \cdots (x_{n-1,n})^{2}.\end{align*}\]</span>  </p><p>Since each variable appears squared, there exists only&nbsp;one permutation that contributes this specific product of&nbsp;variables. Therefore, no&nbsp;other permutation can cancel this term, and it&nbsp;follows that&nbsp;<span class="math-tex">\(\det(T) \neq 0\)</span>.<span class="proof-end" aria-label="End of proof">◼</span></p>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-3-proofs-of-universal-statements-mathematical-induction/unit/chapter-3-proofs-of-universal-statements-mathematical-induction-unit-7-application-algorithm-for-perfect-matching-optional/lesson/proofs-of-universal-statements-mathematical-induction--application-algorithm-for-perfect-matching-optional--step-5/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-3-proofs-of-universal-statements-mathematical-induction/unit/chapter-3-proofs-of-universal-statements-mathematical-induction-unit-7-application-algorithm-for-perfect-matching-optional/lesson/proofs-of-universal-statements-mathematical-induction--application-algorithm-for-perfect-matching-optional--step-7/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="The basic example of a linear code is the Hamming code . It has many remarkable properties. Its only drawback is that its distance equals three, meaning it…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Proofs of Existence and Optimality › Application: Error Correcting Codes (Optional) › Hamming Code | Discrete Mathematics" />
+    <meta property="og:description" content="The basic example of a linear code is the Hamming code . It has many remarkable properties. Its only drawback is that its distance equals three, meaning it…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-2-proofs-of-existence-and-optimality/unit/chapter-2-proofs-of-existence-and-optimality-unit-7-application-error-correcting-codes-optional/lesson/proofs-of-existence-and-optimality--application-error-correcting-codes-optional--step-9/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-2-proofs-of-existence-and-optimality/unit/chapter-2-proofs-of-existence-and-optimality-unit-7-application-error-correcting-codes-optional/lesson/proofs-of-existence-and-optimality--application-error-correcting-codes-optional--step-9/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Proofs of Existence and Optimality › Application: Error Correcting Codes (Optional) › Hamming Code | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Proofs of Existence and Optimality / Application: Error Correcting Codes (Optional)</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Proofs of Existence and Optimality · Application: Error Correcting Codes (Optional)</p>
+        <h1>Hamming Code</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p>The basic example of a&nbsp;linear code is the <em>Hamming code</em>. It has many remarkable properties. Its only drawback is that its distance equals three, meaning it corrects only one error. Nevertheless, it is based on a beautiful combinatorial construction. Understanding its properties is key to understanding more complex codes. To illustrate the properties, we use a toy example with <span class="math-tex">\(n=7\)</span>, then discuss why these properties hold in general.</p><p style="text-align:center;"><img src="generated/assets/Proofs_of_Existence_and_Optimality/Application$_Error_Correcting_Codes_(Optional)=8/image0.png" width="800" ></p><p>The parity-check matrix of the Hamming code <span class="math-tex">\(C_{7} \subseteq \{0,1\}^{7}\)</span> consists of all possible nonzero vectors of length&nbsp;3: <span class="math-tex">\[H_{7}= \begin{pmatrix}0&0&0&1&1&1&1\\ 0&1&1&0&0&1&1\\ 1&0&1&0&1&0&1\\\end{pmatrix}\]</span> In other words, the set <span class="math-tex">\(C_{7}\)</span> consists of words <span class="math-tex">\(u \in \{0,1\}^{7}\)</span> that satisfy the system of linear equations:  <span class="math-tex">\[u_{4} \oplus u_{5} \oplus u_{6} \oplus u_{7} = 0, \quad u_{2} \oplus u_{3} \oplus u_{6} \oplus u_{7}=0, \quad u_{1} \oplus u_{3} \oplus u_{5} \oplus u_{7} = 0 \  .\]</span>  </p><p>It is easy to see that these three equations (the rows of&nbsp;<span class="math-tex">\(H_{7}\)</span>) are linearly independent: indeed, <span class="math-tex">\(u_{4}\)</span> appears only in the first equation, <span class="math-tex">\(u_{2}\)</span> only in the second, <span class="math-tex">\(u_{1}\)</span> only in the third (so no combination of these rows can sum to zero). It follows that <span class="math-tex">\(|C|=2^{7-3}=2^{4}=16\)</span>: informally, each equation reduces the degrees of freedom by one. The code distance equals three: there are no zero columns in the parity-check matrix, any two columns are different (and therefore cannot sum to zero), and one can easily find three linearly dependent columns (any two columns sum to another column in the matrix).</p><p>Now we list the remarkable properties of the Hamming code, introducing a few new definitions along the way. </p><ul><li><strong>Perfectness.</strong>&nbsp; A code is called <em>perfect</em> if it meets the Hamming bound. Clearly, the code <span class="math-tex">\(C_{7}\)</span> has this property: balls of radius one centered at codewords of <span class="math-tex">\(C_{7}\)</span> optimally pack the space <span class="math-tex">\(\{0,1\}^{7}\)</span>.</li><li><strong>Systematic form.</strong>&nbsp; A code is called <em>systematic</em> if encoding is done by appending some information to the original message. The bits of the original message are called <em>information bits</em>, and the appended bits are <em>check bits</em>. More formally, an <span class="math-tex">\((n,k,\cdot)\)</span>-code&nbsp;<span class="math-tex">\(C\)</span> is systematic if there exists an encoding <span class="math-tex">\(\phi \colon \{0,1\}^{k} \to C\)</span> and coordinates <span class="math-tex">\(1 \le i_{1} \le \dotsb \le i_{k} \le n\)</span>, such that for any message <span class="math-tex">\(m \in \{0,1\}^{k}\)</span>, the projection of its codeword on these coordinates equals <span class="math-tex">\(m\)</span>: <span class="math-tex">\(\phi(m)|_{i_1, \dotsc, i_k}=m\)</span>.<br>Clearly, the code&nbsp;<span class="math-tex">\(C_{7}\)</span> is systematic. Encoding can be done as follows. Denote the message by <span class="math-tex">\((u_{3}, u_{5}, u_{6}, u_{7})\)</span> (this numbering will be convenient for decoding). For any such message we can uniquely find the bits <span class="math-tex">\(u_{1}, u_{2}, u_{4}\)</span>:  <span class="math-tex">\[u_{4} = u_{5} \oplus u_{6} \oplus u_{7}, \quad u_{2} = u_{3} \oplus u_{6} \oplus u_{7}, \quad u_{1} = u_{3} \oplus u_{5} \oplus u_{7} \  .\]</span>   Thus, the encoding is:  <span class="math-tex">\[\phi(u_{3}, u_{5}, u_{6}, u_{7}) = (u_{3} \oplus u_{5} \oplus u_{7}, u_{3} \oplus u_{6} \oplus u_{7}, u_{3}, u_{5} \oplus u_{6} \oplus u_{7}, u_{5}, u_{6}, u_{7}) \  .\]</span>  <br>In fact, any linear code is systematic. One can express one variable from each parity-check equation, substitute it into the others, and so on.</li><li><strong>Simple encoding.</strong>&nbsp; This is essentially described in the previous point: the encoding is as simple and efficient as possible.</li><li><strong>Simple decoding.</strong>&nbsp; Decoding is not only simple and efficient but also elegant. Given a&nbsp;word&nbsp;<span class="math-tex">\(v \in \{0,1\}^{7}\)</span> differing from a codeword in at most one bit, compute the <em>syndrome</em> <span class="math-tex">\(s=H_{7}v\)</span>: if <span class="math-tex">\(s=\mathbf{0}\)</span>, there is no error; otherwise, <span class="math-tex">\(s\)</span> is the binary representation of the erroneous bit!<br>Example: suppose we receive <span class="math-tex">\(v \in \{0,1\}^{7}\)</span> with <span class="math-tex">\(s=(0,1,1)^{T}\)</span>. Then <span class="math-tex">\(s\)</span> is the binary representation of three. Take <span class="math-tex">\(e=(0,0,1,0,0,0,0)\)</span>, where the 1 is at position three. Clearly, <span class="math-tex">\(H_{7}e=s\)</span>. Therefore, <span class="math-tex">\[H_{7}(v \oplus e)=H_{7}v \oplus H_{7}e=s \oplus s = \mathbf{0}\  ,\]</span> meaning <span class="math-tex">\(v \oplus e\)</span> is the original codeword.</li></ul><pre><code class="language-python">from itertools import product
+
+
+def syndrome(u):
+    return ((u[3] + u[4] + u[5] + u[6]) % 2,
+            (u[1] + u[2] + u[5] + u[6]) % 2,
+            (u[0] + u[2] + u[4] + u[6]) % 2)
+
+
+def is_code_word(u):
+    return syndrome(u) == (0, 0, 0)
+
+
+def min_non_zero_weight(code):
+    return min(sum(u) for u in code if sum(u) &gt; 0)
+
+
+def encode(m):
+    return ((m[0] + m[1] + m[3]) % 2,
+            (m[0] + m[2] + m[3]) % 2,
+            m[0],
+            (m[1] + m[2] + m[3]) % 2,
+            m[1],
+            m[2],
+            m[3])
+
+
+def decode(v):
+    s = syndrome(v)
+    if s == (0, 0, 0):
+        return v
+
+    i = s[2] + 2 * s[1] + 4 * s[0]
+    u = list(v)
+    u[i - 1] = (u[i - 1] + 1) % 2
+    return u
+
+
+hamming_code = [u for u in product(range(2), repeat=7) if is_code_word(u)]
+print('Length of Hamming code:', len(hamming_code))
+print('Minimum non-zero weight:', min_non_zero_weight(hamming_code))
+print('Encode (1, 0, 1, 0):', encode((1, 0, 1, 0)))
+
+for word in ((1, 0, 1, 1, 0, 1, 0), (1, 0, 1, 0, 0, 1, 0), (1, 1, 1, 1, 0, 1, 0)):
+    print(f'Decode {word}: {decode(word)}')</code></pre><pre><code class="language-auto">Length of Hamming code: 16
+Minimum non-zero weight: 3
+Encode (1, 0, 1, 0): (1, 0, 1, 1, 0, 1, 0)
+Decode (1, 0, 1, 1, 0, 1, 0): (1, 0, 1, 1, 0, 1, 0)
+Decode (1, 0, 1, 0, 0, 1, 0): [1, 0, 1, 1, 0, 1, 0]
+Decode (1, 1, 1, 1, 0, 1, 0): [1, 0, 1, 1, 0, 1, 0]
+</code></pre><p>Now, for the general case. For <span class="math-tex">\(n=2^{t}-1\)</span>, the Hamming code is&nbsp;constructed the same way and has all the same properties. In&nbsp;this case, <span class="math-tex">\(H_{n}\)</span> contains all distinct nonzero columns of height <span class="math-tex">\(t=\log_{2}(n+1)\)</span>. Then <span class="math-tex">\(|C_{n}|=2^{n-t}=\frac{2^n}{n+1}\)</span>. Hence, <span class="math-tex">\(|C_{n}|\)</span> balls of radius one (each containing <span class="math-tex">\(n+1\)</span>&nbsp;points of <span class="math-tex">\(\{0,1\}^{n}\)</span>) fill <span class="math-tex">\(\{0,1\}^{n}\)</span> completely, so the code is perfect. As any linear code, <span class="math-tex">\(C_{n}\)</span> is systematic: the check bits are conveniently chosen as those at positions with binary representation having exactly one 1. Thus, encoding a message of length <span class="math-tex">\(n-t\)</span> appends <span class="math-tex">\(t\)</span>&nbsp;checksums. In decoding, the syndrome is still the binary representation of the erroneous bit.</p><p>For <span class="math-tex">\(2^{t-1}\le n &lt; 2^{t}-1\)</span>, the Hamming code is no longer perfect (here, <span class="math-tex">\(H_{n}\)</span> has <span class="math-tex">\(n\)</span>&nbsp;columns of height&nbsp;<span class="math-tex">\(t\)</span>, corresponding to numbers from&nbsp;1 to&nbsp;<span class="math-tex">\(n\)</span>), but no other code can be perfect for distance three: for that, <span class="math-tex">\(2^{n}\)</span> must be divisible by <span class="math-tex">\(n+1\)</span>. This means some points of <span class="math-tex">\(\{0,1\}^{n}\)</span> will be at distance greater than one from any codeword. In such words the error cannot be corrected, but it is not required. All other properties remain: the code is still systematic, simply encoded, and simply decoded (for <span class="math-tex">\(e \in \{0,1\}^{n}\)</span>, <span class="math-tex">\(||e||=1\)</span>, we must have <span class="math-tex">\(H_{n}e=s\)</span>; if <span class="math-tex">\(H_{n}\)</span> has no column equal to&nbsp;<span class="math-tex">\(s\)</span>, the received message cannot be decoded).</p>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-2-proofs-of-existence-and-optimality/unit/chapter-2-proofs-of-existence-and-optimality-unit-7-application-error-correcting-codes-optional/lesson/proofs-of-existence-and-optimality--application-error-correcting-codes-optional--step-8/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-2-proofs-of-existence-and-optimality/unit/chapter-2-proofs-of-existence-and-optimality-unit-7-application-error-correcting-codes-optional/lesson/proofs-of-existence-and-optimality--application-error-correcting-codes-optional--step-10/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

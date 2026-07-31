@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="Basic Problems. (10 points) Prove that, for any two (finite) complete bases \(\Omega_{1}\) and \(\Omega_{2}\) , there exists a constant \(c\) , such that,…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Boolean Circuits › Theory Problems › Lesson 1 | Discrete Mathematics" />
+    <meta property="og:description" content="Basic Problems. (10 points) Prove that, for any two (finite) complete bases \(\Omega_{1}\) and \(\Omega_{2}\) , there exists a constant \(c\) , such that,…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-9-boolean-circuits/unit/chapter-9-boolean-circuits-unit-10-theory-problems/lesson/boolean-circuits--theory-problems--step-1/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-9-boolean-circuits/unit/chapter-9-boolean-circuits-unit-10-theory-problems/lesson/boolean-circuits--theory-problems--step-1/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Boolean Circuits › Theory Problems › Lesson 1 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Boolean Circuits / Theory Problems</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Boolean Circuits · Theory Problems</p>
+        <h1>Lesson 1</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p><strong>Basic Problems.</strong></p><ol><li data-theory-problem>(10 points) Prove that, for any two (finite) complete bases <span class="math-tex">\(\Omega_{1}\)</span> and <span class="math-tex">\(\Omega_{2}\)</span>, there exists a&nbsp;constant&nbsp;<span class="math-tex">\(c\)</span>, such that, for any Boolean function&nbsp;<span class="math-tex">\(f\)</span>, <span class="math-tex">\[\operatorname{size}_{\Omega_1}(f) \le c \cdot \operatorname{size}_{\Omega_2}(f).\]</span></li><li data-theory-problem>(10 points) Construct a&nbsp;circuit of&nbsp;size&nbsp;<span class="math-tex">\(O(n)\)</span> for the function <span class="math-tex">\(\operatorname{GREATER}(x_{0}, \dotsc, x_{n-1}, y_{0}, \dotsc, y_{n-1}) \in B_{2n}\)</span> that takes as&nbsp;input two <span class="math-tex">\(n\)</span>-bit numbers and&nbsp;outputs one if&nbsp;and&nbsp;only if&nbsp;the first is strictly greater than the second: <span class="math-tex">\[\operatorname{GREATER}(x_{0}, \dotsc, x_{n-1}, y_{0}, \dotsc, y_{n-1}) = \left[\sum_{i=0}^{n-1}x_{i}2^{i} &gt; \sum_{i=0}^{n-1}y_{i}2^{i}\right].\]</span><details><summary>Hint:</summary><div style="border-style: solid;">You may want to&nbsp;use the divide-and-conquer approach.</div></details></li><li data-theory-problem>(10 points) Given a&nbsp;circuit of size&nbsp;<span class="math-tex">\(s\)</span> with a&nbsp;single output bit, construct a&nbsp;formula in&nbsp;CNF with <span class="math-tex">\(O(s)\)</span> clauses that is satisfiable if&nbsp;and only if the original circuit is satisfiable.</li><li data-theory-problem>(15 points) Construct a&nbsp;circuit of&nbsp;size&nbsp;<span class="math-tex">\(O(n)\)</span> and&nbsp;depth&nbsp;<span class="math-tex">\(O(\log n)\)</span> for the <span class="math-tex">\(\operatorname{GREATER}\in B_{2n}\)</span> function.</li><li data-theory-problem>(15 points) Design a&nbsp;circuit of size <span class="math-tex">\(2 \cdot 2^{m}\)</span> with <span class="math-tex">\(2^{m}\)</span> outputs, implementing all <span class="math-tex">\(2^{m}\)</span> possible conjunctions of length <span class="math-tex">\(m\)</span>. For example, for <span class="math-tex">\(m=2\)</span>, this circuit computes <span class="math-tex">\(x_{1}x_{2}\)</span>, <span class="math-tex">\(\overline{x_1}x_{2}\)</span>, <span class="math-tex">\(x_{1}\overline{x_2}\)</span>, <span class="math-tex">\(\overline{x_1}\overline{x_2}\)</span>.</li><li data-theory-problem>(15 points) Imagine yourself as an engineer: you are given a&nbsp;circuit (e.g., for multiplying long numbers) of&nbsp;size&nbsp;<span class="math-tex">\(s_{1}\)</span> over <span class="math-tex">\(n\)</span>&nbsp;variables and are&nbsp;asked to come&nbsp;up with a&nbsp;smaller circuit that computes the&nbsp;same thing. Assume that you've designed a&nbsp;circuit of&nbsp;size&nbsp;<span class="math-tex">\(s_{2}&lt;s_{1}\)</span>. Now, you would like to&nbsp;convince everybody that your new circuit computes the same as&nbsp;the original circuit. One possibility would be&nbsp;to&nbsp;go through all <span class="math-tex">\(2^{n}\)</span> input assignments, but this does not scale well: already for <span class="math-tex">\(n=200\)</span>, this&nbsp;is impractical.Show that one can construct a&nbsp;formula in CNF with <span class="math-tex">\(O(s_{1} + s_{2}+n)\)</span> variables that is&nbsp;unsatisfiable if and only if the two circuits compute the same function.</li><li data-theory-problem>(15 points) Let <span class="math-tex">\(f = (f_{1}, \dotsc, f_{m})\)</span>, where <span class="math-tex">\(f_{i} \in B_{n}\)</span>, i.e., <span class="math-tex">\(f \colon \{ 0, 1 \}^{n}\to \{ 0, 1 \}^{m}\)</span>, and all <span class="math-tex">\(f_{i}\)</span> are pairwise distinct. Prove that <span class="math-tex">\[\operatorname{size}_{B_2}(f) \ge \min_{i \in [m]}\{ \operatorname{size}_{B_2}(f_{i}) \} + (m - 1).\]</span></li><li data-theory-problem>(15 points) Prove that <span class="math-tex">\(\operatorname{size}_{B_2}(\operatorname{THR}_{n}^{2}) \leq 3n - 5\)</span>.</li><li data-theory-problem>(15 points) Prove that <span class="math-tex">\(\operatorname{size}_{B_2}(\operatorname{THR}_{n}^{2}) \ge 2n - O(1)\)</span>.<details><summary>Hint:</summary><div style="border-style: solid;">Is it possible that all input variables have out-degree equal to&nbsp;one?</div></details></li></ol>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-9-boolean-circuits/unit/chapter-9-boolean-circuits-unit-9-nand-game-processor-optional/lesson/boolean-circuits--nand-game-processor-optional--step-5/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-9-boolean-circuits/unit/chapter-9-boolean-circuits-unit-10-theory-problems/lesson/boolean-circuits--theory-problems--step-2/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

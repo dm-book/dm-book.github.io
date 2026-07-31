@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="In the previous two problems, we derived \(A(n)\) not from \(A(n-1)\) , but from \(A(n-t)\) for some \(t\) . In general, this is called the method of…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Proofs of Universal Statements: Mathematical Induction › Complete Induction › Lesson 1 | Discrete Mathematics" />
+    <meta property="og:description" content="In the previous two problems, we derived \(A(n)\) not from \(A(n-1)\) , but from \(A(n-t)\) for some \(t\) . In general, this is called the method of…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-3-proofs-of-universal-statements-mathematical-induction/unit/chapter-3-proofs-of-universal-statements-mathematical-induction-unit-3-complete-induction/lesson/proofs-of-universal-statements-mathematical-induction--complete-induction--step-1/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-3-proofs-of-universal-statements-mathematical-induction/unit/chapter-3-proofs-of-universal-statements-mathematical-induction-unit-3-complete-induction/lesson/proofs-of-universal-statements-mathematical-induction--complete-induction--step-1/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Proofs of Universal Statements: Mathematical Induction › Complete Induction › Lesson 1 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Proofs of Universal Statements: Mathematical Induction / Complete Induction</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Proofs of Universal Statements: Mathematical Induction · Complete Induction</p>
+        <h1>Lesson 1</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p>In the previous two problems, we derived <span class="math-tex">\(A(n)\)</span> not from <span class="math-tex">\(A(n-1)\)</span>, but from <span class="math-tex">\(A(n-t)\)</span> for some <span class="math-tex">\(t\)</span>. In general, this is called the <em>method of complete induction</em> (also known as&nbsp;<em>strong induction</em>). To prove the statement &ldquo;<span class="math-tex">\(A(n)\)</span> holds for all integers <span class="math-tex">\(n \ge \alpha\)</span>&rdquo; using the method of complete induction, one needs, as usual, to check the base case (i.e., that <span class="math-tex">\(A(\alpha)\)</span> holds), and in the induction step, when proving <span class="math-tex">\(A(n+1)\)</span>, to&nbsp;assume that not only <span class="math-tex">\(A(n)\)</span> holds, but all previous statements hold: <span class="math-tex">\(A(\alpha), A(\alpha+1), \dotsc, A(n)\)</span>.</p><p>For example, we used the method of complete induction to prove that any integer <span class="math-tex">\(m \ge 8\)</span> can be represented as a sum of threes and fives: we&nbsp;derived <span class="math-tex">\(A(m)\)</span> from <span class="math-tex">\(A(m-3)\)</span> (for <span class="math-tex">\(m \ge 11\)</span>). Here is another problem where it is useful to use not only the immediately preceding statement. </p><blockquote style="color:black">A&nbsp;convex <span class="math-tex">\(n\)</span>-gon (<span class="math-tex">\(n \ge 3\)</span>) is&nbsp;divided into triangles by&nbsp;non-intersecting diagonals. Prove that <span class="math-tex">\((n-2)\)</span> triangles are obtained.</blockquote><p style="text-align:center;"><img src="generated/assets/Proofs_of_Universal_Statements$_Mathematical_Induction/Complete_Induction=0/image0.png" width="800" ></p><p><strong>Problem. </strong> Is this a&nbsp;correct proof? </p><blockquote style="color:black">The base case <span class="math-tex">\(n=3\)</span> is&nbsp;clear. For the induction step <span class="math-tex">\(n-1 \to n\)</span>, consider a&nbsp;convex <span class="math-tex">\(n\)</span>-gon. One of&nbsp;its diagonals divides&nbsp;it into a&nbsp;triangle and a&nbsp;(convex) <span class="math-tex">\((n-1)\)</span>-gon. By&nbsp;the induction hypothesis, the number of&nbsp;triangles&nbsp;is <span class="math-tex">\[1+(n-1-2)=n-2.\]</span></blockquote>
+          <div class="task-card"><div class="task-heading">Question</div><a class="cogniterra-only-notice" href="https://cogniterra.org/a/697" target="_blank" rel="noreferrer">This problem can only be submitted at Cogniterra.</a><ol class="task-option-list"><li class="task-option"><span class="task-option-number" aria-hidden="true">1</span><div class="task-option-body"><p> Yes, it is correct. </p></div></li><li class="task-option"><span class="task-option-number" aria-hidden="true">2</span><div class="task-option-body"><p> No, it is incorrect.</p></div></li></ol></div>
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-3-proofs-of-universal-statements-mathematical-induction/unit/chapter-3-proofs-of-universal-statements-mathematical-induction-unit-2-base-of-induction/lesson/proofs-of-universal-statements-mathematical-induction--base-of-induction--step-7/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-3-proofs-of-universal-statements-mathematical-induction/unit/chapter-3-proofs-of-universal-statements-mathematical-induction-unit-3-complete-induction/lesson/proofs-of-universal-statements-mathematical-induction--complete-induction--step-2/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

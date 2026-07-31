@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="Theorem (Turing, 1936). The halting problem is undecidable: there is no algorithm that, given a program \(P\) and its input \(x\) , can determine in a…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Set Theory › Application: Undecidability of Halting › Lesson 9 | Discrete Mathematics" />
+    <meta property="og:description" content="Theorem (Turing, 1936). The halting problem is undecidable: there is no algorithm that, given a program \(P\) and its input \(x\) , can determine in a…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-10-set-theory/unit/chapter-10-set-theory-unit-7-application-undecidability-of-halting/lesson/set-theory--application-undecidability-of-halting--step-9/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-10-set-theory/unit/chapter-10-set-theory-unit-7-application-undecidability-of-halting/lesson/set-theory--application-undecidability-of-halting--step-9/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Set Theory › Application: Undecidability of Halting › Lesson 9 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Set Theory / Application: Undecidability of Halting</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Set Theory · Application: Undecidability of Halting</p>
+        <h1>Lesson 9</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p><strong>Theorem (Turing, 1936). </strong><em>The halting problem is undecidable: there is no algorithm that, given a program <span class="math-tex">\(P\)</span> and its input <span class="math-tex">\(x\)</span>, can determine in a finite number of steps whether <span class="math-tex">\(P\)</span> halts on <span class="math-tex">\(x\)</span>.</em></p><p> <em>Proof. </em>Suppose we could write a Python method <span class="math- tex">\(\texttt{is\_{halting}}\)</span>, which determines whether a program in the file <span class="math- tex">\(\texttt{program\_{file}\_{name}}\)</span> halts on input from the file <span class="math- tex">\(\texttt{input\_{file}\_{name}}\)</span>. Below, we will show that this method cannot work correctly. To do so, we will write a simple function <span class="math- tex">\(\texttt{paradox}\)</span>. </p><pre><code class="language-python">def is_halting(program_file_name, input_file_name):
+    ...
+
+
+def paradox(file_name):
+    if is_halting(file_name, file_name):
+        while True:
+            pass</code></pre><p>  As shown, it halts on input <span class="math- tex">\(\texttt{file\_{name}}\)</span> if and only if the program <span class="math- tex">\(\texttt{file\_{name}}\)</span> does not halt when given itself as input. What happens if we save this code snippet in the file <span class="math- tex">\(\texttt{paradox.py}\)</span> and then call <span class="math- tex">\(\texttt{paradox('paradox.py')}\)</span>? If the program halts, then <span class="math-tex">\[\texttt{is\_{halting}('paradox.py', 'paradox.py')}\]</span> must return <span class="math- tex">\(\texttt{False}\)</span>, which means that <span class="math- tex">\(\texttt{paradox('paradox.py')}\)</span> does not halt. And vice versa!  <span class="proof-end" aria-label="End of proof">◼</span></p><details><summary>For the curious 🤓</summary><div style="border-style: solid;">There exist problems that are &ldquo;more undecidable.&rdquo; For example, writing a program that determines whether a given program halts on <em>all</em> inputs is impossible even if the original program has oracle access to the halting problem.</div></details>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-10-set-theory/unit/chapter-10-set-theory-unit-7-application-undecidability-of-halting/lesson/set-theory--application-undecidability-of-halting--step-8/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-10-set-theory/unit/chapter-10-set-theory-unit-8-g-del-s-first-incompleteness-theorem-optional/lesson/set-theory--g-del-s-first-incompleteness-theorem-optional--step-1/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

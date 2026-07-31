@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="Typical applications of graph coloring include problems where there is a limited amount of resources (colors) and a number of constraints of the form “these…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Colorings › Introduction › Lesson 4 | Discrete Mathematics" />
+    <meta property="og:description" content="Typical applications of graph coloring include problems where there is a limited amount of resources (colors) and a number of constraints of the form “these…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-28-colorings/unit/chapter-28-colorings-unit-1-introduction/lesson/colorings--introduction--step-4/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-28-colorings/unit/chapter-28-colorings-unit-1-introduction/lesson/colorings--introduction--step-4/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Colorings › Introduction › Lesson 4 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Colorings / Introduction</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Colorings · Introduction</p>
+        <h1>Lesson 4</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p>Typical applications of&nbsp;graph coloring include problems where there is a&nbsp;limited amount of&nbsp;resources (colors) and a&nbsp;number of&nbsp;constraints of&nbsp;the form &ldquo;these two objects cannot share the same resource&rdquo;. We&nbsp;give a&nbsp;number of&nbsp;examples below.</p><ul><li><strong>Exam timetabling.</strong>&nbsp; During a&nbsp;semester, each student attended a&nbsp;number of&nbsp;courses. Now we&nbsp;would like to&nbsp;create an&nbsp;exam schedule ensuring that no&nbsp;student has exams for two courses on&nbsp;the same day. What is&nbsp;the minimum number of&nbsp;days needed to&nbsp;conduct all exams?<br>This problem can be&nbsp;modeled as&nbsp;the graph coloring problem as&nbsp;follows. Create a&nbsp;graph whose nodes are courses. Join two courses by&nbsp;an&nbsp;edge if&nbsp;there is&nbsp;a&nbsp;student who attended both these courses. Then, the chromatic number of&nbsp;this graph is&nbsp;the minimum number of&nbsp;days needed to&nbsp;organize the exams on&nbsp;all courses.</li><li><strong>Register allocation.</strong>&nbsp; In addition to&nbsp;RAM, a&nbsp;computer usually has some ultra-fast memory cells called <em>registers</em>. Registers are expensive and scarce (about thirty). An&nbsp;optimization during the compilation process is&nbsp;to&nbsp;store variables in&nbsp;registers if&nbsp;their values are needed repeatedly.<br>One can find the minimum number of&nbsp;registers needed by&nbsp;modeling this problem as&nbsp;the following graph coloring problem. For each variable, define its lifetime interval (roughly from declaration to&nbsp;the last use) and build an&nbsp;interference graph: intervals are connected if they overlap (that&nbsp;is, the same register cannot be&nbsp;used for both variables). Then, the chromatic number of&nbsp;this graph is&nbsp;the <a href="https://en.wikipedia.org/wiki/Register_allocation">minimum number of registers</a>. Interestingly, whereas finding a&nbsp;chromatic number of&nbsp;a&nbsp;graph is&nbsp;a&nbsp;difficult problem in&nbsp;general, it&nbsp;can be&nbsp;solved efficiently for this class of&nbsp;graphs (called <em>interval graphs</em>).</li><li><strong>Radio frequencies allocation.</strong>&nbsp; If&nbsp;two radio towers are close, they must use different frequencies. What&nbsp;is the minimum number of&nbsp;frequencies needed? It&nbsp;is straightforward to&nbsp;model this problem as&nbsp;the graph coloring problem. A&nbsp;more <a href="https://en.wikipedia.org/wiki/Radio_coloring">general problem</a> requires neighboring towers to&nbsp;differ significantly in&nbsp;frequency.</li><li><strong>Excursion organizing.</strong>&nbsp; You want to&nbsp;send a&nbsp;large group of&nbsp;people on&nbsp;a&nbsp;trip, but some pairs of&nbsp;them dislike each other so&nbsp;much they won't ride the same bus. What is&nbsp;the minimum number of&nbsp;buses required?</li><li><strong>Puzzles.</strong>&nbsp; Some puzzles are variants of&nbsp;graph coloring. For example, the Sudoku puzzle may&nbsp;be <a href="https://en.wikipedia.org/wiki/Sudoku%23Mathematics_of_Sudoku">viewed</a> as&nbsp;a&nbsp;partially colored graph: connect two cells if they're in the same row, column, or <span class="math-tex">\(3 \times 3\)</span> block. Then, the task is&nbsp;to extend the given coloring to a&nbsp;proper <span class="math-tex">\(9\)</span>-coloring of&nbsp;the corresponding graph.</li></ul>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-28-colorings/unit/chapter-28-colorings-unit-1-introduction/lesson/colorings--introduction--step-3/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-28-colorings/unit/chapter-28-colorings-unit-1-introduction/lesson/colorings--introduction--step-5/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

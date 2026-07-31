@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="Around 300 BC or so, the Greek mathematician Euclid outlined a famous set of axioms in the field of geometry. In other words, he came up with a very simple…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Set Theory › Gödel&#39;s First Incompleteness Theorem (Optional) › Lesson 3 | Discrete Mathematics" />
+    <meta property="og:description" content="Around 300 BC or so, the Greek mathematician Euclid outlined a famous set of axioms in the field of geometry. In other words, he came up with a very simple…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-10-set-theory/unit/chapter-10-set-theory-unit-8-g-del-s-first-incompleteness-theorem-optional/lesson/set-theory--g-del-s-first-incompleteness-theorem-optional--step-3/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-10-set-theory/unit/chapter-10-set-theory-unit-8-g-del-s-first-incompleteness-theorem-optional/lesson/set-theory--g-del-s-first-incompleteness-theorem-optional--step-3/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Set Theory › Gödel&#39;s First Incompleteness Theorem (Optional) › Lesson 3 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Set Theory / Gödel&#39;s First Incompleteness Theorem (Optional)</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Set Theory · Gödel&#39;s First Incompleteness Theorem (Optional)</p>
+        <h1>Lesson 3</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p>Around 300 BC or so, the Greek mathematician Euclid outlined a famous set of axioms in the field of geometry. In other words, he came up with a very simple set of statements that he would assume to be true in order to prove more interesting things. The goal of any decent set of axioms is to be as boring as possible–Every axiom should be obviously and intuitively true, and there shouldn't be very many of them–and Euclid’s axioms are the prototypical example. You might recognize them from high school geometry, but more likely your teacher cheated and let you use fancier axioms. Here they are (in our own clumsy wording):</p><ol><li> There is exactly one line connecting any two distinct points.</li><li> Any line segment can be extended to arbitrary length.</li><li> For every two distinct points, there is exactly one circle centered at the first and touching the second.</li><li> All right angles are equal.</li><li> Given a line&nbsp;<span class="math-tex">\(L\)</span> and a&nbsp;point&nbsp;<span class="math-tex">\(P\notin L\)</span>, there is exactly one line that passes through&nbsp;<span class="math-tex">\(P\)</span> and is parallel to&nbsp;<span class="math-tex">\(L\)</span>. (Euclid used a different, equivalent axiom.)</li></ol><p>These are all incredibly obvious facts. Some of them might seem so obvious that they're not worth mentioning. Of course there's only one line between a pair of distinct points, for example. And, there are only five of them. However, you can prove a lot of stuff from these axioms, e.g., the Pythagorean Theorem.</p><p>However, generations of mathematicians, including Euclid, were not happy with the fifth axiom, known as the parallel postulate. In their eyes, the fifth axiom seemed more like something that needed to be proven than an axiom; it certainly sounds like a less trivial statement than the first four. But, the parallel postulate was a key step in many geometric proofs. So, in order to get rid of this ugly axiom without losing a ton of geometry, they spent a couple thousand years trying to prove that the parallel postulate logically followed directly from the other four axioms.</p><p>It wasn't until the mid-19th century that mathematicians discovered that there are &ldquo;geometries&rdquo; in which the parallel postulate is false. In order to see this, you need to relax the definitions of &ldquo;point&rdquo; and &ldquo;line&rdquo; a bit, so the language gets a little bit messy.</p><p>Consider a sphere, and call a pair of classical points &ldquo;an elliptical point&rdquo; if they are exactly opposite each other on the sphere. Note that a single elliptical point is made up of two classical points. If a circle on the sphere is made up of elliptical points, call it &ldquo;an elliptical line.&rdquo; Elliptical lines are also called <a href="https://en.wikipedia.org/wiki/Great_circle">great circles</a> because they are the largest circles that you can draw on a sphere–The Earth's equator is a nice example. You can think of them as any circle that divides the sphere into two equal halves.</p><p style="text-align:center;"><img src="generated/assets/Set_Theory/Gödel's_First_Incompleteness_Theorem_(Optional)=2/image0.png" width="800" ></p><p>A quick check shows that elliptical points and elliptical lines satisfy the first four axioms. However, they don't satisfy the fifth because all elliptical lines cross. (If you're following, you should be able to picture this easily.) So, obviously the fifth axiom can't follow from the first four because we have a counter-example! (Our counterexample is called an <a href="http://en.wikipedia.org/wiki/Elliptical_geometry">elliptical non-Euclidean geometry</a>.)</p><p>This example is illustrative. While mathematicians often think of axioms as assumptions, they're perhaps better thought of as pieces of a definition. Neither Euclid nor we phrased them like this, but axioms one through four essentially define some properties of things that mathematicians have agreed to call points, lines, and angles. However, those definitions are more general than the English definitions of those words; in particular, elliptical points and elliptical lines are perfectly good points and lines under the first four axioms. The fifth axiom serves to narrow the definitions so that they represent something much closer to the English notions of points, lines, and angles.</p>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-10-set-theory/unit/chapter-10-set-theory-unit-8-g-del-s-first-incompleteness-theorem-optional/lesson/set-theory--g-del-s-first-incompleteness-theorem-optional--step-2/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-10-set-theory/unit/chapter-10-set-theory-unit-8-g-del-s-first-incompleteness-theorem-optional/lesson/set-theory--g-del-s-first-incompleteness-theorem-optional--step-4/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

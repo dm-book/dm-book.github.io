@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="A Horn clause is a clause that contains at most one positive literal and an arbitrary number of negative literals. In the Horn-SAT problem, one is given a…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Satisfiability Problem › Polynomially Solvable Special Cases › Lesson 5 | Discrete Mathematics" />
+    <meta property="og:description" content="A Horn clause is a clause that contains at most one positive literal and an arbitrary number of negative literals. In the Horn-SAT problem, one is given a…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-8-satisfiability-problem/unit/chapter-8-satisfiability-problem-unit-3-polynomially-solvable-special-cases/lesson/satisfiability-problem--polynomially-solvable-special-cases--step-5/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-8-satisfiability-problem/unit/chapter-8-satisfiability-problem-unit-3-polynomially-solvable-special-cases/lesson/satisfiability-problem--polynomially-solvable-special-cases--step-5/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Satisfiability Problem › Polynomially Solvable Special Cases › Lesson 5 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Satisfiability Problem / Polynomially Solvable Special Cases</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Satisfiability Problem · Polynomially Solvable Special Cases</p>
+        <h1>Lesson 5</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p>A&nbsp;<em>Horn clause</em> is a&nbsp;clause that contains at&nbsp;most one positive literal and an&nbsp;arbitrary number of negative literals. In&nbsp;the Horn-SAT problem, one is&nbsp;given a&nbsp;formula consisting solely of Horn clauses, and the&nbsp;objective is to&nbsp;determine an&nbsp;assignment that sets the&nbsp;minimum number of variables to&nbsp;<span class="math- tex">\(\texttt{True}\)</span> in&nbsp;order to satisfy all clauses.</p><p><strong>Theorem. </strong><em>The&nbsp;Horn-SAT problem can be&nbsp;solved in&nbsp;linear time with respect to&nbsp;the&nbsp;size of the&nbsp;input formula.</em></p><p><em>Proof. </em>Write every Horn clause in the form <span class="math-tex">\[(x_{1}\land\dotsb\land x_{k})\Rightarrow y\]</span> if it has the positive literal&nbsp;<span class="math-tex">\(y\)</span>, and as <span class="math-tex">\((x_{1}\land\dotsb\land x_{k})\Rightarrow 0\)</span> if it has no positive literal. Initially, all variables are set to&nbsp;<span class="math- tex">\(\texttt{False}\)</span>. Whenever all variables in the antecedent of a&nbsp;clause have become&nbsp;<span class="math- tex">\(\texttt{True}\)</span>, the clause forces its positive literal to become&nbsp;<span class="math- tex">\(\texttt{True}\)</span>; if the clause has no positive literal, the formula is unsatisfiable. We continue until no new variable is forced. The resulting assignment satisfies all clauses and is contained in every satisfying assignment, so it has the minimum possible number of variables set to&nbsp;<span class="math- tex">\(\texttt{True}\)</span>.</p><p>To implement this in linear time, remove clauses containing both a&nbsp;variable and its negation. For every remaining clause, maintain the number of antecedent variables that are still&nbsp;<span class="math- tex">\(\texttt{False}\)</span>. When a&nbsp;variable becomes&nbsp;<span class="math- tex">\(\texttt{True}\)</span>, decrement this counter in every clause containing its negative literal. Each literal is processed only once, so the total running time is linear in the size of the formula.<span class="proof-end" aria-label="End of proof">◼</span></p><details><summary>For the curious 🤓</summary><div style="border-style: solid;">Horn clauses form the&nbsp;fundamental basis of logic programming languages such as Prolog and Datalog. When expressed as an&nbsp;implication, a&nbsp;clause with exactly one positive literal takes the&nbsp;form: <span class="math-tex">\[(P_{1} \land P_{2} \land \dotsb \land P_{n}) \to Q.\]</span> This structure corresponds directly to&nbsp;rules in&nbsp;logic programming, where <span class="math-tex">\(Q\)</span> represents the&nbsp;conclusion that can be&nbsp;inferred if all preconditions <span class="math-tex">\(P_{1}, \dotsc, P_{n}\)</span> hold.Perhaps surprisingly, if one extends Horn-SAT by allowing quantifiers <span class="math-tex">\(\forall, \exists\)</span> the&nbsp;resulting problem remains solvable in&nbsp;polynomial time (the&nbsp;same also holds for <span class="math-tex">\(2\)</span>-SAT). In&nbsp;contrast, permitting such quantifiers in&nbsp;arbitrary CNF formulas significantly increases the&nbsp;complexity: the&nbsp;problem then becomes PSPACE-complete, whereas the&nbsp;standard SAT problem belongs to&nbsp;NP.Given that both <span class="math-tex">\(2\)</span>-SAT and Horn-SAT admit linear-time algorithms, one might think that they are similar. However, it&nbsp;is known that <span class="math-tex">\(2\)</span>-SAT is NL-complete (i.e., solvable in&nbsp;nondeterministic logarithmic space). In&nbsp;contrast, Horn-SAT is P-complete. Finally, if one allows both Horn clauses and arbitrary binary clauses (i.e., clauses containing exactly two literals) in&nbsp;a&nbsp;single formula, the&nbsp;problem becomes as hard as general SAT. This hybrid problem is referred to as <em>Mixed Horn-SAT</em>.</div></details>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-8-satisfiability-problem/unit/chapter-8-satisfiability-problem-unit-3-polynomially-solvable-special-cases/lesson/satisfiability-problem--polynomially-solvable-special-cases--step-4/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-8-satisfiability-problem/unit/chapter-8-satisfiability-problem-unit-3-polynomially-solvable-special-cases/lesson/satisfiability-problem--polynomially-solvable-special-cases--step-6/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

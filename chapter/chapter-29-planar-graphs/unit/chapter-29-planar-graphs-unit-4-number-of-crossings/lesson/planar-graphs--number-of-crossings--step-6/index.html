@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="From the just-proven theorem it follows that \(\operatorname{cr}(K_{6}) \ge 3\) and that \(\operatorname{cr}(K_{n}) = \Omega(n^{2})\) . The following…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Planar Graphs › Number of Crossings › Lesson 6 | Discrete Mathematics" />
+    <meta property="og:description" content="From the just-proven theorem it follows that \(\operatorname{cr}(K_{6}) \ge 3\) and that \(\operatorname{cr}(K_{n}) = \Omega(n^{2})\) . The following…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-29-planar-graphs/unit/chapter-29-planar-graphs-unit-4-number-of-crossings/lesson/planar-graphs--number-of-crossings--step-6/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-29-planar-graphs/unit/chapter-29-planar-graphs-unit-4-number-of-crossings/lesson/planar-graphs--number-of-crossings--step-6/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Planar Graphs › Number of Crossings › Lesson 6 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Planar Graphs / Number of Crossings</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Planar Graphs · Number of Crossings</p>
+        <h1>Lesson 6</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p>From the just-proven theorem it follows that <span class="math-tex">\(\operatorname{cr}(K_{6}) \ge 3\)</span> and&nbsp;that <span class="math-tex">\(\operatorname{cr}(K_{n}) = \Omega(n^{2})\)</span>.</p><p>The following theorem significantly strengthens this estimate. It is proven using the probabilistic method. Let us recall the idea of this method: to prove that an object with a desired property exists, we take a random object and prove that it has this property with nonzero probability. Here we will prove that <em>there does not exist</em> a too-good drawing of a dense graph in the plane. To do this, we proceed as follows: suppose that such a good drawing exists, then using the probabilistic method we will show that this drawing has a part that is already too good to be true.</p><p><strong>Theorem (Leighton; Ajtai, Chvátal, Newborn, Szemerédi). </strong><em> Let <span class="math-tex">\(G(V,E)\)</span> be a graph such that <span class="math-tex">\(|E| \ge 4|V|\)</span>. Then <span class="math-tex">\[\operatorname{cr}(G) \ge \frac{|E|^3}{64|V|^2}\  .\]</span> In&nbsp;particular, <span class="math-tex">\(\operatorname{cr}(K_{n}) = \Theta(n^{4})\)</span>.</em></p><p><em>Proof. </em>Take an optimal drawing of&nbsp;<span class="math-tex">\(G\)</span> and consider a random subgraph&nbsp;<span class="math-tex">\(H\)</span> of&nbsp;<span class="math-tex">\(G\)</span>: include each vertex in&nbsp;<span class="math-tex">\(H\)</span> (independently) with probability&nbsp;<span class="math-tex">\(p\)</span>, the value of&nbsp;<span class="math-tex">\(p\)</span> will be chosen later. If we keep only the vertices and edges of&nbsp;<span class="math-tex">\(H\)</span> from the original drawing&nbsp;<span class="math-tex">\(G\)</span>, we get some drawing&nbsp;<span class="math-tex">\(T_{H}\)</span> of the graph&nbsp;<span class="math-tex">\(H\)</span>, which need not be optimal. Therefore, by the inequality <span class="math-tex">\[\operatorname{cr}(G) \ge |E(G)|-3|V(G)|+6\]</span> we get: <span class="math-tex">\[\operatorname{cr}(T_{H}) \ge \operatorname{cr}(H) \ge |E(H)|-3|V(H)| \ .\]</span> All parts of this inequality are random variables; let us take their expectations: <span class="math-tex">\[\begin{equation*}\operatorname{E}[\operatorname{cr}(T_{H})] \ge \operatorname{E}[|E(H)|]-3\operatorname{E}[|V(H)|] \ .\end{equation*}\]</span> Now we estimate these expectations: <span class="math-tex">\(\operatorname{E}[|V(H)|]=p|V(G)|\)</span>, since each vertex survives with probability&nbsp;<span class="math-tex">\(p\)</span>; <span class="math-tex">\(\operatorname{E}[|E(H)|]=p^{2}|E(G)|\)</span>, since each edge survives with probability&nbsp;<span class="math-tex">\(p^{2}\)</span>; finally, <span class="math-tex">\(\operatorname{E}[\operatorname{cr}(T_{H})]=p^{4}\operatorname{cr}(G)\)</span>, since each crossing survives with probability&nbsp;<span class="math-tex">\(p^{4}\)</span>. In the last estimate it is important that in the optimal drawing of&nbsp;<span class="math-tex">\(G\)</span> no two edges with a common endpoint cross (and so each crossing involves four rather than three vertices), and that no two edges cross more than once (hence, the number of crossings can be written as a sum over all pairs of edges). Substituting the obtained estimates into the inequality above: <span class="math-tex">\[p^{4}\operatorname{cr}(G) \ge p^{2}|E(G)|-3p|V(G)|.\]</span> Divide by <span class="math-tex">\(p^{4}\)</span>: <span class="math-tex">\[\operatorname{cr}(G) \ge \frac{|E(G)|}{p^2}-\frac{3|V(G)|}{p^3}\ .\]</span> Choosing <span class="math-tex">\(p=\frac{4|V|}{|E|}\)</span>, we obtain the desired estimate (it is important that under the theorem's condition this number is a valid probability).<span class="proof-end" aria-label="End of proof">◼</span></p>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-29-planar-graphs/unit/chapter-29-planar-graphs-unit-4-number-of-crossings/lesson/planar-graphs--number-of-crossings--step-5/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-29-planar-graphs/unit/chapter-29-planar-graphs-unit-4-number-of-crossings/lesson/planar-graphs--number-of-crossings--step-7/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="Second Proof: Cyclic Shifts. Consider a path of \(n+1\) up-steps and \(n\) down-steps. The number of such paths is \(\binom{2n+1}{n}\) . Let us call such a…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Arrangements and Combinations › Catalan Numbers: Proof of the Formula › Lesson 5 | Discrete Mathematics" />
+    <meta property="og:description" content="Second Proof: Cyclic Shifts. Consider a path of \(n+1\) up-steps and \(n\) down-steps. The number of such paths is \(\binom{2n+1}{n}\) . Let us call such a…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-13-arrangements-and-combinations/unit/chapter-13-arrangements-and-combinations-unit-10-catalan-numbers-proof-of-the-formula/lesson/arrangements-and-combinations--catalan-numbers-proof-of-the-formula--step-5/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-13-arrangements-and-combinations/unit/chapter-13-arrangements-and-combinations-unit-10-catalan-numbers-proof-of-the-formula/lesson/arrangements-and-combinations--catalan-numbers-proof-of-the-formula--step-5/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Arrangements and Combinations › Catalan Numbers: Proof of the Formula › Lesson 5 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Arrangements and Combinations / Catalan Numbers: Proof of the Formula</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Arrangements and Combinations · Catalan Numbers: Proof of the Formula</p>
+        <h1>Lesson 5</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p><strong>Second Proof: Cyclic Shifts.</strong></p><p>Consider a path of <span class="math-tex">\(n+1\)</span> up-steps and <span class="math-tex">\(n\)</span> down-steps. The number of such paths is <span class="math-tex">\(\binom{2n+1}{n}\)</span>. Let us call such a path <em>good</em> if it starts with an up-step and never descends to the level of the starting point. Good paths are in one-to-one correspondence with Dyck paths: if we cut off the first up-step from a good path, we get a Dyck path, and vice versa.</p><p>Now consider a table of width <span class="math-tex">\(2n+1\)</span>. Rows will be indexed by all paths. For a row&nbsp;<span class="math-tex">\(p\)</span> and a column <span class="math-tex">\(0 \le i &lt; 2n+1\)</span>, the corresponding cell will contain the path&nbsp;<span class="math-tex">\(p\)</span>, cyclically shifted by <span class="math-tex">\(i\)</span>&nbsp;positions. It is easy to see that each column will list all paths (each column is simply a permutation of the first column). Therefore, the fraction of good paths in a column equals the fraction of good paths in the entire table. Below, we will show that each row contains exactly one good path. In other words, <em>each path has exactly one cyclic shift that is a good path</em>. Thus, <span class="math-tex">\[C(n)=\frac{1}{2n+1}\cdot \binom{2n+1}{n}\  .\]</span></p><p>The code below outputs all sequences of four opening and three closing brackets and all their cyclic shifts. Each valid cyclic shift is marked with an asterisk. As seen, there is exactly one good cyclic shift in each row, and there are exactly five in each column.</p><pre><code class="language-python">from itertools import combinations
+
+
+def table(n):
+    for open_brace_indices in combinations(range(2 * n + 1), n):
+        perm = ['(' for _ in range(2 * n + 1)]
+        for position in open_brace_indices:
+            perm[position] = ')'
+
+        for start_index in range(len(perm)):
+            cyclic_shift = perm[start_index:] + perm[:start_index]
+            print("".join(cyclic_shift), end="")
+            if all(cyclic_shift[:i].count("(") &gt;
+                   cyclic_shift[:i].count(")")
+                   for i in range(1, len(perm))
+                   ):
+                print('* ', end='')
+            else:
+                print('  ', end='')
+        print('')
+
+
+table(3)</code></pre><pre><code class="language-auto">)))((((  ))(((()  )(((())  (((()))* ((()))(  (()))((  ()))(((  
+))()(((  )()((()  ()((())  )((())(  ((())()* (())()(  ())()((  
+))(()((  )(()(()  (()(())* ()(())(  )(())((  (())(()  ())(()(  
+))((()(  )((()()  ((()())* (()())(  ()())((  )())(((  ())((()  
+))(((()  )(((())  (((()))* ((()))(  (()))((  ()))(((  )))((((  
+)())(((  ())((()  ))((()(  )((()()  ((()())* (()())(  ()())((  
+)()()((  ()()(()  )()(()(  ()(()()  )(()()(  (()()()* ()()()(  
+)()(()(  ()(()()  )(()()(  (()()()* ()()()(  )()()((  ()()(()  
+)()((()  ()((())  )((())(  ((())()* (())()(  ())()((  ))()(((  
+)(())((  (())(()  ())(()(  ))(()((  )(()(()  (()(())* ()(())(  
+)(()()(  (()()()* ()()()(  )()()((  ()()(()  )()(()(  ()(()()  
+)(()(()  (()(())* ()(())(  )(())((  (())(()  ())(()(  ))(()((  
+)((())(  ((())()* (())()(  ())()((  ))()(((  )()((()  ()((())  
+)((()()  ((()())* (()())(  ()())((  )())(((  ())((()  ))((()(  
+)(((())  (((()))* ((()))(  (()))((  ()))(((  )))((((  ))(((()  
+()))(((  )))((((  ))(((()  )(((())  (((()))* ((()))(  (()))((  
+())()((  ))()(((  )()((()  ()((())  )((())(  ((())()* (())()(  
+())(()(  ))(()((  )(()(()  (()(())* ()(())(  )(())((  (())(()  
+())((()  ))((()(  )((()()  ((()())* (()())(  ()())((  )())(((  
+()())((  )())(((  ())((()  ))((()(  )((()()  ((()())* (()())(  
+()()()(  )()()((  ()()(()  )()(()(  ()(()()  )(()()(  (()()()* 
+()()(()  )()(()(  ()(()()  )(()()(  (()()()* ()()()(  )()()((  
+()(())(  )(())((  (())(()  ())(()(  ))(()((  )(()(()  (()(())* 
+()(()()  )(()()(  (()()()* ()()()(  )()()((  ()()(()  )()(()(  
+()((())  )((())(  ((())()* (())()(  ())()((  ))()(((  )()((()  
+(()))((  ()))(((  )))((((  ))(((()  )(((())  (((()))* ((()))(  
+(())()(  ())()((  ))()(((  )()((()  ()((())  )((())(  ((())()* 
+(())(()  ())(()(  ))(()((  )(()(()  (()(())* ()(())(  )(())((  
+(()())(  ()())((  )())(((  ())((()  ))((()(  )((()()  ((()())* 
+(()()()* ()()()(  )()()((  ()()(()  )()(()(  ()(()()  )(()()(  
+(()(())* ()(())(  )(())((  (())(()  ())(()(  ))(()((  )(()(()  
+((()))(  (()))((  ()))(((  )))((((  ))(((()  )(((())  (((()))* 
+((())()* (())()(  ())()((  ))()(((  )()((()  ()((())  )((())(  
+((()())* (()())(  ()())((  )())(((  ())((()  ))((()(  )((()()  
+(((()))* ((()))(  (()))((  ()))(((  )))((((  ))(((()  )(((())
+</code></pre><p>Now, it remains to prove that each path of <span class="math-tex">\(n+1\)</span> up-steps and <span class="math-tex">\(n\)</span> down-steps has exactly one good cyclic shift. Consider such a path and focus on the rightmost among its lowest points. </p><p style="text-align:center;"><img src="generated/assets/Arrangements_and_Combinations/Catalan_Numbers$_Proof_of_the_Formula=4/image0.png" width="800" ></p><p> First, notice that the cyclic shift starting at this point will be good: after all, we raise the entire prefix by one when attaching it to the end of the path. </p><p style="text-align:center;"><img src="generated/assets/Arrangements_and_Combinations/Catalan_Numbers$_Proof_of_the_Formula=4/image1.png" width="800" ></p><p> Second, no other cyclic shift can be good. Indeed, any other such shift would be a shift of this good path. The current path starts at level zero, ends at level one, and all its intermediate points are at least at level one. If we cut the prefix and attach it to the end (raising by one), the marked point will be exactly no higher than the beginning of the new path.</p><p>This proven fact is an interpretation of the following result.</p><p><strong>Theorem (Renyi, 1959). </strong><em> A sequence of integers whose sum of elements equals one has exactly one cyclic shift where the sum of all prefixes is positive.</em></p>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-13-arrangements-and-combinations/unit/chapter-13-arrangements-and-combinations-unit-10-catalan-numbers-proof-of-the-formula/lesson/arrangements-and-combinations--catalan-numbers-proof-of-the-formula--step-4/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-13-arrangements-and-combinations/unit/chapter-13-arrangements-and-combinations-unit-10-catalan-numbers-proof-of-the-formula/lesson/arrangements-and-combinations--catalan-numbers-proof-of-the-formula--step-6/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="How many non-negative integer solutions are there to the equation \(x_{1}+x_{2}+\dotsb+x_{n}=k\) ? How many ways are there to distribute \(k\) identical…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Arrangements and Combinations › Combinations with Repetitions › Lesson 1 | Discrete Mathematics" />
+    <meta property="og:description" content="How many non-negative integer solutions are there to the equation \(x_{1}+x_{2}+\dotsb+x_{n}=k\) ? How many ways are there to distribute \(k\) identical…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-13-arrangements-and-combinations/unit/chapter-13-arrangements-and-combinations-unit-5-combinations-with-repetitions/lesson/arrangements-and-combinations--combinations-with-repetitions--step-1/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-13-arrangements-and-combinations/unit/chapter-13-arrangements-and-combinations-unit-5-combinations-with-repetitions/lesson/arrangements-and-combinations--combinations-with-repetitions--step-1/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Arrangements and Combinations › Combinations with Repetitions › Lesson 1 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Arrangements and Combinations / Combinations with Repetitions</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Arrangements and Combinations · Combinations with Repetitions</p>
+        <h1>Lesson 1</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <ul><li> How many non-negative integer solutions are there to the equation <span class="math-tex">\(x_{1}+x_{2}+\dotsb+x_{n}=k\)</span>?</li><li> How many ways are there to distribute <span class="math-tex">\(k\)</span> identical coins to <span class="math-tex">\(n\)</span> distinct people?</li></ul><p>Of course, this is the same problem: <span class="math-tex">\(x_{i}\)</span> is simply the number of coins we give to the <span class="math-tex">\(i\)</span>-th person. Such methods are called <em>combinations with repetitions</em>: we again want to choose <span class="math-tex">\(k\)</span> elements from an <span class="math-tex">\(n\)</span>-element set, but now the selected elements can repeat. The order still doesn't matter. In other words, now we want to choose not a <span class="math-tex">\(k\)</span>-set, but a <span class="math-tex">\(k\)</span>-multiset. That is, to define such a combination, for each element <span class="math-tex">\(1 \le i \le n\)</span>, we need to specify how many times we take it: <span class="math-tex">\(\sum_{i=1}^{n}x_{i}=k\)</span>.</p><pre><code class="language-python">from itertools import combinations_with_replacement
+
+for c in combinations_with_replacement('abc', 5):
+    print(*c, sep='')</code></pre><pre><code class="language-auto">aaaaa
+aaaab
+aaaac
+aaabb
+aaabc
+aaacc
+aabbb
+aabbc
+aabcc
+aaccc
+abbbb
+abbbc
+abbcc
+abccc
+acccc
+bbbbb
+bbbbc
+bbbcc
+bbccc
+bcccc
+ccccc
+</code></pre>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-13-arrangements-and-combinations/unit/chapter-13-arrangements-and-combinations-unit-4-combinations/lesson/arrangements-and-combinations--combinations--step-11/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-13-arrangements-and-combinations/unit/chapter-13-arrangements-and-combinations-unit-5-combinations-with-repetitions/lesson/arrangements-and-combinations--combinations-with-repetitions--step-2/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

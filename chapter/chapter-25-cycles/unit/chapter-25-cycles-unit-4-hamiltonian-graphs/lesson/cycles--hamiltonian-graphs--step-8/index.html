@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="We now turn to the consideration of directed graphs. A tournament is a directed graph in which there is an edge in one of two directions between any two…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Cycles › Hamiltonian Graphs › Lesson 8 | Discrete Mathematics" />
+    <meta property="og:description" content="We now turn to the consideration of directed graphs. A tournament is a directed graph in which there is an edge in one of two directions between any two…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-25-cycles/unit/chapter-25-cycles-unit-4-hamiltonian-graphs/lesson/cycles--hamiltonian-graphs--step-8/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-25-cycles/unit/chapter-25-cycles-unit-4-hamiltonian-graphs/lesson/cycles--hamiltonian-graphs--step-8/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Cycles › Hamiltonian Graphs › Lesson 8 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Cycles / Hamiltonian Graphs</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Cycles · Hamiltonian Graphs</p>
+        <h1>Lesson 8</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p>We now turn to the consideration of directed graphs. A <em>tournament</em> is a directed graph in which there is an edge in one of two directions between any two vertices. The tournament is named as such because it is convenient for representing the results of games between all pairs of teams.</p><p><strong>Theorem. </strong><em>Every tournament has a Hamiltonian path.</em></p><p><em>Proof. </em>We prove by induction on&nbsp;<span class="math-tex">\(n\)</span>. The case <span class="math-tex">\(n=1\)</span> is&nbsp;clear. For the transition <span class="math-tex">\(n-1\to n\)</span>, remove vertex&nbsp;<span class="math-tex">\(n\)</span> from the graph and construct a Hamiltonian path in the remaining graph. Let <span class="math-tex">\(1 \to 2 \to \dotsb \to n-1\)</span> be this Hamiltonian path. If there is an edge <span class="math-tex">\((n,1)\)</span> or an edge <span class="math-tex">\((n-1,n)\)</span>, then everything is ready. Now suppose instead of these edges there are edges <span class="math-tex">\((1,n)\)</span> and <span class="math-tex">\((n,n-1)\)</span>. </p><p style="text-align:center;"><img src="generated/assets/Cycles/Hamiltonian_Graphs=7/image0.png" width="800" ></p><p> Thus, as&nbsp;<span class="math-tex">\(i\)</span> increases from&nbsp;<span class="math-tex">\(1\)</span> to&nbsp;<span class="math-tex">\(n-1\)</span>, the direction of an edge will at some point "switch": there will be edges <span class="math-tex">\((i,n)\)</span> and <span class="math-tex">\((n,i+1)\)</span>. This gives the Hamiltonian path: <span class="math-tex">\[1\to2\to \dotsb \to i \to n \to i+1 \to i+2\to \dotsb \to n-1 \  .\]</span> </p><p style="text-align:center;"><img src="generated/assets/Cycles/Hamiltonian_Graphs=7/image1.png" width="800" ></p><p><span class="proof-end" aria-label="End of proof">◼</span></p>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-25-cycles/unit/chapter-25-cycles-unit-4-hamiltonian-graphs/lesson/cycles--hamiltonian-graphs--step-7/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-25-cycles/unit/chapter-25-cycles-unit-4-hamiltonian-graphs/lesson/cycles--hamiltonian-graphs--step-9/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

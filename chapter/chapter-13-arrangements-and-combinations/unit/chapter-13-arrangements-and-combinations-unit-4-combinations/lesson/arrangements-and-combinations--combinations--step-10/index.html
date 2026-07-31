@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="Pascal&#39;s triangle is a remarkable combinatorial object. Below we will see how many interesting properties it has. Neighbors from above: the value in a cell…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Arrangements and Combinations › Combinations › Lesson 10 | Discrete Mathematics" />
+    <meta property="og:description" content="Pascal&#39;s triangle is a remarkable combinatorial object. Below we will see how many interesting properties it has. Neighbors from above: the value in a cell…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-13-arrangements-and-combinations/unit/chapter-13-arrangements-and-combinations-unit-4-combinations/lesson/arrangements-and-combinations--combinations--step-10/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-13-arrangements-and-combinations/unit/chapter-13-arrangements-and-combinations-unit-4-combinations/lesson/arrangements-and-combinations--combinations--step-10/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Arrangements and Combinations › Combinations › Lesson 10 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Arrangements and Combinations / Combinations</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Arrangements and Combinations · Combinations</p>
+        <h1>Lesson 10</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p>Pascal's triangle is a remarkable combinatorial object. Below we will see how many interesting properties it has.</p><ul><li><strong>Neighbors from above:</strong>&nbsp; the value in a cell of the triangle is equal to the sum of the two neighbors from above this cell. This is a reformulation of the equality&nbsp;<span class="math-tex">\(\binom{n}{k}=\binom{n-1}{k-1}+\binom{n-1}{k}\)</span>.<br><p style="text-align:center;"><img src="generated/assets/Arrangements_and_Combinations/Combinations=9/image0.png" width="800" ></p></li><li><strong>Calculating binomial coefficients:</strong>&nbsp; can be calculated by gradually filling the triangle according to the rule <span class="math-tex">\(\binom{n}{k}=\binom{n-1}{k-1}+\binom{n-1}{k}\)</span>.<br><p style="text-align:center;"><img src="generated/assets/Arrangements_and_Combinations/Combinations=9/image1.png" width="800" ></p><pre><code class="language-python">cells = dict()  # cells[n, k] will keep n choose k
+
+for n in range(8):
+    cells[n, 0] = 1
+    cells[n, n] = 1
+
+    for k in range(1, n):
+        cells[n, k] = cells[n - 1, k - 1] + cells[n - 1, k]
+
+print(cells[7, 4])</code></pre><pre><code class="language-auto">35
+</code></pre></li><li><strong>Horizontal Symmetry:</strong>&nbsp; <span class="math-tex">\[\binom{n}{k}= \binom{n}{n-k}\  .\]</span> That is, the triangle is symmetric about the vertical central line. This can be proven directly using the formula: <span class="math-tex">\[\binom{n}{k}= \frac{n!}{k!(n-k)!}=\frac{n!}{(n-k)!k!}=\binom{n}{n-k}\  .\]</span> Alternatively, it can be proven combinatorially: both represent the number of ways to divide <span class="math-tex">\(n\)</span> people into two teams, one with <span class="math-tex">\(k\)</span> members.</li><li><strong>Sum in a Row:</strong>&nbsp; For any <span class="math-tex">\(n \in \mathbb{Z}_{\ge 0}\)</span> <span class="math-tex">\[\binom{n}{0}+\binom{n}{1}+\dotsb+\binom{n}{n-1}+\binom{n}{n}=2^{n} \  .\]</span> Let us verify this statement for the first few rows.<br><p style="text-align:center;"><img src="generated/assets/Arrangements_and_Combinations/Combinations=9/image2.png" width="800" ></p>This can be proven by induction on <span class="math-tex">\(n\)</span>. The base case <span class="math-tex">\(n=0\)</span> holds. For the induction step <span class="math-tex">\(n-1 \to n\)</span>, Pascal's rule shows that every element of row <span class="math-tex">\(n-1\)</span> appears twice in the sum of row <span class="math-tex">\(n\)</span>.<br><p style="text-align:center;"><img src="generated/assets/Arrangements_and_Combinations/Combinations=9/image3.png" width="800" ></p><p style="text-align:center;"><img src="generated/assets/Arrangements_and_Combinations/Combinations=9/image4.png" width="800" ></p>As usual, this equality can also be proven combinatorially: it simply counts the total number of subsets of an <span class="math-tex">\(n\)</span>-element set.</li><li><strong>Alternating Sum:</strong>&nbsp; For any <span class="math-tex">\(n \in \mathbb{Z}_{&gt;0}\)</span> <span class="math-tex">\[\sum_{k=0}^{n}(-1)^{k}\binom{n}{k}= 0 \  .\]</span><br><p style="text-align:center;"><img src="generated/assets/Arrangements_and_Combinations/Combinations=9/image5.png" width="800" ></p>For odd <span class="math-tex">\(n\)</span>, this follows immediately from the symmetry of the triangle. In general, it is derived from the property of adjacent elements above.<br>We now present a combinatorial proof based on the method of a distinguished element. We need to prove that for <span class="math-tex">\(n&gt;0\)</span> <span class="math-tex">\[\binom{n}{1}+\binom{n}{3}+\dotsb=\binom{n}{0}+\binom{n}{2}+\dotsb \  .\]</span> In other words, a non-empty set (<span class="math-tex">\(n&gt;0\)</span>) has an equal number of subsets of even and odd sizes. To prove this, we establish a one-to-one correspondence between even-sized and odd-sized subsets. Fix an arbitrary element <span class="math-tex">\(x\)</span> (here, the assumption <span class="math-tex">\(n&gt;0\)</span> is critical).Every subset <span class="math-tex">\(B\)</span> not containing <span class="math-tex">\(x\)</span> is paired with <span class="math-tex">\(B \cup \{x\}\)</span>. Clearly, in each pair, one subset has even size and the other has odd size. Let us demonstrate this with a toy example: suppose <span class="math-tex">\(S=\{a, b, c, d\}\)</span> (and <span class="math-tex">\(x=a\)</span>).<br><p style="text-align:center;"><img src="generated/assets/Arrangements_and_Combinations/Combinations=9/image6.png" width="800" ></p></li><li><strong>Number of paths:</strong>&nbsp; In each cell of Pascal's triangle, the number of paths to this cell from the top cell of the triangle is written, where the allowed moves are down-left or down-right. This is a direct consequence of the sum rule and the formula <span class="math-tex">\[\binom{n}{k}=\binom{n-1}{k-1}+\binom{n-1}{k}.\]</span> indeed, the last move to a cell comes from one of its two upper neighbors; thus, the number of paths to this cell is the sum of the numbers of paths to these two neighbors.<br><p style="text-align:center;"><img src="generated/assets/Arrangements_and_Combinations/Combinations=9/image7.png" width="800" ></p>In the diagram below, the number of ways to reach the highlighted cell is <span class="math-tex">\[\binom{k+l}{k}=\binom{k+l}{l}\  .\]</span> Indeed, from <span class="math-tex">\(k+l\)</span> steps, one must take <span class="math-tex">\(k\)</span> steps to the left (and, consequently, <span class="math-tex">\(l\)</span> steps to the right).<br><p style="text-align:center;"><img src="generated/assets/Arrangements_and_Combinations/Combinations=9/image8.png" width="800" ></p></li></ul>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-13-arrangements-and-combinations/unit/chapter-13-arrangements-and-combinations-unit-4-combinations/lesson/arrangements-and-combinations--combinations--step-9/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-13-arrangements-and-combinations/unit/chapter-13-arrangements-and-combinations-unit-4-combinations/lesson/arrangements-and-combinations--combinations--step-11/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

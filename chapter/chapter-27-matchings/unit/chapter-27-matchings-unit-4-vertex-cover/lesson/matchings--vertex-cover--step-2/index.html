@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="Theorem (König — Egerváry, 1931). In any bipartite graph \(G\) the maximum size of a matching equals the minimum size of a vertex cover:…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Matchings › Vertex Cover › Lesson 2 | Discrete Mathematics" />
+    <meta property="og:description" content="Theorem (König — Egerváry, 1931). In any bipartite graph \(G\) the maximum size of a matching equals the minimum size of a vertex cover:…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-27-matchings/unit/chapter-27-matchings-unit-4-vertex-cover/lesson/matchings--vertex-cover--step-2/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-27-matchings/unit/chapter-27-matchings-unit-4-vertex-cover/lesson/matchings--vertex-cover--step-2/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Matchings › Vertex Cover › Lesson 2 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Matchings / Vertex Cover</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Matchings · Vertex Cover</p>
+        <h1>Lesson 2</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p><strong>Theorem (König &mdash; Egerváry, 1931). </strong><em>In any <em>bipartite</em> graph&nbsp;<span class="math-tex">\(G\)</span> the maximum size of a matching equals the minimum size of a vertex cover: <span class="math-tex">\[\alpha'(G)=\beta(G) \  .\]</span></em></p><p style="text-align:center;"><img src="generated/assets/Matchings/Vertex_Cover=1/image0.png" width="800" ></p><p><em>Proof. </em>We again have a weak duality here: the size of <em>any</em> vertex cover is at least the size of <em>any</em> matching (since from each edge in the matching we must take at least one vertex). Therefore <span class="math-tex">\(\alpha'(G) \le \beta(G)\)</span>. To prove equality <span class="math-tex">\(\alpha'(G) = \beta(G)\)</span> it suffices to construct a matching and a vertex cover of the same size. To do this, we transform our bipartite graph into a flow network: direct all edges from the first part to the second, and add a source&nbsp;<span class="math-tex">\(s\)</span> with outgoing edges to all vertices of the first part and a sink&nbsp;<span class="math-tex">\(t\)</span> with incoming edges from all vertices of the second part; set the capacity of all old edges to infinity and the edges connected to <span class="math-tex">\(s\)</span> and <span class="math-tex">\(t\)</span> to one.</p><p>Find a&nbsp;maximum flow in the resulting network, and assume, without loss of generality, that it is integral. The edges of the original graph through which the flow goes will give us a matching of the same size in the original graph.</p><p style="text-align:center;"><img src="generated/assets/Matchings/Vertex_Cover=1/image1.png" width="800" ></p><p>Take a minimum cut&nbsp;<span class="math-tex">\(S\)</span>. Its capacity is finite (we can, for instance, just cut off vertex&nbsp;<span class="math-tex">\(s\)</span> and obtain a cut of finite capacity). Therefore, the cut does not intersect any edge of the original graph.</p><p style="text-align:center;"><img src="generated/assets/Matchings/Vertex_Cover=1/image2.png" width="800" ></p><p>Now consider the set <span class="math-tex">\[C=(V_{1} \setminus S) \sqcup (V_{2} \cap S) \  ,\]</span> that is, the vertices of the left part not in the cut, and the vertices of the right part that are in the cut. </p><p style="text-align:center;"><img src="generated/assets/Matchings/Vertex_Cover=1/image3.png" width="800" ></p><p>It is clear that the size of&nbsp;<span class="math-tex">\(C\)</span> equals the capacity of the cut: the cut intersects exactly the edges <span class="math-tex">\[\{(s, v) \colon v \in (V_{1} \setminus S)\} \sqcup \{(v,t) \colon v \in (V_{2} \cap S) \} \  .\]</span> It is also clear that <span class="math-tex">\(C\)</span> is a vertex cover (because the cut does not intersect edges of the original graph).<span class="proof-end" aria-label="End of proof">◼</span></p>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-27-matchings/unit/chapter-27-matchings-unit-4-vertex-cover/lesson/matchings--vertex-cover--step-1/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-27-matchings/unit/chapter-27-matchings-unit-4-vertex-cover/lesson/matchings--vertex-cover--step-3/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

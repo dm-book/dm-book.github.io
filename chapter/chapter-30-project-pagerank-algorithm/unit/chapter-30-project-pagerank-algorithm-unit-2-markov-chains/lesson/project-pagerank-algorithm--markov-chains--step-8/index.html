@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="Homogeneous Markov chains are a special class of Markov chains that do not depend on time. Formally, a chain \(\alpha_{i}\) is called homogeneous if the…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Project: PageRank Algorithm › Markov Chains › Lesson 8 | Discrete Mathematics" />
+    <meta property="og:description" content="Homogeneous Markov chains are a special class of Markov chains that do not depend on time. Formally, a chain \(\alpha_{i}\) is called homogeneous if the…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-30-project-pagerank-algorithm/unit/chapter-30-project-pagerank-algorithm-unit-2-markov-chains/lesson/project-pagerank-algorithm--markov-chains--step-8/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-30-project-pagerank-algorithm/unit/chapter-30-project-pagerank-algorithm-unit-2-markov-chains/lesson/project-pagerank-algorithm--markov-chains--step-8/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Project: PageRank Algorithm › Markov Chains › Lesson 8 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Project: PageRank Algorithm / Markov Chains</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Project: PageRank Algorithm · Markov Chains</p>
+        <h1>Lesson 8</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p><em>Homogeneous</em> Markov chains are a&nbsp;special class of&nbsp;Markov chains that do&nbsp;not depend on&nbsp;time. Formally, a&nbsp;chain&nbsp;<span class="math-tex">\(\alpha_{i}\)</span> is&nbsp;called homogeneous if the transition probabilities satisfy  <span class="math-tex">\[\Pr[\alpha_{t+1}= i \mid \alpha_{t} = j] = \Pr[\alpha_{s+1}= i \mid \alpha_{s} = j] \quad \text{for all }t, s \ge 0 \text{ and all states }i,j.\]</span>   It&nbsp;is&nbsp;easy to&nbsp;see that, for such&nbsp;chains, the transition matrix&nbsp;<span class="math-tex">\(\mathbf{T}^{t}\)</span> is&nbsp;identical at&nbsp;all time steps&nbsp;<span class="math-tex">\(t\)</span>. In&nbsp;the following, we&nbsp;will restrict our&nbsp;attention exclusively to&nbsp;homogeneous chains.</p><p>A&nbsp;Markov chain can also be&nbsp;represented as a&nbsp;graph, where the vertices correspond to&nbsp;the states of&nbsp;the chain, and the weighted, directed edges represent the transition probabilities between&nbsp;states. In&nbsp;this context, we&nbsp;can now see that&nbsp;the transition&nbsp;matrices of&nbsp;the graphs we discussed earlier can&nbsp;be&nbsp;interpreted as&nbsp;a&nbsp;homogeneous Markov&nbsp;chain. Such a&nbsp;graph is&nbsp;<em>stochastic</em>, since for any current vertex&nbsp;<span class="math-tex">\(j\)</span>, transition probabilities to all possible next vertices&nbsp;<span class="math-tex">\(i\)</span> form a&nbsp;probability distribution: <span class="math-tex">\[\sum_{i}\Pr[\alpha_{t+1}= i \mid \alpha_{t} = j] = 1.\]</span> In&nbsp;other words, a&nbsp;graph with weighted directed edges is&nbsp;called <em>stochastic</em> if&nbsp;the sum of&nbsp;the weights of&nbsp;all outgoing edges from&nbsp;each vertex&nbsp;<span class="math-tex">\(j\)</span> equals&nbsp;<span class="math-tex">\(1\)</span>.</p><p>What is&nbsp;the advantage of&nbsp;such a&nbsp;graph? Just as&nbsp;before, we can&nbsp;multiply a&nbsp;probability vector&nbsp;<span class="math-tex">\(\mathbf{r}\)</span> by&nbsp;the transition matrix&nbsp;<span class="math-tex">\(\mathbf{T}\)</span> to&nbsp;obtain the distribution at&nbsp;the next step (<span class="math-tex">\(\mathbf{r}_{\text{next}}= \mathbf{T}\mathbf{r}\)</span>) or&nbsp;apply&nbsp;it repeatedly to&nbsp;obtain the distribution after multiple&nbsp;steps. Moreover, this&nbsp;representation allows us to&nbsp;exploit certain properties of&nbsp;Markov chains, which will be&nbsp;discussed in&nbsp;more detail later.</p>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-30-project-pagerank-algorithm/unit/chapter-30-project-pagerank-algorithm-unit-2-markov-chains/lesson/project-pagerank-algorithm--markov-chains--step-7/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-30-project-pagerank-algorithm/unit/chapter-30-project-pagerank-algorithm-unit-2-markov-chains/lesson/project-pagerank-algorithm--markov-chains--step-9/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

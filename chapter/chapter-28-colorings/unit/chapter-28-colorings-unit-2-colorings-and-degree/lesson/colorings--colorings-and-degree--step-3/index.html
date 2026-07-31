@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="For connected graphs, the inequality \(\chi(G) \le \Delta(G) + 1\) is almost never tight: the only exceptions are complete graphs and odd cycles. Theorem…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Colorings › Colorings and Degree › Lesson 3 | Discrete Mathematics" />
+    <meta property="og:description" content="For connected graphs, the inequality \(\chi(G) \le \Delta(G) + 1\) is almost never tight: the only exceptions are complete graphs and odd cycles. Theorem…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-28-colorings/unit/chapter-28-colorings-unit-2-colorings-and-degree/lesson/colorings--colorings-and-degree--step-3/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-28-colorings/unit/chapter-28-colorings-unit-2-colorings-and-degree/lesson/colorings--colorings-and-degree--step-3/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Colorings › Colorings and Degree › Lesson 3 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Colorings / Colorings and Degree</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Colorings · Colorings and Degree</p>
+        <h1>Lesson 3</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p>For connected graphs, the inequality <span class="math-tex">\(\chi(G) \le \Delta(G) + 1\)</span> is almost never tight: the only exceptions are complete graphs and odd cycles.</p><p><strong>Theorem (Brooks, 1941). </strong><em>If a connected graph&nbsp;<span class="math-tex">\(G\)</span> is neither an odd cycle nor a complete graph, then <span class="math-tex">\(\chi(G) \le \Delta(G)\)</span>.</em></p><p>This theorem is not hard to prove, but we will not provide the proof here. We will only show that the main case in the proof of this theorem is regular graphs.</p><p><strong>Lemma. </strong><em>If in a connected graph&nbsp;<span class="math-tex">\(G(V,E)\)</span>, for which <span class="math-tex">\(\Delta(G) \le d\)</span>, there is a vertex of degree less than&nbsp;<span class="math-tex">\(d\)</span>, then <span class="math-tex">\(\chi(G) \le d\)</span>.</em></p><p><em>Proof. </em>Induction on the number of vertices&nbsp;<span class="math-tex">\(n\)</span>. The base case <span class="math-tex">\(n \le d\)</span> is easy to check. To prove the step <span class="math-tex">\(n-1 \to n\)</span>, take a vertex <span class="math-tex">\(v \in V\)</span> of degree less than&nbsp;<span class="math-tex">\(d\)</span> and consider the graph <span class="math-tex">\(G-v\)</span>. Let <span class="math-tex">\(G_{1},\dotsc,G_{k}\)</span> be the connected components of this graph. Since <span class="math-tex">\(G\)</span> is connected, each of these graphs has a vertex of degree less than&nbsp;<span class="math-tex">\(d\)</span>, so each of them can be colored in&nbsp;<span class="math-tex">\(d\)</span> colors by the inductive hypothesis. Then we just need to color vertex&nbsp;<span class="math-tex">\(v\)</span>: one of the&nbsp;<span class="math-tex">\(d\)</span> colors will be available for it because its degree is less than&nbsp;<span class="math-tex">\(d\)</span>.<span class="proof-end" aria-label="End of proof">◼</span></p>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-28-colorings/unit/chapter-28-colorings-unit-2-colorings-and-degree/lesson/colorings--colorings-and-degree--step-2/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-28-colorings/unit/chapter-28-colorings-unit-3-colorings-and-cliques/lesson/colorings--colorings-and-cliques--step-1/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

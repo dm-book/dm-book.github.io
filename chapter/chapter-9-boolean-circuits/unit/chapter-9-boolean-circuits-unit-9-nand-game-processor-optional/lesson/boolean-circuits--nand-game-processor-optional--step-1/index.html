@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="A processor employs both types of memory, namely registers and RAM. Registers are directly accessible to the processor and are used to store intermediate…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Boolean Circuits › NAND Game: Processor (Optional) › Lesson 1 | Discrete Mathematics" />
+    <meta property="og:description" content="A processor employs both types of memory, namely registers and RAM. Registers are directly accessible to the processor and are used to store intermediate…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-9-boolean-circuits/unit/chapter-9-boolean-circuits-unit-9-nand-game-processor-optional/lesson/boolean-circuits--nand-game-processor-optional--step-1/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-9-boolean-circuits/unit/chapter-9-boolean-circuits-unit-9-nand-game-processor-optional/lesson/boolean-circuits--nand-game-processor-optional--step-1/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Boolean Circuits › NAND Game: Processor (Optional) › Lesson 1 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Boolean Circuits / NAND Game: Processor (Optional)</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Boolean Circuits · NAND Game: Processor (Optional)</p>
+        <h1>Lesson 1</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p>A&nbsp;processor employs both types of memory, namely registers and RAM. Registers are directly accessible to&nbsp;the processor and are used to store intermediate values and computation results. In&nbsp;contrast, RAM is capable of storing a&nbsp;substantial amount of data; however, only a&nbsp;single address can be accessed for reading or writing at any given time. In&nbsp;the present processor architecture, two registers, denoted <span class="math-tex">\(A\)</span> and <span class="math-tex">\(D\)</span>, are available in&nbsp;addition to&nbsp;a&nbsp;single RAM bank. In&nbsp;this task, you are required to integrate the two registers with the RAM bank into&nbsp;a&nbsp;unified memory system. Here the provided <span class="math- tex">\(\texttt{RAM16}\)</span> gate is a&nbsp;word-address adapter: it takes, in order, a&nbsp;one-bit store flag, a&nbsp;16-bit data value, a&nbsp;16-bit address, and a&nbsp;one-bit clock signal, and writes one 16-bit value. It selects between its two cells using the least significant bit of&nbsp;the address.</p><p><strong>Problem. </strong> Synthesize a&nbsp;circuit of&nbsp;size&nbsp;<span class="math-tex">\(3\)</span> over <span class="math-tex">\(\{\operatorname{REGISTER}_{16},\allowbreak \operatorname{RAM}_{16},\allowbreak \operatorname{NAND}_{2},\allowbreak \operatorname{INV}_{1},\allowbreak \operatorname{AND}_{2},\allowbreak \operatorname{OR}_{2},\allowbreak \operatorname{XOR}_{2}\}\)</span> computing the combined-memory function <span class="math-tex">\(\operatorname{MEMORY}_{16}(a,d,\texttt{*a},x,cl)=(A,D,\texttt{*A})\)</span>: Here <span class="math-tex">\(x,A,D\)</span>, and&nbsp;<span class="math- tex">\(\texttt{*A}\)</span> are 16-bit values; <span class="math-tex">\(a,d\)</span>, <span class="math- tex">\(\texttt{*a}\)</span>, and&nbsp;<span class="math-tex">\(cl\)</span> are bits. The flags write <span class="math- tex">\(\texttt{x}\)</span> to&nbsp;register&nbsp;<span class="math- tex">\(\texttt{A}\)</span>, register&nbsp;<span class="math- tex">\(\texttt{D}\)</span>, and the two-cell RAM at address <span class="math-tex">\(\texttt{A}\bmod 2\)</span>, respectively. A&nbsp;simultaneous write to&nbsp;<span class="math- tex">\(\texttt{A}\)</span> and&nbsp;<span class="math- tex">\(\texttt{*A}\)</span> uses the old value of&nbsp;<span class="math- tex">\(\texttt{A}\)</span> as&nbsp;the RAM address. Output <span class="math- tex">\(\texttt{*A}\)</span> is&nbsp;the currently addressed RAM value. All memory starts at&nbsp;<span class="math-tex">\(0\)</span>.</p>
+          <div class="task-card"><div class="task-heading">String task, Advanced problem</div><a class="cogniterra-only-notice" href="https://cogniterra.org/a/697" target="_blank" rel="noreferrer">This problem can only be submitted at Cogniterra.</a></div>
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-9-boolean-circuits/unit/chapter-9-boolean-circuits-unit-8-nand-game-memory-optional/lesson/boolean-circuits--nand-game-memory-optional--step-8/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-9-boolean-circuits/unit/chapter-9-boolean-circuits-unit-9-nand-game-processor-optional/lesson/boolean-circuits--nand-game-processor-optional--step-2/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

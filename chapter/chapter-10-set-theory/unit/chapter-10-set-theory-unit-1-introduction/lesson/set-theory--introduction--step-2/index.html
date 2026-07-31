@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="A set is a collection of elements: for each element, it can be determined whether it belongs to the set or not, with no repetitions allowed (no element can…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Set Theory › Introduction › Lesson 2 | Discrete Mathematics" />
+    <meta property="og:description" content="A set is a collection of elements: for each element, it can be determined whether it belongs to the set or not, with no repetitions allowed (no element can…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-10-set-theory/unit/chapter-10-set-theory-unit-1-introduction/lesson/set-theory--introduction--step-2/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-10-set-theory/unit/chapter-10-set-theory-unit-1-introduction/lesson/set-theory--introduction--step-2/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Set Theory › Introduction › Lesson 2 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Set Theory / Introduction</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Set Theory · Introduction</p>
+        <h1>Lesson 2</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p>A&nbsp;<em>set</em> is a&nbsp;collection of elements: for each element, it&nbsp;can be&nbsp;determined whether it&nbsp;belongs to&nbsp;the set or&nbsp;not, with no&nbsp;repetitions allowed (no&nbsp;element can belong to&nbsp;the set more than once). Note that we&nbsp;say nothing about the nature of&nbsp;the elements—they can be&nbsp;numbers, strings, pencils, or&nbsp;even sets themselves. The <em>empty set</em> (containing no&nbsp;elements) is&nbsp;denoted by&nbsp;<span class="math-tex">\(\{\}\)</span> or&nbsp;<span class="math-tex">\(\varnothing\)</span>. The <em>size</em> of&nbsp;a&nbsp;set&nbsp;<span class="math-tex">\(A\)</span> is&nbsp;the number of&nbsp;elements it&nbsp;contains and is&nbsp;denoted by&nbsp;<span class="math-tex">\(|A|\)</span>: <span class="math-tex">\[|\{2, 5, 3\}|=3,\quad |\varnothing|=0 \  .\]</span></p><p>We&nbsp;say that <em><span class="math-tex">\(x\)</span>&nbsp;belongs to&nbsp;<span class="math-tex">\(A\)</span></em> or&nbsp;<em><span class="math-tex">\(A\)</span>&nbsp;contains&nbsp;<span class="math-tex">\(x\)</span></em> and write <span class="math-tex">\(x \in A\)</span>, if <span class="math-tex">\(x\)</span>&nbsp;is&nbsp;an&nbsp;element of&nbsp;<span class="math-tex">\(A\)</span>. We&nbsp;say that <em><span class="math-tex">\(A\)</span>&nbsp;is a&nbsp;subset of&nbsp;<span class="math-tex">\(B\)</span></em> and write <span class="math-tex">\(A \subseteq B\)</span>, if&nbsp;every element of&nbsp;<span class="math-tex">\(A\)</span> is&nbsp;also an&nbsp;element of&nbsp;<span class="math-tex">\(B\)</span>.</p><p>Standard operations on&nbsp;sets are similar to&nbsp;Boolean operations. </p><ul><li> Union (disjunction): <span class="math-tex">\[A \cup B =\{x \colon x \in A \lor x \in B\}\]</span></li><li> Intersection (conjunction): <span class="math-tex">\[A \cap B =\{x \colon x \in A \land x \in B\}\]</span></li><li> Difference: <span class="math-tex">\[A \setminus B =\{x \colon x \in A \land x \not \in B\}\]</span></li><li> Symmetric difference (exclusive OR): <span class="math-tex">\[A \triangle B =\{x \colon x \in A \oplus x \in B\}\]</span></li></ul><p>When there are few sets, it is convenient to represent them using so-called <em>Venn diagrams</em> (also known&nbsp;as Euler&ndash;Venn diagrams). The code below adjusts the sizes and positions of the circles so that the sizes of the various overlapping parts are in the correct proportions.</p><pre><code class="language-python">import matplotlib.pyplot as plt
+from matplotlib_venn import venn3
+
+venn3(subsets=(10, 8, 22, 6, 9, 4, 2))
+plt.savefig('venn3.png')</code></pre><p style="text-align:center;"><img src="generated/assets/Set_Theory/Introduction=1/image0.png" width="800" ></p><p>A&nbsp;set can be defined in various ways: </p><ul><li> by listing its elements: <span class="math-tex">\(A=\{2, 13, 6, 15, 4\}\)</span>;</li><li> by describing its elements: <span class="math-tex">\(B\)</span>&nbsp;is the set of all positive two-digit integers;</li><li> by set-builder notation: <span class="math-tex">\(C=\{x \in A \colon \text{\(x\) is prime}\}\)</span>;</li><li> using set-theoretic operations: <span class="math-tex">\(D=A \cap B\)</span>, <span class="math-tex">\(E=A \setminus B\)</span>.</li></ul><p>Let&nbsp;us emphasize that a set does not have to contain elements of the same &ldquo;type.&rdquo; In the example below, we add a&nbsp;number, a&nbsp;string, and another set to a&nbsp;set.</p><pre><code class="language-python">from sympy.ntheory import isprime
+
+a = {2, 13, 6, 15, 4}
+b = set(range(10, 100))
+
+c = {x for x in a if isprime(x)}
+print(c)
+d = a.intersection(b)
+print(d)
+e = a.difference(b)
+print(e)
+
+f = frozenset({'hello', 2})
+g = {7, f, 'world'}
+print(g, len(g))</code></pre><pre><code class="language-auto">{2, 13}
+{13, 15}
+{2, 4, 6}
+{frozenset({'hello', 2}), 'world', 7} 3
+</code></pre>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-10-set-theory/unit/chapter-10-set-theory-unit-1-introduction/lesson/set-theory--introduction--step-1/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-10-set-theory/unit/chapter-10-set-theory-unit-1-introduction/lesson/set-theory--introduction--step-3/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

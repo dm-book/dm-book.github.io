@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="Repeatedly applying the same idea gives \[(1+x)^{p^i}\equiv 1+x^{p^i}\pmod p\] for every \(i\ge 0\) . Now we can prove the theorem that fully controls…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Arrangements and Combinations › Lucas Theorem and the Sierpiński Triangle (Optional) › Lesson 6 | Discrete Mathematics" />
+    <meta property="og:description" content="Repeatedly applying the same idea gives \[(1+x)^{p^i}\equiv 1+x^{p^i}\pmod p\] for every \(i\ge 0\) . Now we can prove the theorem that fully controls…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-13-arrangements-and-combinations/unit/chapter-13-arrangements-and-combinations-unit-12-lucas-theorem-and-the-sierpi-ski-triangle-optional/lesson/arrangements-and-combinations--lucas-theorem-and-the-sierpi-ski-triangle-optional--step-6/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-13-arrangements-and-combinations/unit/chapter-13-arrangements-and-combinations-unit-12-lucas-theorem-and-the-sierpi-ski-triangle-optional/lesson/arrangements-and-combinations--lucas-theorem-and-the-sierpi-ski-triangle-optional--step-6/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Arrangements and Combinations › Lucas Theorem and the Sierpiński Triangle (Optional) › Lesson 6 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Arrangements and Combinations / Lucas Theorem and the Sierpiński Triangle (Optional)</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Arrangements and Combinations · Lucas Theorem and the Sierpiński Triangle (Optional)</p>
+        <h1>Lesson 6</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p>Repeatedly applying the same idea gives <span class="math-tex">\[(1+x)^{p^i}\equiv 1+x^{p^i}\pmod p\]</span> for every <span class="math-tex">\(i\ge 0\)</span>. Now we can prove the theorem that fully controls Pascal's triangle modulo&nbsp;<span class="math-tex">\(p\)</span>.</p><p><strong>Theorem (Lucas). </strong><em>Let <span class="math-tex">\(p\)</span> be prime. Write <span class="math-tex">\(n\)</span> and <span class="math-tex">\(k\)</span> in base&nbsp;<span class="math-tex">\(p\)</span>:  <span class="math-tex">\[n=n_{0}+n_{1}p+\dotsb+n_{r}p^{r},\qquad k=k_{0}+k_{1}p+\dotsb+k_{r}p^{r},\]</span>   where <span class="math-tex">\(0\le n_{i},k_{i}&lt;p\)</span>. Then <span class="math-tex">\[\binom{n}{k}\equiv \prod_{i=0}^{r}\binom{n_i}{k_i}\pmod p.\]</span> We use the convention that <span class="math-tex">\(\binom{n_i}{k_i}=0\)</span> when <span class="math-tex">\(k_{i}&gt;n_{i}\)</span>.</em></p><p><em>Proof. </em>We work with polynomials whose coefficients are taken modulo&nbsp;<span class="math-tex">\(p\)</span>. Since <span class="math-tex">\(n=n_{0}+n_{1}p+\dotsb+n_{r}p^{r}\)</span>, we have <span class="math-tex">\[ (1+x)^n=\prod_{i=0}^{r}(1+x)^{n_ip^i} =\prod_{i=0}^{r}\left((1+x)^{p^i}\right)^{n_i}. \]</span> Using <span class="math-tex">\((1+x)^{p^i}\equiv 1+x^{p^i}\pmod p\)</span>, we get <span class="math-tex">\[ (1+x)^n\equiv \prod_{i=0}^{r}\left(1+x^{p^i}\right)^{n_i}\pmod p. \]</span> After expanding each factor on the right, <span class="math-tex">\[ \prod_{i=0}^{r}\left(1+x^{p^i}\right)^{n_i} =\prod_{i=0}^{r}\sum_{j=0}^{n_i}\binom{n_i}{j}x^{jp^i}. \]</span> To get the term <span class="math-tex">\(x^{k}=x^{k_0+k_1p+\dotsb+k_rp^r}\)</span>, we must choose the term <span class="math-tex">\(x^{k_ip^i}\)</span> from the <span class="math-tex">\(i\)</span>-th factor for every&nbsp;<span class="math-tex">\(i\)</span>. This choice is unique because base-<span class="math-tex">\(p\)</span> notation is unique. Thus the coefficient of <span class="math-tex">\(x^{k}\)</span> on the right is <span class="math-tex">\[\prod_{i=0}^{r}\binom{n_i}{k_i}.\]</span> On the left, the coefficient of <span class="math-tex">\(x^{k}\)</span> is <span class="math-tex">\(\binom{n}{k}\)</span>. Comparing coefficients modulo&nbsp;<span class="math-tex">\(p\)</span> proves the theorem.<span class="proof-end" aria-label="End of proof">◼</span></p>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-13-arrangements-and-combinations/unit/chapter-13-arrangements-and-combinations-unit-12-lucas-theorem-and-the-sierpi-ski-triangle-optional/lesson/arrangements-and-combinations--lucas-theorem-and-the-sierpi-ski-triangle-optional--step-5/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-13-arrangements-and-combinations/unit/chapter-13-arrangements-and-combinations-unit-12-lucas-theorem-and-the-sierpi-ski-triangle-optional/lesson/arrangements-and-combinations--lucas-theorem-and-the-sierpi-ski-triangle-optional--step-7/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

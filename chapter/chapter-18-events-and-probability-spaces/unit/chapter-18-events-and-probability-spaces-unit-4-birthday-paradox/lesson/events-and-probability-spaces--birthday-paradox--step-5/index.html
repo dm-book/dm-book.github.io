@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="Let us see how the graph of the function \(p(n)=1-q(n)\) , which is the probability that among randomly chosen \(n\) people there are at least two with the…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Events and Probability Spaces › Birthday Paradox › Lesson 5 | Discrete Mathematics" />
+    <meta property="og:description" content="Let us see how the graph of the function \(p(n)=1-q(n)\) , which is the probability that among randomly chosen \(n\) people there are at least two with the…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-18-events-and-probability-spaces/unit/chapter-18-events-and-probability-spaces-unit-4-birthday-paradox/lesson/events-and-probability-spaces--birthday-paradox--step-5/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-18-events-and-probability-spaces/unit/chapter-18-events-and-probability-spaces-unit-4-birthday-paradox/lesson/events-and-probability-spaces--birthday-paradox--step-5/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Events and Probability Spaces › Birthday Paradox › Lesson 5 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Events and Probability Spaces / Birthday Paradox</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Events and Probability Spaces · Birthday Paradox</p>
+        <h1>Lesson 5</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p>Let us see how the graph of the function <span class="math-tex">\(p(n)=1-q(n)\)</span>, which is the probability that among randomly chosen <span class="math-tex">\(n\)</span>&nbsp;people there are at least two with the same birthday, grows. </p><pre><code class="language-python">from itertools import accumulate
+import matplotlib.pyplot as plt
+from operator import mul
+
+num_days = 365
+
+factors = [1 - i / num_days for i in range(num_days)]
+prob_no_collision = list(accumulate(factors, mul))
+prob_collision = [1 - p for p in prob_no_collision]
+
+plt.plot(prob_collision)
+plt.savefig('birthdays.png')
+
+for n in (22, 23, 35, 99):
+    print(f'The probability for {n} people '
+          f'is {prob_collision[n - 1]}')</code></pre><pre><code class="language-auto">The probability for 22 people is 0.4756953076625502
+The probability for 23 people is 0.5072972343239854
+The probability for 35 people is 0.8143832388747152
+The probability for 100 people is 0.9999996927510721
+</code></pre><p style="text-align:center;"><img src="generated/assets/Events_and_Probability_Spaces/Birthday_Paradox=4/image0.png" width="800" ></p>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-18-events-and-probability-spaces/unit/chapter-18-events-and-probability-spaces-unit-4-birthday-paradox/lesson/events-and-probability-spaces--birthday-paradox--step-4/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-18-events-and-probability-spaces/unit/chapter-18-events-and-probability-spaces-unit-4-birthday-paradox/lesson/events-and-probability-spaces--birthday-paradox--step-6/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="For the curious 🤓 As we mentioned earlier, no polynomial-time exact algorithms for the superstring problem are known. However, there are actively studied…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Cycles › Application: Genome Assembly and de Bruijn Graphs › Lesson 7 | Discrete Mathematics" />
+    <meta property="og:description" content="For the curious 🤓 As we mentioned earlier, no polynomial-time exact algorithms for the superstring problem are known. However, there are actively studied…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-25-cycles/unit/chapter-25-cycles-unit-6-application-genome-assembly-and-de-bruijn-graphs/lesson/cycles--application-genome-assembly-and-de-bruijn-graphs--step-7/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-25-cycles/unit/chapter-25-cycles-unit-6-application-genome-assembly-and-de-bruijn-graphs/lesson/cycles--application-genome-assembly-and-de-bruijn-graphs--step-7/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Cycles › Application: Genome Assembly and de Bruijn Graphs › Lesson 7 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Cycles / Application: Genome Assembly and de Bruijn Graphs</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Cycles · Application: Genome Assembly and de Bruijn Graphs</p>
+        <h1>Lesson 7</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <details><summary>For the curious 🤓</summary><div style="border-style: solid;">As we mentioned earlier, no polynomial-time exact algorithms for the superstring problem are known. However, there are actively studied <em>approximate</em> algorithms: an <span class="math-tex">\(\alpha\)</span>-approximation algorithm in polynomial time finds a superstring that is guaranteed to be no more than <span class="math-tex">\(\alpha\)</span> times longer than the optimal superstring. The best result so far is <span class="math-tex">\(\alpha \approx 2{,}466\)</span> (obtained by Englert, Matsakis and Veselý in 2023). The corresponding algorithm and its analysis are relatively complex: they use graph techniques and combinatorics on words.At the same time, for <em>over forty years</em>, the following <em>greedy hypothesis</em> has remained open. Consider the following natural greedy algorithm, which takes as input a set of strings&nbsp;<span class="math-tex">\(S\)</span>: <ol><li> while there are at least two strings in&nbsp;<span class="math-tex">\(S\)</span>: <ol><li> <span class="math-tex">\(s,t \gets \text{two strings from \(S\) with the maximum \(\operatorname{overlap}(s,t)\)}\)</span> </li><li> replace in <span class="math-tex">\(S\)</span> the strings <span class="math-tex">\(s\)</span> and <span class="math-tex">\(t\)</span> with <span class="math-tex">\(\operatorname{superstring}(s,t)\)</span></li></ol></li><li> return the only string from&nbsp;<span class="math-tex">\(S\)</span></li></ol>As you can see, this is a very simple algorithm. It is known that it can be implemented in linear (in terms of the sum of the lengths of the input strings) time. The greedy hypothesis asserts that this algorithm is a&nbsp;<span class="math-tex">\(2\)</span>-approximation algorithm, whereas the best currently proven approximation ratio is&nbsp;<span class="math-tex">\(3{,}396\)</span>. Proving this hypothesis would solve three problems: <ol><li> Solve an open problem that has been unresolved for over forty years!</li><li> Show that a very simple algorithm can provide guaranteed approximation!</li><li> Improve all known approximation guarantees!</li></ol></div></details>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-25-cycles/unit/chapter-25-cycles-unit-6-application-genome-assembly-and-de-bruijn-graphs/lesson/cycles--application-genome-assembly-and-de-bruijn-graphs--step-6/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-25-cycles/unit/chapter-25-cycles-unit-6-application-genome-assembly-and-de-bruijn-graphs/lesson/cycles--application-genome-assembly-and-de-bruijn-graphs--step-8/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

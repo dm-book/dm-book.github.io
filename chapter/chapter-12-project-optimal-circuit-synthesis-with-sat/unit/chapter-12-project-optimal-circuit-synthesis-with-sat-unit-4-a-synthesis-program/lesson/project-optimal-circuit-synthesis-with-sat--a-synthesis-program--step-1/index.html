@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="We now combine the encoding with a SAT solver. The solver interface is deliberately not prescribed: you may emit DIMACS CNF and run an external solver, use…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Project: Optimal Circuit Synthesis with SAT › A Synthesis Program › Lesson 1 | Discrete Mathematics" />
+    <meta property="og:description" content="We now combine the encoding with a SAT solver. The solver interface is deliberately not prescribed: you may emit DIMACS CNF and run an external solver, use…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-12-project-optimal-circuit-synthesis-with-sat/unit/chapter-12-project-optimal-circuit-synthesis-with-sat-unit-4-a-synthesis-program/lesson/project-optimal-circuit-synthesis-with-sat--a-synthesis-program--step-1/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-12-project-optimal-circuit-synthesis-with-sat/unit/chapter-12-project-optimal-circuit-synthesis-with-sat-unit-4-a-synthesis-program/lesson/project-optimal-circuit-synthesis-with-sat--a-synthesis-program--step-1/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Project: Optimal Circuit Synthesis with SAT › A Synthesis Program › Lesson 1 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Project: Optimal Circuit Synthesis with SAT / A Synthesis Program</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Project: Optimal Circuit Synthesis with SAT · A Synthesis Program</p>
+        <h1>Lesson 1</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p>We&nbsp;now combine the encoding with a&nbsp;SAT solver. The solver interface is&nbsp;deliberately not prescribed: you may emit DIMACS CNF and run an&nbsp;external solver, use a&nbsp;library, or&nbsp;implement a&nbsp;small solver. What matters is&nbsp;the decoded circuit.</p><p>The output format below uses the same consecutive source numbering as&nbsp;the evaluator.</p><p><strong>Programming problem. </strong> Construct a&nbsp;circuit of&nbsp;at&nbsp;most the given size for a&nbsp;target Boolean function.</p><ul><li><strong>Input format.</strong>&nbsp; The first line contains <span class="math-tex">\(n\)</span> and <span class="math-tex">\(k\)</span> (<span class="math-tex">\(2\le n\le5\)</span>, <span class="math-tex">\(0\le k\le12\)</span>). The second line contains a&nbsp;bit string of&nbsp;length <span class="math-tex">\(2^{n}\)</span>, the target truth table.</li><li><strong>Output format.</strong>&nbsp; First print the number of gates <span class="math-tex">\(m\le k\)</span>. Then print <span class="math-tex">\(m\)</span> gate lines, each containing predecessor indices <span class="math-tex">\(a_{i},b_{i}\)</span> and a&nbsp;four-bit operation string. Gate&nbsp;<span class="math-tex">\(i\)</span> has a&nbsp;source index <span class="math-tex">\(n+i\)</span>, so both predecessors must be smaller than <span class="math-tex">\(n+i\)</span>. Finally, print one source index: the circuit output.</li></ul>
+          <div class="task-card programming-card">
+        
+        <a class="cogniterra-only-notice" href="https://cogniterra.org/a/697" target="_blank" rel="noreferrer">This problem can only be submitted at Cogniterra.</a>
+        <section class="programming-samples" aria-label="Public programming samples">
+          <div class="task-heading">Public samples</div>
+          <article class="programming-sample">
+            <strong>Public sample 1</strong>
+            <div class="programming-result-grid">
+              <div><div class="result-field-label">Input</div><pre>2 1
+0110</pre></div>
+              <div><div class="result-field-label">Example output</div><pre>1
+0 1 0110
+2</pre></div>
+            </div>
+          </article>
+          <article class="programming-sample">
+            <strong>Public sample 2</strong>
+            <div class="programming-result-grid">
+              <div><div class="result-field-label">Input</div><pre>3 2
+01101001</pre></div>
+              <div><div class="result-field-label">Example output</div><pre>2
+0 1 0110
+3 2 0110
+4</pre></div>
+            </div>
+          </article>
+        </section>
+      </div>
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-12-project-optimal-circuit-synthesis-with-sat/unit/chapter-12-project-optimal-circuit-synthesis-with-sat-unit-3-circuits-as-satisfying-assignments/lesson/project-optimal-circuit-synthesis-with-sat--circuits-as-satisfying-assignments--step-4/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-12-project-optimal-circuit-synthesis-with-sat/unit/chapter-12-project-optimal-circuit-synthesis-with-sat-unit-4-a-synthesis-program/lesson/project-optimal-circuit-synthesis-with-sat--a-synthesis-program--step-2/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

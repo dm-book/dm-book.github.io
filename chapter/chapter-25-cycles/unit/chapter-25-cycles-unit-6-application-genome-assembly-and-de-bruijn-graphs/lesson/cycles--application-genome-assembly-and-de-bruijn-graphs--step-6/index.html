@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="It turns out that there is a much more efficient approach. It shows, in particular, how important it is to correctly reformulate the problem. In the…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Cycles › Application: Genome Assembly and de Bruijn Graphs › Lesson 6 | Discrete Mathematics" />
+    <meta property="og:description" content="It turns out that there is a much more efficient approach. It shows, in particular, how important it is to correctly reformulate the problem. In the…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-25-cycles/unit/chapter-25-cycles-unit-6-application-genome-assembly-and-de-bruijn-graphs/lesson/cycles--application-genome-assembly-and-de-bruijn-graphs--step-6/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-25-cycles/unit/chapter-25-cycles-unit-6-application-genome-assembly-and-de-bruijn-graphs/lesson/cycles--application-genome-assembly-and-de-bruijn-graphs--step-6/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Cycles › Application: Genome Assembly and de Bruijn Graphs › Lesson 6 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Cycles / Application: Genome Assembly and de Bruijn Graphs</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Cycles · Application: Genome Assembly and de Bruijn Graphs</p>
+        <h1>Lesson 6</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p>It turns out that there is a much more efficient approach. It shows, in particular, how important it is to correctly reformulate the problem. In the previous approach, each input string corresponded to a vertex. Now let’s try to represent each occurrence of a&nbsp;string as an edge: string&nbsp;<span class="math-tex">\(s\)</span> will be an edge from&nbsp;<span class="math-tex">\(s\)</span> without the last character to&nbsp;<span class="math-tex">\(s\)</span> without the first character (from the prefix to the suffix). For example, the string <span class="math-tex">\(\texttt{CAT}\)</span> will be the edge <span class="math-tex">\({\tt CA}\to{\tt AT}\)</span>. Repeated occurrences give parallel edges. The resulting graph is called the <em>de Bruijn graph</em>.</p><p style="text-align:center;"><img src="generated/assets/Cycles/Application$_Genome_Assembly_and_de_Bruijn_Graphs=5/image0.png" width="800" ></p><p style="text-align:center;"><img src="generated/assets/Cycles/Application$_Genome_Assembly_and_de_Bruijn_Graphs=5/image1.png" width="800" ></p><p>In the resulting graph, it is enough to find an Eulerian path, which can be done very quickly. The existence of an Eulerian path in this graph follows from the fact that we are given the full multiset of <span class="math-tex">\(k\)</span>-mer occurrences of the unknown string. In the general case, we do not know algorithms that work faster than finding the heaviest Hamiltonian path in the overlap graph.</p><pre><code class="language-python">from networkx import DiGraph, eulerian_path
+
+reads = ['AGC', 'ATC', 'CAG', 'CAT', 'CCA', 'GCA', 'TCA', 'TCC']
+graph = DiGraph(strict=False)
+for read in reads:
+    graph.add_edge(read[:-1], read[1:])
+
+path = list(eulerian_path(graph))
+print(path[0][0] + ''.join(e[1][-1] for e in path))</code></pre><pre><code class="language-auto">TCCATCAGCA
+</code></pre>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-25-cycles/unit/chapter-25-cycles-unit-6-application-genome-assembly-and-de-bruijn-graphs/lesson/cycles--application-genome-assembly-and-de-bruijn-graphs--step-5/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-25-cycles/unit/chapter-25-cycles-unit-6-application-genome-assembly-and-de-bruijn-graphs/lesson/cycles--application-genome-assembly-and-de-bruijn-graphs--step-7/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

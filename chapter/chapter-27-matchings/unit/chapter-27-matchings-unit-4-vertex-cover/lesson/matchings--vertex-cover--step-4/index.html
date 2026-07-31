@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="The bipartiteness condition in Kőnig–Egerváry theorem is essential: in general, the problem of finding a minimum vertex cover is NP-hard, while the problem…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Matchings › Vertex Cover › Lesson 4 | Discrete Mathematics" />
+    <meta property="og:description" content="The bipartiteness condition in Kőnig–Egerváry theorem is essential: in general, the problem of finding a minimum vertex cover is NP-hard, while the problem…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-27-matchings/unit/chapter-27-matchings-unit-4-vertex-cover/lesson/matchings--vertex-cover--step-4/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-27-matchings/unit/chapter-27-matchings-unit-4-vertex-cover/lesson/matchings--vertex-cover--step-4/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Matchings › Vertex Cover › Lesson 4 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Matchings / Vertex Cover</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Matchings · Vertex Cover</p>
+        <h1>Lesson 4</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p>The bipartiteness condition in Kőnig–Egerváry theorem is essential: in general, the problem of finding a minimum vertex cover is NP-hard, while the problem of finding a maximum matching is solvable in polynomial time. At the same time, the weak duality <span class="math-tex">\(\alpha'(G) \le \beta(G)\)</span> allows a very simple 2-approximation algorithm for the vertex cover problem.</p><p>The algorithm is very simple. Start with an empty set <span class="math-tex">\(C\)</span>. While the graph still has edges, repeat the following: take any edge <span class="math-tex">\(\{u,v\}\)</span>, remove vertices <span class="math-tex">\(u,v\)</span> from the graph (along with all their edges, of course) and add <span class="math-tex">\(u,v\)</span> to <span class="math-tex">\(C\)</span>.</p><p>It's easy to see that the constructed set <span class="math-tex">\(C\)</span> is a cover. It turns out it always exceeds the optimal vertex cover <span class="math-tex">\(C'\)</span> by at most a factor of two. Indeed, the edges <span class="math-tex">\(\{u,v\}\)</span> selected by our algorithm form a matching <span class="math-tex">\(M\)</span>. Then <span class="math-tex">\[|C|=2|M| \le 2|C'|\ ,\]</span> since the size of any vertex cover is at least the size of any matching.</p><p>Let's note an important detail of this simple proof. Suppose we are given a graph <span class="math-tex">\(G\)</span> of huge size. As we discussed above, finding a minimum vertex cover in such a graph quickly is unlikely. So, we don't know the value of <span class="math-tex">\(\beta(G)\)</span>. But how then were we able to prove above that the size of the vertex cover given by our simple algorithm is at most <span class="math-tex">\(2\beta(G)\)</span>? If we look closely at the proof, it becomes clear that we were able to do this because we have a lower bound on <span class="math-tex">\(\beta(G)\)</span> (<span class="math-tex">\(\beta(G) \ge |M|\)</span>), which we can easily compute.</p><details><summary>For the curious 🤓</summary><div style="border-style: solid;">It's interesting to note that a 1.99-approximation algorithm <a href="https://www.csc.kth.se/~viggo/wwwcompendium/node10.html">is not known</a>. Thus, the 2-approximation algorithm we discussed above, which is definitely one of the simplest approximation algorithms, is currently the best known for the vertex cover problem. Moreover, under&nbsp;the Unique Games Conjecture, the minimum vertex cover cannot be approximated up&nbsp;to&nbsp;a&nbsp;factor <span class="math-tex">\((2 - \varepsilon)\)</span> for any <span class="math-tex">\(\varepsilon &gt; 0\)</span> in polynomial time.</div></details>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-27-matchings/unit/chapter-27-matchings-unit-4-vertex-cover/lesson/matchings--vertex-cover--step-3/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-27-matchings/unit/chapter-27-matchings-unit-5-application-stable-matching/lesson/matchings--application-stable-matching--step-1/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="Proof. [Proof (Prüfer, 1918)] We construct a bijection between all trees and \(\{0,1,\dotsc,n-1\}^{n-2}\) . For this, we associate each tree with the…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Trees › Cayley&#39;s Formula › Lesson 4 | Discrete Mathematics" />
+    <meta property="og:description" content="Proof. [Proof (Prüfer, 1918)] We construct a bijection between all trees and \(\{0,1,\dotsc,n-1\}^{n-2}\) . For this, we associate each tree with the…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-24-trees/unit/chapter-24-trees-unit-4-cayley-s-formula/lesson/trees--cayley-s-formula--step-4/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-24-trees/unit/chapter-24-trees-unit-4-cayley-s-formula/lesson/trees--cayley-s-formula--step-4/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Trees › Cayley&#39;s Formula › Lesson 4 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Trees / Cayley&#39;s Formula</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Trees · Cayley&#39;s Formula</p>
+        <h1>Lesson 4</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p><em>Proof. </em>[Proof (Prüfer, 1918)] We construct a&nbsp;bijection between all trees and&nbsp;<span class="math-tex">\(\{0,1,\dotsc,n-1\}^{n-2}\)</span>. For this, we associate each tree with the so-called <em>Prüfer code</em> and show how to reconstruct the tree from the code.</p><p>Among all vertices of the tree, we take the leaf&nbsp;<span class="math-tex">\(l\)</span> with the smallest number, write its neighbor&nbsp;<span class="math-tex">\(p\)</span> into the code, and remove&nbsp;<span class="math-tex">\(l\)</span> from the tree. After that, we continue recursively. We stop the recursion at the moment when only two vertices remain in the tree. Intuitively, we should stop at this moment because a tree of two vertices does not need encoding (it is enough to know the labels of both vertices).</p><p>The constructed code satisfies the following natural property: the vertex&nbsp;<span class="math-tex">\(v\)</span> appears in the code exactly <span class="math-tex">\(\deg(v)-1\)</span> times. In the process of constructing the Prüfer code, the degree of&nbsp;<span class="math-tex">\(v\)</span> will decrease until&nbsp;<span class="math-tex">\(v\)</span> itself becomes a leaf. With each decrease,&nbsp;<span class="math-tex">\(v\)</span> will be added to the Prüfer code. However, when <span class="math-tex">\(v\)</span> itself becomes a leaf, it can no longer appear in the code. Accordingly, the leaves of the original tree will not appear in the code at all. Let's verify that our intuition is correct: the length of the Prüfer code will be <span class="math-tex">\[\sum_{v}\left(\deg(v)-1\right)=\left(\sum_{v}\deg(v)\right)-n=n-2 &nbsp;.\]</span></p><p>The observation above will help us understand how to reconstruct the original tree from the given code <span class="math-tex">\((p_{1}, \dotsc, p_{n-2})\)</span>. We know that in the first step, the leaf with the smallest number was removed. This allows us to determine from the code which leaf it was: it is simply the smallest number&nbsp;<span class="math-tex">\(l\)</span> from&nbsp;<span class="math-tex">\(\{0,\dotsc,n-1\}\)</span> that does not appear in the code! Thus, we can reconstruct the first removed edge of the tree <span class="math-tex">\(\{l, p_{1}\}\)</span>. Everything else can be restored recursively: we know that after removing the first edge, the Prüfer code is constructed for the remaining tree recursively. We just need to remember that the labels of the remaining tree are <span class="math-tex">\(\{0,\dotsc,n-1\} \setminus \{l\}\)</span>. The recursive procedure should stop when the code becomes empty. At this moment, the label set will contain two vertices. These vertices should simply be connected by an edge.<span class="proof-end" aria-label="End of proof">◼</span></p>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-24-trees/unit/chapter-24-trees-unit-4-cayley-s-formula/lesson/trees--cayley-s-formula--step-3/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-24-trees/unit/chapter-24-trees-unit-4-cayley-s-formula/lesson/trees--cayley-s-formula--step-5/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

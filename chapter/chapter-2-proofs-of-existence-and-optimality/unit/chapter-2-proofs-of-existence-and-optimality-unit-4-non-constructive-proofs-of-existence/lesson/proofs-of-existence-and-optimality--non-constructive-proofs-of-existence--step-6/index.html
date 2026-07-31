@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="We conclude this section by proving a bit more involved result. Theorem. For any set of thirty seven-digit numbers, there are two disjoint non-empty subsets…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Proofs of Existence and Optimality › Non-constructive Proofs of Existence › Lesson 6 | Discrete Mathematics" />
+    <meta property="og:description" content="We conclude this section by proving a bit more involved result. Theorem. For any set of thirty seven-digit numbers, there are two disjoint non-empty subsets…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-2-proofs-of-existence-and-optimality/unit/chapter-2-proofs-of-existence-and-optimality-unit-4-non-constructive-proofs-of-existence/lesson/proofs-of-existence-and-optimality--non-constructive-proofs-of-existence--step-6/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-2-proofs-of-existence-and-optimality/unit/chapter-2-proofs-of-existence-and-optimality-unit-4-non-constructive-proofs-of-existence/lesson/proofs-of-existence-and-optimality--non-constructive-proofs-of-existence--step-6/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Proofs of Existence and Optimality › Non-constructive Proofs of Existence › Lesson 6 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Proofs of Existence and Optimality / Non-constructive Proofs of Existence</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Proofs of Existence and Optimality · Non-constructive Proofs of Existence</p>
+        <h1>Lesson 6</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p>We&nbsp;conclude this section by&nbsp;proving a&nbsp;bit more involved result.</p><p><strong>Theorem. </strong><em>For any set of&nbsp;thirty seven-digit numbers, there are two disjoint non-empty subsets with the same sum.</em></p><p>A&nbsp;more formal statement looks like this. Let <span class="math-tex">\(S\)</span>&nbsp;be&nbsp;a&nbsp;set of&nbsp;thirty seven-digit numbers: <span class="math-tex">\[S \subseteq \{1000000, 1000001, \dotsc, 9999999\}\]</span> and <span class="math-tex">\(|S|=30\)</span>. Then there will be non-empty sets <span class="math-tex">\(A,B \subseteq S\)</span> such that <span class="math-tex">\(A \cap B = \varnothing\)</span> and <span class="math-tex">\(\sum_{a \in A}a=\sum_{b \in B}b\)</span>.</p><p>For example, for the set <span class="math-tex">\(S=\{7, 31, 3, 12, 5, 14, 20\}\)</span>, such subsets would be: <span class="math-tex">\(A=\{7, 3, 12, 14\}\)</span> and <span class="math-tex">\(B=\{31, 5\}\)</span>.</p><p>When there are not seven, but thirty numbers, and the numbers themselves are larger, it becomes more difficult to find such subsets. Here, for example, are thirty such numbers: </p><pre><code class="language-python">from random import randint, seed
+
+seed(14)
+
+for i in range(30):
+    print(randint(10 ** 6, 10 ** 7 - 1), end=' ')
+    if i % 6 == 5:
+        print()</code></pre><pre><code class="language-auto">2792285 9843470 5142886 5548558 5291201 5882438 
+2218459 8545410 6083294 8828556 7655079 7607029 
+2986415 5421072 4745783 6295863 7006791 5368826 
+7051040 9661551 3511608 3701978 5619271 3767372 
+1177927 2173344 3064039 6655032 1466196 2395998
+</code></pre><p> It is difficult to find the required two subsets manually, and it is also challenging to write a program that would find the required two subsets quickly. However, it can be proven that such two subsets exist, <em>without explicitly presenting them</em>. Such proofs are called <em>non-constructive</em>.</p>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-2-proofs-of-existence-and-optimality/unit/chapter-2-proofs-of-existence-and-optimality-unit-4-non-constructive-proofs-of-existence/lesson/proofs-of-existence-and-optimality--non-constructive-proofs-of-existence--step-5/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-2-proofs-of-existence-and-optimality/unit/chapter-2-proofs-of-existence-and-optimality-unit-4-non-constructive-proofs-of-existence/lesson/proofs-of-existence-and-optimality--non-constructive-proofs-of-existence--step-7/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

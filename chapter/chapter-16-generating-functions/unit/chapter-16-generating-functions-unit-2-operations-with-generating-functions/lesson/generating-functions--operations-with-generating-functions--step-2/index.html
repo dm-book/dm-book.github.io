@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="Multiplication. \(\mathcal{A}(x)\cdot \mathcal{B}(x)\) is the generating function for the sequence \(\{c_{n}\}\) , defined as:…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Generating Functions › Operations with Generating Functions › Lesson 2 | Discrete Mathematics" />
+    <meta property="og:description" content="Multiplication. \(\mathcal{A}(x)\cdot \mathcal{B}(x)\) is the generating function for the sequence \(\{c_{n}\}\) , defined as:…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-16-generating-functions/unit/chapter-16-generating-functions-unit-2-operations-with-generating-functions/lesson/generating-functions--operations-with-generating-functions--step-2/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-16-generating-functions/unit/chapter-16-generating-functions-unit-2-operations-with-generating-functions/lesson/generating-functions--operations-with-generating-functions--step-2/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Generating Functions › Operations with Generating Functions › Lesson 2 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Generating Functions / Operations with Generating Functions</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Generating Functions · Operations with Generating Functions</p>
+        <h1>Lesson 2</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p><strong>Multiplication.</strong> <span class="math-tex">\(\mathcal{A}(x)\cdot \mathcal{B}(x)\)</span> is the generating function for the sequence <span class="math-tex">\(\{c_{n}\}\)</span>, defined as: <span class="math-tex">\[c_{n}=a_{0}b_{n}+a_{1}b_{n-1}+\dotsb+a_{n}b_{0}=\sum_{l+r=n}a_{l}b_{r} \  .\]</span> The sequence <span class="math-tex">\(\{c_{n}\}\)</span> is called the <em>convolution</em> of the sequences <span class="math-tex">\(\{a_{n}\}\)</span> and <span class="math-tex">\(\{b_{n}\}\)</span>.</p><p>Convolution allows us to find generating functions for <em>partial sums</em>: if we multiply the sequence <span class="math-tex">\(\{a_{n}\}\)</span> by <span class="math-tex">\((1,1,1,\dotsc)\)</span>, then the <span class="math-tex">\(n\)</span>-th term of the resulting sequence will be <span class="math-tex">\(\sum_{i=0}^{n}a_{i}\)</span>.</p><p>The multiplication rule provides a different perspective on the binomial theorem. How many ways are there to choose <span class="math-tex">\(n\)</span> elements from the set <span class="math-tex">\(\{a_{1}, \dotsc, a_{m}\}\)</span>? The generating function for the set <span class="math-tex">\(\{a_{i}\}\)</span> is simply <span class="math-tex">\(1+x\)</span>: there is one way to choose zero elements and one way to choose one element. Thus, the generating function for choosing from <span class="math-tex">\(\{a_{1}, \dotsc, a_{m}\}\)</span> is simply <span class="math-tex">\((1+x)^{m}\)</span>. And we, of course, know the coefficient for the corresponding monomial: <span class="math-tex">\[[x^{n}](1+x)^{m} = \binom{m}{n}\  .\]</span></p><p>The neutral element for the multiplication operation we defined is the sequence <span class="math-tex">\(\mathcal{I}(x)=(1,0,0,\dotsc)\)</span>. Accordingly, we say that <span class="math-tex">\(\mathcal{B}(x)\)</span> is <em>inverse</em> to <span class="math-tex">\(\mathcal{A}(x)\)</span> if <span class="math-tex">\(\mathcal{A}(x)\cdot \mathcal{B}(x)=\mathcal{I}(x)\)</span>. We show that the inverse exists (and is unique in this case) if and only if <span class="math-tex">\(a_{0} \neq 0\)</span>. Indeed, for the sequence <span class="math-tex">\(\{b_{n}\}\)</span> to be the inverse of <span class="math-tex">\(\{a_{n}\}\)</span>, it is necessary and sufficient that the following (infinite system of equations) holds: <span class="math-tex">\[\begin{align*}1&=a_{0}b_{0}\\ 0&=a_{1}b_{0}+a_{0}b_{1}\\ 0&=a_{2}b_{0}+a_{1}b_{1}+a_{0}b_{2}\\ \vdots\end{align*}\]</span> It is easy to see that <span class="math-tex">\(b_{0}\)</span> is found from the first equation (<span class="math-tex">\(b_{0}=1/a_{0}\)</span>), <span class="math-tex">\(b_{1}\)</span> from the second (<span class="math-tex">\(b_{1}=-a_{1}b_{0}/a_{0}\)</span>), and so on.</p>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-16-generating-functions/unit/chapter-16-generating-functions-unit-2-operations-with-generating-functions/lesson/generating-functions--operations-with-generating-functions--step-1/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-16-generating-functions/unit/chapter-16-generating-functions-unit-2-operations-with-generating-functions/lesson/generating-functions--operations-with-generating-functions--step-3/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

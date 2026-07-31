@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="We are now turning to some interesting and more concrete examples. We shall now define a model \(\mathbb{N}\) , appropriate to the vocabulary of number…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Propositional Logic › First-Order Logic (Optional) › Lesson 6 | Discrete Mathematics" />
+    <meta property="og:description" content="We are now turning to some interesting and more concrete examples. We shall now define a model \(\mathbb{N}\) , appropriate to the vocabulary of number…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-7-propositional-logic/unit/chapter-7-propositional-logic-unit-6-first-order-logic-optional/lesson/propositional-logic--first-order-logic-optional--step-6/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-7-propositional-logic/unit/chapter-7-propositional-logic-unit-6-first-order-logic-optional/lesson/propositional-logic--first-order-logic-optional--step-6/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Propositional Logic › First-Order Logic (Optional) › Lesson 6 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Propositional Logic / First-Order Logic (Optional)</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Propositional Logic · First-Order Logic (Optional)</p>
+        <h1>Lesson 6</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p>We&nbsp;are now turning to&nbsp;some interesting and&nbsp;more concrete examples. We&nbsp;shall now define a&nbsp;model&nbsp;<span class="math-tex">\(\mathbb{N}\)</span>, appropriate to&nbsp;the vocabulary of&nbsp;number theory. Its universe <span class="math-tex">\(U = \{0, 1, 2, 3, &hellip; \}\)</span> is&nbsp;the set of&nbsp;all nonnegative whole numbers. To&nbsp;the constant&nbsp;<span class="math-tex">\(0\)</span>, <span class="math-tex">\(\mathbb{N}\)</span> assigns the number <span class="math-tex">\(0^{\mathbb{N}}= 0\)</span>. To&nbsp;the function&nbsp;<span class="math-tex">\(\sigma\)</span>, <span class="math-tex">\(\mathbb{N}\)</span> assigns the unary function <span class="math-tex">\(\sigma^{\mathbb{N}}(n) = n + 1\)</span>. Similarly, to&nbsp;<span class="math-tex">\(+\)</span> it&nbsp;assigns addition, to&nbsp;<span class="math-tex">\(\times\)</span> multiplication, and&nbsp;to&nbsp;<span class="math-tex">\(\uparrow\)</span> exponentiation. Two numbers <span class="math-tex">\(m\)</span> and&nbsp;<span class="math-tex">\(n\)</span> are related by&nbsp;<span class="math-tex">\(&lt;^{\mathbb{N}}\)</span> if&nbsp;<span class="math-tex">\(m\)</span> is&nbsp;less than&nbsp;<span class="math-tex">\(n\)</span>. Finally, assume that <span class="math-tex">\(\mathbb{N}\)</span> maps all variables to, say, <span class="math-tex">\(0\)</span> (recall that the values assigned to&nbsp;variables by&nbsp;a&nbsp;model are not very important by the Lemma).</p><p>We&nbsp;claim that <span class="math-tex">\(\mathbb{N}\models \forall x(x &lt; x + 1)\)</span>. To&nbsp;prove this, we&nbsp;have to&nbsp;use our knowledge about the&nbsp;properties of&nbsp;numbers to&nbsp;verify that, for&nbsp;any natural number&nbsp;<span class="math-tex">\(n\)</span>, <span class="math-tex">\(\mathbb{N}_{x = n}\models x &lt; x + 1\)</span>. That is, we&nbsp;must show that, for&nbsp;all&nbsp;<span class="math-tex">\(n\)</span>, <span class="math-tex">\(n &lt;^{\mathbb{N}}n +^{\mathbb{N}}1^{\mathbb{N}}\)</span>. But this is&nbsp;equivalent to&nbsp;saying that <span class="math-tex">\(n &lt; n + 1\)</span>, which we&nbsp;know is&nbsp;true of&nbsp;every number&nbsp;<span class="math-tex">\(n\)</span>.</p><p>On&nbsp;the other hand, <span class="math-tex">\(\mathbb{N}\not\models \forall x \exists y (x = y + y)\)</span>. The reason is&nbsp;that <span class="math-tex">\(\mathbb{N}_{x = 1}\not\models \exists y (x = y + y)\)</span>, or&nbsp;equivalently <span class="math-tex">\(\mathbb{N}_{x = 1}\models \forall y \neg(x = y + y)\)</span>, which means that <span class="math-tex">\(1 \neq n + n\)</span> for&nbsp;all whole numbers&nbsp;<span class="math-tex">\(n\)</span>, which is&nbsp;clearly a&nbsp;true statement.</p><p>Arguing about model&nbsp;<span class="math-tex">\(\mathbb{N}\)</span> adds another dimension to&nbsp;the slippery distinction between logic and&nbsp;the metalanguage. In&nbsp;order to&nbsp;find out whether <span class="math-tex">\(\mathbb{N}\models \phi\)</span>, we&nbsp;invoke our mathematical knowledge of&nbsp;the properties of&nbsp;integers, <em>the very subject to&nbsp;which we&nbsp;are supposed to&nbsp;be&nbsp;gaining some insight</em> by&nbsp;this exercise. We&nbsp;only do&nbsp;this for&nbsp;the purpose of&nbsp;illustrating the concepts of&nbsp;model and&nbsp;satisfaction. Our ultimate goal is&nbsp;to&nbsp;be&nbsp;able to&nbsp;mechanize this process, and&nbsp;develop techniques that discriminate between those sentences that are&nbsp;satisfied by&nbsp;<span class="math-tex">\(\mathbb{N}\)</span> (i.e., the <em>theorems of&nbsp;number theory</em>) and&nbsp;those that are&nbsp;not. Later, this goal will prove unattainable in&nbsp;a&nbsp;most interesting and&nbsp;devastating way.</p>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-7-propositional-logic/unit/chapter-7-propositional-logic-unit-6-first-order-logic-optional/lesson/propositional-logic--first-order-logic-optional--step-5/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-7-propositional-logic/unit/chapter-7-propositional-logic-unit-6-first-order-logic-optional/lesson/propositional-logic--first-order-logic-optional--step-7/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

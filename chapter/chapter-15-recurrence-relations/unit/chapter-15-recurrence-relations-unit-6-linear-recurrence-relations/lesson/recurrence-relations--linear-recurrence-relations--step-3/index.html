@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="Now we are ready to generalize this method. In a linear recurrence relation of order \(k\) , \(k\) initial conditions are given: \[F(1)=f_{1}, \dotsc,…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Recurrence Relations › Linear Recurrence Relations › Lesson 3 | Discrete Mathematics" />
+    <meta property="og:description" content="Now we are ready to generalize this method. In a linear recurrence relation of order \(k\) , \(k\) initial conditions are given: \[F(1)=f_{1}, \dotsc,…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-15-recurrence-relations/unit/chapter-15-recurrence-relations-unit-6-linear-recurrence-relations/lesson/recurrence-relations--linear-recurrence-relations--step-3/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-15-recurrence-relations/unit/chapter-15-recurrence-relations-unit-6-linear-recurrence-relations/lesson/recurrence-relations--linear-recurrence-relations--step-3/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Recurrence Relations › Linear Recurrence Relations › Lesson 3 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Recurrence Relations / Linear Recurrence Relations</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Recurrence Relations · Linear Recurrence Relations</p>
+        <h1>Lesson 3</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p>Now we are ready to generalize this method. In a <em>linear recurrence relation of order <span class="math-tex">\(k\)</span></em>, <span class="math-tex">\(k\)</span> initial conditions are given: <span class="math-tex">\[F(1)=f_{1}, \dotsc, F(k)=f_{k},\]</span> as well as a linear rule such that for any <span class="math-tex">\(n&gt;k\)</span>, the value <span class="math-tex">\(F(n)\)</span> is determined by the <span class="math-tex">\(k\)</span> previous values: <span class="math-tex">\[F(n)=c_{1}F(n-1)+c_{2}F(n-2)+\dotsb+c_{k}F(n-k)+g(n) \  .\]</span> It is called <em>homogeneous</em> if the term <span class="math-tex">\(g(n)\)</span> is absent. The <em>characteristic polynomial</em> of such a relation is the following degree-<span class="math-tex">\(k\)</span> polynomial: <span class="math-tex">\[P(x)=x^{k}-c_{1}x^{k-1}-c_{2}x^{k-2}-\dotsb-c_{k}.\]</span></p><p>Below, we will explore how to solve homogeneous linear recurrence relations of order two, followed by a generalization. The characteristic polynomial of a second-order recurrence relation has degree two and thus has two roots (which can be real or complex). Let us consider three cases with examples.</p><ul><li><strong>Two distinct real roots.</strong>&nbsp; <span class="math-tex">\[F(0)=1,\quad F(1)=3,\quad F(n)=5F(n-1)+6F(n-2).\]</span>  The roots of the characteristic polynomial <span class="math-tex">\(x^{2}-5x-6\)</span> are <span class="math-tex">\(-1\)</span> and <span class="math-tex">\(6\)</span>. The general solution is <span class="math-tex">\(F(n)=a(-1)^{n}+b6^{n}\)</span>. Using the initial conditions <span class="math-tex">\(1=a+b\)</span> and <span class="math-tex">\(3=-a+6b\)</span>, we find that <span class="math-tex">\(a=3/7\)</span> and <span class="math-tex">\(b=4/7\)</span>. Thus, the solution is: <span class="math-tex">\[{F(n)=\frac{3}{7}(-1)^n+\frac{4}{7}6^n}.\]</span> <pre><code class="language-python">from sympy import Function, rsolve
+from sympy.abc import n
+
+f = Function('f')
+rec = f(n) - 5 * f(n - 1) - 6 * f(n - 2)
+
+print(rsolve(rec, f(n)))
+print(rsolve(rec, f(n), {f(0): 1, f(1): 3}))</code></pre><pre><code class="language-auto">(-1)**n*C0 + 6**n*C1
+3*(-1)**n/7 + 4*6**n/7
+</code></pre></li><li><strong>A real root of multiplicity two.</strong>&nbsp; <span class="math-tex">\[F(0)=0,\quad F(1)=1,\quad F(n)=4F(n-1)-4F(n-2).\]</span>  The characteristic polynomial <span class="math-tex">\(x^{2}-4x+4\)</span> has a root <span class="math-tex">\(x=2\)</span> of multiplicity two. In this case, the general solution is a linear combination of <span class="math-tex">\(2^{n}\)</span> and <span class="math-tex">\(n2^{n}\)</span>: <span class="math-tex">\(F(n)=a2^{n}+bn2^{n}\)</span>. Verifying that <span class="math-tex">\(n2^{n}\)</span> satisfies the recurrence relation: <span class="math-tex">\[4(n-1)2^{n-1}-4(n-2)2^{n-2}=(2n-2)2^{n}-(n-2)2^{n}=n2^{n}.\]</span>  Using the initial conditions, we find that <span class="math-tex">\(a=0\)</span> and <span class="math-tex">\(b=1/2\)</span>. Thus, the solution is: <span class="math-tex">\[F(n)=\frac{1}{2}n2^{n}=n2^{n-1}.\]</span> <pre><code class="language-python">from sympy import Function, rsolve
+from sympy.abc import n
+
+f = Function('f')
+rec = f(n) - 4 * f(n - 1) + 4 * f(n - 2)
+
+print(rsolve(rec, f(n)))
+print(rsolve(rec, f(n), {f(0): 0, f(1): 1}))</code></pre><pre><code class="language-auto">2**n*(C0 + C1*n)
+2**n*n/2
+</code></pre></li><li><strong>Two complex roots.</strong>&nbsp; <span class="math-tex">\[F(0)=0,\quad F(1)=1,\quad F(n)=F(n-1)-4F(n-2).\]</span>  The roots of the characteristic polynomial <span class="math-tex">\(x^{2}-x+4\)</span> are the complex numbers <span class="math-tex">\((1 \pm i\sqrt{15})/2=2e^{\pm i\theta}\)</span> (where <span class="math-tex">\(\theta=\arctan\sqrt{15}\)</span>). The general solution is <span class="math-tex">\[\begin{align*}F(n)&=a2^{n}e^{in\theta}+b2^{n}e^{-in\theta}=\\&=c2^{n}\cos(n\theta)+d2^{n}\sin(n\theta),\end{align*}\]</span> where <span class="math-tex">\[\begin{align*}c&=a+b,\\ d&=i(a-b),\end{align*}\]</span> since <span class="math-tex">\[\begin{align*}\cos x&=\frac{e^{ix}+e^{-ix}}{2},\\ \sin x&=\frac{e^{ix}-e^{-ix}}{2i}.\end{align*}\]</span> Using the initial conditions, we find that <span class="math-tex">\(c=0\)</span> and <span class="math-tex">\(d=2/\sqrt{15}\)</span>. The final solution is: <span class="math-tex">\[F(n)=\frac{2}{\sqrt{15}}2^{n}\sin(n\theta).\]</span> <pre><code class="language-python">from sympy import Function, rsolve
+from sympy.abc import n
+
+f = Function('f')
+rec = f(n) - f(n - 1) + 4 * f(n - 2)
+
+print(rsolve(rec, f(n)))
+print(rsolve(rec, f(n), {f(0): 0, f(1): 1}))</code></pre><pre><code class="language-auto">C0*(1/2 - sqrt(15)*I/2)**n + C1*(1/2 + sqrt(15)*I/2)**n
+sqrt(15)*I*(1/2 - sqrt(15)*I/2)**n/15 - sqrt(15)*I*(1/2 + sqrt(15)*I/2)**n/15
+</code></pre></li></ul>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-15-recurrence-relations/unit/chapter-15-recurrence-relations-unit-6-linear-recurrence-relations/lesson/recurrence-relations--linear-recurrence-relations--step-2/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-15-recurrence-relations/unit/chapter-15-recurrence-relations-unit-6-linear-recurrence-relations/lesson/recurrence-relations--linear-recurrence-relations--step-4/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

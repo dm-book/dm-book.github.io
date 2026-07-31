@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="Theorem (Hall&#39;s Marriage Theorem, 1935). Consider a bipartite graph \(G = (U \sqcup V, E)\) . There exists a matching that covers every vertex in \(U\) if…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Partially Ordered Sets › Application: Combinatorial Optimization (Optional) › Lesson 2 | Discrete Mathematics" />
+    <meta property="og:description" content="Theorem (Hall&#39;s Marriage Theorem, 1935). Consider a bipartite graph \(G = (U \sqcup V, E)\) . There exists a matching that covers every vertex in \(U\) if…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-11-partially-ordered-sets/unit/chapter-11-partially-ordered-sets-unit-6-application-combinatorial-optimization-optional/lesson/partially-ordered-sets--application-combinatorial-optimization-optional--step-2/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-11-partially-ordered-sets/unit/chapter-11-partially-ordered-sets-unit-6-application-combinatorial-optimization-optional/lesson/partially-ordered-sets--application-combinatorial-optimization-optional--step-2/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Partially Ordered Sets › Application: Combinatorial Optimization (Optional) › Lesson 2 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Partially Ordered Sets / Application: Combinatorial Optimization (Optional)</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Partially Ordered Sets · Application: Combinatorial Optimization (Optional)</p>
+        <h1>Lesson 2</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p><strong>Theorem (Hall's Marriage Theorem, 1935). </strong><em>Consider a&nbsp;bipartite graph <span class="math-tex">\(G = (U \sqcup V, E)\)</span>. There exists a&nbsp;matching that covers every vertex in&nbsp;<span class="math-tex">\(U\)</span> if and only if for every subset <span class="math-tex">\(S \subseteq U\)</span>, the size of&nbsp;its neighborhood satisfies <span class="math-tex">\(|N(S)| \ge |S|\)</span>.</em></p><p><em>Proof. </em>The &ldquo;only if&rdquo; direction is still straightforward. If we have a&nbsp;matching that covers&nbsp;<span class="math-tex">\(U\)</span>, then for any subset <span class="math-tex">\(S \subseteq U\)</span>, each vertex in&nbsp;<span class="math-tex">\(S\)</span> is matched to&nbsp;a&nbsp;unique vertex in&nbsp;<span class="math-tex">\(N(S)\)</span>. Thus, <span class="math-tex">\(|N(S)|\)</span> must be&nbsp;at least <span class="math-tex">\(|S|\)</span>.</p><p>For the &ldquo;if&rdquo; direction, assume the condition holds. We construct a&nbsp;poset <span class="math-tex">\(P\)</span> on&nbsp;the set of&nbsp;vertices <span class="math-tex">\(U \sqcup V\)</span>. We define the relation <span class="math-tex">\(x \prec y\)</span> if and only if <span class="math-tex">\(x \in U\)</span>, <span class="math-tex">\(y \in V\)</span>, and there is an&nbsp;edge <span class="math-tex">\((x,y) \in E\)</span>.</p><p>Let <span class="math-tex">\(w\)</span> be&nbsp;the size of&nbsp;a&nbsp;maximum antichain. By&nbsp;Dilworth's theorem, <span class="math-tex">\(P\)</span> can be&nbsp;partitioned into <span class="math-tex">\(w\)</span> chains. Let the partition consist of&nbsp;<span class="math-tex">\(k_{1}\)</span> chains of&nbsp;size 1 (single vertices) and <span class="math-tex">\(k_{2}\)</span> chains of&nbsp;size 2 (edges). The total number of&nbsp;vertices is <span class="math-tex">\(|U| + |V| = k_{1} + 2k_{2} = w + k_{2}\)</span>. Hence, we get <span class="math-tex">\(k_{2} = |U| + |V| - w\)</span>. The <span class="math-tex">\(k_{2}\)</span> chains of&nbsp;size 2 form a&nbsp;matching of&nbsp;size <span class="math-tex">\(k_{2}\)</span>. We want to&nbsp;show this matching covers&nbsp;<span class="math-tex">\(U\)</span>, which means its size must be&nbsp;<span class="math-tex">\(|U|\)</span>.</p><p>Let's find an&nbsp;upper bound on&nbsp;<span class="math-tex">\(w\)</span>. Let <span class="math-tex">\(A\)</span> be&nbsp;a&nbsp;maximum antichain in&nbsp;<span class="math-tex">\(P\)</span>. Let <span class="math-tex">\(A_{U} = A \cap U\)</span> and <span class="math-tex">\(A_{V} = A \cap V\)</span>. By the&nbsp;definition of an&nbsp;antichain in&nbsp;our poset, there are no edges between any vertex in&nbsp;<span class="math-tex">\(A_{U}\)</span> and any vertex in&nbsp;<span class="math-tex">\(A_{V}\)</span>. This means that the neighborhood of&nbsp;<span class="math-tex">\(A_{U}\)</span> is completely contained in&nbsp;the complement of&nbsp;<span class="math-tex">\(A_{V}\)</span>: <span class="math-tex">\(N(A_{U}) \subseteq V \setminus A_{V}\)</span>. Using the marriage condition for the set <span class="math-tex">\(A_{U}\)</span>, we have <span class="math-tex">\(|A_{U}| \le |N(A_{U})|\)</span>. Combining these facts, we get <span class="math-tex">\(|A_{U}| \le |N(A_{U})| \le |V \setminus A_{V}| = |V| - |A_{V}|\)</span>. Rearranging gives <span class="math-tex">\(|A_{U}| + |A_{V}| \le |V|\)</span>. Since <span class="math-tex">\(w = |A| = |A_{U}| + |A_{V}|\)</span>, we have <span class="math-tex">\(w \le |V|\)</span>.</p><p>Now we can plug this back into our expression for the matching size: <span class="math-tex">\[k_{2} = |U| + |V| - w \ge |U|.\]</span> Thus, we have found a&nbsp;matching of&nbsp;size at least <span class="math-tex">\(|U|\)</span>.<span class="proof-end" aria-label="End of proof">◼</span></p>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-11-partially-ordered-sets/unit/chapter-11-partially-ordered-sets-unit-6-application-combinatorial-optimization-optional/lesson/partially-ordered-sets--application-combinatorial-optimization-optional--step-1/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-11-partially-ordered-sets/unit/chapter-11-partially-ordered-sets-unit-6-application-combinatorial-optimization-optional/lesson/partially-ordered-sets--application-combinatorial-optimization-optional--step-3/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

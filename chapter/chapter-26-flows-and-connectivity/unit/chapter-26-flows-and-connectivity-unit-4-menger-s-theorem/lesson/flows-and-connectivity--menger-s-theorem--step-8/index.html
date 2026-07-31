@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="The code below finds the maximum number of edge-disjoint paths from 1 to 0, and the minimum number of edges that must be removed to destroy all such paths.…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Flows and Connectivity › Menger’s Theorem › Lesson 8 | Discrete Mathematics" />
+    <meta property="og:description" content="The code below finds the maximum number of edge-disjoint paths from 1 to 0, and the minimum number of edges that must be removed to destroy all such paths.…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-26-flows-and-connectivity/unit/chapter-26-flows-and-connectivity-unit-4-menger-s-theorem/lesson/flows-and-connectivity--menger-s-theorem--step-8/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-26-flows-and-connectivity/unit/chapter-26-flows-and-connectivity-unit-4-menger-s-theorem/lesson/flows-and-connectivity--menger-s-theorem--step-8/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Flows and Connectivity › Menger’s Theorem › Lesson 8 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Flows and Connectivity / Menger’s Theorem</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Flows and Connectivity · Menger’s Theorem</p>
+        <h1>Lesson 8</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p style="text-align:center;"><img src="generated/assets/Flows_and_Connectivity/Menger’s_Theorem=7/image0.png" width="800" ></p><p>The code below finds the maximum number of edge-disjoint paths from 1 to 0, and the minimum number of edges that must be removed to destroy all such paths. Internally, of course, it uses max-flow and min-cut algorithms. </p><pre><code class="language-python">import networkx as nx
+
+g = nx.DiGraph([
+    (1, 2), (2, 5), (5, 0), (2, 7), (2, 0), (1, 3),
+    (3, 7), (7, 0), (1, 4), (3, 4), (1, 6), (4, 6),
+    (4, 8), (6, 8), (6, 7), (8, 0)
+])
+
+print(list(nx.edge_disjoint_paths(g, 1, 0)))
+print(nx.minimum_edge_cut(g, 1, 0))</code></pre><pre><code class="language-auto">[[1, 2, 0], [1, 3, 7, 0], [1, 4, 8, 0]]
+{(1, 2), (8, 0), (7, 0)}
+</code></pre>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-26-flows-and-connectivity/unit/chapter-26-flows-and-connectivity-unit-4-menger-s-theorem/lesson/flows-and-connectivity--menger-s-theorem--step-7/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-26-flows-and-connectivity/unit/chapter-26-flows-and-connectivity-unit-5-matchings-in-bipartite-graphs/lesson/flows-and-connectivity--matchings-in-bipartite-graphs--step-1/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

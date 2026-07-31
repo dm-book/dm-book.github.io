@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="The main trick in the proof is to look at special colorings of vertices. A coloring \(\rho\) of the vertices of a graph is called \(t\) -periodic if the…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Cycles › Cycles of Even Length (Optional) › Lesson 4 | Discrete Mathematics" />
+    <meta property="og:description" content="The main trick in the proof is to look at special colorings of vertices. A coloring \(\rho\) of the vertices of a graph is called \(t\) -periodic if the…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-25-cycles/unit/chapter-25-cycles-unit-7-cycles-of-even-length-optional/lesson/cycles--cycles-of-even-length-optional--step-4/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-25-cycles/unit/chapter-25-cycles-unit-7-cycles-of-even-length-optional/lesson/cycles--cycles-of-even-length-optional--step-4/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Cycles › Cycles of Even Length (Optional) › Lesson 4 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Cycles / Cycles of Even Length (Optional)</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Cycles · Cycles of Even Length (Optional)</p>
+        <h1>Lesson 4</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p>The main trick in the proof is to&nbsp;look at special colorings of vertices.</p><p>A&nbsp;coloring&nbsp;<span class="math-tex">\(\rho\)</span> of the vertices of a&nbsp;graph is called <em><span class="math-tex">\(t\)</span>-periodic</em> if the endpoints of every simple path of length&nbsp;<span class="math-tex">\(t\)</span> have the same color. For example, a&nbsp;<span class="math-tex">\(2\)</span>-periodic coloring says that vertices at distance two along any simple path have the same color. In a&nbsp;connected graph this almost forces a&nbsp;bipartite coloring by the following lemma.</p><p><strong>Lemma. </strong><em>Let&nbsp;<span class="math-tex">\(\rho\)</span> be a&nbsp;coloring of the vertices of a&nbsp;connected graph&nbsp;<span class="math-tex">\(H\)</span> such that, for every vertex&nbsp;<span class="math-tex">\(a\in V(H)\)</span>, all vertices in&nbsp;<span class="math-tex">\(N_{H}(a)\)</span> have the same color. Then <span class="math-tex">\(\rho\)</span> uses at most two colors.</em></p><p><em>Proof. </em>Take a&nbsp;spanning tree&nbsp;<span class="math-tex">\(T\)</span> of&nbsp;<span class="math-tex">\(H\)</span> and root it at an&nbsp;arbitrary vertex&nbsp;<span class="math-tex">\(a\)</span>. The vertices at level&nbsp;<span class="math-tex">\(0\)</span> have the color of&nbsp;<span class="math-tex">\(a\)</span>. All vertices at level&nbsp;<span class="math-tex">\(1\)</span> are neighbors of&nbsp;<span class="math-tex">\(a\)</span>, so they all have one common color. Now suppose we know that all vertices at level&nbsp;<span class="math-tex">\(i-2\)</span> have one color. Let <span class="math-tex">\(x\)</span> be a&nbsp;vertex at level&nbsp;<span class="math-tex">\(i\)</span>, let <span class="math-tex">\(y\)</span> be its parent, and let <span class="math-tex">\(z\)</span> be the parent of&nbsp;<span class="math-tex">\(y\)</span>. Since <span class="math-tex">\(x,z\in N_{H}(y)\)</span>, the vertices <span class="math-tex">\(x\)</span> and&nbsp;<span class="math-tex">\(z\)</span> have the same color. Hence all even levels have one color and all odd levels have one color.<span class="proof-end" aria-label="End of proof">◼</span></p><p><strong>Corollary. </strong><em>If a&nbsp;coloring of the vertices of a&nbsp;connected graph is <span class="math-tex">\(2\)</span>-periodic, then it uses at most two colors.</em></p><p><em>Proof. </em>For every vertex&nbsp;<span class="math-tex">\(a\)</span>, any two of its neighbors are connected by a&nbsp;path of length two through&nbsp;<span class="math-tex">\(a\)</span>. Therefore all neighbors of&nbsp;<span class="math-tex">\(a\)</span> have the same color, and the previous lemma applies.<span class="proof-end" aria-label="End of proof">◼</span></p>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-25-cycles/unit/chapter-25-cycles-unit-7-cycles-of-even-length-optional/lesson/cycles--cycles-of-even-length-optional--step-3/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-25-cycles/unit/chapter-25-cycles-unit-7-cycles-of-even-length-optional/lesson/cycles--cycles-of-even-length-optional--step-5/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

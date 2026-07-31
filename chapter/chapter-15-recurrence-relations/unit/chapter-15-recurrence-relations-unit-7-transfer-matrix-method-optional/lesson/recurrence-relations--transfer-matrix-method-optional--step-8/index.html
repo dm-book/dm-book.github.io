@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="Transfer matrices also explain why linear recurrence relations appear so often. Let \(A\) be any fixed square matrix, and let \(u\) and \(v\) be fixed…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Recurrence Relations › Transfer-Matrix Method (Optional) › Lesson 8 | Discrete Mathematics" />
+    <meta property="og:description" content="Transfer matrices also explain why linear recurrence relations appear so often. Let \(A\) be any fixed square matrix, and let \(u\) and \(v\) be fixed…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-15-recurrence-relations/unit/chapter-15-recurrence-relations-unit-7-transfer-matrix-method-optional/lesson/recurrence-relations--transfer-matrix-method-optional--step-8/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-15-recurrence-relations/unit/chapter-15-recurrence-relations-unit-7-transfer-matrix-method-optional/lesson/recurrence-relations--transfer-matrix-method-optional--step-8/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Recurrence Relations › Transfer-Matrix Method (Optional) › Lesson 8 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Recurrence Relations / Transfer-Matrix Method (Optional)</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Recurrence Relations · Transfer-Matrix Method (Optional)</p>
+        <h1>Lesson 8</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p>Transfer matrices also explain why linear recurrence relations appear so often. Let <span class="math-tex">\(A\)</span> be any fixed square matrix, and let <span class="math-tex">\(u\)</span> and <span class="math-tex">\(v\)</span> be fixed column vectors. Consider the sequence <span class="math-tex">\[s_{n}=u^{T}A^{n}v.\]</span> We can write the following formal power series:  <span class="math-tex">\[\sum_{n\ge 0}u^{T}A^{n}vx^{n} = u^{T}(I+xA+x^{2}A^{2}+\dotsb)v = u^{T}(I-xA)^{-1}v.\]</span>   The entries of the inverse matrix <span class="math-tex">\((I-xA)^{-1}\)</span> are rational functions whose denominators divide <span class="math-tex">\(\det(I-xA)\)</span>. Therefore the sequence <span class="math-tex">\(s_{n}\)</span> satisfies a&nbsp;linear recurrence relation with constant coefficients. Informally, the polynomial <span class="math-tex">\(\det(I-xA)\)</span> tells us what recurrence to expect.</p><p>For the binary strings above, <span class="math-tex">\[\det\left( I-x \begin{pmatrix}1&1\\ 1&0\end{pmatrix} \right) = \det \begin{pmatrix}1-x&-x\\ -x&1\end{pmatrix} = 1-x-x^{2}.\]</span> This is another way to see the recurrence <span class="math-tex">\(N(n)=N(n-1)+N(n-2)\)</span>.</p>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-15-recurrence-relations/unit/chapter-15-recurrence-relations-unit-7-transfer-matrix-method-optional/lesson/recurrence-relations--transfer-matrix-method-optional--step-7/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-15-recurrence-relations/unit/chapter-15-recurrence-relations-unit-7-transfer-matrix-method-optional/lesson/recurrence-relations--transfer-matrix-method-optional--step-9/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="Optional Problems. (20 points) Prove that, if the occurrence frequency of each symbol is less than \(\frac{1}{3}\) , then each symbol in the Huffman code…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Proofs of Algorithm Correctness and Runtime Estimates › Theory Problems › Lesson 3 | Discrete Mathematics" />
+    <meta property="og:description" content="Optional Problems. (20 points) Prove that, if the occurrence frequency of each symbol is less than \(\frac{1}{3}\) , then each symbol in the Huffman code…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-4-proofs-of-algorithm-correctness-and-runtime-estimates/unit/chapter-4-proofs-of-algorithm-correctness-and-runtime-estimates-unit-6-theory-problems/lesson/proofs-of-algorithm-correctness-and-runtime-estimates--theory-problems--step-3/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-4-proofs-of-algorithm-correctness-and-runtime-estimates/unit/chapter-4-proofs-of-algorithm-correctness-and-runtime-estimates-unit-6-theory-problems/lesson/proofs-of-algorithm-correctness-and-runtime-estimates--theory-problems--step-3/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Proofs of Algorithm Correctness and Runtime Estimates › Theory Problems › Lesson 3 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Proofs of Algorithm Correctness and Runtime Estimates / Theory Problems</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Proofs of Algorithm Correctness and Runtime Estimates · Theory Problems</p>
+        <h1>Lesson 3</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p><strong>Optional Problems.</strong></p><ol><li data-theory-problem>(20 points) Prove that, if the&nbsp;occurrence frequency of each symbol is less than&nbsp;<span class="math-tex">\(\frac{1}{3}\)</span>, then each symbol in the&nbsp;Huffman code has length at&nbsp;least&nbsp;<span class="math-tex">\(2\)</span>.<details><summary>Hint:</summary><div style="border-style: solid;">Recall, that for a&nbsp;symbol to have a&nbsp;codeword length of&nbsp;<span class="math-tex">\(1\)</span>, it must be directly attached to the&nbsp;root. This means its frequency must be one of the&nbsp;two largest frequencies at the very&nbsp;last step.</div></details></li><li data-theory-problem>(20 points) Prove that the&nbsp;probability of compressing a&nbsp;random binary file by at&nbsp;least one byte using any&nbsp;archiver does&nbsp;not exceed&nbsp;<span class="math-tex">\(\frac{1}{128}\)</span>.</li><li data-theory-problem>(20 points) We&nbsp;know already that the Huffman code can be&nbsp;constructed in&nbsp;time <span class="math-tex">\(O(n\log n)\)</span>. Show that if&nbsp;the input frequencies are sorted (<span class="math-tex">\(p_{1} \le \dotsb \le p_{n}\)</span>), then one can construct the Huffman code in&nbsp;time&nbsp;<span class="math-tex">\(O(n)\)</span>.<details><summary>Hint:</summary><div style="border-style: solid;">The standard algorithm uses a min-priority queue which takes&nbsp;<span class="math-tex">\(O(\log n)\)</span> for extraction and insertion operations. The key to&nbsp;achieving&nbsp;<span class="math-tex">\(O(n)\)</span> time when frequencies are already sorted is to&nbsp;avoid the&nbsp;general priority queue operations.</div></details></li><li data-theory-problem>(20 points) Prove the&nbsp;following formula: <span class="math-tex">\[\begin{align*}H(p_{1}, \dotsc, p_{n}, q_{1}, &hellip;, q_{m})&= H(p_{1} + \dotsb + p_{n},\  q_{1} + \dotsb + q_{m}) \\&\quad + (p_{1} + \dotsb + p_{n})\  H(p_{1}', \dotsc, p_{n}') \\&\quad + (q_{1} + \dotsb + q_{m})\  H(q_{1}', \dotsc, q_{m}'),\end{align*}\]</span> where <span class="math-tex">\(p_{1} + \dotsb + p_{n} + q_{1} + \dotsb + q_{m} = 1\)</span>, and <span class="math-tex">\[p_{i}' = \frac{p_i}{p_1 + \dotsb + p_n}, \qquad q_{i}' = \frac{q_i}{q_1 + \dotsb + q_m}.\]</span></li><li data-theory-problem>(25 points) The&nbsp;Kraft–McMillan inequality states that if positive integers&nbsp;<span class="math-tex">\(l_{1}, \dotsc, l_{n}\)</span> are such that <span class="math-tex">\(2^{-l_1}+ \dotsb + 2^{-l_n}\le 1\)</span>, then there&nbsp;is a&nbsp;prefix code&nbsp;<span class="math-tex">\(c_{1}, \dotsc, c_{n}\)</span> with code lengths&nbsp;<span class="math-tex">\(l_{1}, &hellip;, l_{n}\)</span>. Construct an&nbsp;online algorithm for this problem: on&nbsp;the <span class="math-tex">\(i\)</span>-th iteration, the&nbsp;algorithm receives&nbsp;<span class="math-tex">\(l_{i}\)</span> and should output&nbsp;<span class="math-tex">\(c_{i}\)</span> of length&nbsp;<span class="math-tex">\(l_{i}\)</span>, such that <span class="math-tex">\(c_{1}, &hellip;, c_{i}\)</span> are a&nbsp;prefix code.<details><summary>Hint:</summary><div style="border-style: solid;">Note that, in this case, assigning each&nbsp;<span class="math-tex">\(c_{i}\)</span> to an&nbsp;arbitrary codeword of length&nbsp;<span class="math-tex">\(l_{i}\)</span> will not&nbsp;suffice. Indeed, consider the&nbsp;lengths <span class="math-tex">\(l_{1} = 2\)</span>, <span class="math-tex">\(l_{2} = 2\)</span>, and&nbsp;<span class="math-tex">\(l_{3} = 1\)</span>. Suppose that&nbsp;<span class="math-tex">\(c_{1} = 01\)</span> and&nbsp;<span class="math-tex">\(c_{2} = 10\)</span>; then there is no&nbsp;available position for&nbsp;<span class="math-tex">\(c_{3}\)</span>. A&nbsp;correct encoding in this instance would be&nbsp;<span class="math-tex">\(c_{1} = 01\)</span>, <span class="math-tex">\(c_{2} = 00\)</span>, and&nbsp;<span class="math-tex">\(c_{3} = 1\)</span>.</div></details></li></ol>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-4-proofs-of-algorithm-correctness-and-runtime-estimates/unit/chapter-4-proofs-of-algorithm-correctness-and-runtime-estimates-unit-6-theory-problems/lesson/proofs-of-algorithm-correctness-and-runtime-estimates--theory-problems--step-2/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-5-proofs-in-computer-science-optional/unit/chapter-5-proofs-in-computer-science-optional-unit-1-certificates/lesson/proofs-in-computer-science-optional--certificates--step-1/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

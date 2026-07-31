@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="Trees. In the problem about the number of \(E(n)\) rooted trees with \(n\) edges, we can reason as follows. Consider the leftmost edge \(\{r,v\}\) from the…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Arrangements and Combinations › Catalan Numbers: Various Manifestations › Lesson 5 | Discrete Mathematics" />
+    <meta property="og:description" content="Trees. In the problem about the number of \(E(n)\) rooted trees with \(n\) edges, we can reason as follows. Consider the leftmost edge \(\{r,v\}\) from the…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-13-arrangements-and-combinations/unit/chapter-13-arrangements-and-combinations-unit-11-catalan-numbers-various-manifestations/lesson/arrangements-and-combinations--catalan-numbers-various-manifestations--step-5/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-13-arrangements-and-combinations/unit/chapter-13-arrangements-and-combinations-unit-11-catalan-numbers-various-manifestations/lesson/arrangements-and-combinations--catalan-numbers-various-manifestations--step-5/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Arrangements and Combinations › Catalan Numbers: Various Manifestations › Lesson 5 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Arrangements and Combinations / Catalan Numbers: Various Manifestations</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Arrangements and Combinations · Catalan Numbers: Various Manifestations</p>
+        <h1>Lesson 5</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p><strong>Trees.</strong> In the problem about the number of <span class="math-tex">\(E(n)\)</span> rooted trees with <span class="math-tex">\(n\)</span> edges, we can reason as follows. Consider the leftmost edge <span class="math-tex">\(\{r,v\}\)</span> from the root <span class="math-tex">\(r\)</span> to the vertex <span class="math-tex">\(v\)</span>. Some number <span class="math-tex">\(l\)</span> of the remaining <span class="math-tex">\(n-1\)</span> edges will fall into the subtree with the root <span class="math-tex">\(v\)</span>. </p><p style="text-align:center;"><img src="generated/assets/Arrangements_and_Combinations/Catalan_Numbers$_Various_Manifestations=4/image0.png" width="800" ></p><p> Thus, <span class="math-tex">\[E(n)=\sum_{l=0}^{n-1}E(l)E(n-1-l) \  .\]</span> Since <span class="math-tex">\(E(0)=1\)</span>, we get that <span class="math-tex">\(E(n)=C(n)\)</span>.</p><p>In the problem about the number&nbsp;<span class="math-tex">\(B(n)\)</span> of rooted binary trees with&nbsp;<span class="math-tex">\(n\)</span> leaves, the required recurrence relation is straightforward: <span class="math-tex">\(l\)</span>&nbsp;leaves fall into the left subtree, and <span class="math-tex">\((n-l)\)</span> into the right subtree. Therefore <span class="math-tex">\(B(n)=C(n-1)\)</span>.</p><p>There is also a natural bijection between such trees and ways to place parentheses in a product of <span class="math-tex">\(n\)</span> factors.</p><p style="text-align:center;"><img src="generated/assets/Arrangements_and_Combinations/Catalan_Numbers$_Various_Manifestations=4/image1.png" width="800" ></p><p>Finally, a bijection can be established between triangulations of an <span class="math-tex">\((n+1)\)</span>-gon and binary trees with&nbsp;<span class="math-tex">\(n\)</span> leaves as follows.</p><p style="text-align:center;"><img src="generated/assets/Arrangements_and_Combinations/Catalan_Numbers$_Various_Manifestations=4/image2.png" width="800" ></p>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-13-arrangements-and-combinations/unit/chapter-13-arrangements-and-combinations-unit-11-catalan-numbers-various-manifestations/lesson/arrangements-and-combinations--catalan-numbers-various-manifestations--step-4/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-13-arrangements-and-combinations/unit/chapter-13-arrangements-and-combinations-unit-11-catalan-numbers-various-manifestations/lesson/arrangements-and-combinations--catalan-numbers-various-manifestations--step-6/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

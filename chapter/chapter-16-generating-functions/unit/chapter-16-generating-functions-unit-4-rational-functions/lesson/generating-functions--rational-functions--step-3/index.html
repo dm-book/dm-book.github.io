@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="First, find the generating function of the sequence \(s=(0,1,4,9,16,\dotsc)\) ( \(s_{n}=n^{2}\) ). Start with the already known generating function of the…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Generating Functions › Rational Functions › Lesson 3 | Discrete Mathematics" />
+    <meta property="og:description" content="First, find the generating function of the sequence \(s=(0,1,4,9,16,\dotsc)\) ( \(s_{n}=n^{2}\) ). Start with the already known generating function of the…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-16-generating-functions/unit/chapter-16-generating-functions-unit-4-rational-functions/lesson/generating-functions--rational-functions--step-3/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-16-generating-functions/unit/chapter-16-generating-functions-unit-4-rational-functions/lesson/generating-functions--rational-functions--step-3/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Generating Functions › Rational Functions › Lesson 3 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Generating Functions / Rational Functions</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Generating Functions · Rational Functions</p>
+        <h1>Lesson 3</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p>First, find the generating function of the sequence <span class="math-tex">\(s=(0,1,4,9,16,\dotsc)\)</span> (<span class="math-tex">\(s_{n}=n^{2}\)</span>). Start with the already known generating function of the sequence <span class="math-tex">\((1,2,3,4,\dotsc)\)</span>: <span class="math-tex">\[(1,2,3,4,\dotsc)=\frac{1}{(1-x)^2}\  .\]</span> Multiply by <span class="math-tex">\(x\)</span> to shift one position to the right: <span class="math-tex">\[(0,1,2,3,\dotsc)=\frac{x}{(1-x)^2}\  .\]</span> Differentiate to multiply the <span class="math-tex">\(n\)</span>-th coefficient by <span class="math-tex">\(n\)</span> and shift left: <span class="math-tex">\[(1,4,9,16,\dotsc)=\frac{d}{dx}\frac{x}{(1-x)^2}=\frac{1+x}{(1-x)^3}\  .\]</span> Multiply by <span class="math-tex">\(x\)</span> to shift one position to the right: <span class="math-tex">\[(0,1,4,9,\dotsc)=\frac{x(1+x)}{(1-x)^3}\  .\]</span> Multiply by <span class="math-tex">\((1,1,1,\dotsc)=\frac{1}{1-x}\)</span> to get the partial sums: <span class="math-tex">\[(0,1,5,14,\dotsc)=\frac{x(1+x)}{(1-x)^4}\  .\]</span> Finally, use the formula <span class="math-tex">\[\frac{1}{(1-x)^k}=\sum_{n=0}^{\infty}\binom{n+k-1}{n}x^{n},\]</span> to find the coefficient we need: <span class="math-tex">\[\begin{align*}[x^{n}]\frac{x(1+x)}{(1-x)^4}&=[x^{n}]\frac{x}{(1-x)^4}+[x^{n}]\frac{x^2}{(1-x)^4}=\\&=[x^{n-1}]\frac{1}{(1-x)^4}+[x^{n-2}]\frac{1}{(1-x)^4}=\\&=\binom{n+2}{n-1}+\binom{n+1}{n-2}=\\&=\frac{(n+2)(n+1)n}{6}+\frac{(n+1)n(n-1)}{6}=\\&=\frac{n(n+1)(2n+1)}{6}\  .\end{align*}\]</span></p>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-16-generating-functions/unit/chapter-16-generating-functions-unit-4-rational-functions/lesson/generating-functions--rational-functions--step-2/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-16-generating-functions/unit/chapter-16-generating-functions-unit-4-rational-functions/lesson/generating-functions--rational-functions--step-4/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

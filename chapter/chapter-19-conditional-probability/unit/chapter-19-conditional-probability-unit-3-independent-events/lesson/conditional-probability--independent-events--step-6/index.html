@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="For the curious 🤓 Let us give an example where practical benefits can be derived from the fact that 2-independence is a weaker property than mutual…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Conditional Probability › Independent Events › Lesson 6 | Discrete Mathematics" />
+    <meta property="og:description" content="For the curious 🤓 Let us give an example where practical benefits can be derived from the fact that 2-independence is a weaker property than mutual…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-19-conditional-probability/unit/chapter-19-conditional-probability-unit-3-independent-events/lesson/conditional-probability--independent-events--step-6/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-19-conditional-probability/unit/chapter-19-conditional-probability-unit-3-independent-events/lesson/conditional-probability--independent-events--step-6/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Conditional Probability › Independent Events › Lesson 6 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Conditional Probability / Independent Events</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Conditional Probability · Independent Events</p>
+        <h1>Lesson 6</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <details><summary>For the curious 🤓</summary><div style="border-style: solid;">Let us give an example where practical benefits can be derived from the fact that 2-independence is a weaker property than mutual independence.The maximum cut problem is a difficult algorithmic problem with applications in fields such as statistical physics, integrated circuit design, and image analysis. It requires finding a partition of the vertices in a given graph into two parts such that the number of edges connecting vertices from different parts is maximized.If each vertex is assigned randomly and independently to one of the parts, then on average, <span class="math-tex">\(m/2\)</span> edges will be in the cut, where <span class="math-tex">\(m\)</span> is the number of edges. This implies that there always exists a cut of size at least <span class="math-tex">\(m/2\)</span>. This immediately gives a simple probabilistic algorithm. But what if we want to quickly and deterministically find such a cut? We could enumerate the entire sample space, but its size is <span class="math-tex">\(2^{n}\)</span>, where <span class="math-tex">\(n=|V|\)</span> is the number of vertices in the graph. It turns out that the size of the sample space can be significantly reduced. To estimate <span class="math-tex">\(m/2\)</span> (for the expected cut size), we only need <em>pairwise</em> independence. Suppose for simplicity that <span class="math-tex">\(n=2^{d}\)</span> and consider the field <span class="math-tex">\(\mathbb{F}_{n}\)</span>. We choose random <span class="math-tex">\(a,b \in \mathbb{F}_{n}\)</span> and for each <span class="math-tex">\(i \in [n]\)</span> consider the random variable <span class="math-tex">\(\alpha_{i}=a \cdot i + b\)</span>. It is easy to show that these random variables are pairwise independent: for any <span class="math-tex">\(i \neq j\)</span> and <span class="math-tex">\(x,y \in \mathbb{F}_{n}\)</span> it holds that <span class="math-tex">\[\Pr[\alpha_{i}=x, \  \alpha_{j}=y]=\Pr[\alpha_{i}=x]\cdot\Pr[\alpha_{j}=y] = \frac{1}{n^2}\  .\]</span> Indeed, for fixed <span class="math-tex">\(i \neq j, x,y\)</span>, the system of equations <span class="math-tex">\(\{ai+b=x, aj+b=y\}\)</span> is always uniquely solvable in the field: <span class="math-tex">\(a=(x-y)/(i-j)\)</span>, <span class="math-tex">\(b=x-i(x-y)/(i-j)\)</span>. Then we proceed as follows: we choose <span class="math-tex">\(a,b\)</span>, and then assign each vertex <span class="math-tex">\(i \in [n]\)</span> to a part corresponding to the first bit of the binary representation of <span class="math-tex">\(\alpha_{i}\)</span>. The expected cut size remains <span class="math-tex">\(m/2\)</span>, but now all sample outcomes can be easily enumerated (by iterating over all pairs <span class="math-tex">\((a,b)\)</span>).</div></details>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-19-conditional-probability/unit/chapter-19-conditional-probability-unit-3-independent-events/lesson/conditional-probability--independent-events--step-5/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-19-conditional-probability/unit/chapter-19-conditional-probability-unit-4-bayes-formula/lesson/conditional-probability--bayes-formula--step-1/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

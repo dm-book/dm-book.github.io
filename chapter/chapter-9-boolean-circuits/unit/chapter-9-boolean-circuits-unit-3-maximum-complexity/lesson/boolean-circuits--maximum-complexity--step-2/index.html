@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="Let&#39;s start by proving the lower bound on the maximum complexity: \(S(n)=\Omega(2^{n}/n)\) . This means that there are functions that cannot be computed by…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Boolean Circuits › Maximum Complexity › Lesson 2 | Discrete Mathematics" />
+    <meta property="og:description" content="Let&#39;s start by proving the lower bound on the maximum complexity: \(S(n)=\Omega(2^{n}/n)\) . This means that there are functions that cannot be computed by…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-9-boolean-circuits/unit/chapter-9-boolean-circuits-unit-3-maximum-complexity/lesson/boolean-circuits--maximum-complexity--step-2/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-9-boolean-circuits/unit/chapter-9-boolean-circuits-unit-3-maximum-complexity/lesson/boolean-circuits--maximum-complexity--step-2/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Boolean Circuits › Maximum Complexity › Lesson 2 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Boolean Circuits / Maximum Complexity</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Boolean Circuits · Maximum Complexity</p>
+        <h1>Lesson 2</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p>Let's start by proving the lower bound on the maximum complexity: <span class="math-tex">\(S(n)=\Omega(2^{n}/n)\)</span>. This means that there are functions that cannot be computed by circuits of size <span class="math-tex">\(o(2^{n}/n)\)</span>. Moreover, as the following theorem shows, there are many such functions. In fact, almost all Boolean functions have this property.</p><p><strong>Theorem (Shannon, 1949). </strong><em>The circuit complexity of almost all Boolean functions from <span class="math-tex">\(B_{n}\)</span> is at least <span class="math-tex">\(\Omega(2^{n}/n)\)</span> (in other words, the ratio of such functions is <span class="math-tex">\(1-o(1)\)</span>).</em></p><p> <em>Proof. </em>This is proven by counting: we will show that there&nbsp;is not enough small circuits to&nbsp;compute all <span class="math-tex">\(|B_{n}|=2^{2^n}\)</span> functions.</p><p>We will estimate the number <span class="math-tex">\(s(n,r)\)</span> of circuits with <span class="math-tex">\(n\)</span> inputs and <span class="math-tex">\(r\)</span> gates. To define such a circuit, for each of the <span class="math-tex">\(r\)</span> gates, we need to choose one of 16 functions that it computes, and also specify which gates or inputs the wires come from: <span class="math-tex">\[s(n,r) \le \left(16\cdot (n+r)^{2}\right)^{r} \  .\]</span> Now set <span class="math-tex">\(r=\alpha \cdot \frac{2^n}{n}\)</span>, where <span class="math-tex">\(\alpha\)</span> is a constant that we will choose later, and estimate this expression from above. Assume <span class="math-tex">\(n\)</span> is sufficiently large. This allows us to write <span class="math-tex">\(n+\alpha \frac{2^n}{n}\le 2\alpha \frac{2^n}{n}\)</span>.</p><p> <span class="math-tex">\[\begin{align*}s\left(n, \alpha\frac{2^n}{n}\right)&\le \left(16 \cdot \left(2 \alpha \cdot \frac{2^n}{n}\right)^{2}\right)^{\alpha \frac{2^n}{n}}&\text{(upper bound for \(s(n, r)\))}\\&= \left(2^{2\cdot(n-\log_2 n + 3 +\log_2 \alpha)}\right)^{\alpha \frac{2^n}{n}}\\&= 2^{2^n\cdot\left(\frac{2\alpha \cdot(n-\log_2 n + 3 +\log_2 \alpha)}{n}\right)}\  .\end{align*}\]</span>  </p><p>The fraction inside the parentheses approaches <span class="math-tex">\(2\alpha\)</span> as <span class="math-tex">\(n\)</span> grows. Therefore, for <span class="math-tex">\(\alpha=\frac{1}{3}\)</span> (and sufficiently large <span class="math-tex">\(n\)</span>), the exponent will be much smaller than <span class="math-tex">\(2^{n}\)</span>. This already shows that circuits of size <span class="math-tex">\(\alpha \cdot \frac{2^n}{n}\)</span> are insufficient to compute all <span class="math-tex">\(2^{2^n}\)</span> functions. Moreover, a randomly selected function from <span class="math-tex">\(B_{n}\)</span> will have circuit complexity above <span class="math-tex">\(\alpha \cdot \frac{2^n}{n}\)</span> with probability <span class="math-tex">\(1-\frac{1}{2^{c2^n}}\)</span>.<span class="proof-end" aria-label="End of proof">◼</span></p>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-9-boolean-circuits/unit/chapter-9-boolean-circuits-unit-3-maximum-complexity/lesson/boolean-circuits--maximum-complexity--step-1/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-9-boolean-circuits/unit/chapter-9-boolean-circuits-unit-3-maximum-complexity/lesson/boolean-circuits--maximum-complexity--step-3/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

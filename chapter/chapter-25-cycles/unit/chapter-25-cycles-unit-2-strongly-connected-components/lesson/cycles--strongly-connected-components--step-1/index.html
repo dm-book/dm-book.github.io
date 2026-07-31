@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="Recall that an undirected graph is called connected if there is a path between any two of its nodes. For example, the following graph is connected.…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Cycles › Strongly Connected Components › Lesson 1 | Discrete Mathematics" />
+    <meta property="og:description" content="Recall that an undirected graph is called connected if there is a path between any two of its nodes. For example, the following graph is connected.…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-25-cycles/unit/chapter-25-cycles-unit-2-strongly-connected-components/lesson/cycles--strongly-connected-components--step-1/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-25-cycles/unit/chapter-25-cycles-unit-2-strongly-connected-components/lesson/cycles--strongly-connected-components--step-1/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Cycles › Strongly Connected Components › Lesson 1 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Cycles / Strongly Connected Components</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Cycles · Strongly Connected Components</p>
+        <h1>Lesson 1</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p>Recall that an&nbsp;undirected graph is&nbsp;called connected if&nbsp;there is&nbsp;a&nbsp;path between any two of&nbsp;its nodes. For example, the following graph is&nbsp;connected. </p><p style="text-align:center;"><img src="generated/assets/Cycles/Strongly_Connected_Components=0/image0.png" width="800" ></p><p> Connectivity for <em>directed</em> graphs is&nbsp;defined more subtly.</p><p>Would you call the following directed graph connected?</p><p style="text-align:center;"><img src="generated/assets/Cycles/Strongly_Connected_Components=0/image1.png" width="800" ></p><p>Though this graph looks connected in a&nbsp;sense that there are roads allowing one to&nbsp;get from any node to&nbsp;any other node, these roads are now one-way and one needs to&nbsp;respect the direction while driving the roads. In&nbsp;particular, there is&nbsp;no&nbsp;path from&nbsp;<span class="math-tex">\(6\)</span> to&nbsp;<span class="math-tex">\(4\)</span> in&nbsp;this graph, for a&nbsp;simple reason: there are no&nbsp;edges coming to&nbsp;<span class="math-tex">\(4\)</span>. Also, from&nbsp;<span class="math-tex">\(8\)</span> one cannot reach&nbsp;<span class="math-tex">\(5\)</span> since the only nodes reachable from&nbsp;<span class="math-tex">\(8\)</span> are <span class="math-tex">\(2\)</span>&nbsp;and&nbsp;<span class="math-tex">\(7\)</span>.</p><p>This discussion motivates the following definition. In a&nbsp;directed graph, nodes <span class="math-tex">\(u,v\)</span> are <em>connected</em> if there is a&nbsp;path from&nbsp;<span class="math-tex">\(u\)</span> to&nbsp;<span class="math-tex">\(v\)</span> <em>and</em> a&nbsp;path from&nbsp;<span class="math-tex">\(v\)</span> to&nbsp;<span class="math-tex">\(u\)</span>. In&nbsp;the example graph above, the nodes <span class="math-tex">\(3\)</span>&nbsp;and&nbsp;<span class="math-tex">\(6\)</span> are connected, whereas the nodes <span class="math-tex">\(5\)</span>&nbsp;and&nbsp;<span class="math-tex">\(8\)</span> are not.</p><p>As&nbsp;in the case of&nbsp;undirected graphs, the nodes of&nbsp;any directed graph can be partitioned into subsets called <em>strongly connected components</em> (SCCs) satisfying the following properties: </p><ul><li> every node belongs to exactly one SCC;</li><li> nodes from the same SCC are connected;</li><li> nodes from different SCCs are not connected.</li></ul>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-25-cycles/unit/chapter-25-cycles-unit-1-acyclic-graphs/lesson/cycles--acyclic-graphs--step-9/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-25-cycles/unit/chapter-25-cycles-unit-2-strongly-connected-components/lesson/cycles--strongly-connected-components--step-2/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="A call center receives a certain number of calls from noon to 1 PM. How many operators should be available during this hour to handle these calls? Of…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Random Variables › Poisson Distribution › Lesson 1 | Discrete Mathematics" />
+    <meta property="og:description" content="A call center receives a certain number of calls from noon to 1 PM. How many operators should be available during this hour to handle these calls? Of…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-20-random-variables/unit/chapter-20-random-variables-unit-6-poisson-distribution/lesson/random-variables--poisson-distribution--step-1/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-20-random-variables/unit/chapter-20-random-variables-unit-6-poisson-distribution/lesson/random-variables--poisson-distribution--step-1/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Random Variables › Poisson Distribution › Lesson 1 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Random Variables / Poisson Distribution</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Random Variables · Poisson Distribution</p>
+        <h1>Lesson 1</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p>A call center receives a certain number of calls from noon to 1 PM. How many operators should be available during this hour to handle these calls? Of course, it is impossible to answer such an abstract question, so we will refine it to construct a well-defined mathematical model. Suppose observations show that, on average, <span class="math-tex">\(\lambda\)</span> calls are received during this hour. Then we can consider a discrete model: divide our time interval (one hour) into <span class="math-tex">\(n\)</span> parts and assume that in each such interval, a call arrives with probability <span class="math-tex">\(p=\frac{\lambda}{n}\)</span> (thus, we assume that in each interval, a call arrives independently of what happened in other intervals, with the same probability). We obtain a binomial distribution with parameters <span class="math-tex">\(n,p\)</span>. Let the random variable <span class="math-tex">\(\alpha\)</span> represent the number of calls received in an hour. Then <span class="math-tex">\[\Pr[\alpha=k]=\binom{n}{k}p^{k} (1-p)^{n-k}\  .\]</span> Naturally, we expect that our estimates will be more accurate as <span class="math-tex">\(n\)</span> increases, so we let <span class="math-tex">\(n\)</span> tend to infinity and evaluate our expression (where <span class="math-tex">\(\lambda\)</span> and <span class="math-tex">\(k\)</span> are considered fixed, i.e., constants).  <span class="math-tex">\[\begin{align*}\Pr[\alpha=k]&=\binom nk p^{k} (1-p)^{n-k}=\\&=\frac{n!}{k!(n-k)!}\left(\frac{\lambda}{n}\right)^{k}\left(1-\frac{\lambda}{n}\right)^{n-k}=\\&=\frac{\lambda^k}{k!}\cdot \frac{n\dotsb(n-k+1)}{n^k}\left(1-\frac{\lambda}{n}\right)^{-k}\left(1-\frac{\lambda}{n}\right)^{n} \  .\end{align*}\]</span>   Substituting the limiting relations as <span class="math-tex">\(n \to \infty\)</span> <span class="math-tex">\[\begin{align*}\frac{n(n-1)\dotsb(n-k+1)}{n^k}&\to 1\ ,\\ \left(1-\frac{\lambda}{n}\right)^{-k}&\to 1\ ,\\ \left(1-\frac{\lambda}{n}\right)^{n}&\to e^{-\lambda}\ ,\end{align*}\]</span> we obtain <span class="math-tex">\[\Pr[\alpha=k] \to \frac{\lambda^ke^{-\lambda}}{k!}\  .\]</span></p><p>This is the <em>Poisson distribution</em>. It plays an important role in queuing theory (the call center problem is a standard example from this field).</p><p style="text-align:center;"><img src="generated/assets/Random_Variables/Poisson_Distribution=0/image0.png" width="800" ></p>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-20-random-variables/unit/chapter-20-random-variables-unit-5-geometric-distribution/lesson/random-variables--geometric-distribution--step-6/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-20-random-variables/unit/chapter-20-random-variables-unit-6-poisson-distribution/lesson/random-variables--poisson-distribution--step-2/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

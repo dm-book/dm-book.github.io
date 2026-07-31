@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="Before applying this theorem to prove that, given two well-ordered sets, one of them is an initial segment of the other, we must first refine it slightly.…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Partially Ordered Sets › Zermelo&#39;s Theorem (Optional) › Lesson 4 | Discrete Mathematics" />
+    <meta property="og:description" content="Before applying this theorem to prove that, given two well-ordered sets, one of them is an initial segment of the other, we must first refine it slightly.…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-11-partially-ordered-sets/unit/chapter-11-partially-ordered-sets-unit-7-zermelo-s-theorem-optional/lesson/partially-ordered-sets--zermelo-s-theorem-optional--step-4/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-11-partially-ordered-sets/unit/chapter-11-partially-ordered-sets-unit-7-zermelo-s-theorem-optional/lesson/partially-ordered-sets--zermelo-s-theorem-optional--step-4/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Partially Ordered Sets › Zermelo&#39;s Theorem (Optional) › Lesson 4 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Partially Ordered Sets / Zermelo&#39;s Theorem (Optional)</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Partially Ordered Sets · Zermelo&#39;s Theorem (Optional)</p>
+        <h1>Lesson 4</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p>Before applying this theorem to prove that, given two well-ordered sets, one of them is an initial segment of the other, we must first refine it slightly. We need to account for the situation where the recursive rule is not defined everywhere. For instance, consider defining a&nbsp;sequence of real numbers by the relation <span class="math-tex">\(x_{n} = \tan x_{n-1}\)</span> with the initial condition <span class="math-tex">\(x_{0} = a\)</span>. For certain values of <span class="math-tex">\(a\)</span>, the construction of the sequence may break down, since the tangent function is not defined for some arguments.</p><p><strong>Theorem. </strong><em>Let the mapping <span class="math-tex">\(F\)</span>, as discussed in the previous Theorem, be partial (that is, for some elements <span class="math-tex">\(x\)</span> and functions <span class="math-tex">\(g \colon [0, x) \to B\)</span>, the value <span class="math-tex">\(F(x, g)\)</span> may be undefined). Then there exists a&nbsp;function <span class="math-tex">\(f\)</span> which satisfies one of the following: </p><ul><li> either it is defined on the entire set <span class="math-tex">\(A\)</span> and agrees with the recursive definition;</li><li> or it is defined on some initial segment <span class="math-tex">\([0, a)\)</span> and agrees with the recursive definition on that segment, while at the point <span class="math-tex">\(a\)</span> the recursive rule is inapplicable (i.e., the mapping <span class="math-tex">\(F\)</span> is undefined).</li></ul><p></em></p><p> <em>Proof. </em>Let us extend the set <span class="math-tex">\(B\)</span> by adding a&nbsp;special element <span class="math-tex">\(\bot\)</span> (denoting &ldquo;undefined&rdquo;), and modify the recursive rule accordingly: the new rule assigns the value <span class="math-tex">\(\bot\)</span> wherever the original rule was undefined. (If any of the values of the function on earlier arguments is already <span class="math-tex">\(\bot\)</span>, the new recursive rule likewise returns <span class="math-tex">\(\bot\)</span>.)</p><p>Applying the previous Theorem to the modified rule yields a&nbsp;function <span class="math-tex">\(f'\)</span>. If this function never takes the value <span class="math-tex">\(\bot\)</span>, then the first of the two possibilities stated in the theorem is realized (with <span class="math-tex">\(f = f'\)</span>). If, however, the function <span class="math-tex">\(f'\)</span> assumes the value <span class="math-tex">\(\bot\)</span> at some point, then it continues to do so at all greater points. Replacing the value <span class="math-tex">\(\bot\)</span> with &ldquo;undefined&rdquo; gives a&nbsp;function <span class="math-tex">\(f\)</span> derived from <span class="math-tex">\(f'\)</span>. The domain of definition of <span class="math-tex">\(f\)</span> is an initial segment <span class="math-tex">\([0, a)\)</span>, and the second case of the theorem is realized.<span class="proof-end" aria-label="End of proof">◼</span></p>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-11-partially-ordered-sets/unit/chapter-11-partially-ordered-sets-unit-7-zermelo-s-theorem-optional/lesson/partially-ordered-sets--zermelo-s-theorem-optional--step-3/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-11-partially-ordered-sets/unit/chapter-11-partially-ordered-sets-unit-7-zermelo-s-theorem-optional/lesson/partially-ordered-sets--zermelo-s-theorem-optional--step-5/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

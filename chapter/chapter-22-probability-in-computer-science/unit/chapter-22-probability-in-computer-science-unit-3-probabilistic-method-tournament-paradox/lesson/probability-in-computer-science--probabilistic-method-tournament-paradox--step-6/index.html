@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="And this is true for any number of \(k\) teams! In other words, for sufficiently large \(n\) , there exists a tournament with \(n\) vertices, in which for…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Probability in Computer Science › Probabilistic Method: Tournament Paradox › Lesson 6 | Discrete Mathematics" />
+    <meta property="og:description" content="And this is true for any number of \(k\) teams! In other words, for sufficiently large \(n\) , there exists a tournament with \(n\) vertices, in which for…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-22-probability-in-computer-science/unit/chapter-22-probability-in-computer-science-unit-3-probabilistic-method-tournament-paradox/lesson/probability-in-computer-science--probabilistic-method-tournament-paradox--step-6/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-22-probability-in-computer-science/unit/chapter-22-probability-in-computer-science-unit-3-probabilistic-method-tournament-paradox/lesson/probability-in-computer-science--probabilistic-method-tournament-paradox--step-6/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Probability in Computer Science › Probabilistic Method: Tournament Paradox › Lesson 6 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Probability in Computer Science / Probabilistic Method: Tournament Paradox</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Probability in Computer Science · Probabilistic Method: Tournament Paradox</p>
+        <h1>Lesson 6</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p>And this is true for any number of <span class="math-tex">\(k\)</span>&nbsp;teams! In other words, for sufficiently large <span class="math-tex">\(n\)</span>, there exists a tournament with <span class="math-tex">\(n\)</span> vertices, in which for any <span class="math-tex">\(k\)</span> teams, there is a team that defeated them all.</p><p><strong>Theorem (Erdős, 1963). </strong><em>For any <span class="math-tex">\(k \in \mathbb{Z}_{\ge 1}\)</span>, there exists a tournament <span class="math-tex">\(G(V,E)\)</span> in which for any <span class="math-tex">\(k\)</span> vertices <span class="math-tex">\(u_{1},\dotsc, u_{k} \in V\)</span>, there exists a vertex <span class="math-tex">\(v \in V\)</span> such that <span class="math-tex">\((v,u_{i}) \in E\)</span> for all <span class="math-tex">\(i \in [k]\)</span>. (That is, for any <span class="math-tex">\(k\)</span> teams, there is a team that defeated them all.)</em></p><p><em>Proof. </em>Consider a random tournament <span class="math-tex">\(G(V,E)\)</span> with <span class="math-tex">\(n\)</span> vertices: the outcome of each game (the direction of each edge) is chosen randomly with probability <span class="math-tex">\(1/2\)</span>. For a set <span class="math-tex">\(S \subseteq V\)</span> of size <span class="math-tex">\(k\)</span>, let <span class="math-tex">\(A_{S}\)</span> denote the event that "no <span class="math-tex">\(v \not \in S\)</span> defeated all of <span class="math-tex">\(S\)</span>". Each <span class="math-tex">\(v \not \in S\)</span> defeats all teams in <span class="math-tex">\(S\)</span> with probability <span class="math-tex">\(2^{-k}\)</span>. There are <span class="math-tex">\(n-k\)</span> such <span class="math-tex">\(v\)</span>, and these probabilities are independent, so <span class="math-tex">\[\Pr[A_{S}]=(1-2^{-k})^{n-k}\ .\]</span> Then  <span class="math-tex">\[\begin{align*}\Pr\left[\bigcup_{S} A_{S}\right]&\le&\text{(union bound)}\\&\le \sum_{S} \Pr[A_{S}] =\\&= \binom{n}{k}(1-2^{-k})^{n-k}\le&\text{(\(\binom{n}{k}\le \frac{n!}{(n-k)!}\le n^{k}\))}\\&\le n^{k}(1-2^{-k})^{n-k}\le&\text{(\(1+x \le e^{x}\), \(x=-2^{-k}\))}\\&\le n^{k}\left(e^{-2^{-k}}\right)^{n-k}= \\&=n^{k}e^{-\frac{n-k}{2^k}}=\\&=e^{\frac{k}{2^k}}\cdot \frac{n^k}{e^{\frac{n}{2^k}}}\  .\end{align*}\]</span>   Now recall that <span class="math-tex">\(k\)</span> is fixed, and we can take <span class="math-tex">\(n\)</span> arbitrarily large. Then <span class="math-tex">\(e^{\frac{k}{2^k}}\)</span> is a constant, <span class="math-tex">\(n^{k}\)</span> is a polynomial, and <span class="math-tex">\(e^{n/2^k}=(e^{1/2^k})^{n}\)</span> is an exponential (as a function of <span class="math-tex">\(n\)</span>). As is well known, any exponential eventually (for sufficiently large <span class="math-tex">\(n\)</span>) surpasses any polynomial, so the considered probability will be less than one. Thus, there exists a tournament in which the event <span class="math-tex">\(A_{S}\)</span> does not occur for any set <span class="math-tex">\(S\)</span>.<span class="proof-end" aria-label="End of proof">◼</span></p>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-22-probability-in-computer-science/unit/chapter-22-probability-in-computer-science-unit-3-probabilistic-method-tournament-paradox/lesson/probability-in-computer-science--probabilistic-method-tournament-paradox--step-5/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-22-probability-in-computer-science/unit/chapter-22-probability-in-computer-science-unit-4-probabilistic-method-ramsey-numbers/lesson/probability-in-computer-science--probabilistic-method-ramsey-numbers--step-1/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

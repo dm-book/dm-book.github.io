@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="This is how you can verify these equivalences. In \(\texttt{Python}\) , there is no dedicated operator for implication \(x \Rightarrow y\) , but it can be…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Propositional Logic › Tautologies › Lesson 3 | Discrete Mathematics" />
+    <meta property="og:description" content="This is how you can verify these equivalences. In \(\texttt{Python}\) , there is no dedicated operator for implication \(x \Rightarrow y\) , but it can be…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-7-propositional-logic/unit/chapter-7-propositional-logic-unit-3-tautologies/lesson/propositional-logic--tautologies--step-3/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-7-propositional-logic/unit/chapter-7-propositional-logic-unit-3-tautologies/lesson/propositional-logic--tautologies--step-3/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Propositional Logic › Tautologies › Lesson 3 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Propositional Logic / Tautologies</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Propositional Logic · Tautologies</p>
+        <h1>Lesson 3</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p>This is how you can verify these equivalences. In <span class="math- tex">\(\texttt{Python}\)</span>, there is no dedicated operator for implication <span class="math-tex">\(x \Rightarrow y\)</span>, but it can be rewritten as <span class="math-tex">\(\overline{x}\lor y\)</span>.</p><pre><code class="language-python">from itertools import product
+
+for x, y, z in product((True, False), repeat=3):
+    assert (x or y) == (y or x)
+    assert (x and y) == (y and x)
+    assert ((x or y) or z) == (x or (y or z))
+    assert ((x and y) and z) == (x and (y and z))
+    assert (not (x or y)) == (not x and not y)
+    assert (not (x and y)) == (not x or not y)
+    assert (x or (x and y)) == x
+    assert (x and (x or y)) == x
+    assert (not x or y) == (not (not y) or not x)
+    assert not(not x) == x</code></pre>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-7-propositional-logic/unit/chapter-7-propositional-logic-unit-3-tautologies/lesson/propositional-logic--tautologies--step-2/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-7-propositional-logic/unit/chapter-7-propositional-logic-unit-3-tautologies/lesson/propositional-logic--tautologies--step-4/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

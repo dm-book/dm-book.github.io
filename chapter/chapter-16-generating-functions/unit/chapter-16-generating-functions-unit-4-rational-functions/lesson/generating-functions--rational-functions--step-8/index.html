@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="As in the above example, in many cases the generating function turns out to be rational , i.e., the ratio of two polynomials. For convenient computation of…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Generating Functions › Rational Functions › Lesson 8 | Discrete Mathematics" />
+    <meta property="og:description" content="As in the above example, in many cases the generating function turns out to be rational , i.e., the ratio of two polynomials. For convenient computation of…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-16-generating-functions/unit/chapter-16-generating-functions-unit-4-rational-functions/lesson/generating-functions--rational-functions--step-8/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-16-generating-functions/unit/chapter-16-generating-functions-unit-4-rational-functions/lesson/generating-functions--rational-functions--step-8/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Generating Functions › Rational Functions › Lesson 8 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Generating Functions / Rational Functions</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Generating Functions · Rational Functions</p>
+        <h1>Lesson 8</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p>As in the above example, in many cases the generating function turns out to be <em>rational</em>, i.e., the ratio of two polynomials. For convenient computation of derivatives of such functions, they can be expanded into a sum of simplest fractions (this technique also helps in integrating such functions). This is done using the <em>method of undetermined coefficients</em>.</p><p><strong>Theorem. </strong><em>Let <span class="math-tex">\(p(x)\)</span> be a polynomial of degree less than <span class="math-tex">\(t\)</span>, and <span class="math-tex">\(\alpha_{1}, \dotsc, \alpha_{t}\)</span> be (pairwise) distinct nonzero numbers. Then there exist numbers <span class="math-tex">\(c_{1}, \dotsc, c_{t}\)</span> such that <span class="math-tex">\[\mathcal{P}(x)=\frac{p(x)}{(1-\alpha_1x)\dotsb(1-\alpha_tx)}=\frac{c_1}{1-\alpha_1x}+\dotsb+\frac{c_t}{1-\alpha_tx}\  .\]</span>  (Thus, <span class="math-tex">\(\alpha_{1}, \dotsc, \alpha_{t}\)</span> are reciprocals of the roots of the denominator.)</p><p>If <span class="math-tex">\(\alpha\)</span> is the reciprocal of a root of the denominator of multiplicity <span class="math-tex">\(m\)</span> (i.e., the denominator has a factor <span class="math-tex">\((1-\alpha x)^{m}\)</span>), then the right-hand side will have terms of the form <span class="math-tex">\(\frac{c}{(1-\alpha x)^k}\)</span> for all <span class="math-tex">\(1 \le k \le m\)</span>.</em></p><p>Having such a decomposition into simplest fractions, we can easily expand <span class="math-tex">\(\mathcal{P}(x)\)</span> into a series: <span class="math-tex">\[\mathcal{P}(x)=\sum_{n=0}^{\infty}(c_{1}\alpha_{1}^{n}+\dotsb+c_{t}\alpha_{t}^{n})x^{n}\]</span> (since <span class="math-tex">\(\frac{1}{1-\alpha x}=\sum_{n=0}^{\infty}\alpha^{n}x^{n}\)</span>).</p><p>We will not formally prove this theorem. The method is as follows: bring the left and right sides to a common denominator and obtain an equality of two polynomials of degree at most <span class="math-tex">\(t\)</span>. By equating their coefficients at corresponding powers of <span class="math-tex">\(x\)</span>, we find the constants <span class="math-tex">\(c_{1}, \dotsc, c_{t}\)</span> by solving the corresponding system of linear equations. (In practice, simpler linear equations may result if we equate not coefficients, but values of the polynomials at the same point.)</p>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-16-generating-functions/unit/chapter-16-generating-functions-unit-4-rational-functions/lesson/generating-functions--rational-functions--step-7/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-16-generating-functions/unit/chapter-16-generating-functions-unit-4-rational-functions/lesson/generating-functions--rational-functions--step-9/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

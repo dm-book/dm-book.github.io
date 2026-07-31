@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="The answer to the previous question is negative, and there is a “local” reason for this: the clubs Chess, Math, Physics, Robotics are competing for three…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Proofs of Universal Statements: Mathematical Induction › Complete Induction › Lesson 7 | Discrete Mathematics" />
+    <meta property="og:description" content="The answer to the previous question is negative, and there is a “local” reason for this: the clubs Chess, Math, Physics, Robotics are competing for three…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-3-proofs-of-universal-statements-mathematical-induction/unit/chapter-3-proofs-of-universal-statements-mathematical-induction-unit-3-complete-induction/lesson/proofs-of-universal-statements-mathematical-induction--complete-induction--step-7/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-3-proofs-of-universal-statements-mathematical-induction/unit/chapter-3-proofs-of-universal-statements-mathematical-induction-unit-3-complete-induction/lesson/proofs-of-universal-statements-mathematical-induction--complete-induction--step-7/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Proofs of Universal Statements: Mathematical Induction › Complete Induction › Lesson 7 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Proofs of Universal Statements: Mathematical Induction / Complete Induction</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Proofs of Universal Statements: Mathematical Induction · Complete Induction</p>
+        <h1>Lesson 7</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p>The answer to&nbsp;the previous question is&nbsp;negative, and there is a&nbsp;&ldquo;local&rdquo; reason for this: the clubs Chess, Math, Physics, Robotics are competing for three people (Alice, Bob, and Carol). Below, we&nbsp;prove that in&nbsp;general this&nbsp;is the only obstacle: a&nbsp;system of&nbsp;distinct representatives exists if&nbsp;and only&nbsp;if every subset of&nbsp;clubs has at&nbsp;least as&nbsp;many available people as&nbsp;the number of&nbsp;clubs.</p><p><strong>Theorem (Hall, 1935). </strong><em>Let <span class="math-tex">\(S_{1}, \dotsc, S_{m}\)</span> be finite sets. There exists a&nbsp;<em>system of distinct representatives</em> for these sets if and only if for any <span class="math-tex">\(1 \le k \le m\)</span>, the union of any <span class="math-tex">\(k\)</span> sets has at least <span class="math-tex">\(k\)</span> elements. In other words, there exist pairwise distinct <span class="math-tex">\(x_{1} \in S_{1}, \dotsc, x_{m} \in S_{m}\)</span> if&nbsp;and only&nbsp;if <span class="math-tex">\[\left|\bigcup_{i \in I}S_{i}\right| \ge |I| \text{ for any }I \subseteq \{1, \dotsc, m\} \  .\]</span></em></p><p style="text-align:center;"><img src="generated/assets/Proofs_of_Universal_Statements$_Mathematical_Induction/Complete_Induction=6/image0.png" width="800" ></p><p><em>Proof. </em>We will prove this by induction on&nbsp;<span class="math-tex">\(m\)</span>. The base case <span class="math-tex">\(m=1\)</span> is obvious, consider the step <span class="math-tex">\(\{1, 2, \dotsc, m-1\} \to m\)</span>. </p><ul><li><strong>Case 1:</strong>&nbsp; for any <span class="math-tex">\(1 \le k &lt; m\)</span>, the union of any <span class="math-tex">\(k\)</span> sets contains more than <span class="math-tex">\(k\)</span> elements. Then it is straightforward to use the induction hypothesis. Assign an arbitrary element <span class="math-tex">\(x \in S_{m}\)</span> as the representative of the set <span class="math-tex">\(S_{m}\)</span>. After this, remove <span class="math-tex">\(x\)</span> from all sets <span class="math-tex">\(S_{1}, \dotsc, S_{m-1}\)</span>. It is easy to see that the induction hypothesis holds for the sets <span class="math-tex">\(S_{1}, \dotsc, S_{m-1}\)</span>, so representatives can be chosen for them.</li><li><strong>Case 2:</strong>&nbsp; the union of some <span class="math-tex">\(1 \le k &lt; m\)</span> sets contains exactly <span class="math-tex">\(k\)</span> elements. For these <span class="math-tex">\(k\)</span> sets, a system of representatives can be found by the induction hypothesis. Remove these <span class="math-tex">\(k\)</span> elements from all remaining sets and show that the condition of the theorem holds for these sets after this (and then a system of representatives can be found for them by the induction hypothesis). Indeed, if there are <span class="math-tex">\(s\)</span> sets among the remaining ones that give a union of fewer than <span class="math-tex">\(s\)</span> elements, then if we return the removed <span class="math-tex">\(k\)</span> sets and <span class="math-tex">\(k\)</span> elements, we get <span class="math-tex">\(k+s\)</span> sets, the union of which has fewer than <span class="math-tex">\(k+s\)</span> elements (which contradicts the condition).</li></ul><p><span class="proof-end" aria-label="End of proof">◼</span></p>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-3-proofs-of-universal-statements-mathematical-induction/unit/chapter-3-proofs-of-universal-statements-mathematical-induction-unit-3-complete-induction/lesson/proofs-of-universal-statements-mathematical-induction--complete-induction--step-6/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-3-proofs-of-universal-statements-mathematical-induction/unit/chapter-3-proofs-of-universal-statements-mathematical-induction-unit-4-well-ordering-principle/lesson/proofs-of-universal-statements-mathematical-induction--well-ordering-principle--step-1/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

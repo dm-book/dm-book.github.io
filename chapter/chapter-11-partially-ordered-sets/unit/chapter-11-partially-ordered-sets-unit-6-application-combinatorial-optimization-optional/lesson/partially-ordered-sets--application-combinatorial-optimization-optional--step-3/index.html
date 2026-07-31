@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="Kőnig&#39;s Theorem is another beautiful result that connects two seemingly different concepts. Theorem (Kőnig&#39;s Theorem, 1931). In any bipartite graph, the…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Partially Ordered Sets › Application: Combinatorial Optimization (Optional) › Lesson 3 | Discrete Mathematics" />
+    <meta property="og:description" content="Kőnig&#39;s Theorem is another beautiful result that connects two seemingly different concepts. Theorem (Kőnig&#39;s Theorem, 1931). In any bipartite graph, the…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-11-partially-ordered-sets/unit/chapter-11-partially-ordered-sets-unit-6-application-combinatorial-optimization-optional/lesson/partially-ordered-sets--application-combinatorial-optimization-optional--step-3/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-11-partially-ordered-sets/unit/chapter-11-partially-ordered-sets-unit-6-application-combinatorial-optimization-optional/lesson/partially-ordered-sets--application-combinatorial-optimization-optional--step-3/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Partially Ordered Sets › Application: Combinatorial Optimization (Optional) › Lesson 3 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Partially Ordered Sets / Application: Combinatorial Optimization (Optional)</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Partially Ordered Sets · Application: Combinatorial Optimization (Optional)</p>
+        <h1>Lesson 3</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p>Kőnig's Theorem is another beautiful result that connects two seemingly different concepts.</p><p><strong>Theorem (Kőnig's Theorem, 1931). </strong><em>In any bipartite graph, the number of&nbsp;edges in&nbsp;a&nbsp;maximum matching is equal to&nbsp;the number of&nbsp;vertices in&nbsp;a&nbsp;minimum vertex cover.</em></p><p><em>Proof. </em>Let <span class="math-tex">\(\alpha'(G)\)</span> be&nbsp;the size of&nbsp;a&nbsp;maximum matching and <span class="math-tex">\(\tau(G)\)</span> be&nbsp;the size of&nbsp;a&nbsp;minimum vertex cover. We want to&nbsp;prove <span class="math-tex">\(\alpha'(G) = \tau(G)\)</span>. We use the same poset as in&nbsp;the proof of&nbsp;Hall's theorem: vertices are the elements, and <span class="math-tex">\(u \prec v\)</span> if <span class="math-tex">\((u,v)\)</span> is an&nbsp;edge. By&nbsp;Dilworth's theorem, the maximum size of&nbsp;an&nbsp;antichain, <span class="math-tex">\(w\)</span>, is equal to&nbsp;the minimum number of&nbsp;chains in&nbsp;a&nbsp;chain partition. An antichain in&nbsp;this poset is a&nbsp;set of&nbsp;vertices where no two are connected by&nbsp;an&nbsp;edge. So, <span class="math-tex">\(w = \alpha(G)\)</span>, the size of&nbsp;the maximum independent set. A chain partition consists of&nbsp;<span class="math-tex">\(k_{1}\)</span> single-vertex chains and <span class="math-tex">\(k_{2}\)</span> two-vertex chains (edges). The <span class="math-tex">\(k_{2}\)</span> edges form a&nbsp;matching. The total number of&nbsp;vertices is <span class="math-tex">\(|V(G)| = k_{1} + 2k_{2}\)</span>, and the number of&nbsp;chains is <span class="math-tex">\(w = k_{1}+k_{2}\)</span>. This gives a&nbsp;matching of&nbsp;size <span class="math-tex">\(k_{2} = |V(G)| - w\)</span>. Recall the fact that for any graph, a&nbsp;set of&nbsp;vertices is an&nbsp;independent set if and only if its complement is a&nbsp;vertex cover. This means that the size of&nbsp;a&nbsp;maximum independent set and the size of&nbsp;a&nbsp;minimum vertex cover sum up to&nbsp;the total number of&nbsp;vertices: <span class="math-tex">\(\alpha(G) + \tau(G) = |V(G)|\)</span>. Putting everything together: </p><ol><li> From Dilworth's theorem, we can find a&nbsp;chain partition of&nbsp;size <span class="math-tex">\(w = \alpha(G)\)</span> which yields a&nbsp;matching of&nbsp;size <span class="math-tex">\(|V(G)| - w\)</span>.</li><li> From Gallai's identity, the minimum vertex cover has size <span class="math-tex">\(\tau(G) = |V(G)| - \alpha(G) = |V(G)| - w\)</span>.</li></ol><p> So, we have constructed a&nbsp;matching whose size is exactly <span class="math-tex">\(\tau(G)\)</span>, and hence <span class="math-tex">\(\alpha'(G) \ge \tau(G)\)</span>. Since the size of&nbsp;any matching can't exceed the size of&nbsp;any vertex cover, we also have <span class="math-tex">\(\alpha'(G) \le \tau(G)\)</span>. Therefore, <span class="math-tex">\(\alpha'(G) = \tau(G)\)</span>.<span class="proof-end" aria-label="End of proof">◼</span></p>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-11-partially-ordered-sets/unit/chapter-11-partially-ordered-sets-unit-6-application-combinatorial-optimization-optional/lesson/partially-ordered-sets--application-combinatorial-optimization-optional--step-2/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-11-partially-ordered-sets/unit/chapter-11-partially-ordered-sets-unit-6-application-combinatorial-optimization-optional/lesson/partially-ordered-sets--application-combinatorial-optimization-optional--step-4/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

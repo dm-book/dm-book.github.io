@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="We are now ready to show that our definition of the parity of a permutation is consistent. Theorem. For any permutation \(\pi\) , the permutation \(\pi\)…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Project: 15 Puzzle, A*, and Coordinated Motion Planning › Solving the Original Configuration › Lesson 8 | Discrete Mathematics" />
+    <meta property="og:description" content="We are now ready to show that our definition of the parity of a permutation is consistent. Theorem. For any permutation \(\pi\) , the permutation \(\pi\)…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-6-project-15-puzzle-a-and-coordinated-motion-planning/unit/chapter-6-project-15-puzzle-a-and-coordinated-motion-planning-unit-2-solving-the-original-configuration/lesson/project-15-puzzle-a-and-coordinated-motion-planning--solving-the-original-configuration--step-8/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-6-project-15-puzzle-a-and-coordinated-motion-planning/unit/chapter-6-project-15-puzzle-a-and-coordinated-motion-planning-unit-2-solving-the-original-configuration/lesson/project-15-puzzle-a-and-coordinated-motion-planning--solving-the-original-configuration--step-8/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Project: 15 Puzzle, A*, and Coordinated Motion Planning › Solving the Original Configuration › Lesson 8 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Project: 15 Puzzle, A*, and Coordinated Motion Planning / Solving the Original Configuration</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Project: 15 Puzzle, A*, and Coordinated Motion Planning · Solving the Original Configuration</p>
+        <h1>Lesson 8</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p>We&nbsp;are now ready to&nbsp;show that our definition of&nbsp;the parity of&nbsp;a&nbsp;permutation is&nbsp;consistent.</p><p><strong>Theorem. </strong><em>For any permutation&nbsp;<span class="math-tex">\(\pi\)</span>, the permutation&nbsp;<span class="math-tex">\(\pi\)</span> cannot be&nbsp;both even and odd.</em></p><p><em>Proof. </em>Assume, for the sake of&nbsp;contradiction, that&nbsp;<span class="math-tex">\(\pi\)</span> can be&nbsp;obtained from the identity permutation by&nbsp;both an&nbsp;odd number of&nbsp;transpositions and an&nbsp;even number of&nbsp;transpositions. In&nbsp;each of&nbsp;these two sequences, replace every transposition with a&nbsp;sequence of&nbsp;neighbor transpositions. A&nbsp;simple but crucial observation is&nbsp;that this replacement does not change the parity of&nbsp;the total number of&nbsp;transpositions. Thus, we&nbsp;obtain two sequences of&nbsp;neighbor transpositions with different parities.</p><p>Indeed, each transposition is&nbsp;replaced by&nbsp;a&nbsp;sequence of&nbsp;<span class="math-tex">\(2k+1\)</span> neighbor transpositions, where&nbsp;<span class="math-tex">\(k\)</span> is&nbsp;the number of&nbsp;elements lying between the two elements being swapped. In&nbsp;particular, each replacement increases the total number of&nbsp;transpositions by&nbsp;<span class="math-tex">\(2k\)</span>, and therefore preserves its parity.</p><p>It&nbsp;follows that&nbsp;<span class="math-tex">\(\pi\)</span> can be&nbsp;obtained from the identity permutation by&nbsp;a&nbsp;sequence&nbsp;<span class="math-tex">\(A\)</span> consisting of&nbsp;an&nbsp;even number of&nbsp;neighbor transpositions and also by&nbsp;a&nbsp;sequence&nbsp;<span class="math-tex">\(B\)</span> consisting of&nbsp;an&nbsp;odd number of&nbsp;neighbor transpositions. Now apply the reversed sequence&nbsp;<span class="math-tex">\(A\)</span> to&nbsp;<span class="math-tex">\(\pi\)</span>; this returns the identity permutation. Then apply the sequence&nbsp;<span class="math-tex">\(B\)</span> to&nbsp;the identity permutation; this brings us back to&nbsp;<span class="math-tex">\(\pi\)</span>. Hence, starting from&nbsp;<span class="math-tex">\(\pi\)</span>, one can return to&nbsp;<span class="math-tex">\(\pi\)</span> using an&nbsp;odd number of&nbsp;neighbor transpositions. It&nbsp;remains to&nbsp;show that this is&nbsp;impossible.</p><p>To&nbsp;prove this, fix any two distinct elements&nbsp;<span class="math-tex">\(x\)</span> and&nbsp;<span class="math-tex">\(y\)</span> in&nbsp;the permutation&nbsp;<span class="math-tex">\(\pi\)</span>, and consider the number of&nbsp;neighbor transpositions that swap&nbsp;<span class="math-tex">\(x\)</span> and&nbsp;<span class="math-tex">\(y\)</span>. Any sequence of&nbsp;neighbor transpositions that starts with&nbsp;<span class="math-tex">\(\pi\)</span> and ends again with&nbsp;<span class="math-tex">\(\pi\)</span> must swap&nbsp;<span class="math-tex">\(x\)</span> and&nbsp;<span class="math-tex">\(y\)</span> an&nbsp;even number of&nbsp;times. Since this holds for every pair of&nbsp;distinct elements, the total number of&nbsp;neighbor transpositions in&nbsp;the sequence must be&nbsp;even. This contradicts the conclusion above.<span class="proof-end" aria-label="End of proof">◼</span></p>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-6-project-15-puzzle-a-and-coordinated-motion-planning/unit/chapter-6-project-15-puzzle-a-and-coordinated-motion-planning-unit-2-solving-the-original-configuration/lesson/project-15-puzzle-a-and-coordinated-motion-planning--solving-the-original-configuration--step-7/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-6-project-15-puzzle-a-and-coordinated-motion-planning/unit/chapter-6-project-15-puzzle-a-and-coordinated-motion-planning-unit-2-solving-the-original-configuration/lesson/project-15-puzzle-a-and-coordinated-motion-planning--solving-the-original-configuration--step-9/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

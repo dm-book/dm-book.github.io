@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="To better understand the theorem&#39;s condition, let us provide some comments and give a couple of examples before proving it. The function \(\Gamma\) is…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Conditional Probability › Local Lemma (Optional) › Lesson 3 | Discrete Mathematics" />
+    <meta property="og:description" content="To better understand the theorem&#39;s condition, let us provide some comments and give a couple of examples before proving it. The function \(\Gamma\) is…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-19-conditional-probability/unit/chapter-19-conditional-probability-unit-6-local-lemma-optional/lesson/conditional-probability--local-lemma-optional--step-3/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-19-conditional-probability/unit/chapter-19-conditional-probability-unit-6-local-lemma-optional/lesson/conditional-probability--local-lemma-optional--step-3/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Conditional Probability › Local Lemma (Optional) › Lesson 3 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Conditional Probability / Local Lemma (Optional)</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Conditional Probability · Local Lemma (Optional)</p>
+        <h1>Lesson 3</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p>To better understand the theorem's condition, let us provide some comments and give a couple of examples before proving it. The function <span class="math-tex">\(\Gamma\)</span> is exactly the localizer we mentioned above: each <span class="math-tex">\(A \in \mathcal{A}\)</span> may depend only on sets from <span class="math-tex">\(\Gamma(A)\)</span>. At the same time, <span class="math-tex">\(A\)</span> may not depend on some events from <span class="math-tex">\(\Gamma(A)\)</span>. Moreover, there may exist many different functions <span class="math-tex">\(\Gamma\)</span> and <span class="math-tex">\(p\)</span> satisfying the lemma's condition. The conditions on <span class="math-tex">\(\Gamma\)</span> and <span class="math-tex">\(p\)</span> pull us in different directions: the larger the set <span class="math-tex">\(\Gamma(A)\)</span>, the easier it is to satisfy the first condition, but the harder it is to satisfy the second.</p><p>Now, let us give two examples. </p><ul><li> Suppose <span class="math-tex">\(A_{1}, \dotsc, A_{n}\)</span> are mutually independent. Then <span class="math-tex">\(\Gamma\)</span> and <span class="math-tex">\(p\)</span> can be defined as follows: <span class="math-tex">\(\Gamma(A)=\varnothing\)</span>, <span class="math-tex">\(p(A)=\Pr[A]\)</span>. The lemma's inequality then reduces to an equality for the probability of the intersection of independent events. In this sense, the lemma generalizes full independence to, roughly speaking, independence with local dependencies.</li><li> Toss three coins, and for <span class="math-tex">\(1 \le i &lt; j \le 3\)</span> let <span class="math-tex">\(A_{ij}\)</span> denote the event &ldquo;coins <span class="math-tex">\(i\)</span> and <span class="math-tex">\(j\)</span> landed the same.&rdquo; As we recall, these three events are not mutually independent but are pairwise independent. This means that for each of our three events <span class="math-tex">\(A\)</span>, the set <span class="math-tex">\(\Gamma(A)\)</span> must contain at least one other event. For example, like this:  <span class="math-tex">\[\Gamma(A_{12})=\{A_{13}\}, \quad \Gamma(A_{12})=\{A_{13}, A_{23}\}, \quad \Gamma(A_{23})=\{A_{12}\}.\]</span>   It is not possible to define the function <span class="math-tex">\(p\)</span> to satisfy the lemma's conditions (try it!).</li></ul>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-19-conditional-probability/unit/chapter-19-conditional-probability-unit-6-local-lemma-optional/lesson/conditional-probability--local-lemma-optional--step-2/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-19-conditional-probability/unit/chapter-19-conditional-probability-unit-6-local-lemma-optional/lesson/conditional-probability--local-lemma-optional--step-4/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

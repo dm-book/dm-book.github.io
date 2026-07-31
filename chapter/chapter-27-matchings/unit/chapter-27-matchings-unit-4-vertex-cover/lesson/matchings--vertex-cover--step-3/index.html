@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="Let&#39;s give one more example. Consider the following graph: To find a maximum matching in it, we will construct a network based on this graph. Let&#39;s find the…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Matchings › Vertex Cover › Lesson 3 | Discrete Mathematics" />
+    <meta property="og:description" content="Let&#39;s give one more example. Consider the following graph: To find a maximum matching in it, we will construct a network based on this graph. Let&#39;s find the…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-27-matchings/unit/chapter-27-matchings-unit-4-vertex-cover/lesson/matchings--vertex-cover--step-3/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-27-matchings/unit/chapter-27-matchings-unit-4-vertex-cover/lesson/matchings--vertex-cover--step-3/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Matchings › Vertex Cover › Lesson 3 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Matchings / Vertex Cover</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Matchings · Vertex Cover</p>
+        <h1>Lesson 3</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p>Let's give one more example. Consider the following graph: </p><p style="text-align:center;"><img src="generated/assets/Matchings/Vertex_Cover=2/image0.png" width="800" ></p><p> To find a maximum matching in it, we will construct a network based on this graph. </p><p style="text-align:center;"><img src="generated/assets/Matchings/Vertex_Cover=2/image1.png" width="800" ></p><p> Let's find the maximum flow in it. </p><p style="text-align:center;"><img src="generated/assets/Matchings/Vertex_Cover=2/image2.png" width="800" ></p><p> This flow yields a maximum matching in the original graph: <span class="math-tex">\[\{\{a_{1}, c_{1}\}, \  \{a_{2}, c_{2}\}\} \  .\]</span> Let's construct the residual network for the given network and flow. </p><p style="text-align:center;"><img src="generated/assets/Matchings/Vertex_Cover=2/image3.png" width="800" ></p><p> To get the minimum capacity cut, we take all vertices reachable from <span class="math-tex">\(s\)</span> in the residual network: <span class="math-tex">\(S=\{s, a_{0}, c_{1}, a_{1}\}\)</span>. This indeed gives a cut of capacity two (in the original network the edges <span class="math-tex">\((s, a_{2})\)</span> and <span class="math-tex">\((c_{1},t)\)</span> are cut). To get the vertex cover from the cut, we take left side vertices not in the cut, and right side vertices that are in the cut: <span class="math-tex">\(C=\{a_{2}, c_{1}\}\)</span>.</p>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-27-matchings/unit/chapter-27-matchings-unit-4-vertex-cover/lesson/matchings--vertex-cover--step-2/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-27-matchings/unit/chapter-27-matchings-unit-4-vertex-cover/lesson/matchings--vertex-cover--step-4/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

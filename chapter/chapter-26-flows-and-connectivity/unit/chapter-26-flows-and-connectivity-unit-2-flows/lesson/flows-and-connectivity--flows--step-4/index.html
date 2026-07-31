@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="We will call a network a directed graph \(G = (V,E)\) with a distinguished source \(s\) and sink \(t\) , and each edge \((u,v)\in E\) having a capacity…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Flows and Connectivity › Flows › Lesson 4 | Discrete Mathematics" />
+    <meta property="og:description" content="We will call a network a directed graph \(G = (V,E)\) with a distinguished source \(s\) and sink \(t\) , and each edge \((u,v)\in E\) having a capacity…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-26-flows-and-connectivity/unit/chapter-26-flows-and-connectivity-unit-2-flows/lesson/flows-and-connectivity--flows--step-4/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-26-flows-and-connectivity/unit/chapter-26-flows-and-connectivity-unit-2-flows/lesson/flows-and-connectivity--flows--step-4/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Flows and Connectivity › Flows › Lesson 4 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Flows and Connectivity / Flows</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Flows and Connectivity · Flows</p>
+        <h1>Lesson 4</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p>We will call a <em>network</em> a directed graph <span class="math-tex">\(G = (V,E)\)</span> with a distinguished <em>source</em>&nbsp;<span class="math-tex">\(s\)</span> and <em>sink</em>&nbsp;<span class="math-tex">\(t\)</span>, and each edge <span class="math-tex">\((u,v)\in E\)</span> having a&nbsp;<em>capacity</em> <span class="math-tex">\(c(u,v) &gt; 0\)</span>. We assume that no edge enters&nbsp;<span class="math-tex">\(s\)</span> and no edge leaves&nbsp;<span class="math-tex">\(t\)</span>.</p><p>We want to pump oil from&nbsp;<span class="math-tex">\(s\)</span> to&nbsp;<span class="math-tex">\(t\)</span> without exceeding the edge capacities. A supply scheme is called a <em>flow</em>: to specify it, for each edge&nbsp;<span class="math-tex">\((u,v)\)</span> we indicate a number&nbsp;<span class="math-tex">\(f(u,v)\)</span> (how much oil goes through it). Constraints:</p><ol><li> Edge capacities must not be exceeded: <span class="math-tex">\(0 \le f(u,v) \le c(u,v)\)</span> for all <span class="math-tex">\((u,v)\in E\)</span>.</li><li> For any vertex&nbsp;<span class="math-tex">\(u\)</span>, except <span class="math-tex">\(s\)</span> and <span class="math-tex">\(t\)</span>, incoming flow equals outgoing: <span class="math-tex">\[\sum_{(w,u) \in E}f(w,u) = \sum_{(u,z)\in E}f(u,z).\]</span>This property is usually called <em>flow conservation</em>.</li></ol><p>Flow conservation guarantees that all oil leaving&nbsp;<span class="math-tex">\(s\)</span> reaches&nbsp;<span class="math-tex">\(t\)</span>; its amount is called the <em>value</em> of the flow: <span class="math-tex">\[\operatorname{size}(f) = \sum_{(s,u)\in E}f(s,u) = \sum_{(u,t) \in E}f(u,t).\]</span></p><p>Although the capacity and flow functions are defined only on the edges of the original network, it will be convenient to extend them to all pairs of distinct vertices and assume they are zero elsewhere.</p>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-26-flows-and-connectivity/unit/chapter-26-flows-and-connectivity-unit-2-flows/lesson/flows-and-connectivity--flows--step-3/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-26-flows-and-connectivity/unit/chapter-26-flows-and-connectivity-unit-2-flows/lesson/flows-and-connectivity--flows--step-5/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

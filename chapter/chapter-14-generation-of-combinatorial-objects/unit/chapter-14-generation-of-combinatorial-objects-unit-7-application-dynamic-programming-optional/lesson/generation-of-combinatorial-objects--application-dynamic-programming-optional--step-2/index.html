@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="This code will still run forever on our old test dataset \[\texttt{capacity=300, weights=[2] * 100}.\] But the reason for this bad behavior will be…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Generation of Combinatorial Objects › Application: Dynamic Programming (Optional) › Lesson 2 | Discrete Mathematics" />
+    <meta property="og:description" content="This code will still run forever on our old test dataset \[\texttt{capacity=300, weights=[2] * 100}.\] But the reason for this bad behavior will be…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-14-generation-of-combinatorial-objects/unit/chapter-14-generation-of-combinatorial-objects-unit-7-application-dynamic-programming-optional/lesson/generation-of-combinatorial-objects--application-dynamic-programming-optional--step-2/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-14-generation-of-combinatorial-objects/unit/chapter-14-generation-of-combinatorial-objects-unit-7-application-dynamic-programming-optional/lesson/generation-of-combinatorial-objects--application-dynamic-programming-optional--step-2/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Generation of Combinatorial Objects › Application: Dynamic Programming (Optional) › Lesson 2 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Generation of Combinatorial Objects / Application: Dynamic Programming (Optional)</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Generation of Combinatorial Objects · Application: Dynamic Programming (Optional)</p>
+        <h1>Lesson 2</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p>This code will still run forever on our old test dataset <span class="math-tex">\[\texttt{capacity=300, weights=[2] * 100}.\]</span> But the reason for this bad behavior will be different now. Previously all recursive calls differed in parameters: all of them had different pairs <span class="math-tex">\(\texttt{(idx, total)}\)</span>. But now it may happen that many recursive calls will have exactly the same parameters. And this is exactly what happens in practice! To verify this, insert a debug print line at the start of the <span class="math- tex">\(\texttt{helper}\)</span> method: <span class="math-tex">\(\texttt{print(idx, total)}\)</span> and run it on the dataset <span class="math-tex">\(\texttt{capacity=300, weights=[2] * 100}\)</span>. You will see an endless stream of output:  </p><pre><code class="language-python">def knapsack(capacity, weights):
+
+    def helper(idx, total):
+        print(idx, total)
+        if idx == len(weights):
+            if total &lt;= capacity:
+                return total
+            else:
+                return 0
+        else:
+            return max(
+                helper(idx + 1, total),
+                helper(idx + 1, total + weights[idx])
+            )
+
+    return helper(0, 0)
+
+
+print(knapsack(28, [17, 9, 7, 3]))</code></pre><pre><code class="language-auto">99 16
+100 16
+100 18
+98 16
+99 16
+100 16
+100 18
+</code></pre><p> That is, our method computes the same thing many times!</p><p>The standard way to avoid this is <em>memoization</em>. Its idea is simple and natural: if we already computed something, let’s save the result somewhere so we don’t have to recompute it next time. This is a purely <em>technical point</em>, and there is an out-of-the-box solution for it: the <em>cache</em> decorator saves the results of recursive calls that have already been made.</p><pre><code class="language-python">from functools import cache
+
+
+def knapsack(capacity, weights):
+    @cache
+    def helper(idx, total):
+        if idx == len(weights):
+            return total if total &lt;= capacity else 0
+        else:
+            return max(helper(idx + 1, total), helper(idx + 1, total + weights[idx]))
+
+    return helper(idx=0, total=0)
+
+
+print(knapsack(capacity=28, weights=[17, 9, 7, 3]))
+print(knapsack(capacity=300, weights=[2] * 100))</code></pre><pre><code class="language-auto">27
+200
+</code></pre>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-14-generation-of-combinatorial-objects/unit/chapter-14-generation-of-combinatorial-objects-unit-7-application-dynamic-programming-optional/lesson/generation-of-combinatorial-objects--application-dynamic-programming-optional--step-1/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-14-generation-of-combinatorial-objects/unit/chapter-14-generation-of-combinatorial-objects-unit-7-application-dynamic-programming-optional/lesson/generation-of-combinatorial-objects--application-dynamic-programming-optional--step-3/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

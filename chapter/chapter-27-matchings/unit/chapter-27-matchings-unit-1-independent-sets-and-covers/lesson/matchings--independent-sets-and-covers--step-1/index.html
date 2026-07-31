@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="Let us introduce several new numerical characteristics of an undirected graph \(G(V,E)\) . \(\alpha(G)\) is the maximum size of a vertex-independent set (or…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Matchings › Independent Sets and Covers › Lesson 1 | Discrete Mathematics" />
+    <meta property="og:description" content="Let us introduce several new numerical characteristics of an undirected graph \(G(V,E)\) . \(\alpha(G)\) is the maximum size of a vertex-independent set (or…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-27-matchings/unit/chapter-27-matchings-unit-1-independent-sets-and-covers/lesson/matchings--independent-sets-and-covers--step-1/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-27-matchings/unit/chapter-27-matchings-unit-1-independent-sets-and-covers/lesson/matchings--independent-sets-and-covers--step-1/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Matchings › Independent Sets and Covers › Lesson 1 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Matchings / Independent Sets and Covers</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Matchings · Independent Sets and Covers</p>
+        <h1>Lesson 1</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p>Let us introduce several new numerical characteristics of an undirected graph <span class="math-tex">\(G(V,E)\)</span>. </p><ol><li> <span class="math-tex">\(\alpha(G)\)</span> is the maximum size of a <em>vertex-independent set</em> (or simply independent set), i.e., a set of vertices where no two are connected by an edge:  <span class="math-tex">\[\alpha(G)=\max\{|I| \colon I \subseteq V,&nbsp;(\forall u \neq v \in I \colon \{u,v\} \not \in E)\} \  .\]</span>   And&nbsp;<span class="math-tex">\(\omega(G)\)</span> is the size of the maximum clique. It is easy to see that <span class="math-tex">\(\alpha(G)=\omega(\overline{G})\)</span>, where <span class="math-tex">\(\overline{G}\)</span> is the complement of&nbsp;<span class="math-tex">\(G\)</span>.</li><li> <span class="math-tex">\(\alpha'(G)\)</span> is the maximum size of an <em>edge-independent set</em>, also called a <em>matching</em>, i.e., a set of edges where no two share a common endpoint:  <span class="math-tex">\[\alpha'(G)=\max\{|I'| \colon I' \subseteq E,&nbsp;(\forall \{u,v\}\neq \{w,t\} \in I' \colon \{u,v\} \cap \{w,t\}=\varnothing)\} \  .\]</span>  </li><li> <span class="math-tex">\(\beta(G)\)</span> is the minimum size of a <em>vertex cover</em>, i.e., a set of vertices that &ldquo;touches&rdquo; every edge:  <span class="math-tex">\[\beta(G)=\min\{|C| \colon C \subseteq V,&nbsp;(\forall \{u,v\} \in E \colon \{u,v\} \cap C \neq \varnothing)\} \  .\]</span>  </li><li> <span class="math-tex">\(\beta'(G)\)</span> is the minimum size of an <em>edge cover</em>, i.e., a set of edges that &ldquo;touches&rdquo; every vertex (if the graph has isolated vertices, we consider <span class="math-tex">\(\beta'\)</span> undefined or equal to infinity):  <span class="math-tex">\[\beta'(G)=\min\{|C'| \colon C' \subseteq E,&nbsp;(\forall v \in V \colon (\exists \{u,w\} \in C' \colon v \in \{u,w\}))\} \  .\]</span>  </li></ol><p>The following table summarizes the notions of&nbsp;independent sets and covers just introduced. </p><p style="text-align:center;"><img src="generated/assets/Matchings/Independent_Sets_and_Covers=0/image0.png" width="800" ></p>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-26-flows-and-connectivity/unit/chapter-26-flows-and-connectivity-unit-9-theory-problems/lesson/flows-and-connectivity--theory-problems--step-3/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-27-matchings/unit/chapter-27-matchings-unit-1-independent-sets-and-covers/lesson/matchings--independent-sets-and-covers--step-2/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

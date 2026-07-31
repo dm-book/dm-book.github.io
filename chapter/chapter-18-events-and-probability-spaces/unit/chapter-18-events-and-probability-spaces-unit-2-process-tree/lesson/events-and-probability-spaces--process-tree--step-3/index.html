@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="How to implement a method that takes a sequence as input and shuffles it randomly so that the resulting distribution is uniform? We can enumerate all…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Events and Probability Spaces › Process Tree › Lesson 3 | Discrete Mathematics" />
+    <meta property="og:description" content="How to implement a method that takes a sequence as input and shuffles it randomly so that the resulting distribution is uniform? We can enumerate all…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-18-events-and-probability-spaces/unit/chapter-18-events-and-probability-spaces-unit-2-process-tree/lesson/events-and-probability-spaces--process-tree--step-3/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-18-events-and-probability-spaces/unit/chapter-18-events-and-probability-spaces-unit-2-process-tree/lesson/events-and-probability-spaces--process-tree--step-3/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Events and Probability Spaces › Process Tree › Lesson 3 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Events and Probability Spaces / Process Tree</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Events and Probability Spaces · Process Tree</p>
+        <h1>Lesson 3</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p>How to implement a method that takes a sequence as input and shuffles it randomly so that the resulting distribution is uniform?</p><p>We can enumerate all permutations of a set (e.g., <span class="math-tex">\([n]\)</span>) by&nbsp;traversing such a&nbsp;tree. </p><p style="text-align:center;"><img src="generated/assets/Events_and_Probability_Spaces/Process_Tree=2/image0.png" width="800" ></p><p>This tree suggests a&nbsp;general method: the first position may (with equal probability) contain any element, the second position may contain any of the remaining elements, and so on. The Fisher&ndash;Yates shuffle (also known as&nbsp;Knuth shuffle) algorithm implements exactly this idea (and additionally ensures that shuffling is done in-place within the given sequence): on the <span class="math-tex">\(i\)</span>-th iteration, we swap the <span class="math-tex">\(i\)</span>-th element with a randomly chosen element that is not to its left. Below is an implementation of this algorithm, which traverses the array from right to left. The <span class="math- tex">\(\texttt{random.shuffle()}\)</span> method is implemented in the same way.</p><pre><code class="language-python">from random import random, seed
+
+
+def shuffle(lst):
+    for i in reversed(range(1, len(lst))):
+        j = int(random() * (i + 1))
+        lst[i], lst[j] = lst[j], lst[i]
+
+
+seed(17)
+lst = list(range(10))
+shuffle(lst)
+print(lst)</code></pre><pre><code class="language-auto">[1, 9, 0, 6, 3, 4, 2, 8, 7, 5]
+</code></pre>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-18-events-and-probability-spaces/unit/chapter-18-events-and-probability-spaces-unit-2-process-tree/lesson/events-and-probability-spaces--process-tree--step-2/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-18-events-and-probability-spaces/unit/chapter-18-events-and-probability-spaces-unit-2-process-tree/lesson/events-and-probability-spaces--process-tree--step-4/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

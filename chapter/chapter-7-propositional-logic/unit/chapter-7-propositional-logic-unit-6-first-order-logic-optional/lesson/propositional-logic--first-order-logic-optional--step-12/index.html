@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="First-order expressions can be encoded as strings in an appropriate alphabet. Let us fix a vocabulary \(\Sigma = \langle \Phi, \Pi, r \rangle\) . A possible…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Propositional Logic › First-Order Logic (Optional) › Lesson 12 | Discrete Mathematics" />
+    <meta property="og:description" content="First-order expressions can be encoded as strings in an appropriate alphabet. Let us fix a vocabulary \(\Sigma = \langle \Phi, \Pi, r \rangle\) . A possible…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-7-propositional-logic/unit/chapter-7-propositional-logic-unit-6-first-order-logic-optional/lesson/propositional-logic--first-order-logic-optional--step-12/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-7-propositional-logic/unit/chapter-7-propositional-logic-unit-6-first-order-logic-optional/lesson/propositional-logic--first-order-logic-optional--step-12/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Propositional Logic › First-Order Logic (Optional) › Lesson 12 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Propositional Logic / First-Order Logic (Optional)</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Propositional Logic · First-Order Logic (Optional)</p>
+        <h1>Lesson 12</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p>First-order expressions can be encoded as strings in an appropriate alphabet. Let us fix a&nbsp;vocabulary&nbsp;<span class="math-tex">\(\Sigma = \langle \Phi, \Pi, r \rangle\)</span>. A&nbsp;possible encoding would use the symbols&nbsp;<span class="math-tex">\(F\)</span>, <span class="math-tex">\(R\)</span>, <span class="math-tex">\(\ast\)</span>, <span class="math-tex">\(0\)</span>, and&nbsp;<span class="math-tex">\(1\)</span> (for expressing functions, relations, and variables, all with binary indices), along with the logical symbols&nbsp;<span class="math-tex">\(\land\)</span>, <span class="math-tex">\(\lor\)</span>, <span class="math-tex">\(\neg\)</span>, <span class="math-tex">\(\exists\)</span>, and&nbsp;<span class="math-tex">\(\forall\)</span>, and parentheses. The same alphabet can, of course, encode proofs (which after all are just sequences of expressions).</p><p>There is an algorithm for checking whether a&nbsp;string is a&nbsp;proof: Examine all expressions one by one, and determine for each whether it belongs to one of the groups of our axioms for first-order logic. This is not trivial, but not very hard. Then, for each expression that is not an axiom, test whether it follows from two of the previous expressions. There are some important computational questions one may ask here: Given an (encoding of an) expression&nbsp;<span class="math-tex">\(\phi\)</span>, is it the case that&nbsp;<span class="math-tex">\(\vdash \phi\)</span>, that is,&nbsp;<span class="math-tex">\(\phi\)</span> is a&nbsp;first-order theorem? We call this problem <span style="font-style: oblique;">Theoremhood</span>.</p><p><strong>Lemma. </strong><em><span style="font-style: oblique;">Theoremhood</span> is recursively enumerable. That is, there is an algorithm which, given an expression&nbsp;<span class="math-tex">\(\phi\)</span>, finds a proof if&nbsp;<span class="math-tex">\(\phi\)</span> is a first-order theorem. If&nbsp;<span class="math-tex">\(\phi\)</span> is not a first-order theorem, then the algorithm runs forever.</em></p><p><em>Proof. </em>The algorithm tries all possible proofs, in lexicographic order, and reports the proof if one of them is indeed a&nbsp;proof of the given expression.<span class="proof-end" aria-label="End of proof">◼</span></p><p>Another problem asks: Given&nbsp;<span class="math-tex">\(\phi\)</span>, is it valid? We call this problem <span style="font-style: oblique;">Validity</span>. The definition of this problem is computationally fearsome: It appears to require that all possible models of a&nbsp;sentence (of which there are uncountably many!) must be checked. At this point, we have no clue on whether <span style="font-style: oblique;">Validity</span> is recursively enumerable. We shall show in the next section that it is, by establishing a&nbsp;surprising fact: <span style="font-style: oblique;">Validity</span> coincides with <span style="font-style: oblique;">Theoremhood</span>; that is,&nbsp;<span class="math-tex">\(\models \phi\)</span> if and only if&nbsp;<span class="math-tex">\(\vdash \phi\)</span>. In other words, our tedious and clumsy proof system turns out as powerful as it can be! This would be more than enough for our project of systematizing our search for mathematical truth, if <em>validity in first-order logic were a&nbsp;satisfactory notion of mathematical truth</em>.</p><p>But, of course, it is not. As mathematicians, we are really interested in discovering the properties of the universes spoken about in the various vocabularies: the whole numbers and their operations, the real numbers, the graphs. First-order logic is just a&nbsp;notation that allows us to study reasoning about all these interesting universes in a&nbsp;unified way. At&nbsp;any point we want to know whether a&nbsp;sentence is satisfied not by <em>all models</em> (this would be validity), but by <em>our favorite model</em>, whatever this may be at the time.</p><p>How can we bridge the gap between what we can do (systematize validity) and what we need (systematize truth in our favorite model)? A&nbsp;very natural way is the <em>axiomatic method</em>. To illustrate the method in an unreasonably favorable case, suppose that we are interested in all sentences that are satisfied by a&nbsp;particular model&nbsp;<span class="math-tex">\(M_{0}\)</span>. Let us assume that we have discovered an expression&nbsp;<span class="math-tex">\(\phi_{0}\)</span> such that&nbsp;<span class="math-tex">\(M_{0} \models \phi_{0}\)</span>, and, furthermore, the following is true:&nbsp;<span class="math-tex">\(M_{0} \models \phi\)</span> if and only if&nbsp;<span class="math-tex">\(\models \phi_{0} \Rightarrow \phi\)</span>. Hence, in this case we could use validity in order to study truth in our &ldquo;favorite model,&rdquo;&nbsp;<span class="math-tex">\(M_{0}\)</span>.</p>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-7-propositional-logic/unit/chapter-7-propositional-logic-unit-6-first-order-logic-optional/lesson/propositional-logic--first-order-logic-optional--step-11/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-7-propositional-logic/unit/chapter-7-propositional-logic-unit-6-first-order-logic-optional/lesson/propositional-logic--first-order-logic-optional--step-13/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

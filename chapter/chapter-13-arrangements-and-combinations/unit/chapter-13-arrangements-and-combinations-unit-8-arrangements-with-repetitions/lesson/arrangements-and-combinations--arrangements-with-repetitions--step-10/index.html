@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="Let&#39;s prove this formula for words. We need to count the number of words in which exactly \(n_{i}\) positions contain the digit \(i\) . Take any such string…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Arrangements and Combinations › Arrangements with Repetitions › Lesson 10 | Discrete Mathematics" />
+    <meta property="og:description" content="Let&#39;s prove this formula for words. We need to count the number of words in which exactly \(n_{i}\) positions contain the digit \(i\) . Take any such string…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-13-arrangements-and-combinations/unit/chapter-13-arrangements-and-combinations-unit-8-arrangements-with-repetitions/lesson/arrangements-and-combinations--arrangements-with-repetitions--step-10/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-13-arrangements-and-combinations/unit/chapter-13-arrangements-and-combinations-unit-8-arrangements-with-repetitions/lesson/arrangements-and-combinations--arrangements-with-repetitions--step-10/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Arrangements and Combinations › Arrangements with Repetitions › Lesson 10 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Arrangements and Combinations / Arrangements with Repetitions</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Arrangements and Combinations · Arrangements with Repetitions</p>
+        <h1>Lesson 10</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p>Let's prove this formula for words. We need to count the number of words in which exactly <span class="math-tex">\(n_{i}\)</span> positions contain the digit&nbsp;<span class="math-tex">\(i\)</span>. Take any such string and write out all <span class="math-tex">\(n!\)</span> permutations of its characters. Among all the resulting words, the required number of characters will be present, but due to repeated characters, each word will appear multiple times. For example, all permutations of the word <span class="math-tex">\(\texttt{121}\)</span> look like this: <span class="math-tex">\[\texttt{ 1\(_{1}\)2\(_{2}\)1\(_{3}\) 1\(_{1}\)1\(_{3}\)2\(_{2}\) 2\(_{2}\)1\(_{1}\)1\(_{3}\) 2\(_{2}\)1\(_{3}\)1\(_{1}\) 1\(_{3}\)2\(_{2}\)1\(_{1}\) 1\(_{3}\)1\(_{1}\)2\(_{2}\) }\]</span> Here, we assign indices to each letter in the original word to distinguish them. If we now forget these indices, all permutations will look like this: <span class="math-tex">\[\texttt{ 121 112 211 211 121 112 }\]</span> It is clear that each word appears multiple times. This will also be true in the general case. How many times does a specific word appear among all <span class="math-tex">\(n!\)</span> permutations? It turns out to be exactly <span class="math-tex">\(n_{1}!n_{2}!\dotsb n_{t}!\)</span> times. Indeed, the symbol&nbsp;1 can be rearranged in <span class="math-tex">\(n_{1}!\)</span> ways, symbol&nbsp;2&nbsp;&mdash; in <span class="math-tex">\(n_{2}!\)</span> ways, and so on.</p>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-13-arrangements-and-combinations/unit/chapter-13-arrangements-and-combinations-unit-8-arrangements-with-repetitions/lesson/arrangements-and-combinations--arrangements-with-repetitions--step-9/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-13-arrangements-and-combinations/unit/chapter-13-arrangements-and-combinations-unit-8-arrangements-with-repetitions/lesson/arrangements-and-combinations--arrangements-with-repetitions--step-11/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

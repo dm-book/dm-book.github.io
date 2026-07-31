@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="Using latches, one can construct a circuit whose state evolves over time. However, a difficulty arises: since data changes are not synchronized throughout…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Boolean Circuits › NAND Game: Memory (Optional) › Lesson 4 | Discrete Mathematics" />
+    <meta property="og:description" content="Using latches, one can construct a circuit whose state evolves over time. However, a difficulty arises: since data changes are not synchronized throughout…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-9-boolean-circuits/unit/chapter-9-boolean-circuits-unit-8-nand-game-memory-optional/lesson/boolean-circuits--nand-game-memory-optional--step-4/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-9-boolean-circuits/unit/chapter-9-boolean-circuits-unit-8-nand-game-memory-optional/lesson/boolean-circuits--nand-game-memory-optional--step-4/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Boolean Circuits › NAND Game: Memory (Optional) › Lesson 4 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Boolean Circuits / NAND Game: Memory (Optional)</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Boolean Circuits · NAND Game: Memory (Optional)</p>
+        <h1>Lesson 4</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p>Using latches, one can construct a&nbsp;circuit whose state evolves over time. However, a&nbsp;difficulty arises: since data changes are not synchronized throughout the circuit, changes propagate in&nbsp;an unpredictable manner, giving rise to&nbsp;race conditions and, more generally, to&nbsp;indeterminate behavior. The standard remedy is&nbsp;the introduction of&nbsp;a&nbsp;clock signal, that is, a&nbsp;one-bit signal that changes periodically and is connected to all stateful components. If components are permitted to modify their outputs only in&nbsp;response to changes in&nbsp;the clock signal, then state transitions occur simultaneously across the circuit, thereby eliminating synchronization issues. In&nbsp;this task, you are required to construct a&nbsp;flip-flop component that stores a&nbsp;bit while the clock signal is equal to&nbsp;<span class="math-tex">\(1\)</span>, but begins emitting the stored bit only when the clock signal transitions to&nbsp;<span class="math-tex">\(0\)</span>.</p><p><strong>Problem. </strong> Synthesize a&nbsp;circuit of&nbsp;size&nbsp;<span class="math-tex">\(4\)</span> over <span class="math-tex">\(\{\operatorname{DLATCH}, \operatorname{NAND}_{2}, \operatorname{INV}_{1}, \operatorname{AND}_{2}, \operatorname{OR}_{2}, \operatorname{XOR}_{2}, \operatorname{SELECT}_{1}\}\)</span> computing a&nbsp;data flip-flop: <span class="math-tex">\[\operatorname{DFF}(st,d,cl)=q.\]</span> Initially, the clock is&nbsp;set to&nbsp;zero. On&nbsp;a&nbsp;rising clock edge, store <span class="math- tex">\(\texttt{d}\)</span> if <span class="math- tex">\(\texttt{st}\)</span>=1; publish the stored value on&nbsp;the following falling edge; otherwise retain the previous value. Assume <span class="math- tex">\(\texttt{st}\)</span> and&nbsp;<span class="math- tex">\(\texttt{d}\)</span> do not change while <span class="math- tex">\(\texttt{cl}\)</span>=1. The output is&nbsp;undefined before the first completed store-and-clock cycle.</p>
+          <div class="task-card"><div class="task-heading">String task, Advanced problem</div><a class="cogniterra-only-notice" href="https://cogniterra.org/a/697" target="_blank" rel="noreferrer">This problem can only be submitted at Cogniterra.</a></div>
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-9-boolean-circuits/unit/chapter-9-boolean-circuits-unit-8-nand-game-memory-optional/lesson/boolean-circuits--nand-game-memory-optional--step-3/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-9-boolean-circuits/unit/chapter-9-boolean-circuits-unit-8-nand-game-memory-optional/lesson/boolean-circuits--nand-game-memory-optional--step-5/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

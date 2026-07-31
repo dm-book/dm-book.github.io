@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="There are many programs that will not halt after being executed: while True: pass from itertools import count for n in count(): a = 2 * n n = 3 while n &lt; 7:…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Set Theory › Application: Undecidability of Halting › Lesson 6 | Discrete Mathematics" />
+    <meta property="og:description" content="There are many programs that will not halt after being executed: while True: pass from itertools import count for n in count(): a = 2 * n n = 3 while n &lt; 7:…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-10-set-theory/unit/chapter-10-set-theory-unit-7-application-undecidability-of-halting/lesson/set-theory--application-undecidability-of-halting--step-6/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-10-set-theory/unit/chapter-10-set-theory-unit-7-application-undecidability-of-halting/lesson/set-theory--application-undecidability-of-halting--step-6/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Set Theory › Application: Undecidability of Halting › Lesson 6 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Set Theory / Application: Undecidability of Halting</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Set Theory · Application: Undecidability of Halting</p>
+        <h1>Lesson 6</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p>There are many programs that will not halt after being executed: </p><pre><code class="language-python">while True:
+    pass</code></pre><pre><code class="language-python">from itertools import count
+
+for n in count():
+    a = 2 * n</code></pre><pre><code class="language-python">n = 3
+while n &lt; 7:
+    if n &gt; 5:
+        n = 0
+    n += 1</code></pre><pre><code class="language-python">def binary_search(xs, key):
+    lower, upper = 0, len(xs) - 1
+    while lower &lt; upper:
+        middle = (lower + upper) // 2
+        if xs[middle] == key:
+            return middle
+        elif xs[middle] &lt; key:
+            lower = middle
+        else:
+            upper = middle - 1
+
+    return -1
+
+
+print(binary_search([-4, -2, 1, 7, 12, 29], 17))</code></pre><p>For the first three programs, it is immediately clear that they will loop indefinitely. However, finding and fixing the bug in the last program will take some time.</p>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-10-set-theory/unit/chapter-10-set-theory-unit-7-application-undecidability-of-halting/lesson/set-theory--application-undecidability-of-halting--step-5/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-10-set-theory/unit/chapter-10-set-theory-unit-7-application-undecidability-of-halting/lesson/set-theory--application-undecidability-of-halting--step-7/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="Theorem (Hamming bound). For an \((n,k,d)\) -code, \[2^{k}\cdot \operatorname{Vol}\left(\left\lfloor \frac{d-1}{2}\right\rfloor\right) \le 2^{n} \ .\]…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Proofs of Existence and Optimality › Application: Error Correcting Codes (Optional) › Hamming and Gilbert Bounds | Discrete Mathematics" />
+    <meta property="og:description" content="Theorem (Hamming bound). For an \((n,k,d)\) -code, \[2^{k}\cdot \operatorname{Vol}\left(\left\lfloor \frac{d-1}{2}\right\rfloor\right) \le 2^{n} \ .\]…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-2-proofs-of-existence-and-optimality/unit/chapter-2-proofs-of-existence-and-optimality-unit-7-application-error-correcting-codes-optional/lesson/proofs-of-existence-and-optimality--application-error-correcting-codes-optional--step-5/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-2-proofs-of-existence-and-optimality/unit/chapter-2-proofs-of-existence-and-optimality-unit-7-application-error-correcting-codes-optional/lesson/proofs-of-existence-and-optimality--application-error-correcting-codes-optional--step-5/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Proofs of Existence and Optimality › Application: Error Correcting Codes (Optional) › Hamming and Gilbert Bounds | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Proofs of Existence and Optimality / Application: Error Correcting Codes (Optional)</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Proofs of Existence and Optimality · Application: Error Correcting Codes (Optional)</p>
+        <h1>Hamming and Gilbert Bounds</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p><strong>Theorem (Hamming bound). </strong><em>For an&nbsp;<span class="math-tex">\((n,k,d)\)</span>-code, <span class="math-tex">\[2^{k}\cdot \operatorname{Vol}\left(\left\lfloor \frac{d-1}{2}\right\rfloor\right) \le 2^{n} \  .\]</span></em></p><p> <em>Proof. </em>Indeed, <span class="math-tex">\(2^{k}\)</span> disjoint balls of radius <span class="math-tex">\(\lfloor \frac{d-1}{2}\rfloor\)</span> would otherwise not fit into <span class="math-tex">\(\{0,1\}^{n}\)</span>.<span class="proof-end" aria-label="End of proof">◼</span></p><p>From the Hamming bound one can formally derive what we discussed informally above: to be able to correct one error, the message must be lengthened by at least <span class="math-tex">\(\log_{2}n\)</span> bits. Indeed, <span class="math-tex">\(\operatorname{Vol}(1)=n+1\)</span> (the ball contains its center and <span class="math-tex">\(n\)</span>&nbsp;words obtained by flipping one coordinate). Therefore <span class="math-tex">\(2^{k} \cdot (n+1) \le 2^{n}\)</span>. Taking logarithms gives <span class="math-tex">\(k \le n - \log_{2}(n+1)\)</span>. Soon we will see how to achieve equality in this bound. For now we give a&nbsp;bound from the other side.</p><p><strong>Theorem (Gilbert bound). </strong><em>If <span class="math-tex">\[(2^{k}-1)\cdot \operatorname{Vol}\left(d-1\right) &lt; 2^{n}\  ,\]</span> then there exists an&nbsp;<span class="math-tex">\((n,k,d)\)</span>-code.</em></p><p> <em>Proof. </em>We&nbsp;add words to the code arbitrarily, ensuring that any two words have distance at least&nbsp;<span class="math-tex">\(d\)</span>. If at some step we cannot add a word, then the whole space is covered by balls of radius <span class="math-tex">\(d-1\)</span>. The inequality above guarantees that we make at least <span class="math-tex">\(2^{k}\)</span> steps, i.e., construct the code.<span class="proof-end" aria-label="End of proof">◼</span></p>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-2-proofs-of-existence-and-optimality/unit/chapter-2-proofs-of-existence-and-optimality-unit-7-application-error-correcting-codes-optional/lesson/proofs-of-existence-and-optimality--application-error-correcting-codes-optional--step-4/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-2-proofs-of-existence-and-optimality/unit/chapter-2-proofs-of-existence-and-optimality-unit-7-application-error-correcting-codes-optional/lesson/proofs-of-existence-and-optimality--application-error-correcting-codes-optional--step-6/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

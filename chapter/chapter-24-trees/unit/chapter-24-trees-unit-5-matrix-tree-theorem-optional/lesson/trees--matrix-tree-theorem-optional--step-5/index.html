@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="It turns out there is also an analytical formula for \(\tau(G)\) . For it, we will need the Kirchhoff matrix (also known as the Laplacian matrix or…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Trees › Matrix Tree Theorem (Optional) › Lesson 5 | Discrete Mathematics" />
+    <meta property="og:description" content="It turns out there is also an analytical formula for \(\tau(G)\) . For it, we will need the Kirchhoff matrix (also known as the Laplacian matrix or…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-24-trees/unit/chapter-24-trees-unit-5-matrix-tree-theorem-optional/lesson/trees--matrix-tree-theorem-optional--step-5/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-24-trees/unit/chapter-24-trees-unit-5-matrix-tree-theorem-optional/lesson/trees--matrix-tree-theorem-optional--step-5/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Trees › Matrix Tree Theorem (Optional) › Lesson 5 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Trees / Matrix Tree Theorem (Optional)</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Trees · Matrix Tree Theorem (Optional)</p>
+        <h1>Lesson 5</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p>It turns out there is also an analytical formula for <span class="math-tex">\(\tau(G)\)</span>. For it, we will need the <em>Kirchhoff matrix</em> (also known as the <em>Laplacian matrix</em> or <em>Laplacian</em>) of the graph&nbsp;<span class="math-tex">\(G\)</span>. This is the matrix <span class="math-tex">\(L \in \mathbb{Z}^{n \times n}\)</span>, where the cell <span class="math-tex">\([i,i]\)</span> (for all <span class="math-tex">\(i \in [n]\)</span>) contains the degree of vertex&nbsp;<span class="math-tex">\(i\)</span>, the cell <span class="math-tex">\([i,j]\)</span> contains <span class="math-tex">\(-1\)</span> if <span class="math-tex">\(\{i,j\} \in E\)</span>, and zero otherwise. Slightly differently: <span class="math-tex">\(L=D-A\)</span>, where <span class="math-tex">\(D\)</span>&nbsp;is the matrix with vertex degrees on the diagonal, and <span class="math-tex">\(A\)</span>&nbsp;is the adjacency matrix of the graph.</p><p style="text-align:center;"><img src="generated/assets/Trees/Matrix_Tree_Theorem_(Optional)=4/image0.png" width="800" ></p><p>Let <span class="math-tex">\(G'\)</span>&nbsp;be an&nbsp;arbitrary orientation of the graph&nbsp;<span class="math-tex">\(G\)</span> (each undirected edge <span class="math-tex">\(\{i,j\}\)</span> is replaced with a directed edge <span class="math-tex">\((i,j)\)</span>), and <span class="math-tex">\(I\)</span>&nbsp;be its <em>incidence matrix</em>: <span class="math-tex">\(I \in \{-1,0,1\}^{n \times m}\)</span>, where in the <span class="math-tex">\(k\)</span>-th column, there is <span class="math-tex">\(1\)</span> in the row corresponding to the start of the <span class="math-tex">\(k\)</span>-th edge, and&nbsp;<span class="math-tex">\(-1\)</span> in the row corresponding to the end of that edge.</p><p style="text-align:center;"><img src="generated/assets/Trees/Matrix_Tree_Theorem_(Optional)=4/image1.png" width="800" ></p><p>It is easy to see that <span class="math-tex">\(L=II^{T}\)</span>. Indeed, <span class="math-tex">\((II^{T})[i,j]\)</span> equals the product of the <span class="math-tex">\(i\)</span>-th and <span class="math-tex">\(j\)</span>-th rows of&nbsp;<span class="math-tex">\(I\)</span>. If <span class="math-tex">\(i=j\)</span>, then in such a product, each edge adjacent to vertex <span class="math-tex">\(i\)</span> contributes one to the total sum. If <span class="math-tex">\(i \neq j\)</span>, then the result is <span class="math-tex">\(-1\)</span> if <span class="math-tex">\(\{i,j\} \in E\)</span>, and zero otherwise.</p>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-24-trees/unit/chapter-24-trees-unit-5-matrix-tree-theorem-optional/lesson/trees--matrix-tree-theorem-optional--step-4/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-24-trees/unit/chapter-24-trees-unit-5-matrix-tree-theorem-optional/lesson/trees--matrix-tree-theorem-optional--step-6/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

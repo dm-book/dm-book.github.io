@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="A \(3\) -cycle is a permutation in which all objects except three remain fixed, while those three are permuted cyclically. It is easy to see that a \(3\)…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Project: 15 Puzzle, A*, and Coordinated Motion Planning › Solving Any Configuration › Lesson 3 | Discrete Mathematics" />
+    <meta property="og:description" content="A \(3\) -cycle is a permutation in which all objects except three remain fixed, while those three are permuted cyclically. It is easy to see that a \(3\)…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-6-project-15-puzzle-a-and-coordinated-motion-planning/unit/chapter-6-project-15-puzzle-a-and-coordinated-motion-planning-unit-3-solving-any-configuration/lesson/project-15-puzzle-a-and-coordinated-motion-planning--solving-any-configuration--step-3/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-6-project-15-puzzle-a-and-coordinated-motion-planning/unit/chapter-6-project-15-puzzle-a-and-coordinated-motion-planning-unit-3-solving-any-configuration/lesson/project-15-puzzle-a-and-coordinated-motion-planning--solving-any-configuration--step-3/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Project: 15 Puzzle, A*, and Coordinated Motion Planning › Solving Any Configuration › Lesson 3 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Project: 15 Puzzle, A*, and Coordinated Motion Planning / Solving Any Configuration</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Project: 15 Puzzle, A*, and Coordinated Motion Planning · Solving Any Configuration</p>
+        <h1>Lesson 3</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p>A&nbsp;<em><span class="math-tex">\(3\)</span>-cycle</em> is&nbsp;a&nbsp;permutation in&nbsp;which all objects except three remain fixed, while those three are permuted cyclically. </p><p style="text-align:center;"><img src="generated/assets/Project$_15_Puzzle,_A*,_and_Coordinated_Motion_Planning/Solving_Any_Configuration=2/image0.png" width="800" ></p><p> It&nbsp;is easy to&nbsp;see that a&nbsp;<span class="math-tex">\(3\)</span>-cycle can be&nbsp;obtained as&nbsp;the composition of&nbsp;two transpositions, and therefore is&nbsp;an&nbsp;even permutation.</p><p>If&nbsp;we&nbsp;apply several <span class="math-tex">\(3\)</span>-cycles in&nbsp;sequence, then each of&nbsp;them can be&nbsp;replaced by&nbsp;two transpositions, so&nbsp;the resulting permutation is&nbsp;even. The following theorem shows that <em>every even permutation can be&nbsp;obtained in&nbsp;this way</em>.</p><p><strong>Theorem. </strong><em>Every even permutation of&nbsp;<span class="math-tex">\(n\)</span> objects can be&nbsp;represented as&nbsp;a&nbsp;sequence of&nbsp;<span class="math-tex">\(3\)</span>-cycles.</em></p><p>Note that this theorem is&nbsp;vacuously true for&nbsp;<span class="math-tex">\(n=1\)</span> and&nbsp;<span class="math-tex">\(n=2\)</span>: in&nbsp;these cases, the identity permutation is&nbsp;the only even permutation, and it&nbsp;is obtained by&nbsp;an&nbsp;empty sequence of&nbsp;<span class="math-tex">\(3\)</span>-cycles. Although <span class="math-tex">\(3\)</span>-cycles do&nbsp;not exist when&nbsp;<span class="math-tex">\(n=1\)</span> or&nbsp;<span class="math-tex">\(n=2\)</span>, this does not prevent us from considering an&nbsp;<em>empty</em> sequence of&nbsp;<span class="math-tex">\(3\)</span>-cycles.</p><p><em>Proof. </em>Earlier, we&nbsp;proved that every permutation can be&nbsp;decomposed into transpositions by&nbsp;filling the positions one by&nbsp;one with the required objects. A&nbsp;similar argument works for&nbsp;<span class="math-tex">\(3\)</span>-cycles instead of&nbsp;transpositions, provided that at&nbsp;least three objects remain available: we&nbsp;need a&nbsp;third spare object to&nbsp;form a&nbsp;cycle.</p><p>Thus, compared with the previous argument for&nbsp;transpositions, we&nbsp;need one spare object, and so&nbsp;we&nbsp;must stop when only two positions remain unfilled. There are then two possibilities. In&nbsp;the good case, the two remaining objects are already in&nbsp;their correct positions. In&nbsp;the bad case, they are not, and one additional transposition is&nbsp;needed to&nbsp;obtain the required permutation. But then the permutation would be&nbsp;the composition of&nbsp;several <span class="math-tex">\(3\)</span>-cycles and one transposition, and hence would be&nbsp;odd, contrary to&nbsp;the assumption that it&nbsp;is even.<span class="proof-end" aria-label="End of proof">◼</span></p>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-6-project-15-puzzle-a-and-coordinated-motion-planning/unit/chapter-6-project-15-puzzle-a-and-coordinated-motion-planning-unit-3-solving-any-configuration/lesson/project-15-puzzle-a-and-coordinated-motion-planning--solving-any-configuration--step-2/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-6-project-15-puzzle-a-and-coordinated-motion-planning/unit/chapter-6-project-15-puzzle-a-and-coordinated-motion-planning-unit-3-solving-any-configuration/lesson/project-15-puzzle-a-and-coordinated-motion-planning--solving-any-configuration--step-4/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

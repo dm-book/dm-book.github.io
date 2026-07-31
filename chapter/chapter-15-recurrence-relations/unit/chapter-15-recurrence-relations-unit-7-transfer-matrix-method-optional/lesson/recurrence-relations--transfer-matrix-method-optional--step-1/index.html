@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="Sometimes a single number is not enough to write a convenient recurrence relation. Instead of counting all objects at once, we divide them into a few states…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Recurrence Relations › Transfer-Matrix Method (Optional) › Lesson 1 | Discrete Mathematics" />
+    <meta property="og:description" content="Sometimes a single number is not enough to write a convenient recurrence relation. Instead of counting all objects at once, we divide them into a few states…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-15-recurrence-relations/unit/chapter-15-recurrence-relations-unit-7-transfer-matrix-method-optional/lesson/recurrence-relations--transfer-matrix-method-optional--step-1/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-15-recurrence-relations/unit/chapter-15-recurrence-relations-unit-7-transfer-matrix-method-optional/lesson/recurrence-relations--transfer-matrix-method-optional--step-1/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Recurrence Relations › Transfer-Matrix Method (Optional) › Lesson 1 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Recurrence Relations / Transfer-Matrix Method (Optional)</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Recurrence Relations · Transfer-Matrix Method (Optional)</p>
+        <h1>Lesson 1</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p>Sometimes a&nbsp;single number is not enough to write a&nbsp;convenient recurrence relation. Instead of counting all objects at once, we divide them into a&nbsp;few <em>states</em> and count how many objects are in each state. If the transition from one length to the next is always the same, this transition can be written as&nbsp;multiplication by a&nbsp;matrix. This idea is called the <em>transfer-matrix method</em>.</p><p>As an&nbsp;example, let us count binary strings of length <span class="math-tex">\(n\)</span> with no two consecutive ones. Let <span class="math-tex">\(a_{n}\)</span> be the number of such strings ending in <span class="math-tex">\(0\)</span>, and let <span class="math-tex">\(b_{n}\)</span> be the number of such strings ending in <span class="math-tex">\(1\)</span>. Then <span class="math-tex">\[a_{n+1}=a_{n}+b_{n},\qquad b_{n+1}=a_{n}.\]</span> Indeed, we may append <span class="math-tex">\(0\)</span> to any valid string, while we may append <span class="math-tex">\(1\)</span> only to a string that previously ended in <span class="math-tex">\(0\)</span>.</p><p>In matrix form this becomes <span class="math-tex">\[\begin{pmatrix}a_{n+1}&b_{n+1}\end{pmatrix} = \begin{pmatrix}a_n&b_n\end{pmatrix} \begin{pmatrix}1&1\\ 1&0\end{pmatrix}.\]</span> So, in some sense, the matrix stores the rules of the problem: from the first state we can go to both the first and the second, while from the second state we can go only to the first one.</p>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-15-recurrence-relations/unit/chapter-15-recurrence-relations-unit-6-linear-recurrence-relations/lesson/recurrence-relations--linear-recurrence-relations--step-8/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-15-recurrence-relations/unit/chapter-15-recurrence-relations-unit-7-transfer-matrix-method-optional/lesson/recurrence-relations--transfer-matrix-method-optional--step-2/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

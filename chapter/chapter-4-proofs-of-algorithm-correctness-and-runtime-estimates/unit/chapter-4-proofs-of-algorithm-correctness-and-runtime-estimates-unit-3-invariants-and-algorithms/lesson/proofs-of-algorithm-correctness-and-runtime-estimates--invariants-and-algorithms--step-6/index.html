@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="In this problem, we finally have a process, and this process is simple, so let&#39;s just model it. There is one bug in Anya&#39;s code. She fixes it and introduces…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Proofs of Algorithm Correctness and Runtime Estimates › Invariants and Algorithms › Lesson 6 | Discrete Mathematics" />
+    <meta property="og:description" content="In this problem, we finally have a process, and this process is simple, so let&#39;s just model it. There is one bug in Anya&#39;s code. She fixes it and introduces…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-4-proofs-of-algorithm-correctness-and-runtime-estimates/unit/chapter-4-proofs-of-algorithm-correctness-and-runtime-estimates-unit-3-invariants-and-algorithms/lesson/proofs-of-algorithm-correctness-and-runtime-estimates--invariants-and-algorithms--step-6/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-4-proofs-of-algorithm-correctness-and-runtime-estimates/unit/chapter-4-proofs-of-algorithm-correctness-and-runtime-estimates-unit-3-invariants-and-algorithms/lesson/proofs-of-algorithm-correctness-and-runtime-estimates--invariants-and-algorithms--step-6/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Proofs of Algorithm Correctness and Runtime Estimates › Invariants and Algorithms › Lesson 6 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Proofs of Algorithm Correctness and Runtime Estimates / Invariants and Algorithms</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Proofs of Algorithm Correctness and Runtime Estimates · Invariants and Algorithms</p>
+        <h1>Lesson 6</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p>In this problem, we finally have a process, and this process is simple, so let's just model it. </p><ol><li> There is one bug in Anya's code. She fixes it and introduces three new bugs.</li><li> There are three bugs in Anya's code. She fixes one of them, but introduces three new ones.</li><li> There are five bugs in Anya's code. She fixes one of them, but three new ones appear.</li><li> There are seven bugs in Anya's code <span class="math-tex">\(\dotsc\)</span></li></ol><p> It is easy to notice that with each step (i.e., with each new fixed bug) the number of bugs increases by two. Thus, throughout the process, the following equation remains true: <span class="math-tex">\[\#\text{current bugs}=1+2\cdot \#\text{fixed bugs}\  .\]</span> Therefore, the answer to our problem will be <span class="math-tex">\(1+2\cdot 15=31\)</span>.</p><p>Modeling the process in Python is also simple. </p><pre><code class="language-python">number_of_pending_bugs = 1
+
+for _ in range(15):
+    number_of_pending_bugs -= 1
+    number_of_pending_bugs += 3
+
+print(number_of_pending_bugs)</code></pre><pre><code class="language-auto">31
+</code></pre>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-4-proofs-of-algorithm-correctness-and-runtime-estimates/unit/chapter-4-proofs-of-algorithm-correctness-and-runtime-estimates-unit-3-invariants-and-algorithms/lesson/proofs-of-algorithm-correctness-and-runtime-estimates--invariants-and-algorithms--step-5/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-4-proofs-of-algorithm-correctness-and-runtime-estimates/unit/chapter-4-proofs-of-algorithm-correctness-and-runtime-estimates-unit-3-invariants-and-algorithms/lesson/proofs-of-algorithm-correctness-and-runtime-estimates--invariants-and-algorithms--step-7/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

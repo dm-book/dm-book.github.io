@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="Circuits are often synthesized from known blocks that are themselves circuits for some standard functions. For example, a circuit for…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Boolean Circuits › Synthesis of Boolean Circuits › Lesson 2 | Discrete Mathematics" />
+    <meta property="og:description" content="Circuits are often synthesized from known blocks that are themselves circuits for some standard functions. For example, a circuit for…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-9-boolean-circuits/unit/chapter-9-boolean-circuits-unit-2-synthesis-of-boolean-circuits/lesson/boolean-circuits--synthesis-of-boolean-circuits--step-2/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-9-boolean-circuits/unit/chapter-9-boolean-circuits-unit-2-synthesis-of-boolean-circuits/lesson/boolean-circuits--synthesis-of-boolean-circuits--step-2/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Boolean Circuits › Synthesis of Boolean Circuits › Lesson 2 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Boolean Circuits / Synthesis of Boolean Circuits</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Boolean Circuits · Synthesis of Boolean Circuits</p>
+        <h1>Lesson 2</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p>Circuits are often synthesized from known blocks that are themselves circuits for some standard functions. For example, a circuit for <span class="math-tex">\(\operatorname{SUM}_{5}\)</span> can be assembled from two FA blocks and one HA block. In the diagram below, wires coming out of the blocks are labeled with their weights: for example, the first block computes <span class="math-tex">\((a_{1}, a_{0})=\operatorname{FA}(x_{1}, x_{2}, x_{3})\)</span>, so <span class="math-tex">\(x_{1}+x_{2}+x_{3}=a_{0}+2a_{1}\)</span>; we assume that <span class="math-tex">\(a_{1}\)</span> and <span class="math-tex">\(a_{0}\)</span> have weights of 1&nbsp;and&nbsp;0.</p><p style="text-align:center;"><img src="generated/assets/Boolean_Circuits/Synthesis_of_Boolean_Circuits=1/image0.png" width="800" ></p><p>Of course, each of the blocks can be replaced with its representation as a circuit. The result is a circuit of size 12 that computes <span class="math-tex">\(\operatorname{SUM}_{5}\)</span>.</p><p style="text-align:center;"><img src="generated/assets/Boolean_Circuits/Synthesis_of_Boolean_Circuits=1/image1.png" width="800" ></p><p>Such a&nbsp;construction, with known inputs and outputs but concealed internal structure, is often referred to as a&nbsp;<em>black box</em>. If we assemble more complex circuits from such boxes and subsequently decide to&nbsp;modify the internal implementation of&nbsp;a&nbsp;box, our circuits will continue to&nbsp;operate in&nbsp;the same manner, provided that the functions computed by&nbsp;the boxes remain unchanged.</p>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-9-boolean-circuits/unit/chapter-9-boolean-circuits-unit-2-synthesis-of-boolean-circuits/lesson/boolean-circuits--synthesis-of-boolean-circuits--step-1/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-9-boolean-circuits/unit/chapter-9-boolean-circuits-unit-2-synthesis-of-boolean-circuits/lesson/boolean-circuits--synthesis-of-boolean-circuits--step-3/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

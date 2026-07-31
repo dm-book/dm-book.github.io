@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="Theorem (Wagner, Fáry). Any planar graph admits an embedding in which each edge is a straight-line segment. Proof. We will prove by induction on the number…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Planar Graphs › Special Layouts › Lesson 5 | Discrete Mathematics" />
+    <meta property="og:description" content="Theorem (Wagner, Fáry). Any planar graph admits an embedding in which each edge is a straight-line segment. Proof. We will prove by induction on the number…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-29-planar-graphs/unit/chapter-29-planar-graphs-unit-7-special-layouts/lesson/planar-graphs--special-layouts--step-5/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-29-planar-graphs/unit/chapter-29-planar-graphs-unit-7-special-layouts/lesson/planar-graphs--special-layouts--step-5/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Planar Graphs › Special Layouts › Lesson 5 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Planar Graphs / Special Layouts</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Planar Graphs · Special Layouts</p>
+        <h1>Lesson 5</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p><strong>Theorem (Wagner, Fáry). </strong><em>Any planar graph admits an embedding in which each edge is a straight-line segment.</em></p><p><em>Proof. </em>We will prove by induction on the number of vertices a stronger statement: any proper embedding of a graph can be continuously transformed into a proper embedding in which all edges are straight-line segments.</p><p>For three vertices the statement holds, so we assume the graph has at least four vertices. We assume the graph is a maximal planar graph, meaning no edge can be added without losing planarity. This, in particular, means that all its faces (including the outer one) are triangles.</p><p>We will show that in our (maximal planar) graph there are at least four vertices of degree at most five. Each face of our graph is a triangle and each edge belongs to two faces, so <span class="math-tex">\(|F|=\frac{2|E|}{3}\)</span>. Then, by Euler’s formula, <span class="math-tex">\(|E|=3|V|-6\)</span>. Define the <em>deficit</em> of a vertex: <span class="math-tex">\(d(v)=6-\deg(v)\)</span>. The sum of all deficits is 12: <span class="math-tex">\[\sum_{v \in V}(6-\deg(v))=6|V|-2|E|=6|V|-2(3|V|-6)=12 \  .\]</span> On the other hand, the degree of each vertex is at least three, so the deficit of each vertex is at most three. Thus, for the total deficit to be twelve, there must be at least four vertices with positive deficit.</p><p>Now consider an arbitrary embedding of graph <span class="math-tex">\(G\)</span>. Its outer face is a triangle, so there exists a vertex <span class="math-tex">\(v\)</span> of degree <span class="math-tex">\(k \le 5\)</span> not lying on the outer face. If we remove vertex <span class="math-tex">\(v\)</span> from the graph, a face with <span class="math-tex">\(k\)</span> edges is formed. Now straighten the resulting graph. The considered face becomes a <span class="math-tex">\(k\)</span>-gon (possibly non-convex). By the Art Gallery Theorem, there exists a point inside this <span class="math-tex">\(k\)</span>-gon from which segments to all its vertices do not cross its sides.<span class="proof-end" aria-label="End of proof">◼</span></p>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-29-planar-graphs/unit/chapter-29-planar-graphs-unit-7-special-layouts/lesson/planar-graphs--special-layouts--step-4/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-29-planar-graphs/unit/chapter-29-planar-graphs-unit-7-special-layouts/lesson/planar-graphs--special-layouts--step-6/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

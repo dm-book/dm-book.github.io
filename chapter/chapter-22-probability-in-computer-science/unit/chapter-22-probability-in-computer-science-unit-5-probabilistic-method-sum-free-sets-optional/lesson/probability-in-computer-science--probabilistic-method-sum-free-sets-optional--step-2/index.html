@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="Theorem (Erdős, 1965). Any finite set \(A \subset \mathbb{Z}\setminus \{0\}\) contains a sum-free subset of size greater than \(|A|/3\) . Proof. Dirichlet&#39;s…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Probability in Computer Science › Probabilistic Method: Sum-Free Sets (Optional) › Lesson 2 | Discrete Mathematics" />
+    <meta property="og:description" content="Theorem (Erdős, 1965). Any finite set \(A \subset \mathbb{Z}\setminus \{0\}\) contains a sum-free subset of size greater than \(|A|/3\) . Proof. Dirichlet&#39;s…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-22-probability-in-computer-science/unit/chapter-22-probability-in-computer-science-unit-5-probabilistic-method-sum-free-sets-optional/lesson/probability-in-computer-science--probabilistic-method-sum-free-sets-optional--step-2/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-22-probability-in-computer-science/unit/chapter-22-probability-in-computer-science-unit-5-probabilistic-method-sum-free-sets-optional/lesson/probability-in-computer-science--probabilistic-method-sum-free-sets-optional--step-2/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Probability in Computer Science › Probabilistic Method: Sum-Free Sets (Optional) › Lesson 2 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Probability in Computer Science / Probabilistic Method: Sum-Free Sets (Optional)</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Probability in Computer Science · Probabilistic Method: Sum-Free Sets (Optional)</p>
+        <h1>Lesson 2</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p><strong>Theorem (Erdős, 1965). </strong><em>Any finite set <span class="math-tex">\(A \subset \mathbb{Z}\setminus \{0\}\)</span> contains a sum-free subset of size greater than <span class="math-tex">\(|A|/3\)</span>.</em></p><p><em>Proof. </em>Dirichlet's theorem on prime numbers in an arithmetic progression states that for any coprime numbers <span class="math-tex">\(a,d \in \mathbb{Z}_{&gt;0}\)</span>, there exist infinitely many prime numbers of the form <span class="math-tex">\(dk+a\)</span> (where <span class="math-tex">\(k \in \mathbb{Z}_{&gt;0}\)</span>). Using this theorem, we take a prime number <span class="math-tex">\(p=3k+2\)</span> satisfying <span class="math-tex">\(p &gt; 2\max_{a \in A}|a|\)</span>. Then all elements of&nbsp;<span class="math-tex">\(A\)</span>&nbsp;are distinct nonzero residues modulo&nbsp;<span class="math-tex">\(p\)</span>, i.e., <span class="math-tex">\(A \subset \mathbb{Z}_{p}\)</span>.</p><p>It is easy to see that <span class="math-tex">\(S=\{k+1,k+2, \dotsc, k+(k+1)\}\)</span> is a sum-free subset of the group <span class="math-tex">\(\mathbb{Z}_{p}\)</span>: the sum <span class="math-tex">\((k+1)+(k+1)=2k+2\)</span> is too large, and the sum <span class="math-tex">\((2k+1)+(2k+1)=4k+2=k \bmod p\)</span> is too small. Thus, we consider <span class="math-tex">\(S\)</span> as a subset of the additive group <span class="math-tex">\(\mathbb{Z}_{p}\)</span>: we sum its elements modulo&nbsp;<span class="math-tex">\(p\)</span>.</p><p>We choose a subset&nbsp;<span class="math-tex">\(A\)</span> as follows. Take a random element <span class="math-tex">\(0 \neq t \in \mathbb{Z}_{p}\)</span> and consider <span class="math-tex">\[A_{t}=\{a \in A \colon at \bmod p \in S\} \  .\]</span> It is clear that <span class="math-tex">\(A_{t}\)</span> is sum-free: for any <span class="math-tex">\(a,b \in A_{t}\)</span>, we have <span class="math-tex">\(at \bmod p \in S\)</span> and <span class="math-tex">\(bt \bmod p \in S\)</span>, but <span class="math-tex">\((a+b)t \bmod p\)</span> cannot belong to&nbsp;<span class="math-tex">\(S\)</span>, since <span class="math-tex">\(S\)</span>&nbsp;is sum-free. We now show that for at least one&nbsp;<span class="math-tex">\(t\)</span>, the set <span class="math-tex">\(A_{t}\)</span> has a sufficiently large size. To do this, we fix <span class="math-tex">\(0 \neq a \in \mathbb{Z}_{p}\)</span> and note that <span class="math-tex">\[\{at\bmod p \colon 0 \neq t \in \mathbb{Z}_{p}\}=\mathbb{Z}_{p} \setminus \{0\} \  ,\]</span> that is, <span class="math-tex">\(at \bmod p\)</span> takes all values <span class="math-tex">\(1,\dotsc,p-1\)</span> as <span class="math-tex">\(t\)</span> runs through <span class="math-tex">\(1,\dotsc,p-1\)</span> (indeed, if <span class="math-tex">\(at_{1} \bmod p = at_{2} \bmod p\)</span>, then <span class="math-tex">\(a(t_{1}-t_{2})\)</span> is divisible by&nbsp;<span class="math-tex">\(p\)</span>, which is possible only in&nbsp;the case <span class="math-tex">\(t_{1}=t_{2}\)</span>). Hence, for any <span class="math-tex">\(a \neq 0\)</span> we have <span class="math-tex">\[\Pr[at \bmod p \in S]=\frac{|S|}{p-1}=\frac{k+1}{3k+1}&gt; \frac{1}{3}.\]</span> Thus, <span class="math-tex">\[\operatorname{E}[|A_{t}|] =\sum_{a \in A}\Pr[at \bmod p \in S] &gt; \frac{|A|}{3}\  .\]</span> Therefore, for some&nbsp;<span class="math-tex">\(t\)</span>, the size of <span class="math-tex">\(A_{t}\)</span> will be greater than <span class="math-tex">\(|A|/3\)</span>.<span class="proof-end" aria-label="End of proof">◼</span></p>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-22-probability-in-computer-science/unit/chapter-22-probability-in-computer-science-unit-5-probabilistic-method-sum-free-sets-optional/lesson/probability-in-computer-science--probabilistic-method-sum-free-sets-optional--step-1/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-22-probability-in-computer-science/unit/chapter-22-probability-in-computer-science-unit-5-probabilistic-method-sum-free-sets-optional/lesson/probability-in-computer-science--probabilistic-method-sum-free-sets-optional--step-3/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

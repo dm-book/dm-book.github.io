@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="The code below builds a Hasse diagram for all divisors of 840 with the divisibility relation. from itertools import combinations import pygraphviz as pgv n…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Partially Ordered Sets › Hasse Diagrams › Lesson 2 | Discrete Mathematics" />
+    <meta property="og:description" content="The code below builds a Hasse diagram for all divisors of 840 with the divisibility relation. from itertools import combinations import pygraphviz as pgv n…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-11-partially-ordered-sets/unit/chapter-11-partially-ordered-sets-unit-2-hasse-diagrams/lesson/partially-ordered-sets--hasse-diagrams--step-2/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-11-partially-ordered-sets/unit/chapter-11-partially-ordered-sets-unit-2-hasse-diagrams/lesson/partially-ordered-sets--hasse-diagrams--step-2/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Partially Ordered Sets › Hasse Diagrams › Lesson 2 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Partially Ordered Sets / Hasse Diagrams</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Partially Ordered Sets · Hasse Diagrams</p>
+        <h1>Lesson 2</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p>The code below builds a Hasse diagram for all divisors of 840 with the divisibility relation. </p><pre><code class="language-python">from itertools import combinations
+import pygraphviz as pgv
+
+n = 840
+divisors = [k for k in range(1, n + 1) if n % k == 0]
+
+graph = pgv.AGraph(directed=True, rankdir='BT')
+for a, b in combinations(divisors, 2):
+    if b % a == 0 and not any(a &lt; c &lt; b and c % a == 0
+                              and b % c == 0
+                              for c in divisors):
+        graph.add_edge(a, b)
+
+graph.layout(prog='dot')
+graph.draw('hasse.png')</code></pre><p style="text-align:center;"><img src="generated/assets/Partially_Ordered_Sets/Hasse_Diagrams=1/image0.png" width="800" ></p>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-11-partially-ordered-sets/unit/chapter-11-partially-ordered-sets-unit-2-hasse-diagrams/lesson/partially-ordered-sets--hasse-diagrams--step-1/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-11-partially-ordered-sets/unit/chapter-11-partially-ordered-sets-unit-2-hasse-diagrams/lesson/partially-ordered-sets--hasse-diagrams--step-3/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

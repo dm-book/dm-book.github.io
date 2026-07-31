@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="From the recurrence upper bound just proven for \(R(k,l)\) , we can derive the following upper bound: \[R(k,l) \le \binom{k+l-2}{k-1}.\] Indeed, for \(k=1\)…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Probability in Computer Science › Probabilistic Method: Ramsey Numbers › Lesson 6 | Discrete Mathematics" />
+    <meta property="og:description" content="From the recurrence upper bound just proven for \(R(k,l)\) , we can derive the following upper bound: \[R(k,l) \le \binom{k+l-2}{k-1}.\] Indeed, for \(k=1\)…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-22-probability-in-computer-science/unit/chapter-22-probability-in-computer-science-unit-4-probabilistic-method-ramsey-numbers/lesson/probability-in-computer-science--probabilistic-method-ramsey-numbers--step-6/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-22-probability-in-computer-science/unit/chapter-22-probability-in-computer-science-unit-4-probabilistic-method-ramsey-numbers/lesson/probability-in-computer-science--probabilistic-method-ramsey-numbers--step-6/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Probability in Computer Science › Probabilistic Method: Ramsey Numbers › Lesson 6 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Probability in Computer Science / Probabilistic Method: Ramsey Numbers</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Probability in Computer Science · Probabilistic Method: Ramsey Numbers</p>
+        <h1>Lesson 6</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p>From the recurrence upper bound just proven for <span class="math-tex">\(R(k,l)\)</span>, we can derive the following upper bound: <span class="math-tex">\[R(k,l) \le \binom{k+l-2}{k-1}.\]</span> Indeed, for <span class="math-tex">\(k=1\)</span> or <span class="math-tex">\(l=1\)</span>, this is easily verified. For <span class="math-tex">\(k,l&gt;1\)</span>, the bound follows from the induction hypothesis:  <span class="math-tex">\[R(k,l) \le R(k-1,l)+R(k,l-1) \le \binom{k+l-3}{k-2}+\binom{k+l-3}{k-1}=\binom{k+l-2}{k-1}.\]</span> The last equality is Pascal's identity: <span class="math-tex">\(\binom{n-1}{k-1}+\binom{n-1}{k}=\binom{n}{k}\)</span>.  </p><p>Substituting <span class="math-tex">\(k=l\)</span> into the just-proven inequality gives an&nbsp;upper bound on&nbsp;the <em>diagonal</em> Ramsey numbers: <span class="math-tex">\[R(k,k) \le \binom{2k-2}{k-1}\le 2^{2k-2}\  .\]</span></p><p>It turns out that finding exact values of Ramsey numbers is a difficult task. For example, here is what is currently known about some diagonal (<span class="math-tex">\(k=l\)</span>) Ramsey numbers: <span class="math-tex">\[\begin{alignat*}{3} 6 &= R(3,3) = & 6\\ 18 &= R(4,4) = & 18\\ 43 &\le R(5,5) \le & 46\\ 102 &\le R(6,6) \le & 160\\ 798 &\le R(10,10) \le & 16064\\ 17885 & \le R(19,19) \le &\  9075135299\\\end{alignat*}\]</span> That is, we do not know the exact value even for <span class="math-tex">\(R(5,5)\)</span>!</p><p style="text-align:center;"><img src="generated/assets/Probability_in_Computer_Science/Probabilistic_Method$_Ramsey_Numbers=5/myquote0.png" width="800" ></p><p>The recurrence relation discussed above allows us to obtain upper bounds on Ramsey numbers.</p><pre><code class="language-python">from functools import cache
+
+
+@cache
+def ramsey_upper(k, l):
+    return 1 if min(k, l) == 1 else ramsey_upper(k - 1, l) + ramsey_upper(k, l - 1)
+
+
+for n in (3, 4, 5, 6, 10, 19):
+    print(n, ramsey_upper(n, n))</code></pre><pre><code class="language-auto">3 6
+4 20
+5 70
+6 252
+10 48620
+19 9075135300
+</code></pre><p>To prove lower bounds on Ramsey numbers, we need to present graphs that contain neither a <span class="math-tex">\(k\)</span>-clique nor an <span class="math-tex">\(l\)</span>-independent set. For example, the graphs below show that <span class="math-tex">\(R(3,3) \ge 6\)</span> and <span class="math-tex">\(R(4,4) \ge 10\)</span>.</p><p style="text-align:center;"><img src="generated/assets/Probability_in_Computer_Science/Probabilistic_Method$_Ramsey_Numbers=5/image0.png" width="800" ></p><p><strong>Problem. </strong> Construct an undirected graph on <span class="math-tex">\(12\)</span> vertices, in which there is neither a clique of size four nor an independent set of size four. Thus, you will prove that <span class="math-tex">\(R(4,4)&gt;12\)</span>.</p><p>As an answer, enter the edges of the graph in one line with spaces. For example, the set of edges <span class="math-tex">\(\{3, 7\}, \{7, 2\}, \{2, 9\}\)</span> should be entered as: <span class="math- tex">\(\texttt{3 7 7 2 2 9}\)</span>. Assume that the vertices of the graph are the set <span class="math-tex">\(\{0,1,\dotsc,11\}\)</span>.</p>
+          <div class="task-card"><a class="cogniterra-only-notice" href="https://cogniterra.org/a/697" target="_blank" rel="noreferrer">This problem can only be submitted at Cogniterra.</a></div>
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-22-probability-in-computer-science/unit/chapter-22-probability-in-computer-science-unit-4-probabilistic-method-ramsey-numbers/lesson/probability-in-computer-science--probabilistic-method-ramsey-numbers--step-5/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-22-probability-in-computer-science/unit/chapter-22-probability-in-computer-science-unit-4-probabilistic-method-ramsey-numbers/lesson/probability-in-computer-science--probabilistic-method-ramsey-numbers--step-7/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

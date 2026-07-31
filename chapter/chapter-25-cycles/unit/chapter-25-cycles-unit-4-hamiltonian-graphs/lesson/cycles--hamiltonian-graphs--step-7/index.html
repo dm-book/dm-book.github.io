@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="Let \(G(V,E)\) be an undirected graph, and let \(u,v \in V\) be two of its non-adjacent vertices. If \(\deg(u)+\deg(v) \ge n\) , add the edge \(\{u,v\}\) to…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Cycles › Hamiltonian Graphs › Lesson 7 | Discrete Mathematics" />
+    <meta property="og:description" content="Let \(G(V,E)\) be an undirected graph, and let \(u,v \in V\) be two of its non-adjacent vertices. If \(\deg(u)+\deg(v) \ge n\) , add the edge \(\{u,v\}\) to…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-25-cycles/unit/chapter-25-cycles-unit-4-hamiltonian-graphs/lesson/cycles--hamiltonian-graphs--step-7/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-25-cycles/unit/chapter-25-cycles-unit-4-hamiltonian-graphs/lesson/cycles--hamiltonian-graphs--step-7/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Cycles › Hamiltonian Graphs › Lesson 7 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Cycles / Hamiltonian Graphs</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Cycles · Hamiltonian Graphs</p>
+        <h1>Lesson 7</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p>Let <span class="math-tex">\(G(V,E)\)</span> be an undirected graph, and let <span class="math-tex">\(u,v \in V\)</span> be two of its non-adjacent vertices. If <span class="math-tex">\(\deg(u)+\deg(v) \ge n\)</span>, add the edge <span class="math-tex">\(\{u,v\}\)</span> to the graph. Repeat this operation as long as possible. The resulting graph is called the <em>closure of the graph&nbsp;<span class="math-tex">\(G\)</span></em> and is denoted by&nbsp;<span class="math-tex">\(C(G)\)</span>. We will show that the closure is uniquely defined and does not depend on the order of edge additions. Assume that as a result of two different sequences of edge additions, different closures <span class="math-tex">\(G_{1}\)</span> and <span class="math-tex">\(G_{2}\)</span> were obtained. Assume that these graphs first diverged when adding different edges <span class="math-tex">\(\{u_{1},v_{1}\}\)</span> and <span class="math-tex">\(\{u_{2},v_{2}\}\)</span> to the same graph <span class="math-tex">\(H\)</span>. Then <span class="math-tex">\[\deg_{H}(u_{1})+\deg_{H}(v_{1}), \deg_{H}(u_{2})+\deg_{H}(v_{2}) \ge n \  .\]</span> Thus, both of these edges will be added in each of the two sequences. Then we can add these two edges simultaneously in&nbsp;<span class="math-tex">\(H\)</span> in both sequences and consider the next difference.</p><p>The concept of closure allows expanding the set of edges before proceeding to searching for a Hamiltonian cycle in the graph. This can potentially simplify the search.</p><p><strong>Theorem (Chvatal, 1974). </strong><em>An undirected graph&nbsp;<span class="math-tex">\(G\)</span> has a Hamiltonian cycle if and only if it has one in&nbsp;<span class="math-tex">\(C(G)\)</span>.</em></p><p style="text-align:center;"><img src="generated/assets/Cycles/Hamiltonian_Graphs=6/image0.png" width="800" ></p><p><em>Proof. </em>Let <span class="math-tex">\(\{u,v\} \not \in E\)</span> and&nbsp;<span class="math-tex">\(\deg(u)+\deg(v) \ge n\)</span>. We will show that <span class="math-tex">\(G\)</span> is Hamiltonian if and only if <span class="math-tex">\(G+\{u,v\}\)</span> is Hamiltonian. One direction is obvious. Now assume that <span class="math-tex">\(G+\{u,v\}\)</span> is Hamiltonian. If <span class="math-tex">\(G+\{u,v\}\)</span> has a Hamiltonian cycle not passing through the edge <span class="math-tex">\(\{u,v\}\)</span>, then it is also in&nbsp;<span class="math-tex">\(G\)</span>. If the Hamiltonian cycle in&nbsp;<span class="math-tex">\(G+\{u,v\}\)</span> does pass through the edge <span class="math-tex">\(\{u,v\}\)</span>, then <span class="math-tex">\(G\)</span> has a Hamiltonian path with endpoints&nbsp;<span class="math-tex">\(u,v\)</span>. Then, by the lemma, <span class="math-tex">\(G\)</span> has a Hamiltonian cycle.<span class="proof-end" aria-label="End of proof">◼</span></p>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-25-cycles/unit/chapter-25-cycles-unit-4-hamiltonian-graphs/lesson/cycles--hamiltonian-graphs--step-6/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-25-cycles/unit/chapter-25-cycles-unit-4-hamiltonian-graphs/lesson/cycles--hamiltonian-graphs--step-8/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

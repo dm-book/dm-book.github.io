@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="Theorem. For any \(n\) students and \(n\) companies, where each student ranks all companies and each company ranks all students, the Gale — Shapley…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Matchings › Application: Stable Matching › Lesson 13 | Discrete Mathematics" />
+    <meta property="og:description" content="Theorem. For any \(n\) students and \(n\) companies, where each student ranks all companies and each company ranks all students, the Gale — Shapley…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-27-matchings/unit/chapter-27-matchings-unit-5-application-stable-matching/lesson/matchings--application-stable-matching--step-13/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-27-matchings/unit/chapter-27-matchings-unit-5-application-stable-matching/lesson/matchings--application-stable-matching--step-13/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Matchings › Application: Stable Matching › Lesson 13 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Matchings / Application: Stable Matching</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Matchings · Application: Stable Matching</p>
+        <h1>Lesson 13</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p><strong>Theorem. </strong><em>For any <span class="math-tex">\(n\)</span>&nbsp;students and <span class="math-tex">\(n\)</span>&nbsp;companies, where each student ranks all companies and each company ranks all students, the Gale&nbsp;&mdash; Shapley algorithm produces a stable matching.</em></p><p><em>Proof. </em>We immediately show that the algorithm terminates and that there will be no more than <span class="math-tex">\(n^{2}\)</span> iterations. Indeed, at each iteration, the current student crosses the current company off their list. Since the total length of all students' lists is exactly <span class="math-tex">\(n^{2}\)</span>, there will be no more than that many iterations.</p><p>Now let's show that at the moment the algorithm stops, the current matching is perfect. If this were not the case, then at the end of the algorithm, there would be a student&nbsp;<span class="math-tex">\(s\)</span> with an empty preference list. Since the matching is not perfect, there would also be an unmatched company&nbsp;<span class="math-tex">\(c\)</span>. But <span class="math-tex">\(c\)</span> can remain unmatched only if no student applied to&nbsp;<span class="math-tex">\(c\)</span>, while <span class="math-tex">\(s\)</span>'s empty list means that <span class="math-tex">\(s\)</span> applied to every company, including&nbsp;<span class="math-tex">\(c\)</span>.</p><p>Finally, let us show that the constructed perfect matching is stable. Suppose the contrary: there exist a student&nbsp;<span class="math-tex">\(s\)</span> and a company&nbsp;<span class="math-tex">\(c\)</span> such that <span class="math-tex">\(s\)</span>&nbsp;prefers&nbsp;<span class="math-tex">\(c\)</span> to the current company&nbsp;<span class="math-tex">\(c'\)</span> and&nbsp;<span class="math-tex">\(c\)</span>&nbsp;prefers&nbsp;<span class="math-tex">\(s\)</span> to the current student&nbsp;<span class="math-tex">\(s'\)</span>. Student&nbsp;<span class="math-tex">\(s\)</span> did not apply to&nbsp;<span class="math-tex">\(c\)</span>: indeed, <span class="math-tex">\(s'\)</span> is the student whom <span class="math-tex">\(c\)</span> prefers most among those who applied to&nbsp;<span class="math-tex">\(c\)</span>. On the other hand, <span class="math-tex">\(s\)</span> definitely applied to&nbsp;<span class="math-tex">\(c'\)</span>, since that is the only way they could end up paired. It follows that <span class="math-tex">\(s\)</span> applied to&nbsp;<span class="math-tex">\(c'\)</span> while skipping&nbsp;<span class="math-tex">\(c\)</span>, although <span class="math-tex">\(s\)</span> prefers&nbsp;<span class="math-tex">\(c\)</span> to&nbsp;<span class="math-tex">\(c'\)</span>, a&nbsp;contradiction.<span class="proof-end" aria-label="End of proof">◼</span></p>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-27-matchings/unit/chapter-27-matchings-unit-5-application-stable-matching/lesson/matchings--application-stable-matching--step-12/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-27-matchings/unit/chapter-27-matchings-unit-5-application-stable-matching/lesson/matchings--application-stable-matching--step-14/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

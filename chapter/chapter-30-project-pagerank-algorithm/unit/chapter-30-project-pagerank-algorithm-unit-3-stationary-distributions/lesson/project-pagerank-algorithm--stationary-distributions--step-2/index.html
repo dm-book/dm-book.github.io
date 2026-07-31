@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="Let us denote the population of Michigan fans by \(x\) and the population of Michigan State fans by \(y\) . The number of fans of each team remains constant…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Project: PageRank Algorithm › Stationary Distributions › Lesson 2 | Discrete Mathematics" />
+    <meta property="og:description" content="Let us denote the population of Michigan fans by \(x\) and the population of Michigan State fans by \(y\) . The number of fans of each team remains constant…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-30-project-pagerank-algorithm/unit/chapter-30-project-pagerank-algorithm-unit-3-stationary-distributions/lesson/project-pagerank-algorithm--stationary-distributions--step-2/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-30-project-pagerank-algorithm/unit/chapter-30-project-pagerank-algorithm-unit-3-stationary-distributions/lesson/project-pagerank-algorithm--stationary-distributions--step-2/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Project: PageRank Algorithm › Stationary Distributions › Lesson 2 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Project: PageRank Algorithm / Stationary Distributions</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Project: PageRank Algorithm · Stationary Distributions</p>
+        <h1>Lesson 2</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p>Let&nbsp;us denote&nbsp;the population of&nbsp;Michigan&nbsp;fans by&nbsp;<span class="math-tex">\(x\)</span> and the population of&nbsp;Michigan&nbsp;State fans by&nbsp;<span class="math-tex">\(y\)</span>. The number of&nbsp;fans of&nbsp;each team remains constant from&nbsp;year to&nbsp;year, hence, <span class="math-tex">\[\begin{cases}x = 0.97x + 0.05y\\ y = 0.03x + 0.95y\end{cases}\]</span> Solving these equations gives&nbsp;<span class="math-tex">\(x = \frac{5}{3}y\)</span>, which&nbsp;implies that&nbsp;Michigan fans constitute&nbsp;<span class="math-tex">\(x = \frac{5}{8}\)</span> of&nbsp;the total fan&nbsp;population.</p><p>In&nbsp;terms of&nbsp;Markov chains, this solution can be&nbsp;stated as&nbsp;follows. The transition matrix of&nbsp;the considered process&nbsp;is <span class="math-tex">\[\mathbf{T}= \begin{bmatrix}0.97 & 0.05 \\ 0.03 & 0.95\end{bmatrix}\]</span> Since the number of&nbsp;fans of&nbsp;each team remains constant over time, the distribution vector <span class="math-tex">\((x,y)^{T}\)</span> satisfies the equation <span class="math-tex">\(\mathbf{T}(x,y)^{T} = (x,y)^{T}\)</span>. <span class="math-tex">\[\mathbf{T}(x,y)^{T} = \begin{bmatrix}0.97 & 0.05 \\ 0.03 & 0.95\end{bmatrix} \cdot \begin{bmatrix}x \\ y\end{bmatrix} = \begin{bmatrix}0.97x + 0.05y \\ 0.03x + 0.95y\end{bmatrix} = \begin{bmatrix}x \\ y\end{bmatrix}\]</span> Solving these equations gives&nbsp;<span class="math-tex">\(x = \frac{5}{3}y\)</span>, which&nbsp;implies that&nbsp;Michigan fans constitute&nbsp;<span class="math-tex">\(x = \frac{5}{8}\)</span> of&nbsp;the total fan&nbsp;population.</p>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-30-project-pagerank-algorithm/unit/chapter-30-project-pagerank-algorithm-unit-3-stationary-distributions/lesson/project-pagerank-algorithm--stationary-distributions--step-1/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-30-project-pagerank-algorithm/unit/chapter-30-project-pagerank-algorithm-unit-3-stationary-distributions/lesson/project-pagerank-algorithm--stationary-distributions--step-3/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

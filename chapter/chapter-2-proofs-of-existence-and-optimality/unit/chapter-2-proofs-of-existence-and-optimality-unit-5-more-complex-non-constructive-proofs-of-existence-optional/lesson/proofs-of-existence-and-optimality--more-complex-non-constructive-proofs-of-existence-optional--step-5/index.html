@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="Another common way to non-constructively prove the existence of something is to take a random object and prove that it has the desired properties with…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Proofs of Existence and Optimality › More Complex Non-constructive Proofs of Existence (Optional) › Lesson 5 | Discrete Mathematics" />
+    <meta property="og:description" content="Another common way to non-constructively prove the existence of something is to take a random object and prove that it has the desired properties with…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-2-proofs-of-existence-and-optimality/unit/chapter-2-proofs-of-existence-and-optimality-unit-5-more-complex-non-constructive-proofs-of-existence-optional/lesson/proofs-of-existence-and-optimality--more-complex-non-constructive-proofs-of-existence-optional--step-5/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-2-proofs-of-existence-and-optimality/unit/chapter-2-proofs-of-existence-and-optimality-unit-5-more-complex-non-constructive-proofs-of-existence-optional/lesson/proofs-of-existence-and-optimality--more-complex-non-constructive-proofs-of-existence-optional--step-5/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Proofs of Existence and Optimality › More Complex Non-constructive Proofs of Existence (Optional) › Lesson 5 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Proofs of Existence and Optimality / More Complex Non-constructive Proofs of Existence (Optional)</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Proofs of Existence and Optimality · More Complex Non-constructive Proofs of Existence (Optional)</p>
+        <h1>Lesson 5</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p>Another common way to non-constructively prove the existence of something is to take a random object and prove that it has the desired properties with non-zero probability. This is called the <em>probabilistic method</em>.</p><p><strong>Theorem (Erdős, 1963). </strong><em>For any <span class="math-tex">\(k \in \mathbb{Z}_{\ge 1}\)</span>, there exists a tournament <span class="math-tex">\(G(V,E)\)</span> in which for any <span class="math-tex">\(k\)</span> vertices <span class="math-tex">\(u_{1},\dotsc, u_{k} \in V\)</span>, there exists a vertex <span class="math-tex">\(v \in V\)</span> such that <span class="math-tex">\((v,u_{i}) \in E\)</span> for all <span class="math-tex">\(i \in [k]\)</span>. (That is, for any <span class="math-tex">\(k\)</span> teams, there is a team that has beaten all of them.)</em></p><p> <em>Proof. </em>Consider a random tournament <span class="math-tex">\(G(V,E)\)</span> on <span class="math-tex">\(n\)</span> vertices: the outcome of each game (the direction of each edge) is chosen randomly with probability <span class="math-tex">\(1/2\)</span>. For a set <span class="math-tex">\(S \subseteq V\)</span> of size <span class="math-tex">\(k\)</span>, let <span class="math-tex">\(A_{S}\)</span> denote the event &ldquo;no <span class="math-tex">\(v \not \in S\)</span> has beaten all of <span class="math-tex">\(S\)</span>&rdquo;. Each <span class="math-tex">\(v \not \in S\)</span> beats all teams from <span class="math-tex">\(S\)</span> with probability <span class="math-tex">\(2^{-k}\)</span>. There are <span class="math-tex">\(n-k\)</span> such <span class="math-tex">\(v\)</span> and these probabilities are independent, so <span class="math-tex">\[\Pr[A_{S}]=(1-2^{-k})^{n-k}\  .\]</span> Then  <span class="math-tex">\[\begin{align*}\Pr\left[\bigcup_{S} A_{S}\right]&\le \sum_{S} \Pr[A_{S}]&\text{(union bound)}\\&= \binom{n}{k}(1-2^{-k})^{n-k}\\&\le n^{k}(1-2^{-k})^{n-k}&\text{(\(\binom{n}{k}\le n^{k}\))}\\&\le n^{k}\left(e^{-2^{-k}}\right)^{n-k}&\text{(\(1+x \le e^{x}\), \(x=-2^{-k}\))}\\&=n^{k}e^{-\frac{n-k}{2^k}}\\&=e^{\frac{k}{2^k}}\cdot \frac{n^k}{e^{\frac{n}{2^k}}}\  .\end{align*}\]</span>   Recall now that <span class="math-tex">\(k\)</span>&nbsp;is fixed, and we can take&nbsp;<span class="math-tex">\(n\)</span> arbitrarily large. Then, <span class="math-tex">\(e^{\frac{k}{2^k}}\)</span> is a&nbsp;constant, <span class="math-tex">\(n^{k}\)</span> is a&nbsp;polynomial, and <span class="math-tex">\(e^{n/2^k}=(e^{1/2^k})^{n}\)</span> is an exponential function (as&nbsp;functions of&nbsp;<span class="math-tex">\(n\)</span>). An&nbsp;exponential function grows faster than a&nbsp;polynomial function, hence, for large enough&nbsp;<span class="math-tex">\(n\)</span>, the considered probability is&nbsp;less than one. Therefore, there exists a&nbsp;tournament in&nbsp;which the event <span class="math-tex">\(A_{S}\)</span> does not occur for any set&nbsp;<span class="math-tex">\(S\)</span>.<span class="proof-end" aria-label="End of proof">◼</span></p>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-2-proofs-of-existence-and-optimality/unit/chapter-2-proofs-of-existence-and-optimality-unit-5-more-complex-non-constructive-proofs-of-existence-optional/lesson/proofs-of-existence-and-optimality--more-complex-non-constructive-proofs-of-existence-optional--step-4/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-2-proofs-of-existence-and-optimality/unit/chapter-2-proofs-of-existence-and-optimality-unit-5-more-complex-non-constructive-proofs-of-existence-optional/lesson/proofs-of-existence-and-optimality--more-complex-non-constructive-proofs-of-existence-optional--step-6/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>

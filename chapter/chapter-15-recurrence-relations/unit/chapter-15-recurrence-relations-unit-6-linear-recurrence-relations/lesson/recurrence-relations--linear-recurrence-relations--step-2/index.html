@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231e20" />
+    <meta name="author" content="Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="description" content="We already have enough intuition to understand that Fibonacci numbers grow exponentially. This can be seen, for example, as follows. It is clear that the…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Recurrence Relations › Linear Recurrence Relations › Lesson 2 | Discrete Mathematics" />
+    <meta property="og:description" content="We already have enough intuition to understand that Fibonacci numbers grow exponentially. This can be seen, for example, as follows. It is clear that the…" />
+    <meta property="og:url" content="https://dm-book.github.io/chapter/chapter-15-recurrence-relations/unit/chapter-15-recurrence-relations-unit-6-linear-recurrence-relations/lesson/recurrence-relations--linear-recurrence-relations--step-2/" />
+    <meta property="og:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://dm-book.github.io/social-preview.png" />
+    <meta name="twitter:image:alt" content="Discrete Mathematics with applications in Computer Science, by Nikolai Chukhin and Alexander S. Kulikov" />
+    <base href="/" />
+    <link rel="canonical" href="https://dm-book.github.io/chapter/chapter-15-recurrence-relations/unit/chapter-15-recurrence-relations-unit-6-linear-recurrence-relations/lesson/recurrence-relations--linear-recurrence-relations--step-2/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" crossorigin href="/assets/index-CwGfeFMK.css">
+    <script type="module" crossorigin src="/assets/index-BijEGzSU.js"></script>
+    <title>Recurrence Relations › Linear Recurrence Relations › Lesson 2 | Discrete Mathematics</title>
+  </head>
+  <body>
+    <main id="seo-landing" class="seo-shell seo-page">
+      <nav class="seo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Discrete Mathematics</a> / Recurrence Relations / Linear Recurrence Relations</nav>
+      <article class="seo-article">
+        <p class="seo-kicker">Recurrence Relations · Linear Recurrence Relations</p>
+        <h1>Lesson 2</h1>
+        <p class="seo-authors">Nikolai Chukhin · Alexander S. Kulikov</p>
+        <section class="seo-lesson">
+          <p>We already have enough intuition to understand that Fibonacci numbers grow exponentially. This can be seen, for example, as follows. It is clear that the sequence <span class="math-tex">\(F(n)\)</span> is non-decreasing. Thus, <span class="math-tex">\[2F(n-2) \le F(n-1)+F(n-2) \le 2F(n-1) \  .\]</span> The solutions to the relations <span class="math-tex">\(F(n)=2F(n-2)\)</span> and <span class="math-tex">\(F(n)=2F(n-1)\)</span> are straightforward: <span class="math-tex">\(\sqrt{2}^{n}\)</span> and <span class="math-tex">\(2^{n}\)</span>. It is reasonable to hypothesize that <span class="math-tex">\(F(n)\)</span> also grows as <span class="math-tex">\(\alpha^{n}\)</span> for some <span class="math-tex">\(\sqrt{2}\le \alpha \le 2\)</span>. This is just a guess, but we can verify it against the recurrence relation. Let us try! If <span class="math-tex">\[\alpha^{n} = \alpha^{n-1}+\alpha^{n-2},\]</span> then <span class="math-tex">\[\alpha^{2}=\alpha+1.\]</span> It follows that the exponential functions <span class="math-tex">\(G(n)=\alpha_{1}^{n}\)</span> and <span class="math-tex">\(H(n)=\alpha_{2}^{n}\)</span>, where <span class="math-tex">\[\alpha_{1,2}=\frac{1\pm \sqrt{5}}{2},\]</span> are the roots of the resulting quadratic equation and satisfy the recurrence relation.</p><p>A simple but crucial observation is that <em>any linear combination</em> <span class="math-tex">\(aH(n)+bG(n)\)</span> (where <span class="math-tex">\(a\)</span> and <span class="math-tex">\(b\)</span> are constants) also satisfies our recurrence relation. Indeed, let <span class="math-tex">\(Q(n)=aH(n)+bG(n)\)</span>. Then  <span class="math-tex">\[\begin{align*}Q(n)&=aH(n)+bG(n)=\\&=a(H(n-1)+H(n-2))+b(G(n-1)+G(n-2))=\\&=(aH(n-1)+bG(n-1))+(aH(n-2)+bG(n-2))=\\&=Q(n-1)+Q(n-2) \ .\end{align*}\]</span>   The function <span class="math-tex">\(Q(n)\)</span> is called the <em>general solution</em> of the recurrence relation.</p><p>Now it is time to recall that the functions <span class="math-tex">\(H(n)\)</span> and <span class="math-tex">\(G(n)\)</span> arose as solutions to the recurrence relation, but without considering initial conditions. Clearly, they do not satisfy the initial conditions: <span class="math-tex">\(H(0)=G(0)=1 \neq 0\)</span>. This explains the need for linear combinations: we adjust the coefficients <span class="math-tex">\(a\)</span> and <span class="math-tex">\(b\)</span> so that the initial conditions are satisfied! These coefficients can be found by solving a system of two linear equations: <span class="math-tex">\[\begin{cases}0=a+b\\ 1=a\alpha_1+b\alpha_2\end{cases}\]</span> This leads to Binet’s formula.</p><p>This is exactly what the <span class="math- tex">\(\texttt{rsolve}\)</span> method in Python does. It finds the roots <span class="math-tex">\(\alpha_{1}\)</span> and <span class="math-tex">\(\alpha_{2}\)</span> of the characteristic polynomial <span class="math-tex">\(\alpha^{n}=\alpha^{n-1}+\alpha^{n-2}\)</span>, understanding that any linear combination <span class="math-tex">\(\alpha_{1}^{n}\)</span> and <span class="math-tex">\(\alpha_{2}^{n}\)</span> satisfies the recurrence relation. If initial conditions are provided, it derives the coefficients for the linear combination from them.</p><pre><code class="language-python">from sympy import Function, rsolve
+from sympy.abc import n
+
+f = Function('f')
+Fib = f(n) - f(n - 1) - f(n - 2)
+
+print(rsolve(Fib, f(n)))
+print(rsolve(Fib, f(n), {f(0): 0, f(1): 1}))</code></pre><pre><code class="language-auto">C0*(1/2 - sqrt(5)/2)**n + C1*(1/2 + sqrt(5)/2)**n
+-sqrt(5)*(1/2 - sqrt(5)/2)**n/5 + sqrt(5)*(1/2 + sqrt(5)/2)**n/5
+</code></pre>
+          
+        </section>
+        <nav class="seo-page-footer seo-lesson-navigation" aria-label="Lesson navigation"><a class="seo-secondary-link" rel="prev" href="/chapter/chapter-15-recurrence-relations/unit/chapter-15-recurrence-relations-unit-6-linear-recurrence-relations/lesson/recurrence-relations--linear-recurrence-relations--step-1/">Previous lesson</a><a class="seo-primary-link" rel="next" href="/chapter/chapter-15-recurrence-relations/unit/chapter-15-recurrence-relations-unit-6-linear-recurrence-relations/lesson/recurrence-relations--linear-recurrence-relations--step-3/">Next lesson</a></nav>
+      </article>
+    </main>
+    <div id="root" hidden></div>
+  </body>
+</html>
